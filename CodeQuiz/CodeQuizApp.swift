@@ -10,23 +10,21 @@ import SwiftData
 
 @main
 struct CodeQuizApp: App {
-    var sharedModelContainer: ModelContainer = {
-        let schema = Schema([
-            Item.self,
-        ])
-        let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
-
-        do {
-            return try ModelContainer(for: schema, configurations: [modelConfiguration])
-        } catch {
-            fatalError("Could not create ModelContainer: \(error)")
-        }
-    }()
-
+    @State var testProperties = TestProperties()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            TabBarView()
+                .environment(testProperties)
+            // Difficulty level nomenclature
+            // Add classic touch sounds for almost everything
+            // Handle Frame size (width/height)
+            // Handle Dynamic Type
+            // Create color constants
+            // Basic logic: Generates questions whenever the quiz begins
+            // Future implementation: Generate unique set of questions daily
+            
         }
-        .modelContainer(sharedModelContainer)
+        // .modelContainer(sharedModelContainer)
     }
 }
