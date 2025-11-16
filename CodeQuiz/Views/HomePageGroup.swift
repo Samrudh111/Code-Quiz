@@ -9,17 +9,16 @@ import SwiftUI
 import Foundation
 
 struct HomePageGroup: View {
-    @Environment(TestProperties.self) var testProperties
+    @AppStorage("QuizActive") private var isQuizActive: Bool?
     
     var body: some View {
-        if testProperties.testRunning{
+        if isQuizActive ?? false{
             QAPageView()
         } else {
             HomepageView()
         }
     }
 }
-
 
 #Preview {
     HomePageGroup()

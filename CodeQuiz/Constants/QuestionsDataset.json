@@ -1,1670 +1,1672 @@
 {
-  "Swift": {
-    "Swift UI": {
-      "Easy": [
-        {
-          "question": "What is SwiftUI primarily used for?",
-          "options": [
-            "Building declarative user interfaces",
-            "Writing backend services in Swift",
-            "Creating Android applications",
-            "Designing database schemas"
-          ]
-        },
-        {
-          "question": "Which container stacks views vertically in SwiftUI?",
-          "options": [
-            "VStack",
-            "HStack",
-            "ZStack",
-            "GridStack"
-          ]
-        },
-        {
-          "question": "Which property wrapper is used for local view state in SwiftUI?",
-          "options": [
-            "@State",
-            "@Binding",
-            "@ObservedObject",
-            "@Environment"
-          ]
-        },
-        {
-          "question": "Which view provides a scrollable region in SwiftUI?",
-          "options": [
-            "ScrollView",
-            "Form",
-            "NavigationStack",
-            "Spacer"
-          ]
-        },
-        {
-          "question": "Which modifier is commonly used to add space around a view?",
-          "options": [
-            ".padding()",
-            ".frame()",
-            ".border()",
-            ".clipShape()"
-          ]
-        },
-        {
-          "question": "What does ZStack do in SwiftUI?",
-          "options": [
-            "Overlays views on top of each other",
-            "Stacks views vertically",
-            "Stacks views horizontally",
-            "Creates a zoom animation"
-          ]
-        },
-        {
-          "question": "Which SwiftUI view is used to show tappable text or content?",
-          "options": [
-            "Button",
-            "Label",
-            "Spacer",
-            "Divider"
-          ]
-        },
-        {
-          "question": "Which modifier changes the text color in SwiftUI?",
-          "options": [
-            ".foregroundColor()",
-            ".background()",
-            ".tint()",
-            ".shadow()"
-          ]
-        },
-        {
-          "question": "Which view is best for displaying a list of rows?",
-          "options": [
-            "List",
-            "ScrollViewReader",
-            "GroupBox",
-            "Menu"
-          ]
-        },
-        {
-          "question": "What is the starting point of a SwiftUI app?",
-          "options": [
-            "A struct conforming to the App protocol",
-            "A class inheriting from UIApplication",
-            "A main.swift file",
-            "A storyboard entry point"
-          ]
+    "data": {
+        "Swift": {
+            "Swift UI": {
+                "Easy": [
+                    {
+                        "question": "What is SwiftUI primarily used for?",
+                        "options": [
+                            "Building declarative user interfaces",
+                            "Writing backend services in Swift",
+                            "Creating Android applications",
+                            "Designing database schemas"
+                        ]
+                    },
+                    {
+                        "question": "Which container stacks views vertically in SwiftUI?",
+                        "options": [
+                            "VStack",
+                            "HStack",
+                            "ZStack",
+                            "GridStack"
+                        ]
+                    },
+                    {
+                        "question": "Which property wrapper is used for local view state in SwiftUI?",
+                        "options": [
+                            "@State",
+                            "@Binding",
+                            "@ObservedObject",
+                            "@Environment"
+                        ]
+                    },
+                    {
+                        "question": "Which view provides a scrollable region in SwiftUI?",
+                        "options": [
+                            "ScrollView",
+                            "Form",
+                            "NavigationStack",
+                            "Spacer"
+                        ]
+                    },
+                    {
+                        "question": "Which modifier is commonly used to add space around a view?",
+                        "options": [
+                            ".padding()",
+                            ".frame()",
+                            ".border()",
+                            ".clipShape()"
+                        ]
+                    },
+                    {
+                        "question": "What does ZStack do in SwiftUI?",
+                        "options": [
+                            "Overlays views on top of each other",
+                            "Stacks views vertically",
+                            "Stacks views horizontally",
+                            "Creates a zoom animation"
+                        ]
+                    },
+                    {
+                        "question": "Which SwiftUI view is used to show tappable text or content?",
+                        "options": [
+                            "Button",
+                            "Label",
+                            "Spacer",
+                            "Divider"
+                        ]
+                    },
+                    {
+                        "question": "Which modifier changes the text color in SwiftUI?",
+                        "options": [
+                            ".foregroundColor()",
+                            ".background()",
+                            ".tint()",
+                            ".shadow()"
+                        ]
+                    },
+                    {
+                        "question": "Which view is best for displaying a list of rows?",
+                        "options": [
+                            "List",
+                            "ScrollViewReader",
+                            "GroupBox",
+                            "Menu"
+                        ]
+                    },
+                    {
+                        "question": "What is the starting point of a SwiftUI app?",
+                        "options": [
+                            "A struct conforming to the App protocol",
+                            "A class inheriting from UIApplication",
+                            "A main.swift file",
+                            "A storyboard entry point"
+                        ]
+                    }
+                ],
+                "Medium": [
+                    {
+                        "question": "What does @Binding provide between two SwiftUI views?",
+                        "options": [
+                            "A two-way connection to a value",
+                            "A one-way read-only connection",
+                            "A persistent storage in UserDefaults",
+                            "A networking connection"
+                        ]
+                    },
+                    {
+                        "question": "Which container allows lazy loading of rows in SwiftUI?",
+                        "options": [
+                            "LazyVStack",
+                            "VStack",
+                            "HStack",
+                            "Group"
+                        ]
+                    },
+                    {
+                        "question": "Which modifier is used to animate changes to a view’s state?",
+                        "options": [
+                            ".animation(_:value:)",
+                            ".withAnimation()",
+                            ".transition()",
+                            ".matchedGeometryEffect()"
+                        ]
+                    },
+                    {
+                        "question": "Which property wrapper subscribes to an observable reference type created outside a view?",
+                        "options": [
+                            "@ObservedObject",
+                            "@StateObject",
+                            "@Environment",
+                            "@Binding"
+                        ]
+                    },
+                    {
+                        "question": "Which view is used for grouping controls in a settings-like layout?",
+                        "options": [
+                            "Form",
+                            "Table",
+                            "ScrollView",
+                            "Group"
+                        ]
+                    },
+                    {
+                        "question": "What does .sheet(isPresented:) present?",
+                        "options": [
+                            "A modal view from the bottom",
+                            "A full screen cover only",
+                            "A push onto NavigationStack",
+                            "A popover only on iPad"
+                        ]
+                    },
+                    {
+                        "question": "What does .onAppear perform in SwiftUI?",
+                        "options": [
+                            "Runs code when the view becomes visible",
+                            "Runs code when the app launches",
+                            "Runs code before compilation",
+                            "Runs code only when the app terminates"
+                        ]
+                    },
+                    {
+                        "question": "What is the correct way to observe environment changes like color scheme?",
+                        "options": [
+                            "@Environment(\\.colorScheme) var colorScheme",
+                            "@State var colorScheme",
+                            "@ObservedObject var colorScheme",
+                            "@EnvironmentObject var colorScheme"
+                        ]
+                    },
+                    {
+                        "question": "Which view is appropriate for building navigation-based flows?",
+                        "options": [
+                            "NavigationStack",
+                            "TabView",
+                            "Form",
+                            "GroupBox"
+                        ]
+                    },
+                    {
+                        "question": "What is the purpose of the PreviewProvider in SwiftUI?",
+                        "options": [
+                            "To provide Xcode canvas previews for a view",
+                            "To manage runtime logging",
+                            "To configure production builds",
+                            "To handle network mocking"
+                        ]
+                    }
+                ],
+                "Hard": [
+                    {
+                        "question": "What happens internally when a @State property changes in SwiftUI?",
+                        "options": [
+                            "The view invalidates and recomputes its body",
+                            "The entire view hierarchy is destroyed",
+                            "Only sibling views are re-rendered",
+                            "The app restarts the main run loop"
+                        ]
+                    },
+                    {
+                        "question": "When should @StateObject be preferred over @ObservedObject?",
+                        "options": [
+                            "When the view owns the lifecycle of the object",
+                            "When the object is passed in from a parent view",
+                            "When the object is global",
+                            "When the object is immutable"
+                        ]
+                    },
+                    {
+                        "question": "What is the main advantage of using .transaction in SwiftUI?",
+                        "options": [
+                            "To customize how state changes are animated",
+                            "To manage database transactions",
+                            "To handle memory allocation",
+                            "To schedule background tasks"
+                        ]
+                    },
+                    {
+                        "question": "Which SwiftUI feature is most closely related to diffing the view hierarchy?",
+                        "options": [
+                            "The identity of views determined by their structure and modifiers",
+                            "The unique IDs of all subviews",
+                            "The underlying UIKit view tags",
+                            "Manual calls to reloadData"
+                        ]
+                    },
+                    {
+                        "question": "What is a potential issue when using many nested stacks (VStack/HStack) deeply?",
+                        "options": [
+                            "Performance and layout complexity can increase",
+                            "Compilation will always fail",
+                            "SwiftUI will not compile the body",
+                            "NavigationStack stops working"
+                        ]
+                    },
+                    {
+                        "question": "How can you prevent state from resetting when a parent view is recreated?",
+                        "options": [
+                            "Use @StateObject in the child instead of @ObservedObject",
+                            "Use only @State everywhere",
+                            "Use @Environment for all values",
+                            "Avoid using any property wrappers"
+                        ]
+                    },
+                    {
+                        "question": "Why might you use a custom ViewModifier in SwiftUI?",
+                        "options": [
+                            "To reuse complex combinations of modifiers across views",
+                            "To replace all property wrappers",
+                            "To handle networking logic",
+                            "To manage asynchronous tasks only"
+                        ]
+                    },
+                    {
+                        "question": "What is the role of EquatableView in SwiftUI?",
+                        "options": [
+                            "To skip view updates when input values haven't changed",
+                            "To guarantee views are hashable",
+                            "To force redraw for each state change",
+                            "To store views in a Set"
+                        ]
+                    },
+                    {
+                        "question": "How can you conditionally apply a modifier in a clean way?",
+                        "options": [
+                            "By using a custom extension that applies a modifier based on a Boolean",
+                            "By using if statements only outside the body",
+                            "By using only ternary operators in all views",
+                            "By wrapping all modifiers in a ZStack"
+                        ]
+                    },
+                    {
+                        "question": "What is a common cause of 'Modifying state during view update' warnings?",
+                        "options": [
+                            "Changing state from inside the view’s body calculation",
+                            "Using @StateObject instead of @ObservedObject",
+                            "Calling NavigationStack inside a List",
+                            "Using Spacer inside an HStack"
+                        ]
+                    }
+                ]
+            },
+            "UIKit": {
+                "Easy": [
+                    {
+                        "question": "What is UIKit mainly used for?",
+                        "options": [
+                            "Building imperative user interfaces for iOS",
+                            "Writing command-line tools",
+                            "Developing Android apps",
+                            "Managing cloud servers"
+                        ]
+                    },
+                    {
+                        "question": "Which class represents a screen in UIKit?",
+                        "options": [
+                            "UIViewController",
+                            "UIView",
+                            "UIApplication",
+                            "UIWindowScene"
+                        ]
+                    },
+                    {
+                        "question": "Which class is used to display tappable text or images in UIKit?",
+                        "options": [
+                            "UIButton",
+                            "UILabel",
+                            "UITextField",
+                            "UITableViewCell"
+                        ]
+                    },
+                    {
+                        "question": "Which class is used to display static text?",
+                        "options": [
+                            "UILabel",
+                            "UITextView",
+                            "UIImageView",
+                            "UISlider"
+                        ]
+                    },
+                    {
+                        "question": "Which UIKit object holds and manages all visible content?",
+                        "options": [
+                            "UIWindow",
+                            "UIApplication",
+                            "UIView",
+                            "UIViewController"
+                        ]
+                    },
+                    {
+                        "question": "Which UI component is best suited to display a list of rows?",
+                        "options": [
+                            "UITableView",
+                            "UIScrollView",
+                            "UICollectionView",
+                            "UIPickerView"
+                        ]
+                    },
+                    {
+                        "question": "What does Auto Layout manage in UIKit?",
+                        "options": [
+                            "Constraints and positions of UI elements",
+                            "Networking requests",
+                            "Database queries",
+                            "Multithreading"
+                        ]
+                    },
+                    {
+                        "question": "Which class shows an image on screen?",
+                        "options": [
+                            "UIImageView",
+                            "UILabel",
+                            "UIButton",
+                            "UIPageControl"
+                        ]
+                    },
+                    {
+                        "question": "Which control captures simple text input?",
+                        "options": [
+                            "UITextField",
+                            "UILabel",
+                            "UIImageView",
+                            "UISwitch"
+                        ]
+                    },
+                    {
+                        "question": "Which UIKit concept is responsible for responding to touch events?",
+                        "options": [
+                            "UIResponder",
+                            "UIView",
+                            "CALayer",
+                            "NSOperation"
+                        ]
+                    }
+                ],
+                "Medium": [
+                    {
+                        "question": "Which method is called after a view controller’s view is loaded into memory?",
+                        "options": [
+                            "viewDidLoad",
+                            "viewWillAppear",
+                            "viewDidAppear",
+                            "viewWillLayoutSubviews"
+                        ]
+                    },
+                    {
+                        "question": "What is the role of UINavigationController?",
+                        "options": [
+                            "It manages a stack of view controllers",
+                            "It manages tab bar items",
+                            "It handles animation only",
+                            "It manages CoreData entities"
+                        ]
+                    },
+                    {
+                        "question": "Which UIKit class should you subclass to create a custom list cell?",
+                        "options": [
+                            "UITableViewCell",
+                            "UIView",
+                            "UIControl",
+                            "UIStackView"
+                        ]
+                    },
+                    {
+                        "question": "Which delegate method configures each cell in a UITableView?",
+                        "options": [
+                            "tableView(_:cellForRowAt:)",
+                            "tableView(_:numberOfRowsInSection:)",
+                            "numberOfSections(in:)",
+                            "tableView(_:didSelectRowAt:)"
+                        ]
+                    },
+                    {
+                        "question": "What is the primary purpose of Interface Builder outlets (IBOutlets)?",
+                        "options": [
+                            "To connect UI elements from storyboards/XIBs to code",
+                            "To handle push notifications",
+                            "To manage app lifecycle events",
+                            "To send analytics events"
+                        ]
+                    },
+                    {
+                        "question": "What pattern do many UIKit classes use for communication like UITableView?",
+                        "options": [
+                            "Delegate pattern",
+                            "Factory pattern",
+                            "Singleton pattern",
+                            "Strategy pattern"
+                        ]
+                    },
+                    {
+                        "question": "Which class is best for grid-like layouts of items?",
+                        "options": [
+                            "UICollectionView",
+                            "UITableView",
+                            "UIScrollView",
+                            "UIStackView"
+                        ]
+                    },
+                    {
+                        "question": "Which property of UIView affects transparency?",
+                        "options": [
+                            "alpha",
+                            "tintColor",
+                            "backgroundColor",
+                            "contentMode"
+                        ]
+                    },
+                    {
+                        "question": "Which component typically manages app-level events like launching and termination?",
+                        "options": [
+                            "UIApplicationDelegate",
+                            "UIViewController",
+                            "UIWindow",
+                            "UITabBarController"
+                        ]
+                    },
+                    {
+                        "question": "Which method should you use to present a view controller modally from another?",
+                        "options": [
+                            "present(_:animated:completion:)",
+                            "pushViewController(_:animated:)",
+                            "show(_:sender:)",
+                            "performSegue(withIdentifier:sender:)"
+                        ]
+                    }
+                ],
+                "Hard": [
+                    {
+                        "question": "What is the purpose of layoutSubviews in UIView subclasses?",
+                        "options": [
+                            "To adjust the layout of subviews when bounds change",
+                            "To start network calls",
+                            "To handle memory warnings",
+                            "To register gesture recognizers"
+                        ]
+                    },
+                    {
+                        "question": "Why might you use a custom CALayer subclass?",
+                        "options": [
+                            "To implement complex, performant custom drawing",
+                            "To handle JSON decoding",
+                            "To manage CoreData entities",
+                            "To manage URLSession configurations"
+                        ]
+                    },
+                    {
+                        "question": "What is the risk of creating a strong reference cycle with delegates in UIKit?",
+                        "options": [
+                            "It can cause memory leaks because objects never deallocate",
+                            "It speeds up UI rendering but uses more CPU",
+                            "It automatically cancels all network requests",
+                            "It prevents user interaction gestures"
+                        ]
+                    },
+                    {
+                        "question": "Which approach helps improve scrolling performance in UITableView?",
+                        "options": [
+                            "Cell reuse with reusable identifiers",
+                            "Creating new cells every time without reuse",
+                            "Triggering layoutIfNeeded on every scroll step",
+                            "Using synchronous network calls in cellForRowAt"
+                        ]
+                    },
+                    {
+                        "question": "Why might you use constraints’ contentCompressionResistancePriority?",
+                        "options": [
+                            "To control how views resist being shrunk",
+                            "To handle view rotation animations",
+                            "To control CPU compression levels",
+                            "To adjust navigation bar height"
+                        ]
+                    },
+                    {
+                        "question": "What is the main difference between frame and bounds of a UIView?",
+                        "options": [
+                            "Frame is in superview’s coordinate space, bounds is in the view’s own",
+                            "Frame is always (0,0), bounds is not",
+                            "Bounds includes transforms, frame does not",
+                            "They are always identical"
+                        ]
+                    },
+                    {
+                        "question": "Why is performing heavy work on the main thread discouraged in UIKit apps?",
+                        "options": [
+                            "It blocks UI updates and makes the app feel unresponsive",
+                            "It speeds up UI but uses more memory",
+                            "It prevents background refresh",
+                            "It breaks Auto Layout constraints"
+                        ]
+                    },
+                    {
+                        "question": "When implementing custom transitions between view controllers, which protocol is typically adopted?",
+                        "options": [
+                            "UIViewControllerAnimatedTransitioning",
+                            "UITableViewDataSource",
+                            "UICollectionViewDelegate",
+                            "UIScrollViewDelegate"
+                        ]
+                    },
+                    {
+                        "question": "What is a common use case for UIAppearance?",
+                        "options": [
+                            "To globally customize the appearance of UIKit controls",
+                            "To manage app localization",
+                            "To manage core data migrations",
+                            "To handle gesture recognizers"
+                        ]
+                    },
+                    {
+                        "question": "Why might you override traitCollectionDidChange in a view or view controller?",
+                        "options": [
+                            "To respond to environment changes like Dark Mode or size class changes",
+                            "To manage push notification tokens",
+                            "To handle keychain changes",
+                            "To respond to network reachability changes"
+                        ]
+                    }
+                ]
+            },
+            "AppKit": {
+                "Easy": [
+                    {
+                        "question": "What is AppKit mainly used for?",
+                        "options": [
+                            "Building macOS applications",
+                            "Developing iOS apps only",
+                            "Writing Linux drivers",
+                            "Creating Android apps"
+                        ]
+                    },
+                    {
+                        "question": "Which class represents a window in AppKit?",
+                        "options": [
+                            "NSWindow",
+                            "NSView",
+                            "NSApplication",
+                            "UIView"
+                        ]
+                    },
+                    {
+                        "question": "Which AppKit class is used to display text labels?",
+                        "options": [
+                            "NSTextField",
+                            "NSTextView",
+                            "NSButton",
+                            "NSImageView"
+                        ]
+                    },
+                    {
+                        "question": "Which framework is AppKit most closely related to on iOS?",
+                        "options": [
+                            "UIKit",
+                            "SwiftUI",
+                            "CoreData",
+                            "SpriteKit"
+                        ]
+                    },
+                    {
+                        "question": "Which class represents the main application object in AppKit?",
+                        "options": [
+                            "NSApplication",
+                            "UIApplication",
+                            "NSWindowController",
+                            "NSResponder"
+                        ]
+                    },
+                    {
+                        "question": "Which control is used for clickable buttons in AppKit?",
+                        "options": [
+                            "NSButton",
+                            "NSControl",
+                            "NSTableView",
+                            "NSCollectionView"
+                        ]
+                    },
+                    {
+                        "question": "Which class is used for displaying images?",
+                        "options": [
+                            "NSImageView",
+                            "NSButton",
+                            "NSTextField",
+                            "NSAlert"
+                        ]
+                    },
+                    {
+                        "question": "Which AppKit component is used to display lists of rows and columns?",
+                        "options": [
+                            "NSTableView",
+                            "NSCollectionView",
+                            "NSTextView",
+                            "NSBox"
+                        ]
+                    },
+                    {
+                        "question": "Which class represents a basic drawable region in AppKit?",
+                        "options": [
+                            "NSView",
+                            "NSWindow",
+                            "NSBox",
+                            "NSResponder"
+                        ]
+                    },
+                    {
+                        "question": "Which menu is typically always present at the top of a macOS screen?",
+                        "options": [
+                            "Main menu bar",
+                            "Contextual menu",
+                            "Status bar menu",
+                            "Dock menu"
+                        ]
+                    }
+                ],
+                "Medium": [
+                    {
+                        "question": "Which object typically acts as the app's delegate in an AppKit app?",
+                        "options": [
+                            "NSApplicationDelegate",
+                            "NSWindowDelegate",
+                            "NSViewController",
+                            "NSResponder"
+                        ]
+                    },
+                    {
+                        "question": "Which class should you subclass to manage the content of an NSWindow?",
+                        "options": [
+                            "NSWindowController",
+                            "NSViewController",
+                            "NSApplication",
+                            "NSTableView"
+                        ]
+                    },
+                    {
+                        "question": "What is the role of NSResponder in AppKit?",
+                        "options": [
+                            "It handles events in a responder chain",
+                            "It stores application settings",
+                            "It manages window lifecycles",
+                            "It handles background networking"
+                        ]
+                    },
+                    {
+                        "question": "Which AppKit view is typically used for displaying rich, editable text?",
+                        "options": [
+                            "NSTextView",
+                            "NSTextField",
+                            "NSLabel",
+                            "NSImageView"
+                        ]
+                    },
+                    {
+                        "question": "What mechanism does AppKit use for drag and drop and other complex interactions?",
+                        "options": [
+                            "Responder chain",
+                            "Storyboard segues",
+                            "SwiftUI bindings",
+                            "Core Animation triggers"
+                        ]
+                    },
+                    {
+                        "question": "Which class is commonly used to present alerts in macOS?",
+                        "options": [
+                            "NSAlert",
+                            "UIAlertController",
+                            "NSNotificationCenter",
+                            "NSPanel"
+                        ]
+                    },
+                    {
+                        "question": "Which control is used for popup menus in AppKit?",
+                        "options": [
+                            "NSPopUpButton",
+                            "NSComboBox",
+                            "NSTextField",
+                            "NSMenuButton"
+                        ]
+                    },
+                    {
+                        "question": "Which class manages the tabs interface similar to a browser on macOS?",
+                        "options": [
+                            "NSTabView",
+                            "NSPageController",
+                            "NSCollectionView",
+                            "NSTableView"
+                        ]
+                    },
+                    {
+                        "question": "Which AppKit view is suitable for displaying a grid of items?",
+                        "options": [
+                            "NSCollectionView",
+                            "NSTableView",
+                            "NSScrollView",
+                            "NSTextView"
+                        ]
+                    },
+                    {
+                        "question": "Which object manages menu items in the macOS menu bar?",
+                        "options": [
+                            "NSMenu",
+                            "NSStatusItem",
+                            "NSButton",
+                            "NSPanel"
+                        ]
+                    }
+                ],
+                "Hard": [
+                    {
+                        "question": "Why might you override draw(_:) in an NSView subclass?",
+                        "options": [
+                            "To perform custom drawing with Core Graphics",
+                            "To manage network requests",
+                            "To configure Auto Layout constraints",
+                            "To handle app lifecycle events"
+                        ]
+                    },
+                    {
+                        "question": "What is a common way to support Dark Mode in AppKit?",
+                        "options": [
+                            "Using dynamic colors and responding to effectiveAppearance changes",
+                            "Using only NSColor.black and NSColor.white",
+                            "Disabling all custom drawing",
+                            "Rebuilding the window each time"
+                        ]
+                    },
+                    {
+                        "question": "How does the responder chain help with keyboard shortcuts in AppKit?",
+                        "options": [
+                            "It routes actions to the first object that can handle them",
+                            "It blocks all unused events",
+                            "It always sends events to NSApplicationDelegate first",
+                            "It logs events for debugging"
+                        ]
+                    },
+                    {
+                        "question": "Why might you use NSOutlineView instead of NSTableView?",
+                        "options": [
+                            "To display hierarchical data in a collapsible format",
+                            "To display only flat lists",
+                            "To embed arbitrary SwiftUI views",
+                            "To handle network-driven cells automatically"
+                        ]
+                    },
+                    {
+                        "question": "What is a benefit of using NSScrollView around other views?",
+                        "options": [
+                            "It provides scrolling behavior for content larger than its bounds",
+                            "It automatically animates view transitions",
+                            "It manages keyboard shortcuts",
+                            "It handles all drag-and-drop events"
+                        ]
+                    },
+                    {
+                        "question": "What is a potential pitfall when mixing AppKit and SwiftUI in the same macOS app?",
+                        "options": [
+                            "Managing two different lifecycle and layout systems",
+                            "CoreData stops working",
+                            "Menu bars are disabled",
+                            "Auto Layout cannot be used"
+                        ]
+                    },
+                    {
+                        "question": "Which class would you use for advanced text layout and performance in AppKit?",
+                        "options": [
+                            "NSTextStorage with NSLayoutManager",
+                            "NSTextField only",
+                            "NSImageView",
+                            "NSBox"
+                        ]
+                    },
+                    {
+                        "question": "Why is it important to manage strong references in AppKit's delegate patterns?",
+                        "options": [
+                            "To avoid retain cycles and memory leaks",
+                            "To ensure fast drawing",
+                            "To guarantee ordering of menu items",
+                            "To support Dark Mode"
+                        ]
+                    },
+                    {
+                        "question": "What role does NSRunLoop play in AppKit applications?",
+                        "options": [
+                            "It manages the event loop for input and timers",
+                            "It manages the disk cache",
+                            "It compiles Interface Builder files",
+                            "It creates windows automatically"
+                        ]
+                    },
+                    {
+                        "question": "Why might you use NSPanel instead of NSWindow?",
+                        "options": [
+                            "For auxiliary floating windows like tool palettes",
+                            "For main document windows",
+                            "For full-screen games only",
+                            "For the menu bar"
+                        ]
+                    }
+                ]
+            },
+            "Storyboard": {
+                "Easy": [
+                    {
+                        "question": "What is a storyboard in iOS development?",
+                        "options": [
+                            "A visual representation of app UI and flow",
+                            "A JSON configuration file",
+                            "A Swift package",
+                            "A log of user actions"
+                        ]
+                    },
+                    {
+                        "question": "Which file extension do storyboards use?",
+                        "options": [
+                            ".storyboard",
+                            ".xib",
+                            ".swift",
+                            ".plist"
+                        ]
+                    },
+                    {
+                        "question": "Which tool is used to edit storyboards?",
+                        "options": [
+                            "Interface Builder in Xcode",
+                            "Keychain Access",
+                            "Instruments",
+                            "Terminal"
+                        ]
+                    },
+                    {
+                        "question": "Which object in a storyboard represents a screen?",
+                        "options": [
+                            "View Controller",
+                            "Table View Cell",
+                            "Segue",
+                            "Navigation Bar"
+                        ]
+                    },
+                    {
+                        "question": "What does a segue represent in a storyboard?",
+                        "options": [
+                            "A transition from one scene to another",
+                            "A custom view",
+                            "A network connection",
+                            "A background task"
+                        ]
+                    },
+                    {
+                        "question": "How do you set a view controller as the initial screen?",
+                        "options": [
+                            "Check 'Is Initial View Controller' in Attributes Inspector",
+                            "Rename its class to InitialViewController",
+                            "Place it at the top of the storyboard",
+                            "Connect it to AppDelegate"
+                        ]
+                    },
+                    {
+                        "question": "Which UI element allows navigation between multiple view controllers?",
+                        "options": [
+                            "UINavigationController",
+                            "UITableView",
+                            "UITabBarItem",
+                            "UILabel"
+                        ]
+                    },
+                    {
+                        "question": "Which storyboard element is used to create tab-based navigation?",
+                        "options": [
+                            "UITabBarController",
+                            "UINavigationController",
+                            "UISplitViewController",
+                            "UITableViewController"
+                        ]
+                    },
+                    {
+                        "question": "How are interface elements connected to code from storyboards?",
+                        "options": [
+                            "Through IBOutlets and IBActions",
+                            "Through URLSession",
+                            "Through UserDefaults",
+                            "Through Swift Packages"
+                        ]
+                    },
+                    {
+                        "question": "Which panel in Xcode lists all views and constraints in the current scene?",
+                        "options": [
+                            "Document Outline",
+                            "Navigator Area",
+                            "Debug Area",
+                            "Console"
+                        ]
+                    }
+                ],
+                "Medium": [
+                    {
+                        "question": "What is a common issue when using a single Main.storyboard for large apps?",
+                        "options": [
+                            "It becomes hard to manage and merge changes",
+                            "It prevents Auto Layout usage",
+                            "It disables segues",
+                            "It breaks dark mode"
+                        ]
+                    },
+                    {
+                        "question": "What is the purpose of a storyboard ID for a view controller?",
+                        "options": [
+                            "To instantiate it programmatically from the storyboard",
+                            "To track analytics of that screen",
+                            "To set its tab bar position",
+                            "To enable Auto Layout"
+                        ]
+                    },
+                    {
+                        "question": "Which method is typically used to prepare data before a segue transition?",
+                        "options": [
+                            "prepare(for:sender:)",
+                            "viewDidLoad()",
+                            "viewWillLayoutSubviews()",
+                            "application(_:didFinishLaunchingWithOptions:)"
+                        ]
+                    },
+                    {
+                        "question": "What is a benefit of using multiple storyboards instead of one?",
+                        "options": [
+                            "Improved modularity and easier team collaboration",
+                            "Faster network speed",
+                            "Automatic migration to SwiftUI",
+                            "Elimination of segues"
+                        ]
+                    },
+                    {
+                        "question": "Why might you use static cells in a UITableViewController storyboard scene?",
+                        "options": [
+                            "To build simple form-like tables without data source code",
+                            "To fetch remote data automatically",
+                            "To enable dynamic height for all cells",
+                            "To remove the need for delegates"
+                        ]
+                    },
+                    {
+                        "question": "What does an unwind segue allow you to do?",
+                        "options": [
+                            "Navigate back to a specific view controller in the stack",
+                            "Reset the storyboard",
+                            "Switch to another storyboard file",
+                            "Dismiss the keyboard"
+                        ]
+                    },
+                    {
+                        "question": "What is a risk of using storyboards heavily with Auto Layout?",
+                        "options": [
+                            "Conflicting constraints can be harder to debug visually",
+                            "Constraints only work in code",
+                            "Views cannot be reused",
+                            "Outlets cannot be connected"
+                        ]
+                    },
+                    {
+                        "question": "What type of segue would you use to present a full-screen modal view?",
+                        "options": [
+                            "Show (e.g. push) or Present Modally with full screen",
+                            "Popover presentation",
+                            "Unwind segue",
+                            "Custom unwind segue"
+                        ]
+                    },
+                    {
+                        "question": "Why is it often recommended to assign custom classes to view controllers in storyboards?",
+                        "options": [
+                            "To connect the storyboard scene to the correct Swift class",
+                            "To create more segues automatically",
+                            "To speed up compilation",
+                            "To prevent deallocation"
+                        ]
+                    },
+                    {
+                        "question": "Which setting in storyboard helps ensure UI adapts to different screen sizes?",
+                        "options": [
+                            "Auto Layout and Size Classes",
+                            "Storyboard ID",
+                            "Segue Identifier",
+                            "Module field"
+                        ]
+                    }
+                ],
+                "Hard": [
+                    {
+                        "question": "What is a major merge conflict issue with storyboards in large teams?",
+                        "options": [
+                            "They are XML files and can be difficult to merge manually",
+                            "They cannot be committed to Git",
+                            "They are binary-only files",
+                            "They always overwrite local changes"
+                        ]
+                    },
+                    {
+                        "question": "Why might you prefer programmatic UI or SwiftUI over complex storyboard hierarchies?",
+                        "options": [
+                            "Better control, reusability, and easier version control",
+                            "They are required by Apple",
+                            "Storyboards cannot use Auto Layout",
+                            "Storyboards don't support dark mode"
+                        ]
+                    },
+                    {
+                        "question": "How can you reduce storyboard bloat while still using Interface Builder?",
+                        "options": [
+                            "Split UI into multiple storyboards or use XIBs for individual screens",
+                            "Use only one storyboard for everything",
+                            "Avoid Auto Layout completely",
+                            "Disable segues entirely"
+                        ]
+                    },
+                    {
+                        "question": "What is a technical downside of using segues for all navigation logic?",
+                        "options": [
+                            "Navigation logic becomes tightly coupled to storyboard structure",
+                            "It always slows down the app",
+                            "It disallows dependency injection",
+                            "It breaks background modes"
+                        ]
+                    },
+                    {
+                        "question": "Why might you implement custom segue subclasses?",
+                        "options": [
+                            "To customize transition animations or behavior",
+                            "To override app lifecycle",
+                            "To manage push notifications",
+                            "To generate UI at runtime"
+                        ]
+                    },
+                    {
+                        "question": "How can you instantiate a view controller from a storyboard without a segue?",
+                        "options": [
+                            "Using instantiateViewController(withIdentifier:)",
+                            "Using loadViewIfNeeded()",
+                            "Using viewDidLoad()",
+                            "Using prepare(for:sender:)"
+                        ]
+                    },
+                    {
+                        "question": "What is a best practice when passing data between view controllers using segues?",
+                        "options": [
+                            "Use prepare(for:sender:) and set properties on the destination",
+                            "Use global variables for all data",
+                            "Store everything in UserDefaults",
+                            "Use notification center for all values"
+                        ]
+                    },
+                    {
+                        "question": "Why can overusing storyboard-based logic make refactoring harder?",
+                        "options": [
+                            "Logic is spread across visual connections and code",
+                            "Storyboards are not compiled",
+                            "Xcode does not open large storyboards",
+                            "Storyboard files cannot be renamed"
+                        ]
+                    },
+                    {
+                        "question": "Which approach helps with dependency injection when using storyboards?",
+                        "options": [
+                            "Instantiating controllers from storyboards in code and injecting dependencies manually",
+                            "Always using segues with no configuration",
+                            "Creating outlets for dependencies",
+                            "Using multiple initial view controllers"
+                        ]
+                    },
+                    {
+                        "question": "When using storyboards, why might runtime crashes occur despite a clean compile?",
+                        "options": [
+                            "Mismatched storyboard IDs, segue identifiers, or missing outlet connections",
+                            "Storyboard files cannot compile",
+                            "Swift version mismatch only",
+                            "Too many images in the asset catalog"
+                        ]
+                    }
+                ]
+            },
+            "Async/Await": {
+                "Easy": [
+                    {
+                        "question": "What is the main goal of async/await in Swift?",
+                        "options": [
+                            "To simplify writing asynchronous code",
+                            "To speed up UI animations",
+                            "To replace classes with structs",
+                            "To manage memory automatically"
+                        ]
+                    },
+                    {
+                        "question": "Which keyword is used to define an asynchronous function in Swift?",
+                        "options": [
+                            "async",
+                            "await",
+                            "suspend",
+                            "defer"
+                        ]
+                    },
+                    {
+                        "question": "Which keyword is used before calling an asynchronous function?",
+                        "options": [
+                            "await",
+                            "async",
+                            "try",
+                            "throws"
+                        ]
+                    },
+                    {
+                        "question": "Where can async functions be called directly without creating a Task?",
+                        "options": [
+                            "In other async functions",
+                            "In any synchronous function",
+                            "In property observers only",
+                            "In initializers only"
+                        ]
+                    },
+                    {
+                        "question": "What does concurrency mainly help with?",
+                        "options": [
+                            "Keeping apps responsive during long tasks",
+                            "Reducing app bundle size",
+                            "Improving code style only",
+                            "Managing storyboards"
+                        ]
+                    },
+                    {
+                        "question": "Which construct is used to run asynchronous work in a synchronous context?",
+                        "options": [
+                            "Task { }",
+                            "DispatchQueue.main.async { }",
+                            "Thread { }",
+                            "NotificationCenter.default.post"
+                        ]
+                    },
+                    {
+                        "question": "Which Swift feature replaced many closure-based completion handlers for async APIs?",
+                        "options": [
+                            "async/await",
+                            "property wrappers",
+                            "protocol extensions",
+                            "inheritance"
+                        ]
+                    },
+                    {
+                        "question": "What happens if you call an async function without await?",
+                        "options": [
+                            "It is a compile-time error",
+                            "The function runs synchronously",
+                            "The function returns immediately without work",
+                            "The app crashes at runtime"
+                        ]
+                    },
+                    {
+                        "question": "Which keyword is used to mark functions that can throw errors?",
+                        "options": [
+                            "throws",
+                            "error",
+                            "catch",
+                            "guard"
+                        ]
+                    },
+                    {
+                        "question": "Which Swift construct lets you handle errors from async functions?",
+                        "options": [
+                            "do-try-catch",
+                            "repeat-while",
+                            "guard-else",
+                            "if-let"
+                        ]
+                    }
+                ],
+                "Medium": [
+                    {
+                        "question": "What is the type returned by an async function that does not explicitly return a value?",
+                        "options": [
+                            "Void",
+                            "Any",
+                            "Result<Void, Error>",
+                            "Never"
+                        ]
+                    },
+                    {
+                        "question": "How can you run multiple async tasks in parallel and wait for all of them?",
+                        "options": [
+                            "Using async let declarations",
+                            "Using a serial DispatchQueue",
+                            "Using a semaphore only",
+                            "Using NotificationCenter"
+                        ]
+                    },
+                    {
+                        "question": "Which keyword combination defines a function that can both throw and be awaited?",
+                        "options": [
+                            "async throws",
+                            "throws await",
+                            "suspend throws",
+                            "async error"
+                        ]
+                    },
+                    {
+                        "question": "In Swift concurrency, what does Task represent?",
+                        "options": [
+                            "A unit of asynchronous work",
+                            "A UI element for to-do lists",
+                            "A storyboard scene",
+                            "A database table"
+                        ]
+                    },
+                    {
+                        "question": "Which Task initializer is used to create a detached task?",
+                        "options": [
+                            "Task.detached(priority:operation:)",
+                            "Task(priority:operation:)",
+                            "Task.runDetached(_:)",
+                            "DetachedTask.init(_:)"
+                        ]
+                    },
+                    {
+                        "question": "What is a potential issue of using detached tasks excessively?",
+                        "options": [
+                            "They ignore structured concurrency, making cancellation and priority harder to manage",
+                            "They block the main thread",
+                            "They prevent URLSession from working",
+                            "They disable async/await in other tasks"
+                        ]
+                    },
+                    {
+                        "question": "Which attribute allows an actor or class to bridge legacy closure-based APIs to async/await?",
+                        "options": [
+                            "@available and continuations with withCheckedContinuation",
+                            "@objc",
+                            "@escaping",
+                            "@inlinable"
+                        ]
+                    },
+                    {
+                        "question": "What does Task.sleep(nanoseconds:) do?",
+                        "options": [
+                            "Suspends the current task for the given duration",
+                            "Blocks the main thread for the given time",
+                            "Pauses all tasks globally",
+                            "Cancels the current task"
+                        ]
+                    },
+                    {
+                        "question": "What feature of Swift concurrency helps avoid data races with shared mutable state?",
+                        "options": [
+                            "Actors",
+                            "Optionals",
+                            "Generics",
+                            "Structs"
+                        ]
+                    },
+                    {
+                        "question": "Why is it important to mark long-running operations as async?",
+                        "options": [
+                            "To avoid blocking threads and keep UI responsive",
+                            "To reduce code size",
+                            "To avoid ARC",
+                            "To improve storyboard loading"
+                        ]
+                    }
+                ],
+                "Hard": [
+                    {
+                        "question": "What is structured concurrency in Swift?",
+                        "options": [
+                            "A model where tasks form a tree-like structure with clear parent-child relationships",
+                            "A way to reorder async tasks randomly",
+                            "A mechanism to manage only main thread work",
+                            "A design pattern for class inheritance"
+                        ]
+                    },
+                    {
+                        "question": "Why might you use withCheckedContinuation?",
+                        "options": [
+                            "To bridge a callback-based API into async/await safely",
+                            "To enforce actor isolation",
+                            "To measure execution time",
+                            "To cancel a task early"
+                        ]
+                    },
+                    {
+                        "question": "What does it mean that async functions are 'cooperative' with the scheduler?",
+                        "options": [
+                            "They suspend at await points, allowing other tasks to run",
+                            "They monopolize the thread until completion",
+                            "They automatically run on the main thread",
+                            "They always run on background threads"
+                        ]
+                    },
+                    {
+                        "question": "Why is calling blocking APIs inside async functions problematic?",
+                        "options": [
+                            "It defeats concurrency by blocking threads instead of suspending",
+                            "It prevents compilation",
+                            "It disables cancellation entirely",
+                            "It auto-converts them to async"
+                        ]
+                    },
+                    {
+                        "question": "What is a key advantage of using actors over locks for concurrency control?",
+                        "options": [
+                            "Actors provide isolation through language-level guarantees",
+                            "Actors are always faster than locks",
+                            "Actors automatically persist data",
+                            "Actors require no memory"
+                        ]
+                    },
+                    {
+                        "question": "How does task cancellation propagate in structured concurrency?",
+                        "options": [
+                            "Cancellation flows from parent tasks down to child tasks",
+                            "Cancellation only applies to detached tasks",
+                            "Cancellation always restarts tasks",
+                            "Cancellation never propagates automatically"
+                        ]
+                    },
+                    {
+                        "question": "Why is it risky to capture self strongly in long-lived async tasks?",
+                        "options": [
+                            "It can cause retain cycles and memory leaks",
+                            "It always crashes the app",
+                            "It stops other tasks from executing",
+                            "It changes task priority unexpectedly"
+                        ]
+                    },
+                    {
+                        "question": "What is a safe pattern to update UI from an async function?",
+                        "options": [
+                            "Use @MainActor or call await MainActor.run",
+                            "Call UI code from any background Task",
+                            "Use DispatchQueue.global() for UI",
+                            "Use NotificationCenter.post"
+                        ]
+                    },
+                    {
+                        "question": "Why might you use TaskGroup?",
+                        "options": [
+                            "To dynamically spawn and manage multiple child tasks and aggregate their results",
+                            "To block threads in a group",
+                            "To manage only main thread tasks",
+                            "To schedule timers"
+                        ]
+                    },
+                    {
+                        "question": "What is a common best practice when calling async functions inside SwiftUI views?",
+                        "options": [
+                            "Trigger them from lifecycle events (like .task or .onAppear) instead of directly in body",
+                            "Call them directly in the body without Task",
+                            "Use detached tasks for all calls",
+                            "Block the main thread first"
+                        ]
+                    }
+                ]
+            },
+            "URLSession": {
+                "Easy": [
+                    {
+                        "question": "What is URLSession mainly used for?",
+                        "options": [
+                            "Performing network requests",
+                            "Rendering UI layouts",
+                            "Managing CoreData storage",
+                            "Handling animations"
+                        ]
+                    },
+                    {
+                        "question": "Which type represents a URL in Swift?",
+                        "options": [
+                            "URL",
+                            "String",
+                            "URI",
+                            "NSURLRequest"
+                        ]
+                    },
+                    {
+                        "question": "Which method creates a simple data task with a completion handler?",
+                        "options": [
+                            "dataTask(with:completionHandler:)",
+                            "uploadTask(with:from:)",
+                            "downloadTask(with:)",
+                            "streamTask(with:)"
+                        ]
+                    },
+                    {
+                        "question": "Which HTTP method is used by default in a URLRequest?",
+                        "options": [
+                            "GET",
+                            "POST",
+                            "PUT",
+                            "DELETE"
+                        ]
+                    },
+                    {
+                        "question": "Which property of URLRequest is used to set HTTP headers?",
+                        "options": [
+                            "allHTTPHeaderFields",
+                            "headerBody",
+                            "httpHeaders",
+                            "metaData"
+                        ]
+                    },
+                    {
+                        "question": "Which URLSession configuration is suitable for basic in-app requests?",
+                        "options": [
+                            ".default",
+                            ".ephemeral",
+                            ".background",
+                            ".offline"
+                        ]
+                    },
+                    {
+                        "question": "What kind of value is returned in the completion handler of dataTask?",
+                        "options": [
+                            "Data?, URLResponse?, Error?",
+                            "String, Int, Error?",
+                            "URL, Data, Bool",
+                            "HTTPURLResponse, URL, Error"
+                        ]
+                    },
+                    {
+                        "question": "What must you do after creating a data task to start it?",
+                        "options": [
+                            "Call resume() on the task",
+                            "Call start() on URLSession",
+                            "Call begin() on URL",
+                            "Nothing, it starts automatically"
+                        ]
+                    },
+                    {
+                        "question": "Which class is used to represent HTTP-specific responses?",
+                        "options": [
+                            "HTTPURLResponse",
+                            "URLResponse",
+                            "URLRequest",
+                            "NSURL"
+                        ]
+                    },
+                    {
+                        "question": "Which property of HTTPURLResponse commonly holds the status code?",
+                        "options": [
+                            "statusCode",
+                            "code",
+                            "responseCode",
+                            "httpStatus"
+                        ]
+                    }
+                ],
+                "Medium": [
+                    {
+                        "question": "Which configuration is best for requests that should not be persisted, like private browsing?",
+                        "options": [
+                            "ephemeral",
+                            "default",
+                            "background",
+                            "cached"
+                        ]
+                    },
+                    {
+                        "question": "Which configuration is used for tasks that continue even if the app is suspended?",
+                        "options": [
+                            "background",
+                            "default",
+                            "ephemeral",
+                            "offline"
+                        ]
+                    },
+                    {
+                        "question": "What is a common way to decode JSON received from URLSession?",
+                        "options": [
+                            "Using JSONDecoder().decode(_:from:)",
+                            "Using String(data:encoding:)",
+                            "Using PropertyListEncoder",
+                            "Using UserDefaults.standard"
+                        ]
+                    },
+                    {
+                        "question": "What should you check before decoding HTTP response data?",
+                        "options": [
+                            "That the HTTP status code indicates success",
+                            "That the URLRequest is nil",
+                            "That the device is charging",
+                            "That the bundle identifier matches"
+                        ]
+                    },
+                    {
+                        "question": "Why is it important to handle errors from dataTask?",
+                        "options": [
+                            "Network requests can fail for many reasons like no connection or invalid URLs",
+                            "It increases app bundle size",
+                            "It enables storyboards",
+                            "It reduces CPU usage always"
+                        ]
+                    },
+                    {
+                        "question": "How can you set a timeout interval for a URLRequest?",
+                        "options": [
+                            "Set timeoutInterval on URLRequest",
+                            "Set timeout on URL",
+                            "Set interval on URLResponse",
+                            "Use DispatchQueue.main.asyncAfter"
+                        ]
+                    },
+                    {
+                        "question": "When should you use uploadTask instead of dataTask?",
+                        "options": [
+                            "When sending large files or data to a server",
+                            "When only fetching small JSON responses",
+                            "When you need no body in the request",
+                            "When making local file reads"
+                        ]
+                    },
+                    {
+                        "question": "Why might you use URLCache with URLSession?",
+                        "options": [
+                            "To cache responses and reduce repeated network calls",
+                            "To store app configurations",
+                            "To save user credentials",
+                            "To cache CoreData entities"
+                        ]
+                    },
+                    {
+                        "question": "Which delegate can you implement for more advanced control over URLSession tasks?",
+                        "options": [
+                            "URLSessionDelegate and related task delegates",
+                            "UITableViewDelegate",
+                            "UIApplicationDelegate",
+                            "NSFetchedResultsControllerDelegate"
+                        ]
+                    },
+                    {
+                        "question": "How can you ensure UI updates occur on the main thread after a network response?",
+                        "options": [
+                            "DispatchQueue.main.async { /* update UI */ }",
+                            "DispatchQueue.global().async { /* update UI */ }",
+                            "Call UI code directly in completion",
+                            "Use URLSession.mainThread"
+                        ]
+                    }
+                ],
+                "Hard": [
+                    {
+                        "question": "What is the benefit of using URLSession with async/await APIs?",
+                        "options": [
+                            "Cleaner, more readable asynchronous networking code",
+                            "Automatic offline support",
+                            "JSON decoding without errors",
+                            "Elimination of status codes"
+                        ]
+                    },
+                    {
+                        "question": "Which security-related header is commonly used for sending tokens with URLSession requests?",
+                        "options": [
+                            "Authorization",
+                            "Content-Encoding",
+                            "Accept-Language",
+                            "User-Agent"
+                        ]
+                    },
+                    {
+                        "question": "Why is it important to validate server certificates in networking?",
+                        "options": [
+                            "To prevent man-in-the-middle attacks",
+                            "To reduce latency",
+                            "To log all responses",
+                            "To improve JSON parsing"
+                        ]
+                    },
+                    {
+                        "question": "Why might you want to set waitsForConnectivity on a URLSessionConfiguration?",
+                        "options": [
+                            "To pause tasks until network becomes available instead of failing immediately",
+                            "To immediately cancel tasks on no network",
+                            "To disable background tasks",
+                            "To force all traffic over cellular"
+                        ]
+                    },
+                    {
+                        "question": "When handling large downloads, which URLSession method is preferable?",
+                        "options": [
+                            "downloadTask(with:)",
+                            "dataTask(with:)",
+                            "uploadTask(with:from:)",
+                            "streamTask(with:)"
+                        ]
+                    },
+                    {
+                        "question": "What is the purpose of HTTP keep-alive connections managed by URLSession?",
+                        "options": [
+                            "To reuse TCP connections and reduce latency",
+                            "To force re-authentication",
+                            "To cache all responses",
+                            "To block redirects"
+                        ]
+                    },
+                    {
+                        "question": "Why should sensitive data sometimes avoid being cached by URLCache?",
+                        "options": [
+                            "To avoid storing confidential information on disk",
+                            "To speed up all requests",
+                            "To reduce CPU performance",
+                            "To enable background fetch"
+                        ]
+                    },
+                    {
+                        "question": "What is a potential risk of ignoring the URLSession error parameter in completion handlers?",
+                        "options": [
+                            "You may treat failed requests as successful and mis-handle data",
+                            "The task will run twice",
+                            "URLSession stops working",
+                            "The app will not compile"
+                        ]
+                    },
+                    {
+                        "question": "What is a potential risk of ignoring the URLSession error parameter in completion handlers?",
+                        "options": [
+                            "You may treat failed requests as successful and mis-handle data",
+                            "The task will run twice",
+                            "URLSession stops working",
+                            "The app will not compile"
+                        ]
+                    },        {
+                        "question": "What is a potential risk of ignoring the URLSession error parameter in completion handlers?",
+                        "options": [
+                            "You may treat failed requests as successful and mis-handle data",
+                            "The task will run twice",
+                            "URLSession stops working",
+                            "The app will not compile"
+                        ]
+                    }]
+            }
         }
-      ],
-      "Medium": [
-        {
-          "question": "What does @Binding provide between two SwiftUI views?",
-          "options": [
-            "A two-way connection to a value",
-            "A one-way read-only connection",
-            "A persistent storage in UserDefaults",
-            "A networking connection"
-          ]
-        },
-        {
-          "question": "Which container allows lazy loading of rows in SwiftUI?",
-          "options": [
-            "LazyVStack",
-            "VStack",
-            "HStack",
-            "Group"
-          ]
-        },
-        {
-          "question": "Which modifier is used to animate changes to a view’s state?",
-          "options": [
-            ".animation(_:value:)",
-            ".withAnimation()",
-            ".transition()",
-            ".matchedGeometryEffect()"
-          ]
-        },
-        {
-          "question": "Which property wrapper subscribes to an observable reference type created outside a view?",
-          "options": [
-            "@ObservedObject",
-            "@StateObject",
-            "@Environment",
-            "@Binding"
-          ]
-        },
-        {
-          "question": "Which view is used for grouping controls in a settings-like layout?",
-          "options": [
-            "Form",
-            "Table",
-            "ScrollView",
-            "Group"
-          ]
-        },
-        {
-          "question": "What does .sheet(isPresented:) present?",
-          "options": [
-            "A modal view from the bottom",
-            "A full screen cover only",
-            "A push onto NavigationStack",
-            "A popover only on iPad"
-          ]
-        },
-        {
-          "question": "What does .onAppear perform in SwiftUI?",
-          "options": [
-            "Runs code when the view becomes visible",
-            "Runs code when the app launches",
-            "Runs code before compilation",
-            "Runs code only when the app terminates"
-          ]
-        },
-        {
-          "question": "What is the correct way to observe environment changes like color scheme?",
-          "options": [
-            "@Environment(\\.colorScheme) var colorScheme",
-            "@State var colorScheme",
-            "@ObservedObject var colorScheme",
-            "@EnvironmentObject var colorScheme"
-          ]
-        },
-        {
-          "question": "Which view is appropriate for building navigation-based flows?",
-          "options": [
-            "NavigationStack",
-            "TabView",
-            "Form",
-            "GroupBox"
-          ]
-        },
-        {
-          "question": "What is the purpose of the PreviewProvider in SwiftUI?",
-          "options": [
-            "To provide Xcode canvas previews for a view",
-            "To manage runtime logging",
-            "To configure production builds",
-            "To handle network mocking"
-          ]
-        }
-      ],
-      "Hard": [
-        {
-          "question": "What happens internally when a @State property changes in SwiftUI?",
-          "options": [
-            "The view invalidates and recomputes its body",
-            "The entire view hierarchy is destroyed",
-            "Only sibling views are re-rendered",
-            "The app restarts the main run loop"
-          ]
-        },
-        {
-          "question": "When should @StateObject be preferred over @ObservedObject?",
-          "options": [
-            "When the view owns the lifecycle of the object",
-            "When the object is passed in from a parent view",
-            "When the object is global",
-            "When the object is immutable"
-          ]
-        },
-        {
-          "question": "What is the main advantage of using .transaction in SwiftUI?",
-          "options": [
-            "To customize how state changes are animated",
-            "To manage database transactions",
-            "To handle memory allocation",
-            "To schedule background tasks"
-          ]
-        },
-        {
-          "question": "Which SwiftUI feature is most closely related to diffing the view hierarchy?",
-          "options": [
-            "The identity of views determined by their structure and modifiers",
-            "The unique IDs of all subviews",
-            "The underlying UIKit view tags",
-            "Manual calls to reloadData"
-          ]
-        },
-        {
-          "question": "What is a potential issue when using many nested stacks (VStack/HStack) deeply?",
-          "options": [
-            "Performance and layout complexity can increase",
-            "Compilation will always fail",
-            "SwiftUI will not compile the body",
-            "NavigationStack stops working"
-          ]
-        },
-        {
-          "question": "How can you prevent state from resetting when a parent view is recreated?",
-          "options": [
-            "Use @StateObject in the child instead of @ObservedObject",
-            "Use only @State everywhere",
-            "Use @Environment for all values",
-            "Avoid using any property wrappers"
-          ]
-        },
-        {
-          "question": "Why might you use a custom ViewModifier in SwiftUI?",
-          "options": [
-            "To reuse complex combinations of modifiers across views",
-            "To replace all property wrappers",
-            "To handle networking logic",
-            "To manage asynchronous tasks only"
-          ]
-        },
-        {
-          "question": "What is the role of EquatableView in SwiftUI?",
-          "options": [
-            "To skip view updates when input values haven't changed",
-            "To guarantee views are hashable",
-            "To force redraw for each state change",
-            "To store views in a Set"
-          ]
-        },
-        {
-          "question": "How can you conditionally apply a modifier in a clean way?",
-          "options": [
-            "By using a custom extension that applies a modifier based on a Boolean",
-            "By using if statements only outside the body",
-            "By using only ternary operators in all views",
-            "By wrapping all modifiers in a ZStack"
-          ]
-        },
-        {
-          "question": "What is a common cause of 'Modifying state during view update' warnings?",
-          "options": [
-            "Changing state from inside the view’s body calculation",
-            "Using @StateObject instead of @ObservedObject",
-            "Calling NavigationStack inside a List",
-            "Using Spacer inside an HStack"
-          ]
-        }
-      ]
-    },
-    "UIKit": {
-      "Easy": [
-        {
-          "question": "What is UIKit mainly used for?",
-          "options": [
-            "Building imperative user interfaces for iOS",
-            "Writing command-line tools",
-            "Developing Android apps",
-            "Managing cloud servers"
-          ]
-        },
-        {
-          "question": "Which class represents a screen in UIKit?",
-          "options": [
-            "UIViewController",
-            "UIView",
-            "UIApplication",
-            "UIWindowScene"
-          ]
-        },
-        {
-          "question": "Which class is used to display tappable text or images in UIKit?",
-          "options": [
-            "UIButton",
-            "UILabel",
-            "UITextField",
-            "UITableViewCell"
-          ]
-        },
-        {
-          "question": "Which class is used to display static text?",
-          "options": [
-            "UILabel",
-            "UITextView",
-            "UIImageView",
-            "UISlider"
-          ]
-        },
-        {
-          "question": "Which UIKit object holds and manages all visible content?",
-          "options": [
-            "UIWindow",
-            "UIApplication",
-            "UIView",
-            "UIViewController"
-          ]
-        },
-        {
-          "question": "Which UI component is best suited to display a list of rows?",
-          "options": [
-            "UITableView",
-            "UIScrollView",
-            "UICollectionView",
-            "UIPickerView"
-          ]
-        },
-        {
-          "question": "What does Auto Layout manage in UIKit?",
-          "options": [
-            "Constraints and positions of UI elements",
-            "Networking requests",
-            "Database queries",
-            "Multithreading"
-          ]
-        },
-        {
-          "question": "Which class shows an image on screen?",
-          "options": [
-            "UIImageView",
-            "UILabel",
-            "UIButton",
-            "UIPageControl"
-          ]
-        },
-        {
-          "question": "Which control captures simple text input?",
-          "options": [
-            "UITextField",
-            "UILabel",
-            "UIImageView",
-            "UISwitch"
-          ]
-        },
-        {
-          "question": "Which UIKit concept is responsible for responding to touch events?",
-          "options": [
-            "UIResponder",
-            "UIView",
-            "CALayer",
-            "NSOperation"
-          ]
-        }
-      ],
-      "Medium": [
-        {
-          "question": "Which method is called after a view controller’s view is loaded into memory?",
-          "options": [
-            "viewDidLoad",
-            "viewWillAppear",
-            "viewDidAppear",
-            "viewWillLayoutSubviews"
-          ]
-        },
-        {
-          "question": "What is the role of UINavigationController?",
-          "options": [
-            "It manages a stack of view controllers",
-            "It manages tab bar items",
-            "It handles animation only",
-            "It manages CoreData entities"
-          ]
-        },
-        {
-          "question": "Which UIKit class should you subclass to create a custom list cell?",
-          "options": [
-            "UITableViewCell",
-            "UIView",
-            "UIControl",
-            "UIStackView"
-          ]
-        },
-        {
-          "question": "Which delegate method configures each cell in a UITableView?",
-          "options": [
-            "tableView(_:cellForRowAt:)",
-            "tableView(_:numberOfRowsInSection:)",
-            "numberOfSections(in:)",
-            "tableView(_:didSelectRowAt:)"
-          ]
-        },
-        {
-          "question": "What is the primary purpose of Interface Builder outlets (IBOutlets)?",
-          "options": [
-            "To connect UI elements from storyboards/XIBs to code",
-            "To handle push notifications",
-            "To manage app lifecycle events",
-            "To send analytics events"
-          ]
-        },
-        {
-          "question": "What pattern do many UIKit classes use for communication like UITableView?",
-          "options": [
-            "Delegate pattern",
-            "Factory pattern",
-            "Singleton pattern",
-            "Strategy pattern"
-          ]
-        },
-        {
-          "question": "Which class is best for grid-like layouts of items?",
-          "options": [
-            "UICollectionView",
-            "UITableView",
-            "UIScrollView",
-            "UIStackView"
-          ]
-        },
-        {
-          "question": "Which property of UIView affects transparency?",
-          "options": [
-            "alpha",
-            "tintColor",
-            "backgroundColor",
-            "contentMode"
-          ]
-        },
-        {
-          "question": "Which component typically manages app-level events like launching and termination?",
-          "options": [
-            "UIApplicationDelegate",
-            "UIViewController",
-            "UIWindow",
-            "UITabBarController"
-          ]
-        },
-        {
-          "question": "Which method should you use to present a view controller modally from another?",
-          "options": [
-            "present(_:animated:completion:)",
-            "pushViewController(_:animated:)",
-            "show(_:sender:)",
-            "performSegue(withIdentifier:sender:)"
-          ]
-        }
-      ],
-      "Hard": [
-        {
-          "question": "What is the purpose of layoutSubviews in UIView subclasses?",
-          "options": [
-            "To adjust the layout of subviews when bounds change",
-            "To start network calls",
-            "To handle memory warnings",
-            "To register gesture recognizers"
-          ]
-        },
-        {
-          "question": "Why might you use a custom CALayer subclass?",
-          "options": [
-            "To implement complex, performant custom drawing",
-            "To handle JSON decoding",
-            "To manage CoreData entities",
-            "To manage URLSession configurations"
-          ]
-        },
-        {
-          "question": "What is the risk of creating a strong reference cycle with delegates in UIKit?",
-          "options": [
-            "It can cause memory leaks because objects never deallocate",
-            "It speeds up UI rendering but uses more CPU",
-            "It automatically cancels all network requests",
-            "It prevents user interaction gestures"
-          ]
-        },
-        {
-          "question": "Which approach helps improve scrolling performance in UITableView?",
-          "options": [
-            "Cell reuse with reusable identifiers",
-            "Creating new cells every time without reuse",
-            "Triggering layoutIfNeeded on every scroll step",
-            "Using synchronous network calls in cellForRowAt"
-          ]
-        },
-        {
-          "question": "Why might you use constraints’ contentCompressionResistancePriority?",
-          "options": [
-            "To control how views resist being shrunk",
-            "To handle view rotation animations",
-            "To control CPU compression levels",
-            "To adjust navigation bar height"
-          ]
-        },
-        {
-          "question": "What is the main difference between frame and bounds of a UIView?",
-          "options": [
-            "Frame is in superview’s coordinate space, bounds is in the view’s own",
-            "Frame is always (0,0), bounds is not",
-            "Bounds includes transforms, frame does not",
-            "They are always identical"
-          ]
-        },
-        {
-          "question": "Why is performing heavy work on the main thread discouraged in UIKit apps?",
-          "options": [
-            "It blocks UI updates and makes the app feel unresponsive",
-            "It speeds up UI but uses more memory",
-            "It prevents background refresh",
-            "It breaks Auto Layout constraints"
-          ]
-        },
-        {
-          "question": "When implementing custom transitions between view controllers, which protocol is typically adopted?",
-          "options": [
-            "UIViewControllerAnimatedTransitioning",
-            "UITableViewDataSource",
-            "UICollectionViewDelegate",
-            "UIScrollViewDelegate"
-          ]
-        },
-        {
-          "question": "What is a common use case for UIAppearance?",
-          "options": [
-            "To globally customize the appearance of UIKit controls",
-            "To manage app localization",
-            "To manage core data migrations",
-            "To handle gesture recognizers"
-          ]
-        },
-        {
-          "question": "Why might you override traitCollectionDidChange in a view or view controller?",
-          "options": [
-            "To respond to environment changes like Dark Mode or size class changes",
-            "To manage push notification tokens",
-            "To handle keychain changes",
-            "To respond to network reachability changes"
-          ]
-        }
-      ]
-    },
-    "AppKit": {
-      "Easy": [
-        {
-          "question": "What is AppKit mainly used for?",
-          "options": [
-            "Building macOS applications",
-            "Developing iOS apps only",
-            "Writing Linux drivers",
-            "Creating Android apps"
-          ]
-        },
-        {
-          "question": "Which class represents a window in AppKit?",
-          "options": [
-            "NSWindow",
-            "NSView",
-            "NSApplication",
-            "UIView"
-          ]
-        },
-        {
-          "question": "Which AppKit class is used to display text labels?",
-          "options": [
-            "NSTextField",
-            "NSTextView",
-            "NSButton",
-            "NSImageView"
-          ]
-        },
-        {
-          "question": "Which framework is AppKit most closely related to on iOS?",
-          "options": [
-            "UIKit",
-            "SwiftUI",
-            "CoreData",
-            "SpriteKit"
-          ]
-        },
-        {
-          "question": "Which class represents the main application object in AppKit?",
-          "options": [
-            "NSApplication",
-            "UIApplication",
-            "NSWindowController",
-            "NSResponder"
-          ]
-        },
-        {
-          "question": "Which control is used for clickable buttons in AppKit?",
-          "options": [
-            "NSButton",
-            "NSControl",
-            "NSTableView",
-            "NSCollectionView"
-          ]
-        },
-        {
-          "question": "Which class is used for displaying images?",
-          "options": [
-            "NSImageView",
-            "NSButton",
-            "NSTextField",
-            "NSAlert"
-          ]
-        },
-        {
-          "question": "Which AppKit component is used to display lists of rows and columns?",
-          "options": [
-            "NSTableView",
-            "NSCollectionView",
-            "NSTextView",
-            "NSBox"
-          ]
-        },
-        {
-          "question": "Which class represents a basic drawable region in AppKit?",
-          "options": [
-            "NSView",
-            "NSWindow",
-            "NSBox",
-            "NSResponder"
-          ]
-        },
-        {
-          "question": "Which menu is typically always present at the top of a macOS screen?",
-          "options": [
-            "Main menu bar",
-            "Contextual menu",
-            "Status bar menu",
-            "Dock menu"
-          ]
-        }
-      ],
-      "Medium": [
-        {
-          "question": "Which object typically acts as the app's delegate in an AppKit app?",
-          "options": [
-            "NSApplicationDelegate",
-            "NSWindowDelegate",
-            "NSViewController",
-            "NSResponder"
-          ]
-        },
-        {
-          "question": "Which class should you subclass to manage the content of an NSWindow?",
-          "options": [
-            "NSWindowController",
-            "NSViewController",
-            "NSApplication",
-            "NSTableView"
-          ]
-        },
-        {
-          "question": "What is the role of NSResponder in AppKit?",
-          "options": [
-            "It handles events in a responder chain",
-            "It stores application settings",
-            "It manages window lifecycles",
-            "It handles background networking"
-          ]
-        },
-        {
-          "question": "Which AppKit view is typically used for displaying rich, editable text?",
-          "options": [
-            "NSTextView",
-            "NSTextField",
-            "NSLabel",
-            "NSImageView"
-          ]
-        },
-        {
-          "question": "What mechanism does AppKit use for drag and drop and other complex interactions?",
-          "options": [
-            "Responder chain",
-            "Storyboard segues",
-            "SwiftUI bindings",
-            "Core Animation triggers"
-          ]
-        },
-        {
-          "question": "Which class is commonly used to present alerts in macOS?",
-          "options": [
-            "NSAlert",
-            "UIAlertController",
-            "NSNotificationCenter",
-            "NSPanel"
-          ]
-        },
-        {
-          "question": "Which control is used for popup menus in AppKit?",
-          "options": [
-            "NSPopUpButton",
-            "NSComboBox",
-            "NSTextField",
-            "NSMenuButton"
-          ]
-        },
-        {
-          "question": "Which class manages the tabs interface similar to a browser on macOS?",
-          "options": [
-            "NSTabView",
-            "NSPageController",
-            "NSCollectionView",
-            "NSTableView"
-          ]
-        },
-        {
-          "question": "Which AppKit view is suitable for displaying a grid of items?",
-          "options": [
-            "NSCollectionView",
-            "NSTableView",
-            "NSScrollView",
-            "NSTextView"
-          ]
-        },
-        {
-          "question": "Which object manages menu items in the macOS menu bar?",
-          "options": [
-            "NSMenu",
-            "NSStatusItem",
-            "NSButton",
-            "NSPanel"
-          ]
-        }
-      ],
-      "Hard": [
-        {
-          "question": "Why might you override draw(_:) in an NSView subclass?",
-          "options": [
-            "To perform custom drawing with Core Graphics",
-            "To manage network requests",
-            "To configure Auto Layout constraints",
-            "To handle app lifecycle events"
-          ]
-        },
-        {
-          "question": "What is a common way to support Dark Mode in AppKit?",
-          "options": [
-            "Using dynamic colors and responding to effectiveAppearance changes",
-            "Using only NSColor.black and NSColor.white",
-            "Disabling all custom drawing",
-            "Rebuilding the window each time"
-          ]
-        },
-        {
-          "question": "How does the responder chain help with keyboard shortcuts in AppKit?",
-          "options": [
-            "It routes actions to the first object that can handle them",
-            "It blocks all unused events",
-            "It always sends events to NSApplicationDelegate first",
-            "It logs events for debugging"
-          ]
-        },
-        {
-          "question": "Why might you use NSOutlineView instead of NSTableView?",
-          "options": [
-            "To display hierarchical data in a collapsible format",
-            "To display only flat lists",
-            "To embed arbitrary SwiftUI views",
-            "To handle network-driven cells automatically"
-          ]
-        },
-        {
-          "question": "What is a benefit of using NSScrollView around other views?",
-          "options": [
-            "It provides scrolling behavior for content larger than its bounds",
-            "It automatically animates view transitions",
-            "It manages keyboard shortcuts",
-            "It handles all drag-and-drop events"
-          ]
-        },
-        {
-          "question": "What is a potential pitfall when mixing AppKit and SwiftUI in the same macOS app?",
-          "options": [
-            "Managing two different lifecycle and layout systems",
-            "CoreData stops working",
-            "Menu bars are disabled",
-            "Auto Layout cannot be used"
-          ]
-        },
-        {
-          "question": "Which class would you use for advanced text layout and performance in AppKit?",
-          "options": [
-            "NSTextStorage with NSLayoutManager",
-            "NSTextField only",
-            "NSImageView",
-            "NSBox"
-          ]
-        },
-        {
-          "question": "Why is it important to manage strong references in AppKit's delegate patterns?",
-          "options": [
-            "To avoid retain cycles and memory leaks",
-            "To ensure fast drawing",
-            "To guarantee ordering of menu items",
-            "To support Dark Mode"
-          ]
-        },
-        {
-          "question": "What role does NSRunLoop play in AppKit applications?",
-          "options": [
-            "It manages the event loop for input and timers",
-            "It manages the disk cache",
-            "It compiles Interface Builder files",
-            "It creates windows automatically"
-          ]
-        },
-        {
-          "question": "Why might you use NSPanel instead of NSWindow?",
-          "options": [
-            "For auxiliary floating windows like tool palettes",
-            "For main document windows",
-            "For full-screen games only",
-            "For the menu bar"
-          ]
-        }
-      ]
-    },
-    "Storyboard": {
-      "Easy": [
-        {
-          "question": "What is a storyboard in iOS development?",
-          "options": [
-            "A visual representation of app UI and flow",
-            "A JSON configuration file",
-            "A Swift package",
-            "A log of user actions"
-          ]
-        },
-        {
-          "question": "Which file extension do storyboards use?",
-          "options": [
-            ".storyboard",
-            ".xib",
-            ".swift",
-            ".plist"
-          ]
-        },
-        {
-          "question": "Which tool is used to edit storyboards?",
-          "options": [
-            "Interface Builder in Xcode",
-            "Keychain Access",
-            "Instruments",
-            "Terminal"
-          ]
-        },
-        {
-          "question": "Which object in a storyboard represents a screen?",
-          "options": [
-            "View Controller",
-            "Table View Cell",
-            "Segue",
-            "Navigation Bar"
-          ]
-        },
-        {
-          "question": "What does a segue represent in a storyboard?",
-          "options": [
-            "A transition from one scene to another",
-            "A custom view",
-            "A network connection",
-            "A background task"
-          ]
-        },
-        {
-          "question": "How do you set a view controller as the initial screen?",
-          "options": [
-            "Check 'Is Initial View Controller' in Attributes Inspector",
-            "Rename its class to InitialViewController",
-            "Place it at the top of the storyboard",
-            "Connect it to AppDelegate"
-          ]
-        },
-        {
-          "question": "Which UI element allows navigation between multiple view controllers?",
-          "options": [
-            "UINavigationController",
-            "UITableView",
-            "UITabBarItem",
-            "UILabel"
-          ]
-        },
-        {
-          "question": "Which storyboard element is used to create tab-based navigation?",
-          "options": [
-            "UITabBarController",
-            "UINavigationController",
-            "UISplitViewController",
-            "UITableViewController"
-          ]
-        },
-        {
-          "question": "How are interface elements connected to code from storyboards?",
-          "options": [
-            "Through IBOutlets and IBActions",
-            "Through URLSession",
-            "Through UserDefaults",
-            "Through Swift Packages"
-          ]
-        },
-        {
-          "question": "Which panel in Xcode lists all views and constraints in the current scene?",
-          "options": [
-            "Document Outline",
-            "Navigator Area",
-            "Debug Area",
-            "Console"
-          ]
-        }
-      ],
-      "Medium": [
-        {
-          "question": "What is a common issue when using a single Main.storyboard for large apps?",
-          "options": [
-            "It becomes hard to manage and merge changes",
-            "It prevents Auto Layout usage",
-            "It disables segues",
-            "It breaks dark mode"
-          ]
-        },
-        {
-          "question": "What is the purpose of a storyboard ID for a view controller?",
-          "options": [
-            "To instantiate it programmatically from the storyboard",
-            "To track analytics of that screen",
-            "To set its tab bar position",
-            "To enable Auto Layout"
-          ]
-        },
-        {
-          "question": "Which method is typically used to prepare data before a segue transition?",
-          "options": [
-            "prepare(for:sender:)",
-            "viewDidLoad()",
-            "viewWillLayoutSubviews()",
-            "application(_:didFinishLaunchingWithOptions:)"
-          ]
-        },
-        {
-          "question": "What is a benefit of using multiple storyboards instead of one?",
-          "options": [
-            "Improved modularity and easier team collaboration",
-            "Faster network speed",
-            "Automatic migration to SwiftUI",
-            "Elimination of segues"
-          ]
-        },
-        {
-          "question": "Why might you use static cells in a UITableViewController storyboard scene?",
-          "options": [
-            "To build simple form-like tables without data source code",
-            "To fetch remote data automatically",
-            "To enable dynamic height for all cells",
-            "To remove the need for delegates"
-          ]
-        },
-        {
-          "question": "What does an unwind segue allow you to do?",
-          "options": [
-            "Navigate back to a specific view controller in the stack",
-            "Reset the storyboard",
-            "Switch to another storyboard file",
-            "Dismiss the keyboard"
-          ]
-        },
-        {
-          "question": "What is a risk of using storyboards heavily with Auto Layout?",
-          "options": [
-            "Conflicting constraints can be harder to debug visually",
-            "Constraints only work in code",
-            "Views cannot be reused",
-            "Outlets cannot be connected"
-          ]
-        },
-        {
-          "question": "What type of segue would you use to present a full-screen modal view?",
-          "options": [
-            "Show (e.g. push) or Present Modally with full screen",
-            "Popover presentation",
-            "Unwind segue",
-            "Custom unwind segue"
-          ]
-        },
-        {
-          "question": "Why is it often recommended to assign custom classes to view controllers in storyboards?",
-          "options": [
-            "To connect the storyboard scene to the correct Swift class",
-            "To create more segues automatically",
-            "To speed up compilation",
-            "To prevent deallocation"
-          ]
-        },
-        {
-          "question": "Which setting in storyboard helps ensure UI adapts to different screen sizes?",
-          "options": [
-            "Auto Layout and Size Classes",
-            "Storyboard ID",
-            "Segue Identifier",
-            "Module field"
-          ]
-        }
-      ],
-      "Hard": [
-        {
-          "question": "What is a major merge conflict issue with storyboards in large teams?",
-          "options": [
-            "They are XML files and can be difficult to merge manually",
-            "They cannot be committed to Git",
-            "They are binary-only files",
-            "They always overwrite local changes"
-          ]
-        },
-        {
-          "question": "Why might you prefer programmatic UI or SwiftUI over complex storyboard hierarchies?",
-          "options": [
-            "Better control, reusability, and easier version control",
-            "They are required by Apple",
-            "Storyboards cannot use Auto Layout",
-            "Storyboards don't support dark mode"
-          ]
-        },
-        {
-          "question": "How can you reduce storyboard bloat while still using Interface Builder?",
-          "options": [
-            "Split UI into multiple storyboards or use XIBs for individual screens",
-            "Use only one storyboard for everything",
-            "Avoid Auto Layout completely",
-            "Disable segues entirely"
-          ]
-        },
-        {
-          "question": "What is a technical downside of using segues for all navigation logic?",
-          "options": [
-            "Navigation logic becomes tightly coupled to storyboard structure",
-            "It always slows down the app",
-            "It disallows dependency injection",
-            "It breaks background modes"
-          ]
-        },
-        {
-          "question": "Why might you implement custom segue subclasses?",
-          "options": [
-            "To customize transition animations or behavior",
-            "To override app lifecycle",
-            "To manage push notifications",
-            "To generate UI at runtime"
-          ]
-        },
-        {
-          "question": "How can you instantiate a view controller from a storyboard without a segue?",
-          "options": [
-            "Using instantiateViewController(withIdentifier:)",
-            "Using loadViewIfNeeded()",
-            "Using viewDidLoad()",
-            "Using prepare(for:sender:)"
-          ]
-        },
-        {
-          "question": "What is a best practice when passing data between view controllers using segues?",
-          "options": [
-            "Use prepare(for:sender:) and set properties on the destination",
-            "Use global variables for all data",
-            "Store everything in UserDefaults",
-            "Use notification center for all values"
-          ]
-        },
-        {
-          "question": "Why can overusing storyboard-based logic make refactoring harder?",
-          "options": [
-            "Logic is spread across visual connections and code",
-            "Storyboards are not compiled",
-            "Xcode does not open large storyboards",
-            "Storyboard files cannot be renamed"
-          ]
-        },
-        {
-          "question": "Which approach helps with dependency injection when using storyboards?",
-          "options": [
-            "Instantiating controllers from storyboards in code and injecting dependencies manually",
-            "Always using segues with no configuration",
-            "Creating outlets for dependencies",
-            "Using multiple initial view controllers"
-          ]
-        },
-        {
-          "question": "When using storyboards, why might runtime crashes occur despite a clean compile?",
-          "options": [
-            "Mismatched storyboard IDs, segue identifiers, or missing outlet connections",
-            "Storyboard files cannot compile",
-            "Swift version mismatch only",
-            "Too many images in the asset catalog"
-          ]
-        }
-      ]
-    },
-    "Async/Await": {
-      "Easy": [
-        {
-          "question": "What is the main goal of async/await in Swift?",
-          "options": [
-            "To simplify writing asynchronous code",
-            "To speed up UI animations",
-            "To replace classes with structs",
-            "To manage memory automatically"
-          ]
-        },
-        {
-          "question": "Which keyword is used to define an asynchronous function in Swift?",
-          "options": [
-            "async",
-            "await",
-            "suspend",
-            "defer"
-          ]
-        },
-        {
-          "question": "Which keyword is used before calling an asynchronous function?",
-          "options": [
-            "await",
-            "async",
-            "try",
-            "throws"
-          ]
-        },
-        {
-          "question": "Where can async functions be called directly without creating a Task?",
-          "options": [
-            "In other async functions",
-            "In any synchronous function",
-            "In property observers only",
-            "In initializers only"
-          ]
-        },
-        {
-          "question": "What does concurrency mainly help with?",
-          "options": [
-            "Keeping apps responsive during long tasks",
-            "Reducing app bundle size",
-            "Improving code style only",
-            "Managing storyboards"
-          ]
-        },
-        {
-          "question": "Which construct is used to run asynchronous work in a synchronous context?",
-          "options": [
-            "Task { }",
-            "DispatchQueue.main.async { }",
-            "Thread { }",
-            "NotificationCenter.default.post"
-          ]
-        },
-        {
-          "question": "Which Swift feature replaced many closure-based completion handlers for async APIs?",
-          "options": [
-            "async/await",
-            "property wrappers",
-            "protocol extensions",
-            "inheritance"
-          ]
-        },
-        {
-          "question": "What happens if you call an async function without await?",
-          "options": [
-            "It is a compile-time error",
-            "The function runs synchronously",
-            "The function returns immediately without work",
-            "The app crashes at runtime"
-          ]
-        },
-        {
-          "question": "Which keyword is used to mark functions that can throw errors?",
-          "options": [
-            "throws",
-            "error",
-            "catch",
-            "guard"
-          ]
-        },
-        {
-          "question": "Which Swift construct lets you handle errors from async functions?",
-          "options": [
-            "do-try-catch",
-            "repeat-while",
-            "guard-else",
-            "if-let"
-          ]
-        }
-      ],
-      "Medium": [
-        {
-          "question": "What is the type returned by an async function that does not explicitly return a value?",
-          "options": [
-            "Void",
-            "Any",
-            "Result<Void, Error>",
-            "Never"
-          ]
-        },
-        {
-          "question": "How can you run multiple async tasks in parallel and wait for all of them?",
-          "options": [
-            "Using async let declarations",
-            "Using a serial DispatchQueue",
-            "Using a semaphore only",
-            "Using NotificationCenter"
-          ]
-        },
-        {
-          "question": "Which keyword combination defines a function that can both throw and be awaited?",
-          "options": [
-            "async throws",
-            "throws await",
-            "suspend throws",
-            "async error"
-          ]
-        },
-        {
-          "question": "In Swift concurrency, what does Task represent?",
-          "options": [
-            "A unit of asynchronous work",
-            "A UI element for to-do lists",
-            "A storyboard scene",
-            "A database table"
-          ]
-        },
-        {
-          "question": "Which Task initializer is used to create a detached task?",
-          "options": [
-            "Task.detached(priority:operation:)",
-            "Task(priority:operation:)",
-            "Task.runDetached(_:)",
-            "DetachedTask.init(_:)"
-          ]
-        },
-        {
-          "question": "What is a potential issue of using detached tasks excessively?",
-          "options": [
-            "They ignore structured concurrency, making cancellation and priority harder to manage",
-            "They block the main thread",
-            "They prevent URLSession from working",
-            "They disable async/await in other tasks"
-          ]
-        },
-        {
-          "question": "Which attribute allows an actor or class to bridge legacy closure-based APIs to async/await?",
-          "options": [
-            "@available and continuations with withCheckedContinuation",
-            "@objc",
-            "@escaping",
-            "@inlinable"
-          ]
-        },
-        {
-          "question": "What does Task.sleep(nanoseconds:) do?",
-          "options": [
-            "Suspends the current task for the given duration",
-            "Blocks the main thread for the given time",
-            "Pauses all tasks globally",
-            "Cancels the current task"
-          ]
-        },
-        {
-          "question": "What feature of Swift concurrency helps avoid data races with shared mutable state?",
-          "options": [
-            "Actors",
-            "Optionals",
-            "Generics",
-            "Structs"
-          ]
-        },
-        {
-          "question": "Why is it important to mark long-running operations as async?",
-          "options": [
-            "To avoid blocking threads and keep UI responsive",
-            "To reduce code size",
-            "To avoid ARC",
-            "To improve storyboard loading"
-          ]
-        }
-      ],
-      "Hard": [
-        {
-          "question": "What is structured concurrency in Swift?",
-          "options": [
-            "A model where tasks form a tree-like structure with clear parent-child relationships",
-            "A way to reorder async tasks randomly",
-            "A mechanism to manage only main thread work",
-            "A design pattern for class inheritance"
-          ]
-        },
-        {
-          "question": "Why might you use withCheckedContinuation?",
-          "options": [
-            "To bridge a callback-based API into async/await safely",
-            "To enforce actor isolation",
-            "To measure execution time",
-            "To cancel a task early"
-          ]
-        },
-        {
-          "question": "What does it mean that async functions are 'cooperative' with the scheduler?",
-          "options": [
-            "They suspend at await points, allowing other tasks to run",
-            "They monopolize the thread until completion",
-            "They automatically run on the main thread",
-            "They always run on background threads"
-          ]
-        },
-        {
-          "question": "Why is calling blocking APIs inside async functions problematic?",
-          "options": [
-            "It defeats concurrency by blocking threads instead of suspending",
-            "It prevents compilation",
-            "It disables cancellation entirely",
-            "It auto-converts them to async"
-          ]
-        },
-        {
-          "question": "What is a key advantage of using actors over locks for concurrency control?",
-          "options": [
-            "Actors provide isolation through language-level guarantees",
-            "Actors are always faster than locks",
-            "Actors automatically persist data",
-            "Actors require no memory"
-          ]
-        },
-        {
-          "question": "How does task cancellation propagate in structured concurrency?",
-          "options": [
-            "Cancellation flows from parent tasks down to child tasks",
-            "Cancellation only applies to detached tasks",
-            "Cancellation always restarts tasks",
-            "Cancellation never propagates automatically"
-          ]
-        },
-        {
-          "question": "Why is it risky to capture self strongly in long-lived async tasks?",
-          "options": [
-            "It can cause retain cycles and memory leaks",
-            "It always crashes the app",
-            "It stops other tasks from executing",
-            "It changes task priority unexpectedly"
-          ]
-        },
-        {
-          "question": "What is a safe pattern to update UI from an async function?",
-          "options": [
-            "Use @MainActor or call await MainActor.run",
-            "Call UI code from any background Task",
-            "Use DispatchQueue.global() for UI",
-            "Use NotificationCenter.post"
-          ]
-        },
-        {
-          "question": "Why might you use TaskGroup?",
-          "options": [
-            "To dynamically spawn and manage multiple child tasks and aggregate their results",
-            "To block threads in a group",
-            "To manage only main thread tasks",
-            "To schedule timers"
-          ]
-        },
-        {
-          "question": "What is a common best practice when calling async functions inside SwiftUI views?",
-          "options": [
-            "Trigger them from lifecycle events (like .task or .onAppear) instead of directly in body",
-            "Call them directly in the body without Task",
-            "Use detached tasks for all calls",
-            "Block the main thread first"
-          ]
-        }
-      ]
-    },
-    "URLSession": {
-      "Easy": [
-        {
-          "question": "What is URLSession mainly used for?",
-          "options": [
-            "Performing network requests",
-            "Rendering UI layouts",
-            "Managing CoreData storage",
-            "Handling animations"
-          ]
-        },
-        {
-          "question": "Which type represents a URL in Swift?",
-          "options": [
-            "URL",
-            "String",
-            "URI",
-            "NSURLRequest"
-          ]
-        },
-        {
-          "question": "Which method creates a simple data task with a completion handler?",
-          "options": [
-            "dataTask(with:completionHandler:)",
-            "uploadTask(with:from:)",
-            "downloadTask(with:)",
-            "streamTask(with:)"
-          ]
-        },
-        {
-          "question": "Which HTTP method is used by default in a URLRequest?",
-          "options": [
-            "GET",
-            "POST",
-            "PUT",
-            "DELETE"
-          ]
-        },
-        {
-          "question": "Which property of URLRequest is used to set HTTP headers?",
-          "options": [
-            "allHTTPHeaderFields",
-            "headerBody",
-            "httpHeaders",
-            "metaData"
-          ]
-        },
-        {
-          "question": "Which URLSession configuration is suitable for basic in-app requests?",
-          "options": [
-            ".default",
-            ".ephemeral",
-            ".background",
-            ".offline"
-          ]
-        },
-        {
-          "question": "What kind of value is returned in the completion handler of dataTask?",
-          "options": [
-            "Data?, URLResponse?, Error?",
-            "String, Int, Error?",
-            "URL, Data, Bool",
-            "HTTPURLResponse, URL, Error"
-          ]
-        },
-        {
-          "question": "What must you do after creating a data task to start it?",
-          "options": [
-            "Call resume() on the task",
-            "Call start() on URLSession",
-            "Call begin() on URL",
-            "Nothing, it starts automatically"
-          ]
-        },
-        {
-          "question": "Which class is used to represent HTTP-specific responses?",
-          "options": [
-            "HTTPURLResponse",
-            "URLResponse",
-            "URLRequest",
-            "NSURL"
-          ]
-        },
-        {
-          "question": "Which property of HTTPURLResponse commonly holds the status code?",
-          "options": [
-            "statusCode",
-            "code",
-            "responseCode",
-            "httpStatus"
-          ]
-        }
-      ],
-      "Medium": [
-        {
-          "question": "Which configuration is best for requests that should not be persisted, like private browsing?",
-          "options": [
-            "ephemeral",
-            "default",
-            "background",
-            "cached"
-          ]
-        },
-        {
-          "question": "Which configuration is used for tasks that continue even if the app is suspended?",
-          "options": [
-            "background",
-            "default",
-            "ephemeral",
-            "offline"
-          ]
-        },
-        {
-          "question": "What is a common way to decode JSON received from URLSession?",
-          "options": [
-            "Using JSONDecoder().decode(_:from:)",
-            "Using String(data:encoding:)",
-            "Using PropertyListEncoder",
-            "Using UserDefaults.standard"
-          ]
-        },
-        {
-          "question": "What should you check before decoding HTTP response data?",
-          "options": [
-            "That the HTTP status code indicates success",
-            "That the URLRequest is nil",
-            "That the device is charging",
-            "That the bundle identifier matches"
-          ]
-        },
-        {
-          "question": "Why is it important to handle errors from dataTask?",
-          "options": [
-            "Network requests can fail for many reasons like no connection or invalid URLs",
-            "It increases app bundle size",
-            "It enables storyboards",
-            "It reduces CPU usage always"
-          ]
-        },
-        {
-          "question": "How can you set a timeout interval for a URLRequest?",
-          "options": [
-            "Set timeoutInterval on URLRequest",
-            "Set timeout on URL",
-            "Set interval on URLResponse",
-            "Use DispatchQueue.main.asyncAfter"
-          ]
-        },
-        {
-          "question": "When should you use uploadTask instead of dataTask?",
-          "options": [
-            "When sending large files or data to a server",
-            "When only fetching small JSON responses",
-            "When you need no body in the request",
-            "When making local file reads"
-          ]
-        },
-        {
-          "question": "Why might you use URLCache with URLSession?",
-          "options": [
-            "To cache responses and reduce repeated network calls",
-            "To store app configurations",
-            "To save user credentials",
-            "To cache CoreData entities"
-          ]
-        },
-        {
-          "question": "Which delegate can you implement for more advanced control over URLSession tasks?",
-          "options": [
-            "URLSessionDelegate and related task delegates",
-            "UITableViewDelegate",
-            "UIApplicationDelegate",
-            "NSFetchedResultsControllerDelegate"
-          ]
-        },
-        {
-          "question": "How can you ensure UI updates occur on the main thread after a network response?",
-          "options": [
-            "DispatchQueue.main.async { /* update UI */ }",
-            "DispatchQueue.global().async { /* update UI */ }",
-            "Call UI code directly in completion",
-            "Use URLSession.mainThread"
-          ]
-        }
-      ],
-      "Hard": [
-        {
-          "question": "What is the benefit of using URLSession with async/await APIs?",
-          "options": [
-            "Cleaner, more readable asynchronous networking code",
-            "Automatic offline support",
-            "JSON decoding without errors",
-            "Elimination of status codes"
-          ]
-        },
-        {
-          "question": "Which security-related header is commonly used for sending tokens with URLSession requests?",
-          "options": [
-            "Authorization",
-            "Content-Encoding",
-            "Accept-Language",
-            "User-Agent"
-          ]
-        },
-        {
-          "question": "Why is it important to validate server certificates in networking?",
-          "options": [
-            "To prevent man-in-the-middle attacks",
-            "To reduce latency",
-            "To log all responses",
-            "To improve JSON parsing"
-          ]
-        },
-        {
-          "question": "Why might you want to set waitsForConnectivity on a URLSessionConfiguration?",
-          "options": [
-            "To pause tasks until network becomes available instead of failing immediately",
-            "To immediately cancel tasks on no network",
-            "To disable background tasks",
-            "To force all traffic over cellular"
-          ]
-        },
-        {
-          "question": "When handling large downloads, which URLSession method is preferable?",
-          "options": [
-            "downloadTask(with:)",
-            "dataTask(with:)",
-            "uploadTask(with:from:)",
-            "streamTask(with:)"
-          ]
-        },
-        {
-          "question": "What is the purpose of HTTP keep-alive connections managed by URLSession?",
-          "options": [
-            "To reuse TCP connections and reduce latency",
-            "To force re-authentication",
-            "To cache all responses",
-            "To block redirects"
-          ]
-        },
-        {
-          "question": "Why should sensitive data sometimes avoid being cached by URLCache?",
-          "options": [
-            "To avoid storing confidential information on disk",
-            "To speed up all requests",
-            "To reduce CPU performance",
-            "To enable background fetch"
-          ]
-        },
-        {
-          "question": "What is a potential risk of ignoring the URLSession error parameter in completion handlers?",
-          "options": [
-            "You may treat failed requests as successful and mis-handle data",
-            "The task will run twice",
-            "URLSession stops working",
-            "The app will not compile"
-          ]
-        },
-        {
-          "question": "What is a potential risk of ignoring the URLSession error parameter in completion handlers?",
-          "options": [
-            "You may treat failed requests as successful and mis-handle data",
-            "The task will run twice",
-            "URLSession stops working",
-            "The app will not compile"
-          ]
-        },        {
-          "question": "What is a potential risk of ignoring the URLSession error parameter in completion handlers?",
-          "options": [
-            "You may treat failed requests as successful and mis-handle data",
-            "The task will run twice",
-            "URLSession stops working",
-            "The app will not compile"
-          ]
-        }]
     }
-  }
 }

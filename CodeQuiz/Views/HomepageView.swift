@@ -64,6 +64,7 @@ struct HomepageView: View {
                             VStack{
                                 if let languageSelected = languageSelected{
                                     LazyVGrid(columns: columns) {
+                                        CategoryButtonView(category: "Random 15", bgColor: languageSelected.backgroundColor, categorySelected: $category) // Change border color for this button
                                         ForEach(languageSelected.categories, id: \.self){ category in
                                             CategoryButtonView(category: category, bgColor: languageSelected.backgroundColor, categorySelected: $category)
                                         }
@@ -92,7 +93,6 @@ struct HomepageView: View {
                     .offset(y: 250)
                     .transition(.move(edge: .bottom).combined(with: .opacity))
                 }
-                
                 VStack{
                     Spacer()
                     Button {
@@ -110,25 +110,73 @@ struct HomepageView: View {
             .background(.green)
         }
         .onAppear{
-          fetchQuestionSets()
+            if UserDefaults.standard.data(forKey: "AllQuestionSet") == nil {
+                DispatchQueue.main.async {
+                    fetchQuestionSets()
+                }
+            }
         }
     }
     
     private func beginTest(){
-        guard let levelWeight = levelWeight, let languageSelected = languageSelected else{ // if no category selected, choose random set
+        guard let _ = levelWeight, let _ = languageSelected else{ // if no category selected, choose random set
             showErrorMessage = true // !! not showing in landscape mode
             DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
                 showErrorMessage = false
             }
             return
         }
-        testProperties.testObject = testObject(levelWeight: levelWeight, language: languageSelected.rawValue, category: category)
+        prepareQuestionSet()
+    }
+    
+    private func prepareQuestionSet(){
+        guard let allQuestions = UserDefaults.standard.data(forKey: "AllQuestionSet") else {
+            // Still downloading the questions indicator
+            return
+        }
+        let questionsData = try? JSONDecoder().decode(Root.self, from: allQuestions)
+        let swiftTopics = questionsData!.data.swift
         
-        testProperties.testRunning = true
+        // 1. Pick the correct DifficultySet for the chosen category
+        let topicSet: DifficultySet
+        switch category {
+        case "Swift UI":
+            topicSet = swiftTopics.swiftUI
+        case "UIKit":
+            topicSet = swiftTopics.uiKit
+        case "AppKit":
+            topicSet = swiftTopics.appKit
+        case "Storyboard":
+            topicSet = swiftTopics.storyboard
+        case "Async/Await":
+            topicSet = swiftTopics.asyncAwait
+        case "URLSession":
+            topicSet = swiftTopics.urlSession
+        default:
+            return
+        }
+        
+        // 2. Pick the correct difficulty array (Easy / Medium / Hard)
+        let questionSet: [QA]
+        switch levelWeight {
+        case 1:
+            questionSet = topicSet.easy
+        case 2:
+            questionSet = topicSet.medium
+        case 3:
+            questionSet = topicSet.hard
+        default:
+            return
+        }
+        let encoded = try? JSONEncoder().encode(questionSet)
+        UserDefaults.standard.set(encoded, forKey: "QuestionSet")
+        UserDefaults.standard.set(true, forKey: "QuizActive")
     }
     
     private func fetchQuestionSets(){
-        
+        guard let dataUrl = Bundle.main.url(forResource: "QuestionsDataset", withExtension: "json"),
+              let rawData = try? Data(contentsOf: dataUrl) else{ return }
+        UserDefaults.standard.set(rawData, forKey: "AllQuestionSet")
     }
 }
 

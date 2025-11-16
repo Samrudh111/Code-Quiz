@@ -12,6 +12,7 @@ struct QAPageView: View {
     @Environment(TestProperties.self) private var testProperties
     @State var cardDegree = 0.0
     @State var contentDegree = 0.0
+    @State var questionSet: [QA]?
     
     var body: some View {
         NavigationStack{
@@ -32,7 +33,7 @@ struct QAPageView: View {
                 }
                 ToolbarItem(placement: .topBarLeading) {
                     ExitButton {
-                        testProperties.testRunning = false
+                        UserDefaults.standard.set(false, forKey: "QuizActive")
                         testProperties.questionNumber = 1
                     }
                 }
@@ -41,21 +42,37 @@ struct QAPageView: View {
                 NavigateQuestionButtons(cardDegree: $cardDegree, contentDegree: $contentDegree, index: $index)
             }
         }
+        .onAppear{
+            questionSet = fetchFromUserDefaults()
+        }
+    }
+    
+    private func fetchFromUserDefaults() -> [QA]{
+        let data = UserDefaults.standard.data(forKey: "QuestionSet")
+        var questionSet: [QA] = []
+        if let data = data{
+            questionSet = try! JSONDecoder().decode([QA].self, from: data)
+        }
+        return questionSet
     }
     
     @ViewBuilder
     func QACard(for index: Int) -> some View {
         ZStack{
-            QuestionCard(question: testProperties.questionSet[index].question)
-            ScrollView{
-                VStack{
-                    //Text("Language - and its category name should be displayed here")
-                    AnswersCard(answerSet: testProperties.questionSet[index].answers)
+            if let questionSet = questionSet{
+                QuestionCard(question: questionSet[index].question)
+                ScrollView{
+                    VStack{
+                        //Text("Language - and its category name should be displayed here")
+                        AnswersCard(answerSet: questionSet[index].options)
+                    }
+                    .frame(maxWidth: .infinity)
+                    .frame(height: 1000, alignment: .top) // need to check this height
+                    .background(.white)
+                    .offset(y: 400)
                 }
-                .frame(maxWidth: .infinity)
-                .frame(height: 1000, alignment: .top) // need to check this height
-                .background(.white)
-                .offset(y: 400)
+            }else{
+                // Error fetching screen
             }
             //.scrollDisabled(false)
         }
@@ -77,12 +94,14 @@ struct QuestionCard: View {
 }
 
 struct AnswersCard: View {
-    let answerSet: [String]
+    let answerSet: [String]?
     
     var body: some View {
         VStack{
-            ForEach(answerSet, id: \.self){ options in
-                Text(options)
+            if let optionSet = answerSet{
+                ForEach(optionSet, id: \.self){ options in
+                    Text(options)
+                }
             }
         }
     }

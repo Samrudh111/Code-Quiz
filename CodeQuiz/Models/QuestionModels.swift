@@ -7,33 +7,50 @@
 
 import Foundation
 
-struct testObject{
-    let levelWeight: Int
-    let language: String
-    let category: String?
-}
-
-struct QA: Identifiable, Equatable, Decodable {
-    let id = UUID()
+struct QA: Codable {
+    //let id = UUID()
     let question: String
-    let answers: [String]
+    let options: [String]
 }
 
-struct langSet: Decodable{
-    let Swift: Category
+struct Root: Decodable {
+    let data: LanguageData
 }
 
-struct Category: Decodable{
-    let categoryName: [Difficulty]? // check name
-    let UIKit: [Difficulty]?
-    let AppKit: [Difficulty]?
-    let Storyboard: [Difficulty]?
-    let `Async/Await`: [Difficulty]? // check name
-    let URLSession: [Difficulty]?
+struct LanguageData: Decodable {
+    let swift: SwiftTopics
+
+    enum CodingKeys: String, CodingKey {
+        case swift = "Swift"
+    }
 }
 
-struct Difficulty: Decodable{
-    let Easy: [QA]
-    let Medium: [QA]
-    let Hard: [QA]
+struct SwiftTopics: Decodable {
+    let swiftUI: DifficultySet
+    let uiKit: DifficultySet
+    let appKit: DifficultySet
+    let storyboard: DifficultySet
+    let asyncAwait: DifficultySet
+    let urlSession: DifficultySet
+
+    enum CodingKeys: String, CodingKey {
+        case swiftUI    = "Swift UI"
+        case uiKit      = "UIKit"
+        case appKit     = "AppKit"
+        case storyboard = "Storyboard"
+        case asyncAwait = "Async/Await"
+        case urlSession = "URLSession"
+    }
+}
+
+struct DifficultySet: Decodable {
+    let easy: [QA]
+    let medium: [QA]
+    let hard: [QA]
+
+    enum CodingKeys: String, CodingKey {
+        case easy   = "Easy"
+        case medium = "Medium"
+        case hard   = "Hard"
+    }
 }
