@@ -9,10 +9,9 @@ import SwiftUI
 
 struct QAPageView: View {
     @State private var index = 0
-    @Environment(TestProperties.self) private var testProperties
     @State var cardDegree = 0.0
     @State var contentDegree = 0.0
-    @State var questionSet: [QA]?
+    @State var questionSet: [QA] = []
     
     var body: some View {
         NavigationStack{
@@ -23,27 +22,26 @@ struct QAPageView: View {
                 QACard(for: index)
                     .id(index)
                     .rotation3DEffect(.degrees(contentDegree), axis: (x: 0, y: 1, z: 0))
-                
             }
             .rotation3DEffect(.degrees(cardDegree), axis: (x: 0, y: 1, z: 0))
             .toolbar(.hidden, for: .tabBar)
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
-                    MenuView()
+                    MenuView(index: $index, questionCount: questionSet.count)
                 }
                 ToolbarItem(placement: .topBarLeading) {
                     ExitButton {
                         UserDefaults.standard.set(false, forKey: "QuizActive")
-                        testProperties.questionNumber = 1
                     }
                 }
             }
             .overlay {
-                NavigateQuestionButtons(cardDegree: $cardDegree, contentDegree: $contentDegree, index: $index)
+                NavigateQuestionButtons(cardDegree: $cardDegree, contentDegree: $contentDegree, index: $index, questionCount: questionSet.count)
             }
         }
         .onAppear{
             questionSet = fetchFromUserDefaults()
+            //index = UserDefaults.standard.integer(forKey: "QuestionNumber")
         }
     }
     
@@ -59,7 +57,7 @@ struct QAPageView: View {
     @ViewBuilder
     func QACard(for index: Int) -> some View {
         ZStack{
-            if let questionSet = questionSet{
+            if !questionSet.isEmpty{
                 QuestionCard(question: questionSet[index].question)
                 ScrollView{
                     VStack{
@@ -109,18 +107,21 @@ struct AnswersCard: View {
 
 struct MenuView: View {
     @Environment(TestProperties.self) private var testProperties
+    @Binding var index: Int
+    let questionCount: Int
+    
     var body: some View {
         Menu {
-            ForEach(1...5, id: \.self) { q in
+            ForEach(0..<questionCount, id: \.self) { qNumber in
                 Button {
-                    testProperties.questionNumber = q
+                    index = qNumber
                 } label: {
-                    Text((String(q)))
+                    Text((String(qNumber+1)))
                 }
             }
         } label: {
             HStack{
-                Text("Question \(testProperties.questionNumber) ")
+                Text("Question \(index+1) ")
                     .font(.custom("Exo2-Light", size: 22))
                 Image(systemName: "list.bullet")
             }
@@ -152,14 +153,17 @@ struct NavigateQuestionButtons: View {
     @Binding var contentDegree: Double
     @Environment(TestProperties.self) private var testProperties
     @Binding var index: Int
-
+    let questionCount: Int
+    
     var body: some View {
         VStack{
             Spacer()
             HStack{
                 PrevNextButton(isNextButton: false)
+                    .disabled(index == 0)
                 Spacer()
                 PrevNextButton(isNextButton: true)
+                    .disabled(index == questionCount-1)
             }
         }
     }
@@ -173,7 +177,6 @@ struct NavigateQuestionButtons: View {
             }
             withAnimation(.easeOut(duration: animTime)) {
                 isNextButton ? (cardDegree -= 180) : (cardDegree += 180)
-                isNextButton ? (testProperties.questionNumber += 1) : (testProperties.questionNumber -= 1)
                 isNextButton ? (index += 1) : (index -= 1) // remove this
             }
         } label: {
@@ -181,7 +184,6 @@ struct NavigateQuestionButtons: View {
         }
         .buttonStyle(.glass)
         .padding()
-        .disabled((testProperties.questionNumber == 1) && (!isNextButton))
     }
 }
 
