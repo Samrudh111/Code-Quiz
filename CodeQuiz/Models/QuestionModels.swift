@@ -54,3 +54,9 @@ struct DifficultySet: Decodable {
         case hard   = "Hard"
     }
 }
+
+struct TestObject: Codable {
+     var levelWeight: Int?
+     var languageSelected: String?
+     var category: String?
+}

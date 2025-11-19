@@ -1665,7 +1665,8 @@
                             "URLSession stops working",
                             "The app will not compile"
                         ]
-                    }]
+                    }
+                ]
             }
         }
     }

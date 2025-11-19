@@ -1,0 +1,1959 @@
+{
+    "data": {
+        "Python": {
+            "Pandas": {
+                "Easy": [
+                    {
+                        "question": "In pandas, which object is used to represent a tabular dataset with labeled rows and columns?",
+                        "options": [
+                            "DataFrame",
+                            "Series",
+                            "Panel",
+                            "Index"
+                        ]
+                    },
+                    {
+                        "question": "Which pandas function is commonly used to read a CSV file into a DataFrame?",
+                        "options": [
+                            "read_csv()",
+                            "read_table()",
+                            "read_excel()",
+                            "read_json()"
+                        ]
+                    },
+                    {
+                        "question": "Which attribute returns the number of rows and columns of a DataFrame?",
+                        "options": [
+                            "shape",
+                            "size",
+                            "ndim",
+                            "count"
+                        ]
+                    },
+                    {
+                        "question": "Which method is used to show the first few rows of a DataFrame?",
+                        "options": [
+                            "head()",
+                            "top()",
+                            "first()",
+                            "sample()"
+                        ]
+                    },
+                    {
+                        "question": "Which method is used to access a single column from a DataFrame?",
+                        "options": [
+                            "df['column_name']",
+                            "df.column('column_name')",
+                            "df.get_column()",
+                            "df.pick()"
+                        ]
+                    },
+                    {
+                        "question": "Which pandas function is used to read data from an Excel file?",
+                        "options": [
+                            "read_excel()",
+                            "read_xls()",
+                            "read_sheet()",
+                            "read_workbook()"
+                        ]
+                    },
+                    {
+                        "question": "What does the dropna() method do in pandas?",
+                        "options": [
+                            "Removes rows or columns with missing values",
+                            "Replaces missing values with zeros",
+                            "Counts missing values",
+                            "Sorts rows with missing values"
+                        ]
+                    },
+                    {
+                        "question": "Which method is used to quickly see summary statistics of numeric columns in a DataFrame?",
+                        "options": [
+                            "describe()",
+                            "summary()",
+                            "info()",
+                            "stats()"
+                        ]
+                    },
+                    {
+                        "question": "Which axis corresponds to rows in pandas?",
+                        "options": [
+                            "axis=0",
+                            "axis=1",
+                            "axis='rows'",
+                            "axis='index'"
+                        ]
+                    },
+                    {
+                        "question": "Which method adds a new column to a DataFrame?",
+                        "options": [
+                            "Assign a Series to df['new_column']",
+                            "use_column()",
+                            "append_column()",
+                            "insert_column()"
+                        ]
+                    }
+                ],
+                "Medium": [
+                    {
+                        "question": "Which method in pandas is used to group rows based on the values of one or more columns?",
+                        "options": [
+                            "groupby()",
+                            "aggregate()",
+                            "pivot()",
+                            "merge()"
+                        ]
+                    },
+                    {
+                        "question": "What does df.loc[] primarily index by?",
+                        "options": [
+                            "Label-based indexing",
+                            "Integer position",
+                            "Boolean-only indexing",
+                            "Random indexing"
+                        ]
+                    },
+                    {
+                        "question": "What does df.iloc[] primarily index by?",
+                        "options": [
+                            "Integer position",
+                            "Label-based indexing",
+                            "Column names",
+                            "Index objects only"
+                        ]
+                    },
+                    {
+                        "question": "Which method is used to combine DataFrames vertically (one on top of the other)?",
+                        "options": [
+                            "concat() with axis=0",
+                            "merge() with how='outer'",
+                            "join()",
+                            "stack()"
+                        ]
+                    },
+                    {
+                        "question": "Which method is typically used for SQL-style joins between two DataFrames based on common columns?",
+                        "options": [
+                            "merge()",
+                            "concat()",
+                            "join_axes()",
+                            "stack()"
+                        ]
+                    },
+                    {
+                        "question": "Which method would you use to reshape data from long format to wide format?",
+                        "options": [
+                            "pivot()",
+                            "melt()",
+                            "stack()",
+                            "explode()"
+                        ]
+                    },
+                    {
+                        "question": "What does the inplace=True parameter generally do in pandas methods?",
+                        "options": [
+                            "Modifies the DataFrame in place without returning a new one",
+                            "Creates a copy of the DataFrame",
+                            "Returns a view instead of a copy",
+                            "Ensures thread safety"
+                        ]
+                    },
+                    {
+                        "question": "Which method is used to change the data type of a pandas Series or DataFrame column?",
+                        "options": [
+                            "astype()",
+                            "change_type()",
+                            "convert()",
+                            "to_type()"
+                        ]
+                    },
+                    {
+                        "question": "Which method is used to sort a DataFrame by the values of one or more columns?",
+                        "options": [
+                            "sort_values()",
+                            "sort_index()",
+                            "order()",
+                            "arrange()"
+                        ]
+                    },
+                    {
+                        "question": "Which method is used to reset the index of a DataFrame back to the default integer index?",
+                        "options": [
+                            "reset_index()",
+                            "drop_index()",
+                            "clear_index()",
+                            "default_index()"
+                        ]
+                    }
+                ],
+                "Hard": [
+                    {
+                        "question": "Which method in pandas can be used to apply a custom function row-wise or column-wise on a DataFrame?",
+                        "options": [
+                            "apply()",
+                            "map()",
+                            "transform()",
+                            "pipe()"
+                        ]
+                    },
+                    {
+                        "question": "Which method is most appropriate for efficiently applying a vectorized operation across groups after using groupby()?",
+                        "options": [
+                            "transform()",
+                            "apply()",
+                            "agg()",
+                            "map()"
+                        ]
+                    },
+                    {
+                        "question": "Which method can be used to convert a DataFrame from wide format to long (tidy) format?",
+                        "options": [
+                            "melt()",
+                            "pivot()",
+                            "unstack()",
+                            "stack()"
+                        ]
+                    },
+                    {
+                        "question": "When merging two DataFrames on columns 'A' and 'B' with potentially different column names, which parameter is used to specify different join keys?",
+                        "options": [
+                            "left_on and right_on",
+                            "on and keys",
+                            "index_on and columns_on",
+                            "join_left and join_right"
+                        ]
+                    },
+                    {
+                        "question": "Which pandas feature allows you to define custom rolling window calculations?",
+                        "options": [
+                            "rolling().apply()",
+                            "expanding().map()",
+                            "window().agg()",
+                            "shift().roll()"
+                        ]
+                    },
+                    {
+                        "question": "Which parameter of read_csv() helps when loading very large files in smaller chunks?",
+                        "options": [
+                            "chunksize",
+                            "buffer_size",
+                            "batch_size",
+                            "step"
+                        ]
+                    },
+                    {
+                        "question": "Which index type in pandas is specifically designed for handling time series data?",
+                        "options": [
+                            "DatetimeIndex",
+                            "TimeIndex",
+                            "PeriodIndex",
+                            "TimedIndex"
+                        ]
+                    },
+                    {
+                        "question": "Which pandas functionality allows combining multiple operations into a single fluent chain for cleaner code?",
+                        "options": [
+                            "pipe()",
+                            "stack()",
+                            "combine_first()",
+                            "eval()"
+                        ]
+                    },
+                    {
+                        "question": "Which method is used to efficiently store a DataFrame in a binary format that preserves data types and can be quickly read back?",
+                        "options": [
+                            "to_parquet()",
+                            "to_csv()",
+                            "to_json()",
+                            "to_clipboard()"
+                        ]
+                    },
+                    {
+                        "question": "When working with time series, which method is used to change the frequency of the datetime index, possibly aggregating or filling values?",
+                        "options": [
+                            "resample()",
+                            "reindex()",
+                            "asfreq()",
+                            "shift()"
+                        ]
+                    }
+                ]
+            },
+            
+            "NumPy": {
+                "Easy": [
+                    {
+                        "question": "What is NumPy primarily used for in Python?",
+                        "options": [
+                            "Numerical computing with multi-dimensional arrays",
+                            "Building web applications",
+                            "Handling HTTP requests",
+                            "Creating GUIs"
+                        ]
+                    },
+                    {
+                        "question": "What is the fundamental data structure in NumPy?",
+                        "options": [
+                            "ndarray",
+                            "Series",
+                            "DataFrame",
+                            "Tensor"
+                        ]
+                    },
+                    {
+                        "question": "Which command is commonly used to import NumPy in Python?",
+                        "options": [
+                            "import numpy as np",
+                            "import numpy as pd",
+                            "import np as numpy",
+                            "from numpy import pandas"
+                        ]
+                    },
+                    {
+                        "question": "Which function creates a NumPy array from a Python list?",
+                        "options": [
+                            "np.array()",
+                            "np.asarray_list()",
+                            "np.list_to_array()",
+                            "np.make_array()"
+                        ]
+                    },
+                    {
+                        "question": "Which function creates an array of zeros in NumPy?",
+                        "options": [
+                            "np.zeros()",
+                            "np.empty()",
+                            "np.ones()",
+                            "np.zero_like()"
+                        ]
+                    },
+                    {
+                        "question": "Which attribute of a NumPy array gives its shape?",
+                        "options": [
+                            "shape",
+                            "size",
+                            "ndim",
+                            "dtype"
+                        ]
+                    },
+                    {
+                        "question": "Which function creates a sequence of evenly spaced numbers over a specified interval?",
+                        "options": [
+                            "np.linspace()",
+                            "np.arange()",
+                            "np.range()",
+                            "np.seq()"
+                        ]
+                    },
+                    {
+                        "question": "Which attribute returns the number of elements in a NumPy array?",
+                        "options": [
+                            "size",
+                            "shape",
+                            "ndim",
+                            "length"
+                        ]
+                    },
+                    {
+                        "question": "Which function creates an identity matrix in NumPy?",
+                        "options": [
+                            "np.eye()",
+                            "np.identity_matrix()",
+                            "np.unit()",
+                            "np.diag_identity()"
+                        ]
+                    },
+                    {
+                        "question": "Which attribute of an array tells you the data type of its elements?",
+                        "options": [
+                            "dtype",
+                            "type",
+                            "datatype",
+                            "element_type"
+                        ]
+                    }
+                ],
+                "Medium": [
+                    {
+                        "question": "Which function is best suited to create an array with values starting from 0 up to (but not including) 10 with step 2?",
+                        "options": [
+                            "np.arange(0, 10, 2)",
+                            "np.linspace(0, 10, 2)",
+                            "np.step(0, 10, 2)",
+                            "np.range(0, 10, 2)"
+                        ]
+                    },
+                    {
+                        "question": "What does the axis parameter control in many NumPy aggregation functions like sum() and mean()?",
+                        "options": [
+                            "The dimension along which the operation is applied",
+                            "The memory allocation strategy",
+                            "The datatype of the result",
+                            "The number of threads used"
+                        ]
+                    },
+                    {
+                        "question": "Which function stacks arrays vertically (row wise) in NumPy?",
+                        "options": [
+                            "np.vstack()",
+                            "np.hstack()",
+                            "np.stack_rows()",
+                            "np.row_stack()"
+                        ]
+                    },
+                    {
+                        "question": "Which function reshapes a NumPy array without changing its data?",
+                        "options": [
+                            "reshape()",
+                            "resize_inplace()",
+                            "reformat()",
+                            "transpose()"
+                        ]
+                    },
+                    {
+                        "question": "Which function performs matrix multiplication between two 2D NumPy arrays?",
+                        "options": [
+                            "np.dot()",
+                            "np.multiply()",
+                            "np.cross()",
+                            "np.outer()"
+                        ]
+                    },
+                    {
+                        "question": "Which function computes the element-wise square root of a NumPy array?",
+                        "options": [
+                            "np.sqrt()",
+                            "np.square()",
+                            "np.power(2)",
+                            "np.exp()"
+                        ]
+                    },
+                    {
+                        "question": "Which function returns the indices of the maximum values along an axis?",
+                        "options": [
+                            "np.argmax()",
+                            "np.max_index()",
+                            "np.where_max()",
+                            "np.indexmax()"
+                        ]
+                    },
+                    {
+                        "question": "What does broadcasting in NumPy allow you to do?",
+                        "options": [
+                            "Perform operations on arrays of different shapes",
+                            "Send arrays over a network",
+                            "Convert arrays to byte streams",
+                            "Automatically cast array dtypes"
+                        ]
+                    },
+                    {
+                        "question": "Which function computes the cumulative sum of array elements over a given axis?",
+                        "options": [
+                            "np.cumsum()",
+                            "np.cumprod()",
+                            "np.sumcum()",
+                            "np.accumulate()"
+                        ]
+                    },
+                    {
+                        "question": "Which function is used to transpose a matrix in NumPy?",
+                        "options": [
+                            "np.transpose()",
+                            "np.reverse()",
+                            "np.reorder()",
+                            "np.swap()"
+                        ]
+                    }
+                ],
+                "Hard": [
+                    {
+                        "question": "Which function is used to compute the eigenvalues and eigenvectors of a square array?",
+                        "options": [
+                            "np.linalg.eig()",
+                            "np.linalg.inv()",
+                            "np.linalg.det()",
+                            "np.linalg.solve()"
+                        ]
+                    },
+                    {
+                        "question": "Which function computes the Moore-Penrose pseudoinverse of a matrix?",
+                        "options": [
+                            "np.linalg.pinv()",
+                            "np.linalg.inv()",
+                            "np.linalg.solve()",
+                            "np.linalg.decomp()"
+                        ]
+                    },
+                    {
+                        "question": "Which function is used to perform a fast Fourier transform in NumPy?",
+                        "options": [
+                            "np.fft.fft()",
+                            "np.fourier()",
+                            "np.freq.fft()",
+                            "np.signal.fft()"
+                        ]
+                    },
+                    {
+                        "question": "Which argument of np.dot or np.matmul is important to ensure correct broadcasting behavior with higher-dimensional arrays?",
+                        "options": [
+                            "The shape alignment of inner dimensions",
+                            "The dtype argument",
+                            "The out parameter",
+                            "The order parameter"
+                        ]
+                    },
+                    {
+                        "question": "Which function in NumPy creates a view of an existing array without copying the data?",
+                        "options": [
+                            "view()",
+                            "copy()",
+                            "clone()",
+                            "alias()"
+                        ]
+                    },
+                    {
+                        "question": "Which function is best for solving a linear system Ax = b for x?",
+                        "options": [
+                            "np.linalg.solve()",
+                            "np.linalg.inv() followed by dot()",
+                            "np.linalg.det()",
+                            "np.linalg.eig()"
+                        ]
+                    },
+                    {
+                        "question": "Which parameter of np.array() ensures that the created array is stored in column-major (Fortran-style) order?",
+                        "options": [
+                            "order='F'",
+                            "layout='F'",
+                            "style='column'",
+                            "orientation='F'"
+                        ]
+                    },
+                    {
+                        "question": "Which function is used to stack arrays along a new axis?",
+                        "options": [
+                            "np.stack()",
+                            "np.vstack()",
+                            "np.hstack()",
+                            "np.append_axis()"
+                        ]
+                    },
+                    {
+                        "question": "Which NumPy feature allows memory-efficient slicing and subarray access without copying data?",
+                        "options": [
+                            "Views",
+                            "Copies",
+                            "Masks",
+                            "Chunks"
+                        ]
+                    },
+                    {
+                        "question": "Which function computes the determinant of a square matrix?",
+                        "options": [
+                            "np.linalg.det()",
+                            "np.linalg.eig()",
+                            "np.linalg.norm()",
+                            "np.linalg.cond()"
+                        ]
+                    }
+                ]
+            },
+            
+            "SciPy": {
+                "Easy": [
+                    {
+                        "question": "What is SciPy mainly built on top of?",
+                        "options": [
+                            "NumPy",
+                            "Pandas",
+                            "Matplotlib",
+                            "Flask"
+                        ]
+                    },
+                    {
+                        "question": "Which submodule of SciPy is commonly used for numerical integration?",
+                        "options": [
+                            "scipy.integrate",
+                            "scipy.optimize",
+                            "scipy.spatial",
+                            "scipy.stats"
+                        ]
+                    },
+                    {
+                        "question": "Which submodule of SciPy is commonly used for optimization problems?",
+                        "options": [
+                            "scipy.optimize",
+                            "scipy.integrate",
+                            "scipy.linalg",
+                            "scipy.signal"
+                        ]
+                    },
+                    {
+                        "question": "Which SciPy submodule deals with statistical functions and probability distributions?",
+                        "options": [
+                            "scipy.stats",
+                            "scipy.spatial",
+                            "scipy.ndimage",
+                            "scipy.interpolate"
+                        ]
+                    },
+                    {
+                        "question": "Which submodule is used for linear algebra operations in SciPy?",
+                        "options": [
+                            "scipy.linalg",
+                            "scipy.spatial",
+                            "scipy.cluster",
+                            "scipy.signal"
+                        ]
+                    },
+                    {
+                        "question": "Which function in scipy.integrate is commonly used for single-variable numerical integration?",
+                        "options": [
+                            "quad()",
+                            "odeint()",
+                            "romberg()",
+                            "trapz()"
+                        ]
+                    },
+                    {
+                        "question": "Which SciPy function is commonly used to solve ordinary differential equations (ODEs)?",
+                        "options": [
+                            "odeint()",
+                            "quad()",
+                            "curve_fit()",
+                            "fsolve()"
+                        ]
+                    },
+                    {
+                        "question": "Which SciPy submodule contains routines for signal processing?",
+                        "options": [
+                            "scipy.signal",
+                            "scipy.spatial",
+                            "scipy.cluster",
+                            "scipy.stats"
+                        ]
+                    },
+                    {
+                        "question": "Which SciPy submodule provides interpolation tools?",
+                        "options": [
+                            "scipy.interpolate",
+                            "scipy.ndimage",
+                            "scipy.spatial",
+                            "scipy.io"
+                        ]
+                    },
+                    {
+                        "question": "Which SciPy submodule is used for reading and writing MATLAB .mat files?",
+                        "options": [
+                            "scipy.io",
+                            "scipy.stats",
+                            "scipy.misc",
+                            "scipy.cluster"
+                        ]
+                    }
+                ],
+                "Medium": [
+                    {
+                        "question": "Which SciPy function is commonly used for finding the roots of a non-linear equation?",
+                        "options": [
+                            "fsolve()",
+                            "quad()",
+                            "odeint()",
+                            "minimize()"
+                        ]
+                    },
+                    {
+                        "question": "Which function in scipy.optimize is used for minimizing a scalar function of one or more variables?",
+                        "options": [
+                            "minimize()",
+                            "curve_fit()",
+                            "fmin_bfgs()",
+                            "least_squares()"
+                        ]
+                    },
+                    {
+                        "question": "Which SciPy function would you use to fit a curve to data using least squares?",
+                        "options": [
+                            "curve_fit()",
+                            "fsolve()",
+                            "quad()",
+                            "linprog()"
+                        ]
+                    },
+                    {
+                        "question": "Which SciPy submodule provides spatial data structures and algorithms, such as KD-trees?",
+                        "options": [
+                            "scipy.spatial",
+                            "scipy.stats",
+                            "scipy.ndimage",
+                            "scipy.signal"
+                        ]
+                    },
+                    {
+                        "question": "Which SciPy function is most appropriate for computing the convolution of two 1D sequences?",
+                        "options": [
+                            "scipy.signal.convolve()",
+                            "scipy.signal.fftconvolve()",
+                            "scipy.signal.correlate()",
+                            "scipy.signal.filter()"
+                        ]
+                    },
+                    {
+                        "question": "Which function in scipy.stats is used to perform a t-test for the means of two independent samples?",
+                        "options": [
+                            "ttest_ind()",
+                            "ttest_rel()",
+                            "f_oneway()",
+                            "chi2_contingency()"
+                        ]
+                    },
+                    {
+                        "question": "Which function in SciPy would you use to compute a 2D interpolation over a grid of data points?",
+                        "options": [
+                            "interp2d()",
+                            "interp1d()",
+                            "griddata()",
+                            "splrep()"
+                        ]
+                    },
+                    {
+                        "question": "Which SciPy function computes a sparse matrix representation of a distance matrix for clustering or nearest neighbor search?",
+                        "options": [
+                            "cdist()",
+                            "pdist()",
+                            "distance_matrix()",
+                            "squareform()"
+                        ]
+                    },
+                    {
+                        "question": "Which SciPy submodule is often used for image processing tasks like filtering and morphology?",
+                        "options": [
+                            "scipy.ndimage",
+                            "scipy.signal",
+                            "scipy.spatial",
+                            "scipy.linalg"
+                        ]
+                    },
+                    {
+                        "question": "Which SciPy function is commonly used to compute the discrete Fourier transform-based convolution efficiently?",
+                        "options": [
+                            "scipy.signal.fftconvolve()",
+                            "scipy.signal.convolve()",
+                            "scipy.signal.correlate()",
+                            "scipy.signal.welch()"
+                        ]
+                    }
+                ],
+                "Hard": [
+                    {
+                        "question": "Which SciPy function in scipy.optimize is best suited for constrained minimization of a multivariate scalar function?",
+                        "options": [
+                            "minimize() with method='SLSQP'",
+                            "fmin()",
+                            "curve_fit()",
+                            "leastsq()"
+                        ]
+                    },
+                    {
+                        "question": "Which sparse matrix format in SciPy is generally most efficient for arithmetic operations and matrix-vector products?",
+                        "options": [
+                            "CSR (Compressed Sparse Row)",
+                            "CSC (Compressed Sparse Column)",
+                            "LIL (List of Lists)",
+                            "DOK (Dictionary of Keys)"
+                        ]
+                    },
+                    {
+                        "question": "Which SciPy function can be used to compute the statistical significance of a correlation coefficient?",
+                        "options": [
+                            "scipy.stats.pearsonr()",
+                            "scipy.stats.linregress()",
+                            "scipy.stats.ttest_ind()",
+                            "scipy.stats.shapiro()"
+                        ]
+                    },
+                    {
+                        "question": "Which SciPy routine is appropriate for solving a system of linear equations with a sparse coefficient matrix?",
+                        "options": [
+                            "scipy.sparse.linalg.spsolve()",
+                            "scipy.linalg.solve()",
+                            "scipy.linalg.inv()",
+                            "scipy.sparse.linalg.eigs()"
+                        ]
+                    },
+                    {
+                        "question": "Which SciPy function can be used for multidimensional interpolation on irregular grids?",
+                        "options": [
+                            "scipy.interpolate.griddata()",
+                            "scipy.interpolate.interp1d()",
+                            "scipy.interpolate.interp2d()",
+                            "scipy.interpolate.spline()"
+                        ]
+                    },
+                    {
+                        "question": "Which SciPy functionality is ideal for hierarchical clustering of data?",
+                        "options": [
+                            "scipy.cluster.hierarchy",
+                            "scipy.cluster.vq",
+                            "scipy.spatial.distance",
+                            "scipy.stats.cluster"
+                        ]
+                    },
+                    {
+                        "question": "Which SciPy function is typically used to compute the probability density function for a continuous random variable, such as a normal distribution?",
+                        "options": [
+                            "scipy.stats.norm.pdf()",
+                            "scipy.stats.norm.cdf()",
+                            "scipy.stats.norm.ppf()",
+                            "scipy.stats.norm.rvs()"
+                        ]
+                    },
+                    {
+                        "question": "Which parameter in scipy.optimize.minimize would you primarily adjust to set bounds on the variables?",
+                        "options": [
+                            "bounds",
+                            "constraints",
+                            "method",
+                            "options"
+                        ]
+                    },
+                    {
+                        "question": "Which SciPy routine can be used to compute the eigenvalues and eigenvectors of a sparse matrix?",
+                        "options": [
+                            "scipy.sparse.linalg.eigs()",
+                            "scipy.linalg.eig()",
+                            "scipy.linalg.eigh()",
+                            "scipy.sparse.linalg.spsolve()"
+                        ]
+                    },
+                    {
+                        "question": "Which SciPy tool is used to perform non-linear least squares optimization and curve fitting to a function with bounds?",
+                        "options": [
+                            "scipy.optimize.curve_fit() with bounds",
+                            "scipy.optimize.minimize_scalar()",
+                            "scipy.optimize.basinhopping()",
+                            "scipy.optimize.anneal()"
+                        ]
+                    }
+                ]
+            },
+            
+            "TensorFlow": {
+                "Easy": [
+                    {
+                        "question": "What is TensorFlow primarily used for?",
+                        "options": [
+                            "Building and training machine learning and deep learning models",
+                            "Creating web pages",
+                            "Managing relational databases",
+                            "Rendering 3D graphics"
+                        ]
+                    },
+                    {
+                        "question": "In TensorFlow, what is a 'tensor'?",
+                        "options": [
+                            "A multi-dimensional array",
+                            "A single scalar value only",
+                            "A configuration file",
+                            "A type of optimizer"
+                        ]
+                    },
+                    {
+                        "question": "Which company originally developed TensorFlow?",
+                        "options": [
+                            "Google",
+                            "Facebook",
+                            "Microsoft",
+                            "Amazon"
+                        ]
+                    },
+                    {
+                        "question": "Which high-level API built on top of TensorFlow is commonly used to define and train models?",
+                        "options": [
+                            "Keras",
+                            "Flask",
+                            "Django",
+                            "Pandas"
+                        ]
+                    },
+                    {
+                        "question": "Which TensorFlow/Keras class is commonly used to create a simple feed-forward neural network?",
+                        "options": [
+                            "Sequential",
+                            "Functional",
+                            "Estimator",
+                            "Optimizer"
+                        ]
+                    },
+                    {
+                        "question": "Which TensorFlow/Keras layer is typically used as the first layer to flatten input images?",
+                        "options": [
+                            "Flatten",
+                            "Dense",
+                            "Conv2D",
+                            "Dropout"
+                        ]
+                    },
+                    {
+                        "question": "Which Keras layer is most commonly used for a fully connected layer?",
+                        "options": [
+                            "Dense",
+                            "Conv2D",
+                            "LSTM",
+                            "Embedding"
+                        ]
+                    },
+                    {
+                        "question": "Which activation function is commonly used for hidden layers in deep neural networks?",
+                        "options": [
+                            "ReLU",
+                            "Softmax",
+                            "Sigmoid",
+                            "Linear"
+                        ]
+                    },
+                    {
+                        "question": "Which activation function is often used in the output layer for multi-class classification?",
+                        "options": [
+                            "Softmax",
+                            "ReLU",
+                            "Tanh",
+                            "HardSigmoid"
+                        ]
+                    },
+                    {
+                        "question": "Which method is used to start training a Keras model?",
+                        "options": [
+                            "model.fit()",
+                            "model.train()",
+                            "model.learn()",
+                            "model.run()"
+                        ]
+                    }
+                ],
+                "Medium": [
+                    {
+                        "question": "Which Keras method is used to evaluate a trained model on test data?",
+                        "options": [
+                            "model.evaluate()",
+                            "model.test()",
+                            "model.predict()",
+                            "model.score()"
+                        ]
+                    },
+                    {
+                        "question": "Which Keras method is used to generate predictions from a trained model?",
+                        "options": [
+                            "model.predict()",
+                            "model.infer()",
+                            "model.run()",
+                            "model.forward()"
+                        ]
+                    },
+                    {
+                        "question": "Which loss function is commonly used for multi-class classification problems with one-hot encoded labels?",
+                        "options": [
+                            "categorical_crossentropy",
+                            "binary_crossentropy",
+                            "mean_squared_error",
+                            "hinge"
+                        ]
+                    },
+                    {
+                        "question": "Which optimizer in Keras is an adaptive learning rate optimization algorithm that combines RMSProp and momentum?",
+                        "options": [
+                            "Adam",
+                            "SGD",
+                            "Adagrad",
+                            "Adadelta"
+                        ]
+                    },
+                    {
+                        "question": "Which Keras callback is used to stop training when a monitored metric has stopped improving?",
+                        "options": [
+                            "EarlyStopping",
+                            "ModelCheckpoint",
+                            "ReduceLROnPlateau",
+                            "TensorBoard"
+                        ]
+                    },
+                    {
+                        "question": "Which Keras layer is commonly used to reduce overfitting by randomly setting a fraction of input units to 0 during training?",
+                        "options": [
+                            "Dropout",
+                            "BatchNormalization",
+                            "MaxPooling2D",
+                            "Conv2D"
+                        ]
+                    },
+                    {
+                        "question": "Which Keras layer is specifically designed for 2D convolution operations on images?",
+                        "options": [
+                            "Conv2D",
+                            "Conv1D",
+                            "Dense",
+                            "Embedding"
+                        ]
+                    },
+                    {
+                        "question": "Which layer should you typically use to downsample the spatial dimensions of feature maps in a CNN?",
+                        "options": [
+                            "MaxPooling2D",
+                            "Flatten",
+                            "Dense",
+                            "Dropout"
+                        ]
+                    },
+                    {
+                        "question": "Which object in TensorFlow 2.x manages the training loop when you use model.fit()?",
+                        "options": [
+                            "tf.keras.Model",
+                            "tf.estimator.Estimator",
+                            "tf.Session",
+                            "tf.Graph"
+                        ]
+                    },
+                    {
+                        "question": "Which TensorFlow construct is used to represent a data input pipeline for feeding data into a model?",
+                        "options": [
+                            "tf.data.Dataset",
+                            "tf.io.Reader",
+                            "tf.feed.Input",
+                            "tf.pipeline.Source"
+                        ]
+                    }
+                ],
+                "Hard": [
+                    {
+                        "question": "Which TensorFlow feature allows you to trace Python functions into computational graphs for performance optimization?",
+                        "options": [
+                            "@tf.function",
+                            "tf.autograph.compile",
+                            "tf.Session",
+                            "tf.GraphDef"
+                        ]
+                    },
+                    {
+                        "question": "Which API is recommended for building complex models with shared layers or multiple inputs/outputs in Keras?",
+                        "options": [
+                            "Functional API",
+                            "Sequential API",
+                            "Estimator API",
+                            "Dataset API"
+                        ]
+                    },
+                    {
+                        "question": "Which method allows you to iterate over a dataset and perform custom training steps in TensorFlow 2.x?",
+                        "options": [
+                            "Using GradientTape in a custom training loop",
+                            "Using Session.run()",
+                            "Using fit_generator()",
+                            "Using train_on_batch() only"
+                        ]
+                    },
+                    {
+                        "question": "What does tf.GradientTape primarily do?",
+                        "options": [
+                            "Records operations for automatic differentiation",
+                            "Allocates GPU memory",
+                            "Creates a new variable scope",
+                            "Loads saved models"
+                        ]
+                    },
+                    {
+                        "question": "Which TensorFlow tool is used to visualize graphs, metrics, and weights during model training?",
+                        "options": [
+                            "TensorBoard",
+                            "TensorViz",
+                            "TensorScope",
+                            "GraphViewer"
+                        ]
+                    },
+                    {
+                        "question": "Which format is commonly used by TensorFlow for saving a complete Keras model, including architecture, weights, and optimizer state?",
+                        "options": [
+                            "SavedModel",
+                            "ONNX",
+                            "HDF5 only",
+                            "Pickle"
+                        ]
+                    },
+                    {
+                        "question": "Which distribution strategy in TensorFlow is used for synchronous training on multiple GPUs on a single machine?",
+                        "options": [
+                            "tf.distribute.MirroredStrategy",
+                            "tf.distribute.TPUStrategy",
+                            "tf.distribute.MultiWorkerMirroredStrategy",
+                            "tf.distribute.CentralStorageStrategy"
+                        ]
+                    },
+                    {
+                        "question": "Which TensorFlow function converts a Keras model into a concrete function suitable for export and serving?",
+                        "options": [
+                            "tf.function(model)",
+                            "tf.saved_model.save(model)",
+                            "tf.make_concrete_function(model)",
+                            "tf.convert_to_tensor(model)"
+                        ]
+                    },
+                    {
+                        "question": "Which Keras method is used to generate predictions from a trained model?",
+                        "options": [
+                            "model.predict()",
+                            "model.infer()",
+                            "model.run()",
+                            "model.forward()"
+                        ]
+                    },
+                    {
+                        "question": "Which loss function is commonly used for multi-class classification problems with one-hot encoded labels?",
+                        "options": [
+                            "categorical_crossentropy",
+                            "binary_crossentropy",
+                            "mean_squared_error",
+                            "hinge"
+                        ]
+                    }
+                ]
+            },
+            
+            "PyTorch": {
+                "Easy": [
+                    {
+                        "question": "In PyTorch, which module contains commonly used neural network layers like Linear and Conv2d?",
+                        "options": [
+                            "torch.nn",
+                            "torch.optim",
+                            "torch.utils.data",
+                            "torch.autograd"
+                        ]
+                    },
+                    {
+                        "question": "Which class in PyTorch should you subclass to define a custom neural network?",
+                        "options": [
+                            "nn.Module",
+                            "nn.Layer",
+                            "nn.Network",
+                            "nn.Model"
+                        ]
+                    },
+                    {
+                        "question": "Which attribute of a tensor in PyTorch tells you whether it will track gradients?",
+                        "options": [
+                            "requires_grad",
+                            "track_grad",
+                            "grad_active",
+                            "enable_grad"
+                        ]
+                    },
+                    {
+                        "question": "Which PyTorch module is used to build input pipelines and batch data?",
+                        "options": [
+                            "torch.utils.data",
+                            "torch.optim",
+                            "torchvision.models",
+                            "torch.cuda"
+                        ]
+                    },
+                    {
+                        "question": "Which function in PyTorch creates a tensor with random values from a uniform distribution between 0 and 1?",
+                        "options": [
+                            "torch.rand()",
+                            "torch.randn()",
+                            "torch.random()",
+                            "torch.uniform()"
+                        ]
+                    },
+                    {
+                        "question": "Which function converts a PyTorch tensor to a NumPy array (on CPU)?",
+                        "options": [
+                            "tensor.numpy()",
+                            "tensor.to_numpy()",
+                            "torch.as_numpy(tensor)",
+                            "torch.numpy(tensor)"
+                        ]
+                    },
+                    {
+                        "question": "Which PyTorch function gives the number of dimensions of a tensor?",
+                        "options": [
+                            "tensor.dim()",
+                            "tensor.ndim()",
+                            "tensor.rank()",
+                            "tensor.nd()"
+                        ]
+                    },
+                    {
+                        "question": "Which method switches a PyTorch model to evaluation mode?",
+                        "options": [
+                            "model.eval()",
+                            "model.test()",
+                            "model.evaluate()",
+                            "model.freeze()"
+                        ]
+                    },
+                    {
+                        "question": "Which method switches a PyTorch model back to training mode?",
+                        "options": [
+                            "model.train()",
+                            "model.fit()",
+                            "model.learn()",
+                            "model.backprop()"
+                        ]
+                    },
+                    {
+                        "question": "Which PyTorch device string is typically used to move tensors to the CPU?",
+                        "options": [
+                            "cpu",
+                            "host",
+                            "default",
+                            "main"
+                        ]
+                    }
+                ],
+                "Medium": [
+                    {
+                        "question": "Which PyTorch module provides standard loss functions like CrossEntropyLoss and MSELoss?",
+                        "options": [
+                            "torch.nn",
+                            "torch.optim",
+                            "torch.utils.data",
+                            "torch.distributions"
+                        ]
+                    },
+                    {
+                        "question": "Which function is commonly used to initialize an optimizer such as Adam in PyTorch?",
+                        "options": [
+                            "torch.optim.Adam(model.parameters(), lr=...)",
+                            "torch.nn.Adam(model.parameters(), lr=...)",
+                            "torch.optim.SGD.Adam(model.parameters())",
+                            "torch.optim.configure('Adam', model.parameters())"
+                        ]
+                    },
+                    {
+                        "question": "Which PyTorch module provides utilities for automatic differentiation?",
+                        "options": [
+                            "torch.autograd",
+                            "torch.grad",
+                            "torch.derivative",
+                            "torch.diff"
+                        ]
+                    },
+                    {
+                        "question": "Which constant in PyTorch returns the default computation device if CUDA is available, otherwise CPU?",
+                        "options": [
+                            "torch.device('cuda' if torch.cuda.is_available() else 'cpu')",
+                            "torch.default_device()",
+                            "torch.get_device()",
+                            "torch.auto_device()"
+                        ]
+                    },
+                    {
+                        "question": "Which PyTorch class is commonly used to create convolutional layers for 2D image inputs?",
+                        "options": [
+                            "nn.Conv2d",
+                            "nn.Conv1d",
+                            "nn.Linear",
+                            "nn.Flatten"
+                        ]
+                    },
+                    {
+                        "question": "Which class is typically used as the final layer for multi-class classification in PyTorch?",
+                        "options": [
+                            "nn.Linear with CrossEntropyLoss",
+                            "nn.Softmax with MSELoss",
+                            "nn.Sigmoid with BCEWithLogitsLoss",
+                            "nn.Conv2d with NLLLoss"
+                        ]
+                    },
+                    {
+                        "question": "Which function in torch.utils.data helps you create batches, shuffle, and parallelize data loading?",
+                        "options": [
+                            "DataLoader",
+                            "DatasetLoader",
+                            "BatchLoader",
+                            "TensorLoader"
+                        ]
+                    },
+                    {
+                        "question": "Which statement is typically used to disable gradient computation during model evaluation to save memory?",
+                        "options": [
+                            "with torch.no_grad():",
+                            "with torch.eval():",
+                            "with torch.stop_grad():",
+                            "with torch.freeze():"
+                        ]
+                    },
+                    {
+                        "question": "Which PyTorch utility would you typically use to apply data augmentations like random crop and flip for images?",
+                        "options": [
+                            "torchvision.transforms",
+                            "torch.utils.data.augment",
+                            "torch.augment.transforms",
+                            "torch.autograd.transforms"
+                        ]
+                    },
+                    {
+                        "question": "Which attribute of a PyTorch model returns an iterator over its trainable parameters?",
+                        "options": [
+                            "model.parameters()",
+                            "model.weights()",
+                            "model.tensors()",
+                            "model.vars()"
+                        ]
+                    }
+                ],
+                "Hard": [
+                    {
+                        "question": "Which PyTorch feature allows just-in-time compilation and optimization of models for faster execution?",
+                        "options": [
+                            "TorchScript",
+                            "Eager mode",
+                            "Autograd",
+                            "DataLoader"
+                        ]
+                    },
+                    {
+                        "question": "Which torch.distributed backend is most commonly used for multi-GPU training on a single machine with NCCL support?",
+                        "options": [
+                            "nccl",
+                            "gloo",
+                            "mpi",
+                            "tcp"
+                        ]
+                    },
+                    {
+                        "question": "Which PyTorch function in torch.jit is used to create a TorchScript model by tracing a function with example inputs?",
+                        "options": [
+                            "torch.jit.trace()",
+                            "torch.jit.script()",
+                            "torch.jit.optimize()",
+                            "torch.jit.compile()"
+                        ]
+                    },
+                    {
+                        "question": "Which context manager in PyTorch enables automatic mixed precision for certain operations?",
+                        "options": [
+                            "torch.cuda.amp.autocast()",
+                            "torch.mixed_precision()",
+                            "torch.half_mode()",
+                            "torch.float16.enable()"
+                        ]
+                    },
+                    {
+                        "question": "Which function in torch.nn.utils can be used to clip gradients to avoid exploding gradients?",
+                        "options": [
+                            "clip_grad_norm_()",
+                            "limit_grad_()",
+                            "cap_gradients_()",
+                            "clip_norm_()"
+                        ]
+                    },
+                    {
+                        "question": "Which PyTorch function is used to register a forward hook on a module for inspecting intermediate activations?",
+                        "options": [
+                            "module.register_forward_hook()",
+                            "module.add_forward_hook()",
+                            "module.hook_forward()",
+                            "module.attach_forward()"
+                        ]
+                    },
+                    {
+                        "question": "Which PyTorch tool can you use to profile the performance of different operators during model execution?",
+                        "options": [
+                            "torch.profiler",
+                            "torch.benchmark",
+                            "torch.trace_profiler",
+                            "torch.timer"
+                        ]
+                    },
+                    {
+                        "question": "Which PyTorch utility allows asynchronous data loading and prefetching to improve input pipeline performance?",
+                        "options": [
+                            "DataLoader with num_workers > 0",
+                            "Dataset with async=True",
+                            "TensorLoader with prefetch=True",
+                            "DataIterator with threads>0"
+                        ]
+                    },
+                    {
+                        "question": "Which module in PyTorch is recommended for exporting models in a portable format like ONNX?",
+                        "options": [
+                            "torch.onnx",
+                            "torch.exporter",
+                            "torch.jit.onnx",
+                            "torch.graph.onnx"
+                        ]
+                    },
+                    {
+                        "question": "Which PyTorch distribution API would you use to sample from a normal distribution as part of a probabilistic model?",
+                        "options": [
+                            "torch.distributions.Normal",
+                            "torch.random.Normal",
+                            "torch.nn.NormalDist",
+                            "torch.stats.Normal"
+                        ]
+                    }
+                ]
+            },
+            
+            "scikit-learn": {
+                "Easy": [
+                    {
+                        "question": "Which Python library is scikit-learn built to work closely with for numerical arrays?",
+                        "options": [
+                            "NumPy",
+                            "Pandas",
+                            "Matplotlib",
+                            "Flask"
+                        ]
+                    },
+                    {
+                        "question": "Which scikit-learn function splits arrays into random train and test subsets?",
+                        "options": [
+                            "train_test_split()",
+                            "split_train_test()",
+                            "make_split()",
+                            "split_data()"
+                        ]
+                    },
+                    {
+                        "question": "Which method in a scikit-learn estimator trains the model on the given data?",
+                        "options": [
+                            "fit()",
+                            "train()",
+                            "learn()",
+                            "build()"
+                        ]
+                    },
+                    {
+                        "question": "Which method in a scikit-learn estimator is used for predicting target values on new data?",
+                        "options": [
+                            "predict()",
+                            "forecast()",
+                            "estimate()",
+                            "infer()"
+                        ]
+                    },
+                    {
+                        "question": "Which module in scikit-learn contains linear models like LinearRegression and LogisticRegression?",
+                        "options": [
+                            "sklearn.linear_model",
+                            "sklearn.svm",
+                            "sklearn.tree",
+                            "sklearn.cluster"
+                        ]
+                    },
+                    {
+                        "question": "Which scikit-learn module provides metrics such as accuracy_score and mean_squared_error?",
+                        "options": [
+                            "sklearn.metrics",
+                            "sklearn.validation",
+                            "sklearn.model_selection",
+                            "sklearn.utils"
+                        ]
+                    },
+                    {
+                        "question": "Which class in scikit-learn is used for k-means clustering?",
+                        "options": [
+                            "KMeans",
+                            "KNeighborsClassifier",
+                            "DBSCAN",
+                            "AgglomerativeClustering"
+                        ]
+                    },
+                    {
+                        "question": "Which scikit-learn module is used for support vector machine algorithms?",
+                        "options": [
+                            "sklearn.svm",
+                            "sklearn.svr",
+                            "sklearn.svc",
+                            "sklearn.support"
+                        ]
+                    },
+                    {
+                        "question": "Which function in sklearn.datasets can generate a simple classification dataset for testing models?",
+                        "options": [
+                            "make_classification()",
+                            "make_moons()",
+                            "make_blobs()",
+                            "make_regression()"
+                        ]
+                    },
+                    {
+                        "question": "Which scikit-learn estimator is commonly used for binary and multi-class classification problems based on linear decision boundaries?",
+                        "options": [
+                            "LogisticRegression",
+                            "KMeans",
+                            "LinearRegression",
+                            "DBSCAN"
+                        ]
+                    }
+                ],
+                "Medium": [
+                    {
+                        "question": "Which scikit-learn scaler transforms features to have a mean of 0 and standard deviation of 1?",
+                        "options": [
+                            "StandardScaler",
+                            "MinMaxScaler",
+                            "MaxAbsScaler",
+                            "Normalizer"
+                        ]
+                    },
+                    {
+                        "question": "Which technique in scikit-learn is commonly used for dimensionality reduction and is found in sklearn.decomposition?",
+                        "options": [
+                            "PCA",
+                            "KMeans",
+                            "RandomForest",
+                            "DBSCAN"
+                        ]
+                    },
+                    {
+                        "question": "Which class in scikit-learn performs random forest classification?",
+                        "options": [
+                            "RandomForestClassifier",
+                            "RandomForestRegressor",
+                            "ExtraTreesClassifier",
+                            "BaggingClassifier"
+                        ]
+                    },
+                    {
+                        "question": "Which function in sklearn.model_selection is used to perform k-fold cross-validation and return scores?",
+                        "options": [
+                            "cross_val_score()",
+                            "kfold_scores()",
+                            "validate_model()",
+                            "cross_validation()"
+                        ]
+                    },
+                    {
+                        "question": "Which scikit-learn class performs randomized search over hyperparameter distributions?",
+                        "options": [
+                            "RandomizedSearchCV",
+                            "GridSearchCV",
+                            "SearchCV",
+                            "RandomGridCV"
+                        ]
+                    },
+                    {
+                        "question": "Which scikit-learn class gives you a classification report including precision, recall, and F1-score?",
+                        "options": [
+                            "classification_report() in sklearn.metrics",
+                            "classifier_report() in sklearn.metrics",
+                            "report_classification() in sklearn.model_selection",
+                            "metrics_report() in sklearn.utils"
+                        ]
+                    },
+                    {
+                        "question": "Which scikit-learn metric is typically used to evaluate a binary classification model when classes are imbalanced?",
+                        "options": [
+                            "f1_score",
+                            "accuracy_score",
+                            "r2_score",
+                            "explained_variance_score"
+                        ]
+                    },
+                    {
+                        "question": "Which scikit-learn class is typically used for L1-regularized linear regression?",
+                        "options": [
+                            "Lasso",
+                            "Ridge",
+                            "ElasticNet",
+                            "LinearRegression"
+                        ]
+                    },
+                    {
+                        "question": "Which scikit-learn transformer can map categorical features into a one-hot numeric array?",
+                        "options": [
+                            "OneHotEncoder",
+                            "LabelEncoder",
+                            "OrdinalEncoder",
+                            "Binarizer"
+                        ]
+                    },
+                    {
+                        "question": "Which scikit-learn utility is used to chain preprocessing steps with an estimator into a single object?",
+                        "options": [
+                            "Pipeline",
+                            "ColumnTransformer",
+                            "FeatureUnion",
+                            "BaseEstimator"
+                        ]
+                    }
+                ],
+                "Hard": [
+                    {
+                        "question": "Which scikit-learn class is specifically designed to apply different transformations to different columns of a dataset?",
+                        "options": [
+                            "ColumnTransformer",
+                            "FeatureUnion",
+                            "Pipeline",
+                            "TransformColumns"
+                        ]
+                    },
+                    {
+                        "question": "Which argument in GridSearchCV specifies the number of folds to use for cross-validation?",
+                        "options": [
+                            "cv",
+                            "folds",
+                            "n_splits",
+                            "k"
+                        ]
+                    },
+                    {
+                        "question": "Which scikit-learn ensemble method combines multiple weak learners in a stage-wise fashion by optimizing a loss function, often used for gradient boosting?",
+                        "options": [
+                            "GradientBoostingClassifier",
+                            "RandomForestClassifier",
+                            "AdaBoostClassifier",
+                            "BaggingClassifier"
+                        ]
+                    },
+                    {
+                        "question": "Which scikit-learn estimator implements a linear SVM classifier optimized for large datasets?",
+                        "options": [
+                            "LinearSVC",
+                            "SVC with kernel='linear'",
+                            "SGDClassifier",
+                            "SVR"
+                        ]
+                    },
+                    {
+                        "question": "Which class in scikit-learn can be used to perform feature selection based on univariate statistical tests?",
+                        "options": [
+                            "SelectKBest",
+                            "RFE",
+                            "VarianceThreshold",
+                            "SelectFromModel"
+                        ]
+                    },
+                    {
+                        "question": "Which scikit-learn meta-estimator is used to reduce variance and improve stability by training multiple base estimators on random subsets of the dataset?",
+                        "options": [
+                            "BaggingClassifier",
+                            "AdaBoostClassifier",
+                            "VotingClassifier",
+                            "GradientBoostingClassifier"
+                        ]
+                    },
+                    {
+                        "question": "Which parameter in regularized linear models like Ridge controls the strength of the L2 penalty?",
+                        "options": [
+                            "alpha",
+                            "C",
+                            "gamma",
+                            "lambda_"
+                        ]
+                    },
+                    {
+                        "question": "Which scikit-learn function can be used to generate polynomial and interaction features from numerical inputs?",
+                        "options": [
+                            "PolynomialFeatures",
+                            "FeatureUnion",
+                            "MinMaxScaler",
+                            "KernelPCA"
+                        ]
+                    },
+                    {
+                        "question": "Which scikit-learn clustering algorithm can identify arbitrarily shaped clusters and is robust to noise by using density-based regions?",
+                        "options": [
+                            "DBSCAN",
+                            "KMeans",
+                            "AgglomerativeClustering",
+                            "MeanShift"
+                        ]
+                    },
+                    {
+                        "question": "Which scikit-learn utility base classes should you subclass to create a custom transformer compatible with Pipelines?",
+                        "options": [
+                            "BaseEstimator and TransformerMixin",
+                            "BaseEstimator and RegressorMixin",
+                            "TransformerMixin and ClassifierMixin",
+                            "EstimatorMixin and TransformerMixin"
+                        ]
+                    }
+                ]
+            },
+            
+            "Flask": {
+                "Easy": [
+                    {
+                        "question": "What type of Python framework is Flask most commonly described as?",
+                        "options": [
+                            "A micro web framework",
+                            "A full-stack desktop framework",
+                            "A scientific computing framework",
+                            "A game engine framework"
+                        ]
+                    },
+                    {
+                        "question": "Which line is used to create a basic Flask application instance?",
+                        "options": [
+                            "app = Flask(__name__)",
+                            "app = Flask()",
+                            "app = new Flask()",
+                            "app = Flask.create()"
+                        ]
+                    },
+                    {
+                        "question": "Which decorator is used to map a URL route to a view function in Flask?",
+                        "options": [
+                            "@app.route()",
+                            "@app.url()",
+                            "@route()",
+                            "@flask.route()"
+                        ]
+                    },
+                    {
+                        "question": "Which Flask function is used to render an HTML template?",
+                        "options": [
+                            "render_template()",
+                            "render_html()",
+                            "template()",
+                            "serve_template()"
+                        ]
+                    },
+                    {
+                        "question": "Where are HTML template files usually stored in a typical Flask project?",
+                        "options": [
+                            "templates/ directory",
+                            "static/ directory",
+                            "views/ directory",
+                            "html/ directory"
+                        ]
+                    },
+                    {
+                        "question": "Which directory in a Flask project typically contains CSS, JavaScript, and image files?",
+                        "options": [
+                            "static/",
+                            "templates/",
+                            "assets/",
+                            "resources/"
+                        ]
+                    },
+                    {
+                        "question": "Which function starts the Flask built-in development server?",
+                        "options": [
+                            "app.run()",
+                            "app.start()",
+                            "app.execute()",
+                            "app.launch()"
+                        ]
+                    },
+                    {
+                        "question": "Which Flask object represents the current incoming HTTP request?",
+                        "options": [
+                            "request",
+                            "response",
+                            "session",
+                            "current_app"
+                        ]
+                    },
+                    {
+                        "question": "Which HTTP method is used by default when no methods parameter is specified in @app.route?",
+                        "options": [
+                            "GET",
+                            "POST",
+                            "PUT",
+                            "DELETE"
+                        ]
+                    },
+                    {
+                        "question": "Which object in Flask is commonly used to store configuration values like SECRET_KEY?",
+                        "options": [
+                            "app.config",
+                            "app.settings",
+                            "app.env",
+                            "app.options"
+                        ]
+                    }
+                ],
+                "Medium": [
+                    {
+                        "question": "Which Flask function is typically used to generate a URL for a given endpoint name?",
+                        "options": [
+                            "url_for()",
+                            "make_url()",
+                            "build_url()",
+                            "route_for()"
+                        ]
+                    },
+                    {
+                        "question": "Which Flask function is used to redirect a client to a different route or external URL?",
+                        "options": [
+                            "redirect()",
+                            "forward()",
+                            "send_to()",
+                            "go_to()"
+                        ]
+                    },
+                    {
+                        "question": "Which Flask object is used to store data across requests for a single client using signed cookies?",
+                        "options": [
+                            "session",
+                            "request",
+                            "g",
+                            "current_app"
+                        ]
+                    },
+                    {
+                        "question": "Which Flask decorator allows you to run a function before each request?",
+                        "options": [
+                            "@app.before_request",
+                            "@app.pre_request",
+                            "@app.request_start",
+                            "@app.on_request"
+                        ]
+                    },
+                    {
+                        "question": "Which object in Flask provides a place to store data during the handling of a request, which is also accessible in templates?",
+                        "options": [
+                            "g",
+                            "session",
+                            "request",
+                            "context"
+                        ]
+                    },
+                    {
+                        "question": "Which configuration flag enables the interactive debugger and auto reload in Flask?",
+                        "options": [
+                            "DEBUG = True",
+                            "DEVELOPMENT = True",
+                            "TESTING = True",
+                            "RELOAD = True"
+                        ]
+                    },
+                    {
+                        "question": "Which Flask extension provides higher-level support for working with SQLAlchemy?",
+                        "options": [
+                            "Flask-SQLAlchemy",
+                            "Flask-DB",
+                            "Flask-ORM",
+                            "Flask-Database"
+                        ]
+                    },
+                    {
+                        "question": "Which pattern does Flask use to organize reusable application components with their own routes and templates?",
+                        "options": [
+                            "Blueprints",
+                            "Modules",
+                            "Controllers",
+                            "Bundles"
+                        ]
+                    },
+                    {
+                        "question": "Which function in Flask helps you return JSON responses from dictionaries or lists?",
+                        "options": [
+                            "jsonify()",
+                            "to_json()",
+                            "render_json()",
+                            "json_response()"
+                        ]
+                    },
+                    {
+                        "question": "Which HTTP method is commonly used with HTML forms when submitting sensitive or changing data to a Flask backend?",
+                        "options": [
+                            "POST",
+                            "GET",
+                            "PUT",
+                            "HEAD"
+                        ]
+                    }
+                ],
+                "Hard": [
+                    {
+                        "question": "Which Flask extension is commonly used to handle user authentication, login, and logout?",
+                        "options": [
+                            "Flask-Login",
+                            "Flask-Auth",
+                            "Flask-Security",
+                            "Flask-Users"
+                        ]
+                    },
+                    {
+                        "question": "Which design pattern is recommended by Flask to allow creating multiple application instances with different configurations?",
+                        "options": [
+                            "Application factory pattern",
+                            "Singleton pattern",
+                            "Observer pattern",
+                            "Adapter pattern"
+                        ]
+                    },
+                    {
+                        "question": "Which Flask decorator lets you register a custom error page for specific HTTP error codes such as 404 or 500?",
+                        "options": [
+                            "@app.errorhandler()",
+                            "@app.handle_error()",
+                            "@app.exception()",
+                            "@app.on_error()"
+                        ]
+                    },
+                    {
+                        "question": "Which WSGI servers are commonly used in production to serve Flask applications?",
+                        "options": [
+                            "Gunicorn or uWSGI",
+                            "Flask's built-in server",
+                            "SimpleHTTPServer",
+                            "Werkzeug dev server only"
+                        ]
+                    },
+                    {
+                        "question": "Which Flask extension is built on top of WTForms and helps with creating and validating web forms, including CSRF protection?",
+                        "options": [
+                            "Flask-WTF",
+                            "Flask-Forms",
+                            "Flask-CSRF",
+                            "Flask-Validate"
+                        ]
+                    },
+                    {
+                        "question": "Which object in Flask gives you access to the application context when you are outside an active request context?",
+                        "options": [
+                            "current_app",
+                            "g",
+                            "session",
+                            "request"
+                        ]
+                    },
+                    {
+                        "question": "Which Flask CLI command is typically used to run the application when using the application factory pattern?",
+                        "options": [
+                            "flask run",
+                            "python app.py",
+                            "flask start",
+                            "flask execute"
+                        ]
+                    },
+                    {
+                        "question": "Which mechanism in Flask allows you to run teardown code after each request, regardless of whether an exception occurred?",
+                        "options": [
+                            "@app.teardown_request",
+                            "@app.after_request",
+                            "@app.end_request",
+                            "@app.cleanup_request"
+                        ]
+                    },
+                    {
+                        "question": "Which HTTP header should be set by a Flask application to protect against clickjacking by restricting framing?",
+                        "options": [
+                            "X-Frame-Options",
+                            "X-Content-Type-Options",
+                            "Strict-Transport-Security",
+                            "Content-Security-Policy"
+                        ]
+                    },
+                    {
+                        "question": "Which deployment approach is commonly used to containerize Flask applications for consistent environments across development and production?",
+                        "options": [
+                            "Using Docker images and containers",
+                            "Using only virtualenv on the server",
+                            "Running Flask directly from the IDE",
+                            "Copying the entire virtual environment manually"
+                        ]
+                    }
+                ]
+            }
+        }
+    }
+}
+

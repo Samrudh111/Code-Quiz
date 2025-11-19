@@ -1,0 +1,1399 @@
+{
+    "data": {
+        "C++": {
+            "Windows API": {
+                "Easy": [
+                    {
+                        "question": "What is the Windows API primarily used for in C++?",
+                        "options": [
+                            "Interacting with the Windows operating system",
+                            "Building Linux kernel modules",
+                            "Creating MacOS apps",
+                            "Managing cloud servers"
+                        ]
+                    },
+                    {
+                        "question": "Which header is required for basic Windows API programming?",
+                        "options": [
+                            "<windows.h>",
+                            "<winapi.h>",
+                            "<system.h>",
+                            "<kernel.h>"
+                        ]
+                    },
+                    {
+                        "question": "Which Windows API function creates a new window?",
+                        "options": [
+                            "CreateWindowEx",
+                            "NewWindow",
+                            "WindowCreate",
+                            "WinMake"
+                        ]
+                    },
+                    {
+                        "question": "Which type represents a window handle?",
+                        "options": [
+                            "HWND",
+                            "HANDLE",
+                            "WINID",
+                            "WID"
+                        ]
+                    },
+                    {
+                        "question": "Which function starts the message loop?",
+                        "options": [
+                            "GetMessage",
+                            "BeginLoop",
+                            "StartEvents",
+                            "DispatchEvents"
+                        ]
+                    },
+                    {
+                        "question": "Which function dispatches messages to window procedures?",
+                        "options": [
+                            "DispatchMessage",
+                            "SendMsg",
+                            "LoopMessage",
+                            "ProcessEvent"
+                        ]
+                    },
+                    {
+                        "question": "Which Windows API structure defines window properties?",
+                        "options": [
+                            "WNDCLASS",
+                            "WINSTRUCT",
+                            "WINDOWINFO",
+                            "WINCLS"
+                        ]
+                    },
+                    {
+                        "question": "What is the entry point function for Windows API apps?",
+                        "options": [
+                            "WinMain",
+                            "main",
+                            "StartWin",
+                            "EntryWin"
+                        ]
+                    },
+                    {
+                        "question": "Which function loads and displays a message box?",
+                        "options": [
+                            "MessageBox",
+                            "ShowDialog",
+                            "MsgBox",
+                            "AlertBox"
+                        ]
+                    },
+                    {
+                        "question": "Which constant represents a left mouse button click?",
+                        "options": [
+                            "WM_LBUTTONDOWN",
+                            "WM_MOUSECLICK",
+                            "WM_LEFTCLICK",
+                            "WM_BTN1"
+                        ]
+                    }
+                ],
+                "Medium": [
+                    {
+                        "question": "What is the purpose of the Windows message loop?",
+                        "options": [
+                            "Processing OS messages sent to the application",
+                            "Managing memory allocations",
+                            "Running background threads",
+                            "Handling network events only"
+                        ]
+                    },
+                    {
+                        "question": "Which structure contains message information retrieved by GetMessage?",
+                        "options": [
+                            "MSG",
+                            "EVENT",
+                            "WINMSG",
+                            "MESSAGE"
+                        ]
+                    },
+                    {
+                        "question": "Which function registers a window class?",
+                        "options": [
+                            "RegisterClassEx",
+                            "AddWindowClass",
+                            "ClassRegister",
+                            "DefineWindowClass"
+                        ]
+                    },
+                    {
+                        "question": "Which Windows API component handles drawing operations?",
+                        "options": [
+                            "GDI",
+                            "DirectX",
+                            "Kernel32",
+                            "User32"
+                        ]
+                    },
+                    {
+                        "question": "Which function retrieves the handle to the device context?",
+                        "options": [
+                            "GetDC",
+                            "FetchDC",
+                            "DeviceContext",
+                            "WindowDC"
+                        ]
+                    },
+                    {
+                        "question": "Which API is commonly used for file I/O?",
+                        "options": [
+                            "CreateFile",
+                            "OpenFileHandle",
+                            "OpenDisk",
+                            "LaunchFile"
+                        ]
+                    },
+                    {
+                        "question": "Which threading API is native to Windows?",
+                        "options": [
+                            "CreateThread",
+                            "pthread_create",
+                            "spawn_thread",
+                            "threadStart"
+                        ]
+                    },
+                    {
+                        "question": "Which module provides functions like MessageBox?",
+                        "options": [
+                            "User32.dll",
+                            "Kernel32.dll",
+                            "Gdi32.dll",
+                            "Advapi32.dll"
+                        ]
+                    },
+                    {
+                        "question": "Which call is used to destroy a window?",
+                        "options": [
+                            "DestroyWindow",
+                            "DeleteWindow",
+                            "CloseWin",
+                            "RemoveWindow"
+                        ]
+                    },
+                    {
+                        "question": "What does WM_PAINT handle?",
+                        "options": [
+                            "Redrawing window content",
+                            "Processing keyboard input",
+                            "Handling window resize",
+                            "Managing network messages"
+                        ]
+                    }
+                ],
+                "Hard": [
+                    {
+                        "question": "Which Windows API function creates a process?",
+                        "options": [
+                            "CreateProcess",
+                            "InitProcess",
+                            "StartProc",
+                            "ForkProcess"
+                        ]
+                    },
+                    {
+                        "question": "Which function is used to map files into memory?",
+                        "options": [
+                            "CreateFileMapping",
+                            "MapView",
+                            "MemoryMap",
+                            "MapFile"
+                        ]
+                    },
+                    {
+                        "question": "Which Windows synchronization primitive allows multiple readers but exclusive writing?",
+                        "options": [
+                            "SRWLock",
+                            "Mutex",
+                            "Semaphore",
+                            "CriticalSection"
+                        ]
+                    },
+                    {
+                        "question": "Which function loads dynamic libraries at runtime?",
+                        "options": [
+                            "LoadLibrary",
+                            "ImportDLL",
+                            "StartLib",
+                            "DLLLoad"
+                        ]
+                    },
+                    {
+                        "question": "Which Windows API subsystem manages low-level OS services?",
+                        "options": [
+                            "Kernel32",
+                            "User32",
+                            "Advapi32",
+                            "Shell32"
+                        ]
+                    },
+                    {
+                        "question": "Which function posts a message to a thread's message queue asynchronously?",
+                        "options": [
+                            "PostMessage",
+                            "SendMessage",
+                            "AsyncMessage",
+                            "QueueMessage"
+                        ]
+                    },
+                    {
+                        "question": "Which concept is associated with overlapped I/O?",
+                        "options": [
+                            "Asynchronous file and network operations",
+                            "GPU rendering",
+                            "Thread affinity",
+                            "Virtual memory faults"
+                        ]
+                    },
+                    {
+                        "question": "What is the purpose of the Windows message WM_NCCALCSIZE?",
+                        "options": [
+                            "Calculate size of non-client area",
+                            "Resize window buffer",
+                            "Initialize GDI",
+                            "Adjust device context"
+                        ]
+                    },
+                    {
+                        "question": "What does VirtualAlloc do?",
+                        "options": [
+                            "Allocates virtual memory pages",
+                            "Creates new threads",
+                            "Starts kernel tasks",
+                            "Registers window classes"
+                        ]
+                    },
+                    {
+                        "question": "Which function retrieves high-resolution performance counters?",
+                        "options": [
+                            "QueryPerformanceCounter",
+                            "WinTimer",
+                            "HighResCounter",
+                            "ClockPrecision"
+                        ]
+                    }
+                ]
+            },
+            
+            "POSIX": {
+                "Easy": [
+                    {
+                        "question": "What is POSIX primarily used for?",
+                        "options": [
+                            "Standardized APIs for Unix-based systems",
+                            "GPU programming",
+                            "Web development",
+                            "Cloud computing"
+                        ]
+                    },
+                    {
+                        "question": "Which POSIX API is used to create new processes?",
+                        "options": [
+                            "fork()",
+                            "spawn()",
+                            "newproc()",
+                            "process_create()"
+                        ]
+                    },
+                    {
+                        "question": "Which POSIX function is used to execute another program?",
+                        "options": [
+                            "exec() family",
+                            "run()",
+                            "launch()",
+                            "execute()"
+                        ]
+                    },
+                    {
+                        "question": "Which POSIX function opens a file?",
+                        "options": [
+                            "open()",
+                            "file_open()",
+                            "fopen_bin()",
+                            "winOpen()"
+                        ]
+                    },
+                    {
+                        "question": "Which POSIX function reads data from a file descriptor?",
+                        "options": [
+                            "read()",
+                            "getline()",
+                            "fetch()",
+                            "scan()"
+                        ]
+                    },
+                    {
+                        "question": "Which signal terminates a process?",
+                        "options": [
+                            "SIGTERM",
+                            "SIGPRINT",
+                            "SIGRUN",
+                            "SIGSTOPONLY"
+                        ]
+                    },
+                    {
+                        "question": "Which POSIX function creates a new thread?",
+                        "options": [
+                            "pthread_create",
+                            "create_thread",
+                            "spawn_thread",
+                            "make_pthread"
+                        ]
+                    },
+                    {
+                        "question": "Which function closes a file descriptor?",
+                        "options": [
+                            "close()",
+                            "end()",
+                            "release()",
+                            "stop()"
+                        ]
+                    },
+                    {
+                        "question": "Which function writes data to a file descriptor?",
+                        "options": [
+                            "write()",
+                            "put()",
+                            "sendfile()",
+                            "store()"
+                        ]
+                    },
+                    {
+                        "question": "Which type commonly represents a thread handle in POSIX?",
+                        "options": [
+                            "pthread_t",
+                            "thandle",
+                            "tid_t",
+                            "win_thread"
+                        ]
+                    }
+                ],
+                "Medium": [
+                    {
+                        "question": "Which POSIX function waits for a child process to finish?",
+                        "options": [
+                            "waitpid()",
+                            "child_wait()",
+                            "waitfor()",
+                            "joinproc()"
+                        ]
+                    },
+                    {
+                        "question": "Which POSIX function changes file permissions?",
+                        "options": [
+                            "chmod()",
+                            "setperm()",
+                            "changeperm()",
+                            "perm()"
+                        ]
+                    },
+                    {
+                        "question": "Which function allows inter-process communication using pipes?",
+                        "options": [
+                            "pipe()",
+                            "ipc_pipe()",
+                            "create_pipe()",
+                            "fifo()"
+                        ]
+                    },
+                    {
+                        "question": "Which POSIX API provides mutex functionality?",
+                        "options": [
+                            "pthread_mutex",
+                            "mtx_posix",
+                            "mutex_linux",
+                            "sync_thread"
+                        ]
+                    },
+                    {
+                        "question": "Which signal cannot be caught, blocked, or ignored?",
+                        "options": [
+                            "SIGKILL",
+                            "SIGTERM",
+                            "SIGINT",
+                            "SIGUSR1"
+                        ]
+                    },
+                    {
+                        "question": "Which function retrieves the current process ID?",
+                        "options": [
+                            "getpid()",
+                            "procid()",
+                            "id()",
+                            "ps()"
+                        ]
+                    },
+                    {
+                        "question": "Which function sets environment variables?",
+                        "options": [
+                            "setenv()",
+                            "envset()",
+                            "addenv()",
+                            "put()"
+                        ]
+                    },
+                    {
+                        "question": "Which POSIX type is used for condition variables?",
+                        "options": [
+                            "pthread_cond_t",
+                            "cond_type",
+                            "waiter_t",
+                            "trigger_t"
+                        ]
+                    },
+                    {
+                        "question": "Which function is used to lock a mutex?",
+                        "options": [
+                            "pthread_mutex_lock",
+                            "pthread_lock",
+                            "mutex_on",
+                            "lock_thread"
+                        ]
+                    },
+                    {
+                        "question": "Which POSIX function creates a named FIFO?",
+                        "options": [
+                            "mkfifo()",
+                            "fifo_make()",
+                            "makepipe()",
+                            "newfifo()"
+                        ]
+                    }
+                ],
+                "Hard": [
+                    {
+                        "question": "Which function maps files into memory in POSIX?",
+                        "options": [
+                            "mmap()",
+                            "mapfile()",
+                            "mapmem()",
+                            "filemap()"
+                        ]
+                    },
+                    {
+                        "question": "Which POSIX API provides read-write locks?",
+                        "options": [
+                            "pthread_rwlock",
+                            "rw_mutex",
+                            "lock_rwd",
+                            "rw_sync"
+                        ]
+                    },
+                    {
+                        "question": "Which flag in open() prevents following symbolic links?",
+                        "options": [
+                            "O_NOFOLLOW",
+                            "O_STATIC",
+                            "O_NEVERLINK",
+                            "O_SAFEOPEN"
+                        ]
+                    },
+                    {
+                        "question": "Which function unmaps a memory-mapped region?",
+                        "options": [
+                            "munmap()",
+                            "unmapfile()",
+                            "disposemap()",
+                            "removemap()"
+                        ]
+                    },
+                    {
+                        "question": "Which function changes memory protection settings?",
+                        "options": [
+                            "mprotect()",
+                            "memguard()",
+                            "protect()",
+                            "securemap()"
+                        ]
+                    },
+                    {
+                        "question": "Which system call monitors multiple file descriptors?",
+                        "options": [
+                            "select()",
+                            "watch()",
+                            "trackfds()",
+                            "fdcheck()"
+                        ]
+                    },
+                    {
+                        "question": "Which API allows timed waits on condition variables?",
+                        "options": [
+                            "pthread_cond_timedwait",
+                            "pthread_cond_wait_t",
+                            "wait_time()",
+                            "cond_timeout"
+                        ]
+                    },
+                    {
+                        "question": "Which signal indicates an invalid memory access?",
+                        "options": [
+                            "SIGSEGV",
+                            "SIGMEM",
+                            "SIGFAULT",
+                            "SIGBAD"
+                        ]
+                    },
+                    {
+                        "question": "Which POSIX function retrieves file metadata?",
+                        "options": [
+                            "stat()",
+                            "meta()",
+                            "info()",
+                            "fileinfo()"
+                        ]
+                    },
+                    {
+                        "question": "Which POSIX function changes process scheduling policy?",
+                        "options": [
+                            "sched_setscheduler",
+                            "setpolicy()",
+                            "sched_update()",
+                            "procsched()"
+                        ]
+                    }
+                ]
+            },
+            
+            "TensorRT": {
+                "Easy": [
+                    {
+                        "question": "TensorRT is primarily used for:",
+                        "options": [
+                            "Optimizing deep learning inference",
+                            "Training neural networks",
+                            "Building mobile apps",
+                            "Processing SQL queries"
+                        ]
+                    },
+                    {
+                        "question": "TensorRT is developed by:",
+                        "options": [
+                            "NVIDIA",
+                            "Intel",
+                            "Google",
+                            "Apple"
+                        ]
+                    },
+                    {
+                        "question": "TensorRT accelerates inference on which hardware?",
+                        "options": [
+                            "NVIDIA GPUs",
+                            "AMD CPUs",
+                            "ARM microcontrollers",
+                            "Apple Neural Engine"
+                        ]
+                    },
+                    {
+                        "question": "TensorRT is commonly used with which framework?",
+                        "options": [
+                            "PyTorch / TensorFlow",
+                            "Flutter",
+                            "React",
+                            "Qt"
+                        ]
+                    },
+                    {
+                        "question": "TensorRT engines are typically generated from:",
+                        "options": [
+                            "ONNX models",
+                            "JSON files",
+                            "C++ headers",
+                            "Dockerfiles"
+                        ]
+                    },
+                    {
+                        "question": "Which precision formats does TensorRT support?",
+                        "options": [
+                            "FP32/FP16/INT8",
+                            "Only FP32",
+                            "INT32 only",
+                            "Double precision only"
+                        ]
+                    },
+                    {
+                        "question": "TensorRT is mainly used in which phase of ML lifecycle?",
+                        "options": [
+                            "Inference",
+                            "Training",
+                            "Data collection",
+                            "Labeling"
+                        ]
+                    },
+                    {
+                        "question": "Which API does TensorRT provide for C++ development?",
+                        "options": [
+                            "nvinfer1",
+                            "nvcompute",
+                            "cudaInfer",
+                            "tensorrt_api"
+                        ]
+                    },
+                    {
+                        "question": "TensorRT optimizes neural networks by:",
+                        "options": [
+                            "Layer fusion and precision calibration",
+                            "Increasing dataset size",
+                            "Adding more layers",
+                            "Reducing GPU memory manually"
+                        ]
+                    },
+                    {
+                        "question": "TensorRT is commonly used in:",
+                        "options": [
+                            "Real-time inference systems",
+                            "Game development",
+                            "Web hosting",
+                            "Database indexing"
+                        ]
+                    }
+                ],
+                "Medium": [
+                    {
+                        "question": "What is a TensorRT engine?",
+                        "options": [
+                            "A serialized optimized inference model",
+                            "An ML training script",
+                            "A CUDA kernel source file",
+                            "A GPU monitoring tool"
+                        ]
+                    },
+                    {
+                        "question": "Which tool converts ONNX models into TensorRT engines?",
+                        "options": [
+                            "trtexec",
+                            "tensorbuild",
+                            "onnx2rt",
+                            "rtbuilder"
+                        ]
+                    },
+                    {
+                        "question": "Which TensorRT feature reduces inference time using lower precision?",
+                        "options": [
+                            "INT8 calibration",
+                            "Batch normalization",
+                            "Memory pooling",
+                            "Thread delegation"
+                        ]
+                    },
+                    {
+                        "question": "Which backend allows PyTorch models to be exported for TensorRT?",
+                        "options": [
+                            "ONNX export",
+                            "TorchScript only",
+                            "JIT fusion",
+                            "SavedModel"
+                        ]
+                    },
+                    {
+                        "question": "TensorRT plugins are used when:",
+                        "options": [
+                            "A layer is unsupported by TensorRT",
+                            "GPU memory is full",
+                            "Model accuracy drops",
+                            "Data is unlabeled"
+                        ]
+                    },
+                    {
+                        "question": "What is the primary benefit of TensorRT layer fusion?",
+                        "options": [
+                            "Reduces kernel launches and improves performance",
+                            "Improves training accuracy",
+                            "Adds dropout layers",
+                            "Decreases memory capacity"
+                        ]
+                    },
+                    {
+                        "question": "TensorRT supports execution on which CUDA API?",
+                        "options": [
+                            "cuBLAS and cuDNN",
+                            "OpenGL",
+                            "DirectX",
+                            "Metal"
+                        ]
+                    },
+                    {
+                        "question": "What is the purpose of the BuilderConfig object?",
+                        "options": [
+                            "Configure optimization settings",
+                            "Store dataset",
+                            "Train layers",
+                            "Replace CUDA kernels"
+                        ]
+                    },
+                    {
+                        "question": "TensorRT supports which graph optimization?",
+                        "options": [
+                            "Constant folding",
+                            "Constant unfolding",
+                            "Layer duplication",
+                            "Gradient boosting"
+                        ]
+                    },
+                    {
+                        "question": "Which file format contains a serialized TensorRT engine?",
+                        "options": [
+                            ".plan",
+                            ".rt",
+                            ".enginejson",
+                            ".tmodel"
+                        ]
+                    }
+                ],
+                "Hard": [
+                    {
+                        "question": "What is the role of a TensorRT execution context?",
+                        "options": [
+                            "Run optimized inference",
+                            "Perform distributed training",
+                            "Allocate GPU drivers",
+                            "Monitor GPU temperatures"
+                        ]
+                    },
+                    {
+                        "question": "Which optimization technique is used to quantize models to INT8?",
+                        "options": [
+                            "Post-training calibration",
+                            "Min-max scaling",
+                            "Layer pruning",
+                            "Gradient clipping"
+                        ]
+                    },
+                    {
+                        "question": "What is the main purpose of TensorRT's tactic selection?",
+                        "options": [
+                            "Choose the fastest kernel implementation",
+                            "Compile CUDA code",
+                            "Generate training checkpoints",
+                            "Allocate system RAM"
+                        ]
+                    },
+                    {
+                        "question": "TensorRT engine building is computationally expensive because:",
+                        "options": [
+                            "It benchmarks multiple kernel tactics",
+                            "It retrains the neural network",
+                            "It reallocates GPU memory",
+                            "It recompiles CUDA drivers"
+                        ]
+                    },
+                    {
+                        "question": "Which TensorRT feature allows dynamic shapes?",
+                        "options": [
+                            "Optimization profiles",
+                            "ShapeBuffer",
+                            "RuntimeContext",
+                            "DynamicAllocator"
+                        ]
+                    },
+                    {
+                        "question": "Which tool shows TensorRT layer-by-layer performance breakdown?",
+                        "options": [
+                            "Nsight Systems",
+                            "CUDA Monitor",
+                            "TensorStats",
+                            "PerfGraph"
+                        ]
+                    },
+                    {
+                        "question": "Why are TensorRT plugins necessary?",
+                        "options": [
+                            "To implement custom layers unsupported by TensorRT",
+                            "To replace CUDA kernels",
+                            "To convert models to ONNX",
+                            "To export PyTorch weights"
+                        ]
+                    },
+                    {
+                        "question": "Which execution mode allows TensorRT to run multiple models concurrently?",
+                        "options": [
+                            "CUDA stream-based execution",
+                            "Graph parallelism",
+                            "Node-based batching",
+                            "Cluster-level scheduling"
+                        ]
+                    },
+                    {
+                        "question": "Which constraint applies to serialized TensorRT engines?",
+                        "options": [
+                            "Engines are specific to GPU architecture and TensorRT version",
+                            "Engines run on any device",
+                            "Engines auto-update themselves",
+                            "Engines include training weights"
+                        ]
+                    },
+                    {
+                        "question": "What happens if a model uses unsupported ONNX operators?",
+                        "options": [
+                            "TensorRT requires custom plugins",
+                            "TensorRT trains missing layers",
+                            "The model cannot be exported",
+                            "The optimizer automatically removes them"
+                        ]
+                    }
+                ]
+            }
+        },
+        "OpenCV": {
+            "Easy": [
+                {
+                    "question": "What is OpenCV primarily used for?",
+                    "options": [
+                        "Computer vision and image processing",
+                        "Database management",
+                        "Web development",
+                        "Operating system design"
+                    ]
+                },
+                {
+                    "question": "Which header is commonly included to use core OpenCV functionality in C++?",
+                    "options": [
+                        "<opencv2/opencv.hpp>",
+                        "<opencv/core.hpp>",
+                        "<opencv/main.hpp>",
+                        "<cv/all.hpp>"
+                    ]
+                },
+                {
+                    "question": "Which OpenCV class is typically used to represent an image?",
+                    "options": [
+                        "cv::Mat",
+                        "cv::Image",
+                        "cv::Picture",
+                        "cv::Frame"
+                    ]
+                },
+                {
+                    "question": "Which function is used to read an image from file?",
+                    "options": [
+                        "cv::imread",
+                        "cv::readImage",
+                        "cv::load",
+                        "cv::openImage"
+                    ]
+                },
+                {
+                    "question": "Which function is used to display an image in a window?",
+                    "options": [
+                        "cv::imshow",
+                        "cv::show",
+                        "cv::display",
+                        "cv::draw"
+                    ]
+                },
+                {
+                    "question": "Which function is used to write an image to file?",
+                    "options": [
+                        "cv::imwrite",
+                        "cv::saveImage",
+                        "cv::imgwrite",
+                        "cv::writeFile"
+                    ]
+                },
+                {
+                    "question": "Which function converts a color image to grayscale?",
+                    "options": [
+                        "cv::cvtColor",
+                        "cv::toGray",
+                        "cv::convertGray",
+                        "cv::grayScale"
+                    ]
+                },
+                {
+                    "question": "Which color space code is commonly used to convert BGR to grayscale?",
+                    "options": [
+                        "cv::COLOR_BGR2GRAY",
+                        "cv::COLOR_RGB2GRAY",
+                        "cv::COLOR_GRAY2BGR",
+                        "cv::COLOR_BGR2HSV"
+                    ]
+                },
+                {
+                    "question": "Which OpenCV function is used to resize an image?",
+                    "options": [
+                        "cv::resize",
+                        "cv::scaleImage",
+                        "cv::zoom",
+                        "cv::transformSize"
+                    ]
+                },
+                {
+                    "question": "Which OpenCV module mainly contains image processing functions like blurring and edge detection?",
+                    "options": [
+                        "imgproc",
+                        "highgui",
+                        "videoio",
+                        "objdetect"
+                    ]
+                }
+            ],
+            "Medium": [
+                {
+                    "question": "Which OpenCV function applies Gaussian blur to an image?",
+                    "options": [
+                        "cv::GaussianBlur",
+                        "cv::BlurGaussian",
+                        "cv::FilterGaussian",
+                        "cv::SmoothGaussian"
+                    ]
+                },
+                {
+                    "question": "Which function detects edges using the Canny algorithm?",
+                    "options": [
+                        "cv::Canny",
+                        "cv::EdgeDetect",
+                        "cv::FindEdges",
+                        "cv::CannyEdge"
+                    ]
+                },
+                {
+                    "question": "Which function is used to detect lines using the Hough transform?",
+                    "options": [
+                        "cv::HoughLines",
+                        "cv::DetectLines",
+                        "cv::LinesHough",
+                        "cv::HoughTransformLines"
+                    ]
+                },
+                {
+                    "question": "Which function converts between different image types and scales pixel values?",
+                    "options": [
+                        "cv::convertTo",
+                        "cv::changeType",
+                        "cv::scaleType",
+                        "cv::castImage"
+                    ]
+                },
+                {
+                    "question": "Which function reads frames from a video file or camera?",
+                    "options": [
+                        "cv::VideoCapture::read",
+                        "cv::VideoStream::get",
+                        "cv::Video::frame",
+                        "cv::Capture::next"
+                    ]
+                },
+                {
+                    "question": "Which function finds contours in a binary image?",
+                    "options": [
+                        "cv::findContours",
+                        "cv::getContours",
+                        "cv::detectContours",
+                        "cv::scanContours"
+                    ]
+                },
+                {
+                    "question": "Which function draws a rectangle on an image?",
+                    "options": [
+                        "cv::rectangle",
+                        "cv::drawRect",
+                        "cv::box",
+                        "cv::rectDraw"
+                    ]
+                },
+                {
+                    "question": "In OpenCV, what does the channels count of 3 usually represent in a cv::Mat image?",
+                    "options": [
+                        "A BGR color image",
+                        "A grayscale image",
+                        "An RGBA image",
+                        "A binary mask"
+                    ]
+                },
+                {
+                    "question": "Which function is typically used to compute a 2D convolution with a custom kernel?",
+                    "options": [
+                        "cv::filter2D",
+                        "cv::conv2D",
+                        "cv::kernelFilter",
+                        "cv::matrixFilter"
+                    ]
+                },
+                {
+                    "question": "Which OpenCV function computes a perspective transform for mapping between two quadrilaterals?",
+                    "options": [
+                        "cv::getPerspectiveTransform",
+                        "cv::warpTransform",
+                        "cv::homography",
+                        "cv::getQuadrilateralMap"
+                    ]
+                }
+            ],
+            "Hard": [
+                {
+                    "question": "Which OpenCV function estimates a homography matrix between two sets of points?",
+                    "options": [
+                        "cv::findHomography",
+                        "cv::calcHomography",
+                        "cv::estimateH",
+                        "cv::homographyRANSAC"
+                    ]
+                },
+                {
+                    "question": "Which feature detector is part of modern OpenCV for keypoint detection and description?",
+                    "options": [
+                        "ORB",
+                        "HOG only",
+                        "FAST without descriptor",
+                        "Gabor"
+                    ]
+                },
+                {
+                    "question": "Which function in OpenCV is used to compute optical flow using the Lucas–Kanade method?",
+                    "options": [
+                        "cv::calcOpticalFlowPyrLK",
+                        "cv::calcOpticalFlowFarneback",
+                        "cv::trackFlowLK",
+                        "cv::optFlowLK"
+                    ]
+                },
+                {
+                    "question": "In OpenCV’s DNN module, which function loads a network from an ONNX file?",
+                    "options": [
+                        "cv::dnn::readNetFromONNX",
+                        "cv::dnn::loadONNX",
+                        "cv::dnn::importONNX",
+                        "cv::dnn::netONNX"
+                    ]
+                },
+                {
+                    "question": "Which method can be used to calibrate a camera in OpenCV?",
+                    "options": [
+                        "cv::calibrateCamera",
+                        "cv::cameraCalib",
+                        "cv::estimateCameraParams",
+                        "cv::calcProjection"
+                    ]
+                },
+                {
+                    "question": "Which datatype is typically used for a single-precision floating-point image in OpenCV?",
+                    "options": [
+                        "CV_32F",
+                        "CV_8U",
+                        "CV_16U",
+                        "CV_64F"
+                    ]
+                },
+                {
+                    "question": "Which OpenCV function warps an image using a perspective transform?",
+                    "options": [
+                        "cv::warpPerspective",
+                        "cv::warpAffine",
+                        "cv::remapPerspective",
+                        "cv::transformPerspective"
+                    ]
+                },
+                {
+                    "question": "Which storage format does OpenCV use in older C-API style for saving structured data like camera parameters?",
+                    "options": [
+                        "YAML or XML with cv::FileStorage",
+                        "Plain text only",
+                        "Binary proprietary",
+                        "SQLite database"
+                    ]
+                },
+                {
+                    "question": "Which OpenCV class encapsulates video writing (encoding frames to a video file)?",
+                    "options": [
+                        "cv::VideoWriter",
+                        "cv::MovieWriter",
+                        "cv::VideoEncoder",
+                        "cv::MediaWriter"
+                    ]
+                },
+                {
+                    "question": "Which function is often used to evaluate stereo calibration quality by computing disparity maps?",
+                    "options": [
+                        "cv::StereoBM or cv::StereoSGBM",
+                        "cv::disparityMap",
+                        "cv::calcDepthMap",
+                        "cv::stereoDepth"
+                    ]
+                }
+            ]
+        },
+        
+        "Arduino SDK": {
+            "Easy": [
+                {
+                    "question": "What language is primarily used for Arduino sketches?",
+                    "options": [
+                        "C/C++-based language",
+                        "Python",
+                        "Java",
+                        "Rust"
+                    ]
+                },
+                {
+                    "question": "Which function is called once at the beginning of an Arduino sketch?",
+                    "options": [
+                        "setup()",
+                        "init()",
+                        "start()",
+                        "main()"
+                    ]
+                },
+                {
+                    "question": "Which function runs repeatedly after setup() in an Arduino sketch?",
+                    "options": [
+                        "loop()",
+                        "run()",
+                        "update()",
+                        "repeat()"
+                    ]
+                },
+                {
+                    "question": "Which function initializes serial communication?",
+                    "options": [
+                        "Serial.begin()",
+                        "Serial.init()",
+                        "Serial.start()",
+                        "Serial.open()"
+                    ]
+                },
+                {
+                    "question": "Which function sends text over the serial port with a newline?",
+                    "options": [
+                        "Serial.println()",
+                        "Serial.printnl()",
+                        "Serial.writeLine()",
+                        "Serial.outln()"
+                    ]
+                },
+                {
+                    "question": "Which constant is used to configure a pin as output?",
+                    "options": [
+                        "OUTPUT",
+                        "OUTPIN",
+                        "WRITE",
+                        "PIN_OUT"
+                    ]
+                },
+                {
+                    "question": "Which function sets the mode of a pin?",
+                    "options": [
+                        "pinMode()",
+                        "setPinMode()",
+                        "configPin()",
+                        "modePin()"
+                    ]
+                },
+                {
+                    "question": "Which function writes a HIGH or LOW value to a digital pin?",
+                    "options": [
+                        "digitalWrite()",
+                        "analogWrite()",
+                        "pinWrite()",
+                        "writeDigital()"
+                    ]
+                },
+                {
+                    "question": "Which constant represents a logical high level on a digital pin?",
+                    "options": [
+                        "HIGH",
+                        "ON",
+                        "TRUE",
+                        "ONE"
+                    ]
+                },
+                {
+                    "question": "Which function introduces a blocking delay in milliseconds?",
+                    "options": [
+                        "delay()",
+                        "wait()",
+                        "pause()",
+                        "sleep_ms()"
+                    ]
+                }
+            ],
+            "Medium": [
+                {
+                    "question": "Which function reads the value from a digital input pin?",
+                    "options": [
+                        "digitalRead()",
+                        "readDigitalPin()",
+                        "pinRead()",
+                        "getDigital()"
+                    ]
+                },
+                {
+                    "question": "Which function reads an analog input value on supported pins?",
+                    "options": [
+                        "analogRead()",
+                        "readAnalogPin()",
+                        "pinAnalogRead()",
+                        "getAnalog()"
+                    ]
+                },
+                {
+                    "question": "Which Arduino board is most commonly used for beginners?",
+                    "options": [
+                        "Arduino Uno",
+                        "Arduino Mega",
+                        "Arduino Due",
+                        "Arduino Nano 33 BLE"
+                    ]
+                },
+                {
+                    "question": "Which function writes a PWM value to a pin that supports it?",
+                    "options": [
+                        "analogWrite()",
+                        "digitalPWM()",
+                        "pwmWrite()",
+                        "setPWM()"
+                    ]
+                },
+                {
+                    "question": "Which baud rate is commonly used for Serial.begin() in Arduino examples?",
+                    "options": [
+                        "9600",
+                        "4800",
+                        "19200",
+                        "115200"
+                    ]
+                },
+                {
+                    "question": "Which macro returns the number of milliseconds since the Arduino board began running the current program?",
+                    "options": [
+                        "millis()",
+                        "micros()",
+                        "time_ms()",
+                        "uptime()"
+                    ]
+                },
+                {
+                    "question": "Which type is typically used for integer constants that fit in 16 bits on Arduino Uno?",
+                    "options": [
+                        "int",
+                        "long",
+                        "short",
+                        "byte"
+                    ]
+                },
+                {
+                    "question": "Which keyword is used to store constant data in flash (program) memory on AVR-based Arduinos?",
+                    "options": [
+                        "PROGMEM",
+                        "FLASHMEM",
+                        "ROMDATA",
+                        "CONSTFLASH"
+                    ]
+                },
+                {
+                    "question": "Which toolchain component actually compiles Arduino C++ code?",
+                    "options": [
+                        "avr-gcc (or board-specific gcc)",
+                        "javac",
+                        "python3",
+                        "clang only"
+                    ]
+                },
+                {
+                    "question": "Which function is used to map a number from one range to another?",
+                    "options": [
+                        "map()",
+                        "rangeMap()",
+                        "scale()",
+                        "convertRange()"
+                    ]
+                }
+            ],
+            "Hard": [
+                {
+                    "question": "On AVR-based Arduinos, which memory type is typically the smallest and used for variables?",
+                    "options": [
+                        "SRAM",
+                        "Flash",
+                        "EEPROM",
+                        "SDRAM"
+                    ]
+                },
+                {
+                    "question": "Which memory type retains its contents after power off on Arduino Uno?",
+                    "options": [
+                        "EEPROM",
+                        "SRAM",
+                        "Registers",
+                        "Stack"
+                    ]
+                },
+                {
+                    "question": "Which function writes a value into Arduino’s EEPROM?",
+                    "options": [
+                        "EEPROM.write()",
+                        "EEPROM.store()",
+                        "EEPROM.save()",
+                        "EEPROM.putByte()"
+                    ]
+                },
+                {
+                    "question": "Which function returns the number of microseconds since the program started?",
+                    "options": [
+                        "micros()",
+                        "millis()",
+                        "time_us()",
+                        "microtime()"
+                    ]
+                },
+                {
+                    "question": "What is a key downside of using delay() in time-sensitive Arduino applications?",
+                    "options": [
+                        "It blocks execution and prevents handling other tasks",
+                        "It reduces clock speed permanently",
+                        "It erases EEPROM contents",
+                        "It disables interrupts permanently"
+                    ]
+                },
+                {
+                    "question": "Which Arduino feature is commonly used to avoid blocking delays?",
+                    "options": [
+                        "Using millis() for non-blocking timing",
+                        "Using nested delay() calls",
+                        "Disabling interrupts",
+                        "Increasing baud rate"
+                    ]
+                },
+                {
+                    "question": "On AVR-based Arduino boards, which type is typically 8 bits?",
+                    "options": [
+                        "byte / uint8_t",
+                        "int",
+                        "long",
+                        "size_t"
+                    ]
+                },
+                {
+                    "question": "Which keyword is used to declare an interrupt service routine (ISR) in low-level AVR C++ code (outside the standard Arduino API)?",
+                    "options": [
+                        "ISR(vector_name)",
+                        "INTERRUPT(vector_name)",
+                        "HANDLER(vector_name)",
+                        "ISR_ROUTINE(vector_name)"
+                    ]
+                },
+                {
+                    "question": "Which communication protocol is commonly used by Arduino’s Wire library?",
+                    "options": [
+                        "I2C (TWI)",
+                        "SPI",
+                        "UART only",
+                        "CAN"
+                    ]
+                },
+                {
+                    "question": "Which factors are most important to consider when using dynamic memory allocation (malloc/new) on small Arduino boards?",
+                    "options": [
+                        "Limited SRAM and risk of fragmentation",
+                        "Flash wear-out",
+                        "EEPROM lifetime",
+                        "Baud rate limitations"
+                    ]
+                }
+            ]
+        }
+    }
+}

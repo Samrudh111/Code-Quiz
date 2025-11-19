@@ -12,6 +12,7 @@ struct QAPageView: View {
     @State var cardDegree = 0.0
     @State var contentDegree = 0.0
     @State var questionSet: [QA] = []
+    @State var testObject = TestObject(levelWeight: 1, languageSelected: "Unknown", category: "Unknown")
     
     var body: some View {
         NavigationStack{
@@ -32,6 +33,7 @@ struct QAPageView: View {
                 ToolbarItem(placement: .topBarLeading) {
                     ExitButton {
                         UserDefaults.standard.set(false, forKey: "QuizActive")
+                        //UserDefaults.standard.set([], forKey: "QuestionSet")
                     }
                 }
             }
@@ -41,7 +43,7 @@ struct QAPageView: View {
         }
         .onAppear{
             questionSet = fetchFromUserDefaults()
-            //index = UserDefaults.standard.integer(forKey: "QuestionNumber")
+            testObject = getCategoryLabel()
         }
     }
     
@@ -54,15 +56,23 @@ struct QAPageView: View {
         return questionSet
     }
     
+    private func getCategoryLabel() -> TestObject{
+        let data = UserDefaults.standard.data(forKey: "TestObject")
+        if let data = data{
+            return (try? JSONDecoder().decode(TestObject.self, from: data))!
+        }
+        return TestObject()
+    }
+    
     @ViewBuilder
-    func QACard(for index: Int) -> some View {
+    private func QACard(for index: Int) -> some View {
         ZStack{
             if !questionSet.isEmpty{
                 QuestionCard(question: questionSet[index].question)
                 ScrollView{
                     VStack{
-                        //Text("Language - and its category name should be displayed here")
-                        AnswersCard(answerSet: questionSet[index].options)
+                        Text("\(testObject.category!) - \(testObject.languageSelected!) - Level \(testObject.levelWeight!)")
+                        OptionsCard(answerSet: questionSet[index].options)
                     }
                     .frame(maxWidth: .infinity)
                     .frame(height: 1000, alignment: .top) // need to check this height
@@ -77,6 +87,7 @@ struct QAPageView: View {
     }
 }
 
+//MARK: -Question Card
 struct QuestionCard: View {
     var question: String?
     
@@ -91,7 +102,8 @@ struct QuestionCard: View {
     }
 }
 
-struct AnswersCard: View {
+//MARK: -Options Card
+struct OptionsCard: View {
     let answerSet: [String]?
     
     var body: some View {
@@ -105,6 +117,7 @@ struct AnswersCard: View {
     }
 }
 
+//MARK: -Menu View
 struct MenuView: View {
     @Environment(TestProperties.self) private var testProperties
     @Binding var index: Int
@@ -116,7 +129,12 @@ struct MenuView: View {
                 Button {
                     index = qNumber
                 } label: {
-                    Text((String(qNumber+1)))
+                    HStack{
+                        Text((String(qNumber+1)))
+                        if index == qNumber{
+                            Image(systemName: "checkmark")
+                        }
+                    }
                 }
             }
         } label: {
@@ -129,6 +147,7 @@ struct MenuView: View {
     }
 }
 
+//MARK: -Exit Button
 struct ExitButton: View {
     var onTapAction: () -> Void
     
@@ -148,6 +167,7 @@ struct ExitButton: View {
     }
 }
 
+//MARK: -Navigate Buttons
 struct NavigateQuestionButtons: View {
     @Binding var cardDegree: Double
     @Binding var contentDegree: Double
@@ -160,10 +180,10 @@ struct NavigateQuestionButtons: View {
             Spacer()
             HStack{
                 PrevNextButton(isNextButton: false)
-                    .disabled(index == 0)
+                    .opacity((index == 0) ? 0 : 1)
                 Spacer()
                 PrevNextButton(isNextButton: true)
-                    .disabled(index == questionCount-1)
+                    .opacity(index == questionCount-1 ? 0 : 1)
             }
         }
     }

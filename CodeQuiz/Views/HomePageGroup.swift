@@ -10,7 +10,7 @@ import Foundation
 
 struct HomePageGroup: View {
     @AppStorage("QuizActive") private var isQuizActive: Bool?
-    
+
     var body: some View {
         if isQuizActive ?? false{
             QAPageView()

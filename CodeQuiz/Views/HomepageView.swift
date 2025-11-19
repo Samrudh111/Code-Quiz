@@ -21,7 +21,6 @@ struct HomepageView: View {
     @Environment(TestProperties.self) var testProperties
     @State var showErrorMessage = false
     
-    
     var body: some View {
         NavigationStack{
             ZStack{
@@ -106,7 +105,15 @@ struct HomepageView: View {
                 }
             }
             .animation(.spring(response: 0.35, dampingFraction: 0.4), value: showErrorMessage)
-            .navigationTitle("CodeQuiz")
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar(content: {
+                ToolbarItem(placement: .principal) {
+                    Text("CodeQuiz")
+                        .font(.custom("Exo2-Regular", size: 40))
+                        .foregroundStyle(.black)
+                        .shadow(radius: 3, y: -3)
+                }
+            })
             .background(.green)
         }
         .onAppear{
@@ -168,13 +175,15 @@ struct HomepageView: View {
         default:
             return
         }
-        let encoded = try? JSONEncoder().encode(questionSet)
-        UserDefaults.standard.set(encoded, forKey: "QuestionSet")
+        let encodedQSet = try? JSONEncoder().encode(questionSet)
+        UserDefaults.standard.set(encodedQSet, forKey: "QuestionSet")
+        let encodedTestObj = try? JSONEncoder().encode(TestObject(levelWeight: levelWeight, languageSelected: languageSelected?.rawValue, category: category))
+        UserDefaults.standard.set(encodedTestObj, forKey: "TestObject")
         UserDefaults.standard.set(true, forKey: "QuizActive")
     }
     
     private func fetchQuestionSets(){
-        guard let dataUrl = Bundle.main.url(forResource: "QuestionsDataset", withExtension: "json"),
+        guard let dataUrl = Bundle.main.url(forResource: "Swift", withExtension: "json"),
               let rawData = try? Data(contentsOf: dataUrl) else{ return }
         UserDefaults.standard.set(rawData, forKey: "AllQuestionSet")
     }

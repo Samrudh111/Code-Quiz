@@ -1,0 +1,1357 @@
+{
+    "data": {
+        "SQL": {
+            "MySQL": {
+                "Easy": [
+                    {
+                        "question": "Which command is used to retrieve data in MySQL?",
+                        "options": ["SELECT", "INSERT", "UPDATE", "DELETE"]
+                    },
+                    {
+                        "question": "Which MySQL command is used to insert new rows into a table?",
+                        "options": ["INSERT INTO", "ADD ROW", "PUT INTO", "APPEND"]
+                    },
+                    {
+                        "question": "Which keyword is used to sort results in ascending or descending order?",
+                        "options": ["ORDER BY", "SORT", "ARRANGE BY", "ORDER"]
+                    },
+                    {
+                        "question": "Which clause is used to filter rows in a SELECT statement?",
+                        "options": ["WHERE", "HAVING", "FILTER", "LIMIT"]
+                    },
+                    {
+                        "question": "Which operator is used for pattern matching in MySQL?",
+                        "options": ["LIKE", "MATCHES", "PATTERN", "COMPARE"]
+                    },
+                    {
+                        "question": "Which MySQL function returns the current date?",
+                        "options": ["CURDATE()", "TODAY()", "GETDATE()", "DATE()"]
+                    },
+                    {
+                        "question": "Which statement is used to remove a table from a MySQL database?",
+                        "options": ["DROP TABLE", "DELETE TABLE", "REMOVE TABLE", "CLEAR TABLE"]
+                    },
+                    {
+                        "question": "Which data type stores whole numbers in MySQL?",
+                        "options": ["INT", "TEXT", "FLOAT", "DATE"]
+                    },
+                    {
+                        "question": "Which SQL keyword is used to remove duplicate rows?",
+                        "options": ["DISTINCT", "UNIQUE", "FILTER", "ONLY"]
+                    },
+                    {
+                        "question": "Which function returns the number of rows in MySQL?",
+                        "options": ["COUNT()", "SUM()", "TOTAL()", "ROWS()"]
+                    }
+                ],
+                "Medium": [
+                    {
+                        "question": "Which constraint ensures that a column cannot contain NULL values?",
+                        "options": ["NOT NULL", "UNIQUE", "PRIMARY KEY", "CHECK"]
+                    },
+                    {
+                        "question": "Which join returns only matching rows from both tables?",
+                        "options": ["INNER JOIN", "LEFT JOIN", "RIGHT JOIN", "FULL JOIN"]
+                    },
+                    {
+                        "question": "Which index type is used for improving full-text search in MySQL?",
+                        "options": ["FULLTEXT", "HASH", "BTREE", "RTREE"]
+                    },
+                    {
+                        "question": "Which storage engine in MySQL supports transactions?",
+                        "options": ["InnoDB", "MyISAM", "MEMORY", "CSV"]
+                    },
+                    {
+                        "question": "Which function is used to return the length of a string in MySQL?",
+                        "options": ["LENGTH()", "SIZE()", "STRLEN()", "CHARCOUNT()"]
+                    },
+                    {
+                        "question": "Which clause filters grouped results in MySQL?",
+                        "options": ["HAVING", "WHERE", "FILTER", "GROUP WHERE"]
+                    },
+                    {
+                        "question": "Which operator performs a case-sensitive comparison?",
+                        "options": ["BINARY", "STRICT", "CASE_COMPARE", "IS EXACT"]
+                    },
+                    {
+                        "question": "Which command displays all databases in MySQL?",
+                        "options": ["SHOW DATABASES", "LIST DATABASES", "GET DB", "SELECT * FROM DB"]
+                    },
+                    {
+                        "question": "Which MySQL function combines strings?",
+                        "options": ["CONCAT()", "MERGE()", "STRING_JOIN()", "JOIN()"]
+                    },
+                    {
+                        "question": "Which keyword limits the number of rows returned?",
+                        "options": ["LIMIT", "FETCH", "ROWLIMIT", "TOP"]
+                    }
+                ],
+                "Hard": [
+                    {
+                        "question": "Which isolation level in MySQL prevents dirty reads?",
+                        "options": ["READ COMMITTED", "READ UNCOMMITTED", "REPEATABLE READ", "SERIALIZABLE"]
+                    },
+                    {
+                        "question": "Which command shows the execution plan of a query?",
+                        "options": ["EXPLAIN", "DESCRIBE", "PROFILE", "ANALYZE"]
+                    },
+                    {
+                        "question": "Which function returns a SHA-256 hash in MySQL?",
+                        "options": ["SHA2()", "HASH256()", "SHA()", "HASH()"]
+                    },
+                    {
+                        "question": "Which MySQL feature allows partitioning of large tables?",
+                        "options": ["PARTITION BY", "DIVIDE TABLE", "SPLIT TABLE", "GROUP PARTITION"]
+                    },
+                    {
+                        "question": "Which MySQL engine supports spatial indexes?",
+                        "options": ["InnoDB", "MyISAM", "MEMORY", "CSV"]
+                    },
+                    {
+                        "question": "Which MySQL clause is used for locking selected rows?",
+                        "options": ["FOR UPDATE", "WITH LOCK", "LOCK ROWS", "ROWLOCK"]
+                    },
+                    {
+                        "question": "Which type of backup locks tables during export?",
+                        "options": ["Cold backup", "Hot backup", "Incremental backup", "Streaming backup"]
+                    },
+                    {
+                        "question": "Which MySQL function converts JSON to relational columns?",
+                        "options": ["JSON_TABLE()", "PARSE_JSON()", "JSON_PARSE()", "EXTRACT_JSON()"]
+                    },
+                    {
+                        "question": "Which join type is NOT supported directly in MySQL?",
+                        "options": ["FULL OUTER JOIN", "LEFT JOIN", "RIGHT JOIN", "INNER JOIN"]
+                    },
+                    {
+                        "question": "Which MySQL variable controls max number of connections?",
+                        "options": ["max_connections", "connection_limit", "db_max_conn", "conn_size"]
+                    }
+                ]
+            },
+            
+            "PostgreSQL": {
+                "Easy": [
+                    {
+                        "question": "What is the default port number for PostgreSQL?",
+                        "options": ["5432", "3306", "1521", "8080"]
+                    },
+                    {
+                        "question": "Which PostgreSQL command lists all databases?",
+                        "options": ["\\l", "\\db", "\\ld", "\\show"]
+                    },
+                    {
+                        "question": "Which keyword retrieves data from a table?",
+                        "options": ["SELECT", "FETCH", "GET", "RETURN"]
+                    },
+                    {
+                        "question": "Which PostgreSQL client command connects to a database?",
+                        "options": ["\\c dbname", "\\connect dbname", "\\open dbname", "\\use dbname"]
+                    },
+                    {
+                        "question": "Which data type stores TRUE or FALSE?",
+                        "options": ["BOOLEAN", "INT", "BIT", "STATE"]
+                    },
+                    {
+                        "question": "Which command deletes an entire table?",
+                        "options": ["DROP TABLE", "DELETE TABLE", "REMOVE TABLE", "CLEAR TABLE"]
+                    },
+                    {
+                        "question": "Which PostgreSQL function returns the current timestamp?",
+                        "options": ["NOW()", "CURDATE()", "GETDATE()", "DATE()"]
+                    },
+                    {
+                        "question": "Which operator matches text using patterns?",
+                        "options": ["LIKE", "MATCH", "PATTERN", "TEST"]
+                    },
+                    {
+                        "question": "What command shows all tables in PostgreSQL?",
+                        "options": ["\\dt", "\\show tables", "\\tables", "\\list tables"]
+                    },
+                    {
+                        "question": "Which aggregate function counts rows?",
+                        "options": ["COUNT()", "SUM()", "ROWCOUNT()", "TOTAL()"]
+                    }
+                ],
+                "Medium": [
+                    {
+                        "question": "Which clause filters grouped rows?",
+                        "options": ["HAVING", "WHERE", "FILTER", "GROUPFILTER"]
+                    },
+                    {
+                        "question": "Which PostgreSQL operator is used for case-insensitive pattern matching?",
+                        "options": ["ILIKE", "LOWER LIKE", "LIKE*", "MATCHLOWER"]
+                    },
+                    {
+                        "question": "Which PostgreSQL keyword auto-generates integer identities?",
+                        "options": ["SERIAL", "AUTO_INT", "IDENTITY", "INT_AUTO"]
+                    },
+                    {
+                        "question": "Which join returns all rows from left table and matched ones from right?",
+                        "options": ["LEFT JOIN", "INNER JOIN", "FULL JOIN", "RIGHT JOIN"]
+                    },
+                    {
+                        "question": "Which PostgreSQL function returns the length of a string?",
+                        "options": ["LENGTH()", "STRLEN()", "CHARCOUNT()", "SIZE()"]
+                    },
+                    {
+                        "question": "Which PostgreSQL type stores JSON data?",
+                        "options": ["JSONB", "JSON2", "TEXTJSON", "JSTORE"]
+                    },
+                    {
+                        "question": "Which command shows the query execution plan?",
+                        "options": ["EXPLAIN", "VIEWPLAN", "QUERYPLAN", "PLAN()"]
+                    },
+                    {
+                        "question": "Which MVCC feature prevents dirty reads?",
+                        "options": ["Snapshot isolation", "Read repair", "Primary isolation", "Table locks"]
+                    },
+                    {
+                        "question": "Which command creates a new role?",
+                        "options": ["CREATE ROLE", "ADD USER", "NEW ROLE", "INSERT ROLE"]
+                    },
+                    {
+                        "question": "Which extension supports full-text search?",
+                        "options": ["tsvector", "fulltext", "pg_search", "text_index"]
+                    }
+                ],
+                "Hard": [
+                    {
+                        "question": "Which isolation level is default in PostgreSQL?",
+                        "options": ["READ COMMITTED", "REPEATABLE READ", "SERIALIZABLE", "READ UNCOMMITTED"]
+                    },
+                    {
+                        "question": "Which PostgreSQL index supports geospatial queries?",
+                        "options": ["GIN/GiST", "BTREE", "HASH", "RTREE"]
+                    },
+                    {
+                        "question": "Which function converts JSON into relational result sets?",
+                        "options": ["jsonb_to_recordset()", "json_table()", "json_parse()", "extract_json()"]
+                    },
+                    {
+                        "question": "Which keyword is used for recursive CTEs?",
+                        "options": ["WITH RECURSIVE", "CTE REPEAT", "RECURSE WITH", "ITERATE WITH"]
+                    },
+                    {
+                        "question": "Which PostgreSQL tool performs physical backups?",
+                        "options": ["pg_basebackup", "pg_dump", "pg_backup", "pg_physical"]
+                    },
+                    {
+                        "question": "Which join technique is highly optimized for large datasets?",
+                        "options": ["Hash Join", "Nested Loop Join", "Merge Join", "Sorted Join"]
+                    },
+                    {
+                        "question": "Which feature allows table partitioning?",
+                        "options": ["PARTITION BY", "TABLE SPLIT", "SEGMENT TABLE", "DIVIDE TABLE"]
+                    },
+                    {
+                        "question": "Which WAL-related feature helps replication?",
+                        "options": ["Logical decoding", "Write caching", "Sync replication", "Delayed commit"]
+                    },
+                    {
+                        "question": "Which command resets a sequence's counter?",
+                        "options": ["ALTER SEQUENCE RESTART", "RESET SEQ", "SEQ RESET", "SEQUENCE NEW"]
+                    },
+                    {
+                        "question": "Which command analyzes statistics for optimizing queries?",
+                        "options": ["ANALYZE", "CHECKSTATS", "REFRESH", "OPTIMIZE"]
+                    }
+                ]
+            },
+            
+            "Oracle": {
+                "Easy": [
+                    {
+                        "question": "What is the default port for Oracle Database?",
+                        "options": ["1521", "3306", "5432", "8080"]
+                    },
+                    {
+                        "question": "Which command retrieves data from an Oracle table?",
+                        "options": ["SELECT", "GET", "RETURN", "FETCH"]
+                    },
+                    {
+                        "question": "Which Oracle data type stores variable-length strings?",
+                        "options": ["VARCHAR2", "NVARCHAR", "TEXT", "STRING"]
+                    },
+                    {
+                        "question": "Which operator checks for NULL values?",
+                        "options": ["IS NULL", "== NULL", "= NULL", "CHECK NULL"]
+                    },
+                    {
+                        "question": "Which Oracle function returns system date?",
+                        "options": ["SYSDATE", "NOW()", "CURDATE()", "GETDATE()"]
+                    },
+                    {
+                        "question": "Which command deletes a table?",
+                        "options": ["DROP TABLE", "DELETE TABLE", "CLEAR TABLE", "REMOVE TABLE"]
+                    },
+                    {
+                        "question": "Which SQL keyword removes duplicate rows?",
+                        "options": ["DISTINCT", "UNIQUE", "ONLY", "FILTER"]
+                    },
+                    {
+                        "question": "Which clause filters rows?",
+                        "options": ["WHERE", "HAVING", "FILTER", "SEARCH"]
+                    },
+                    {
+                        "question": "Which aggregate function returns the largest value?",
+                        "options": ["MAX()", "TOP()", "GREATEST()", "LARGEST()"]
+                    },
+                    {
+                        "question": "Which Oracle object stores user tables?",
+                        "options": ["SCHEMA", "PACKAGE", "INSTANCE", "ARCHIVE"]
+                    }
+                ],
+                "Medium": [
+                    {
+                        "question": "Which constraint ensures column uniqueness?",
+                        "options": ["UNIQUE", "NOT NULL", "CHECK", "PRIMARY"]
+                    },
+                    {
+                        "question": "Which join returns all rows from left table and matching right?",
+                        "options": ["LEFT JOIN", "RIGHT JOIN", "FULL JOIN", "INNER JOIN"]
+                    },
+                    {
+                        "question": "Which Oracle date format is correct?",
+                        "options": ["'YYYY-MM-DD'", "'MM-DD-YYYY'", "'DD-MM-YY'", "'DATE'"]
+                    },
+                    {
+                        "question": "Which Oracle clause filters grouped rows?",
+                        "options": ["HAVING", "WHERE", "GROUP WHERE", "FILTER"]
+                    },
+                    {
+                        "question": "Which Oracle function converts strings to dates?",
+                        "options": ["TO_DATE()", "CONVERT_DATE()", "DATE_PARSE()", "DATE_TO()"]
+                    },
+                    {
+                        "question": "Which Oracle feature improves query performance using execution plans?",
+                        "options": ["EXPLAIN PLAN", "SHOW PLAN", "QUERY PLAN", "CHECK PLAN"]
+                    },
+                    {
+                        "question": "Which keyword creates an index?",
+                        "options": ["CREATE INDEX", "MAKE INDEX", "NEW INDEX", "BUILD INDEX"]
+                    },
+                    {
+                        "question": "Which function concatenates strings?",
+                        "options": ["CONCAT()", "MERGE()", "JOIN()", "APPEND()"]
+                    },
+                    {
+                        "question": "Which Oracle feature allows procedural logic?",
+                        "options": ["PL/SQL", "T-SQL", "SQL BLOCK", "SQL SCRIPT"]
+                    },
+                    {
+                        "question": "Which Oracle clause is used to rename a table?",
+                        "options": ["RENAME", "ALTER TABLE RENAME", "CHANGE TABLE", "MOVE TABLE"]
+                    }
+                ],
+                "Hard": [
+                    {
+                        "question": "Which Oracle isolation level is default?",
+                        "options": ["READ COMMITTED", "SERIALIZABLE", "REPEATABLE READ", "READ UNCOMMITTED"]
+                    },
+                    {
+                        "question": "Which feature helps detect deadlocks and transaction issues?",
+                        "options": ["Automatic Lock Management", "Trigger Optimization", "Redo Logging", "Cursor Tracking"]
+                    },
+                    {
+                        "question": "Which Oracle index supports full-text search?",
+                        "options": ["CONTEXT INDEX", "FULLTEXT INDEX", "HASH INDEX", "RTREE INDEX"]
+                    },
+                    {
+                        "question": "Which Oracle performance view contains SQL execution statistics?",
+                        "options": ["V$SQL", "V$DB", "SYS_STATS", "DBA_EXEC"]
+                    },
+                    {
+                        "question": "Which Oracle tool performs physical backups?",
+                        "options": ["RMAN", "IMPDP", "EXP", "ODP"]
+                    },
+                    {
+                        "question": "Which partitioning method divides data by numeric ranges?",
+                        "options": ["RANGE", "HASH", "LIST", "SUBSET"]
+                    },
+                    {
+                        "question": "Which clause returns rows as XML?",
+                        "options": ["XMLSERIALIZE", "XMLRETURN", "MAKE_XML", "CONVERT_XML"]
+                    },
+                    {
+                        "question": "Which feature caches queries for faster execution?",
+                        "options": ["Result Cache", "Execution Cache", "Query Cache", "Buffer Cache"]
+                    },
+                    {
+                        "question": "Which Oracle function converts rows into columns?",
+                        "options": ["PIVOT", "MATRIX", "TRANSFORM", "SPREAD"]
+                    },
+                    {
+                        "question": "Which Oracle segmentation concept divides table storage?",
+                        "options": ["Tablespaces", "Data nodes", "Data groups", "Blocksets"]
+                    }
+                ]
+            },
+            
+            "SQLite": {
+                "Easy": [
+                    {
+                        "question": "What type of database is SQLite?",
+                        "options": ["Serverless", "Client-server", "Distributed", "Cloud-based"]
+                    },
+                    {
+                        "question": "Which file extension is commonly used by SQLite databases?",
+                        "options": [".db", ".sql", ".ora", ".pg"]
+                    },
+                    {
+                        "question": "Which SQL command is used to retrieve data?",
+                        "options": ["SELECT", "FETCH", "DISPLAY", "GET"]
+                    },
+                    {
+                        "question": "Which SQLite command lists all tables?",
+                        "options": ["SELECT name FROM sqlite_master", "SHOW TABLES", "LIST TABLES", "TABLES"]
+                    },
+                    {
+                        "question": "Which data type stores integer values in SQLite?",
+                        "options": ["INTEGER", "NUMBER", "INT32", "LONG"]
+                    },
+                    {
+                        "question": "Which SQL keyword removes duplicate rows?",
+                        "options": ["DISTINCT", "UNIQUE", "SEPARATE", "ONLY"]
+                    },
+                    {
+                        "question": "Which SQLite function returns current date?",
+                        "options": ["DATE('now')", "CURDATE()", "NOW()", "GETDATE()"]
+                    },
+                    {
+                        "question": "Which operator checks for NULL values?",
+                        "options": ["IS NULL", "= NULL", "== NULL", "NULL?"]
+                    },
+                    {
+                        "question": "Which SQL statement deletes a table?",
+                        "options": ["DROP TABLE", "DELETE TABLE", "REMOVE TABLE", "ERASE TABLE"]
+                    },
+                    {
+                        "question": "Which SQLite pragma shows database schema?",
+                        "options": ["PRAGMA table_info", "PRAGMA schema", "PRAGMA structure", "PRAGMA show"]
+                    }
+                ],
+                "Medium": [
+                    {
+                        "question": "Which SQLite keyword auto-increments values?",
+                        "options": ["AUTOINCREMENT", "AUTO", "AUTOID", "INCREMENT"]
+                    },
+                    {
+                        "question": "Which SQLite type stores JSON-like text?",
+                        "options": ["TEXT", "JSON", "OBJECT", "STRUCT"]
+                    },
+                    {
+                        "question": "Which join returns only matching rows?",
+                        "options": ["INNER JOIN", "LEFT JOIN", "RIGHT JOIN", "FULL JOIN"]
+                    },
+                    {
+                        "question": "Which SQLite command shows query execution plan?",
+                        "options": ["EXPLAIN QUERY PLAN", "SHOW PLAN", "VIEWPLAN", "PLAN()"]
+                    },
+                    {
+                        "question": "Which clause filters grouped rows?",
+                        "options": ["HAVING", "WHERE", "GROUPWHERE", "FILTER"]
+                    },
+                    {
+                        "question": "Which function concatenates strings in SQLite?",
+                        "options": ["|| operator", "CONCAT()", "APPEND()", "JOIN()"]
+                    },
+                    {
+                        "question": "Which command renames a table?",
+                        "options": ["ALTER TABLE RENAME TO", "RENAME TABLE", "CHANGE TABLE", "MOVE TABLE"]
+                    },
+                    {
+                        "question": "Which function returns the number of characters in a string?",
+                        "options": ["LENGTH()", "SIZE()", "STRLEN()", "CHARCOUNT()"]
+                    },
+                    {
+                        "question": "Which pragma enables foreign keys?",
+                        "options": ["PRAGMA foreign_keys=ON", "FK=TRUE", "ENABLE FOREIGNKEY", "SET FK ON"]
+                    },
+                    {
+                        "question": "Which SQLite type is recommended for storing binary data?",
+                        "options": ["BLOB", "VARBINARY", "RAW", "BYTEA"]
+                    }
+                ],
+                "Hard": [
+                    {
+                        "question": "Which SQLite locking mode allows multiple readers but only one writer?",
+                        "options": ["WAL mode", "Exclusive mode", "Shared mode", "Immediate mode"]
+                    },
+                    {
+                        "question": "Which SQLite pragma displays query optimizer statistics?",
+                        "options": ["PRAGMA optimize", "PRAGMA stats", "PRAGMA info", "PRAGMA query"]
+                    },
+                    {
+                        "question": "Which virtual table module supports full-text search?",
+                        "options": ["FTS5", "TEXTINDEX", "FTS3ONLY", "FTSJSON"]
+                    },
+                    {
+                        "question": "Which SQLite file is responsible for write-ahead logging?",
+                        "options": ["-wal file", "-log file", "-redo file", "-cache file"]
+                    },
+                    {
+                        "question": "Which SQLite feature supports row-level versioning?",
+                        "options": ["MVCC", "RVC", "ROWREV", "TRANSLOG"]
+                    },
+                    {
+                        "question": "Which indexing method supports prefix queries?",
+                        "options": ["Trie-like FTS index", "B-tree", "R-tree", "Hash index"]
+                    },
+                    {
+                        "question": "Which command forces SQLite to rebuild indexes?",
+                        "options": ["REINDEX", "INDEX REBUILD", "FIX INDEX", "UPDATE INDEX"]
+                    },
+                    {
+                        "question": "Which pragma provides low-level information about page usage?",
+                        "options": ["PRAGMA page_info", "PRAGMA memory", "PRAGMA blocks", "PRAGMA tablesize"]
+                    },
+                    {
+                        "question": "Which platform is SQLite NOT commonly used for?",
+                        "options": ["Distributed clusters", "Mobile apps", "Browsers", "Embedded systems"]
+                    },
+                    {
+                        "question": "Which SQLite module enables R-tree indexing?",
+                        "options": ["RTREE", "BTREE", "HTREE", "LTREE"]
+                    }
+                ]
+            },
+            "Snowflake": {
+                "Easy": [
+                    {
+                        "question": "What type of platform is Snowflake primarily known as?",
+                        "options": [
+                            "Cloud data warehouse",
+                            "Relational OLTP database only",
+                            "Local file-based database",
+                            "In-memory cache server"
+                        ]
+                    },
+                    {
+                        "question": "Snowflake is typically deployed on top of which kind of infrastructure?",
+                        "options": [
+                            "Public cloud (e.g., AWS, Azure, GCP)",
+                            "Only on-premises hardware",
+                            "Desktop operating systems",
+                            "Mainframe systems only"
+                        ]
+                    },
+                    {
+                        "question": "Which SQL command is used to query data in Snowflake?",
+                        "options": [
+                            "SELECT",
+                            "GET",
+                            "FETCHDATA",
+                            "QUERY"
+                        ]
+                    },
+                    {
+                        "question": "In Snowflake, compute resources are provided by which object?",
+                        "options": [
+                            "Virtual Warehouse",
+                            "Virtual Machine",
+                            "Compute Group",
+                            "Execution Node"
+                        ]
+                    },
+                    {
+                        "question": "Where does Snowflake store its data?",
+                        "options": [
+                            "Cloud storage layer managed by Snowflake",
+                            "On local client machines",
+                            "Only in RAM",
+                            "On user-managed NAS devices"
+                        ]
+                    },
+                    {
+                        "question": "Which of the following best describes Snowflake’s billing model?",
+                        "options": [
+                            "Pay-as-you-go for storage and compute",
+                            "One-time license fee only",
+                            "Per query only with no storage costs",
+                            "Flat monthly cost regardless of usage"
+                        ]
+                    },
+                    {
+                        "question": "Which Snowflake feature allows you to temporarily stop compute charges?",
+                        "options": [
+                            "Suspending a virtual warehouse",
+                            "Dropping a database",
+                            "Freezing a schema",
+                            "Archiving a table"
+                        ]
+                    },
+                    {
+                        "question": "What language is primarily used to query Snowflake?",
+                        "options": [
+                            "SQL",
+                            "Java",
+                            "Python only",
+                            "C++"
+                        ]
+                    },
+                    {
+                        "question": "Which Snowflake role is usually created by default to administer the account?",
+                        "options": [
+                            "ACCOUNTADMIN",
+                            "SYSADMIN",
+                            "DBA",
+                            "ROOT"
+                        ]
+                    },
+                    {
+                        "question": "Which of the following best describes Snowflake’s architecture?",
+                        "options": [
+                            "Multi-cluster shared data",
+                            "Single-node shared memory",
+                            "Master–slave replication only",
+                            "Peer-to-peer mesh"
+                        ]
+                    }
+                ],
+                "Medium": [
+                    {
+                        "question": "In Snowflake, what does the virtual warehouse primarily control?",
+                        "options": [
+                            "Compute resources for query processing",
+                            "The amount of data that can be stored",
+                            "Network bandwidth limits",
+                            "User authentication policies"
+                        ]
+                    },
+                    {
+                        "question": "Snowflake stores table data internally using which structure?",
+                        "options": [
+                            "Micro-partitions",
+                            "Row-by-row linked lists",
+                            "Traditional B-tree pages",
+                            "Text files only"
+                        ]
+                    },
+                    {
+                        "question": "Which feature allows you to query historical data as it existed at a prior point in time?",
+                        "options": [
+                            "Time Travel",
+                            "Fail-safe",
+                            "Clone",
+                            "Data Recovery"
+                        ]
+                    },
+                    {
+                        "question": "Which Snowflake object is used for loading/unloading files such as CSV or Parquet?",
+                        "options": [
+                            "Stage",
+                            "Warehouse",
+                            "Sequence",
+                            "Sequence Store"
+                        ]
+                    },
+                    {
+                        "question": "Which of the following is a valid Snowflake warehouse size?",
+                        "options": [
+                            "XSMALL",
+                            "MINI",
+                            "MICRO",
+                            "LARGEPLUS"
+                        ]
+                    },
+                    {
+                        "question": "Which Snowflake command is used to copy data from a staged file into a table?",
+                        "options": [
+                            "COPY INTO",
+                            "LOAD DATA",
+                            "INSERT FILE",
+                            "IMPORT FROM"
+                        ]
+                    },
+                    {
+                        "question": "What is a key benefit of separating compute and storage in Snowflake?",
+                        "options": [
+                            "Independent scaling of compute and storage",
+                            "All queries are automatically free",
+                            "No need to manage any users",
+                            "It disables concurrency"
+                        ]
+                    },
+                    {
+                        "question": "Which Snowflake feature allows creation of a logical copy of a table without duplicating data?",
+                        "options": [
+                            "Zero-copy cloning",
+                            "Physical backup",
+                            "Materialized copy",
+                            "Hard link table"
+                        ]
+                    },
+                    {
+                        "question": "Which of the following best describes a Snowflake database role?",
+                        "options": [
+                            "A collection of privileges that can be granted to users",
+                            "A physical storage location",
+                            "A special warehouse type",
+                            "A separate billing account"
+                        ]
+                    },
+                    {
+                        "question": "Which process helps Snowflake automatically optimize micro-partitions and storage over time?",
+                        "options": [
+                            "Automatic clustering and optimization services",
+                            "Manual index rebuilding",
+                            "Database vacuum scheduling",
+                            "User-triggered defragmentation only"
+                        ]
+                    }
+                ],
+                "Hard": [
+                    {
+                        "question": "Which Snowflake feature provides long-term storage of historical data primarily for disaster recovery, beyond Time Travel?",
+                        "options": [
+                            "Fail-safe",
+                            "Zero-copy clone",
+                            "Automatic clustering",
+                            "Materialized history"
+                        ]
+                    },
+                    {
+                        "question": "In Snowflake, which type of table does NOT persist data beyond the session?",
+                        "options": [
+                            "Temporary table",
+                            "Permanent table",
+                            "Transient table",
+                            "External table"
+                        ]
+                    },
+                    {
+                        "question": "Which Snowflake object allows you to store external data in cloud storage and query it without fully loading into Snowflake?",
+                        "options": [
+                            "External table",
+                            "Transient table",
+                            "Virtual table",
+                            "Shadow table"
+                        ]
+                    },
+                    {
+                        "question": "Which Snowflake feature enables secure data sharing between different Snowflake accounts without copying data?",
+                        "options": [
+                            "Secure data sharing",
+                            "External stages",
+                            "Data federation",
+                            "Remote mirroring"
+                        ]
+                    },
+                    {
+                        "question": "Which Snowflake construct is commonly used to parameterize SQL logic and encapsulate business rules?",
+                        "options": [
+                            "Stored procedures",
+                            "Row access policies only",
+                            "External functions only",
+                            "Global variables"
+                        ]
+                    },
+                    {
+                        "question": "Which language can be used to write Snowflake stored procedures (in addition to SQL scripting)?",
+                        "options": [
+                            "JavaScript",
+                            "Java",
+                            "C#",
+                            "Ruby"
+                        ]
+                    },
+                    {
+                        "question": "Which Snowflake object enforces row-level filtering based on the executing user’s context?",
+                        "options": [
+                            "Row access policy",
+                            "Masking policy",
+                            "Network policy",
+                            "Resource monitor"
+                        ]
+                    },
+                    {
+                        "question": "Which Snowflake feature is most appropriate for masking sensitive data such as credit card numbers?",
+                        "options": [
+                            "Dynamic data masking policy",
+                            "Fail-safe retention",
+                            "Warehouse auto-suspend",
+                            "Zero-copy clone"
+                        ]
+                    },
+                    {
+                        "question": "When multiple virtual warehouses query the same table concurrently, Snowflake’s architecture primarily relies on:",
+                        "options": [
+                            "Shared centralized storage with independent compute clusters",
+                            "Separate physical copies of the table per warehouse",
+                            "A master-slave architecture per warehouse",
+                            "Client-side caching only"
+                        ]
+                    },
+                    {
+                        "question": "Which Snowflake object is best suited for monitoring and restricting credit or resource usage?",
+                        "options": [
+                            "Resource monitor",
+                            "Warehouse size",
+                            "Network policy",
+                            "Row policy"
+                        ]
+                    }
+                ]
+            },
+            
+            "Indexes": {
+                "Easy": [
+                    {
+                        "question": "What is the primary purpose of an index in a SQL database?",
+                        "options": [
+                            "To speed up data retrieval",
+                            "To encrypt data",
+                            "To compress tables",
+                            "To generate backups"
+                        ]
+                    },
+                    {
+                        "question": "Which database structure is most commonly used to implement traditional indexes?",
+                        "options": [
+                            "B-tree",
+                            "Linked list",
+                            "Heap",
+                            "Stack"
+                        ]
+                    },
+                    {
+                        "question": "Creating an index typically improves performance for which operation?",
+                        "options": [
+                            "SELECT with filters",
+                            "Bulk INSERT",
+                            "Large DELETE without filters",
+                            "Full table UPDATE"
+                        ]
+                    },
+                    {
+                        "question": "Which column is most commonly indexed?",
+                        "options": [
+                            "Columns used frequently in WHERE clauses",
+                            "Columns that are never queried",
+                            "Columns containing only NULL values",
+                            "Debug-only columns"
+                        ]
+                    },
+                    {
+                        "question": "Which SQL command is generally used to create an index?",
+                        "options": [
+                            "CREATE INDEX",
+                            "NEW INDEX",
+                            "ADD INDEX TO",
+                            "BUILD INDEX"
+                        ]
+                    },
+                    {
+                        "question": "Which operation can become slower if too many indexes exist on a table?",
+                        "options": [
+                            "INSERT",
+                            "Simple SELECT",
+                            "Database backup",
+                            "Changing database port"
+                        ]
+                    },
+                    {
+                        "question": "An index on a column with many distinct values is usually described as:",
+                        "options": [
+                            "High cardinality",
+                            "Low cardinality",
+                            "Sparse",
+                            "Dense"
+                        ]
+                    },
+                    {
+                        "question": "Which type of index ensures all values in a column are different?",
+                        "options": [
+                            "UNIQUE index",
+                            "HASH index",
+                            "CLUSTERED index",
+                            "FULLTEXT index"
+                        ]
+                    },
+                    {
+                        "question": "Which of the following is a potential downside of indexes?",
+                        "options": [
+                            "Increased storage usage",
+                            "Fewer available SQL functions",
+                            "Reduced database security",
+                            "Inability to backup the database"
+                        ]
+                    },
+                    {
+                        "question": "On which kind of columns are indexes usually NOT effective?",
+                        "options": [
+                            "Columns with very few distinct values (e.g., TRUE/FALSE)",
+                            "Primary key columns",
+                            "Foreign key columns",
+                            "Highly selective columns"
+                        ]
+                    }
+                ],
+                "Medium": [
+                    {
+                        "question": "What is a composite index?",
+                        "options": [
+                            "An index on multiple columns",
+                            "An index split across multiple servers",
+                            "An index that is partially encrypted",
+                            "An index built from multiple tables"
+                        ]
+                    },
+                    {
+                        "question": "Which statement about clustered indexes is generally true in many RDBMSs?",
+                        "options": [
+                            "They define the physical order of rows in a table",
+                            "They cannot be used on primary key columns",
+                            "They always store only index, not data",
+                            "They are always full-text indexes"
+                        ]
+                    },
+                    {
+                        "question": "Which type of index is typically best for exact-match lookups on equality conditions?",
+                        "options": [
+                            "B-tree or hash index (depending on RDBMS)",
+                            "Bitmap index",
+                            "Full-text index",
+                            "Spatial index"
+                        ]
+                    },
+                    {
+                        "question": "Which kind of query often benefits from a composite index on (col1, col2)?",
+                        "options": [
+                            "Queries filtering on col1 and then col2",
+                            "Queries on col2 only, ignoring col1",
+                            "Queries on unrelated columns",
+                            "Queries with only ORDER BY col3"
+                        ]
+                    },
+                    {
+                        "question": "In many databases, which of the following is true about an index on (A, B)?",
+                        "options": [
+                            "It can effectively support filters on A, or on A and B together",
+                            "It can always optimize queries filtering only on B",
+                            "It cannot be used for range conditions on A",
+                            "It must always be unique"
+                        ]
+                    },
+                    {
+                        "question": "What is a covering index?",
+                        "options": [
+                            "An index that contains all columns needed by a query",
+                            "An index that covers all tables in a schema",
+                            "An index that hides other indexes",
+                            "An index only used for backup"
+                        ]
+                    },
+                    {
+                        "question": "Which of the following can help the optimizer avoid a table lookup when using an index?",
+                        "options": [
+                            "Including all referenced columns in the index",
+                            "Using only numeric columns",
+                            "Disabling all other indexes",
+                            "Using NOLOCK hints"
+                        ]
+                    },
+                    {
+                        "question": "Bitmap indexes are especially useful in which scenario?",
+                        "options": [
+                            "Columns with low cardinality in data warehouses",
+                            "Columns with high cardinality in OLTP systems",
+                            "Temporary tables only",
+                            "Log tables only"
+                        ]
+                    },
+                    {
+                        "question": "Which maintenance operation can help improve performance for heavily updated B-tree indexes?",
+                        "options": [
+                            "Index rebuild or reorganization",
+                            "Dropping all indexes",
+                            "Changing database collation",
+                            "Only updating statistics on tables"
+                        ]
+                    },
+                    {
+                        "question": "Why might a function on a column (e.g., UPPER(col)) prevent index usage?",
+                        "options": [
+                            "The function can make the index non-sargable",
+                            "Functions are not allowed in SQL",
+                            "Indexes cannot be used with strings",
+                            "The optimizer always prefers full scans"
+                        ]
+                    }
+                ],
+                "Hard": [
+                    {
+                        "question": "What does 'sargable' generally mean with respect to indexes?",
+                        "options": [
+                            "A predicate that can effectively use an index",
+                            "An index that supports only equality predicates",
+                            "A query that must scan all rows",
+                            "A column that cannot be indexed"
+                        ]
+                    },
+                    {
+                        "question": "Which scenario is most likely to cause significant index fragmentation?",
+                        "options": [
+                            "Frequent random INSERTs and DELETEs",
+                            "Read-only reporting workload",
+                            "Bulk loads into empty tables",
+                            "Sequential inserts into clustered keys"
+                        ]
+                    },
+                    {
+                        "question": "Why can too many indexes on a table hurt OLTP performance?",
+                        "options": [
+                            "Every INSERT, UPDATE, and DELETE must also maintain the indexes",
+                            "Indexes block concurrent reads",
+                            "Indexes prevent use of transactions",
+                            "Indexes increase network latency"
+                        ]
+                    },
+                    {
+                        "question": "Which indexing strategy is best when queries frequently filter on a range of values?",
+                        "options": [
+                            "B-tree index on the range column",
+                            "Hash index on the range column",
+                            "Bitmap-only index",
+                            "Full-text index"
+                        ]
+                    },
+                    {
+                        "question": "A partial index in some DBMSs is an index that:",
+                        "options": [
+                            "Covers only rows that meet a specified condition",
+                            "Covers only part of a column’s values",
+                            "Is built on a portion of a table’s columns",
+                            "Is only partially stored on disk"
+                        ]
+                    },
+                    {
+                        "question": "Which concept allows storing extra, non-key columns in an index to avoid table lookups?",
+                        "options": [
+                            "Included columns",
+                            "Shadow columns",
+                            "Secondary keys",
+                            "Indirect keys"
+                        ]
+                    },
+                    {
+                        "question": "Why might an index on a very frequently updated column be a bad idea?",
+                        "options": [
+                            "High maintenance overhead for each update",
+                            "Indexes cannot handle updates",
+                            "It disables constraints on that column",
+                            "It prevents clustering"
+                        ]
+                    },
+                    {
+                        "question": "Which kind of index is most suitable for spatial or geographic queries?",
+                        "options": [
+                            "R-tree or GiST-based spatial index",
+                            "Standard hash index",
+                            "Bitmap index",
+                            "Full-text index"
+                        ]
+                    },
+                    {
+                        "question": "In a star schema, which columns are most commonly indexed for performance?",
+                        "options": [
+                            "Foreign keys in fact tables to dimension tables",
+                            "All columns in dimension tables",
+                            "Only surrogate keys in dimensions",
+                            "Only text description columns"
+                        ]
+                    },
+                    {
+                        "question": "Which phenomenon might cause the optimizer to ignore an index even when it exists?",
+                        "options": [
+                            "Out-of-date or poor statistics",
+                            "Too many rows in the table",
+                            "Too few joins in the query",
+                            "Using only numeric columns"
+                        ]
+                    }
+                ]
+            },
+            
+            "Joins": {
+                "Easy": [
+                    {
+                        "question": "What is the main purpose of a SQL JOIN?",
+                        "options": [
+                            "To combine rows from two or more tables",
+                            "To create a backup of a table",
+                            "To encrypt data",
+                            "To delete rows from multiple tables"
+                        ]
+                    },
+                    {
+                        "question": "Which keyword is commonly used to specify join conditions?",
+                        "options": [
+                            "ON",
+                            "WHERE ONLY",
+                            "BY",
+                            "USING ONLY"
+                        ]
+                    },
+                    {
+                        "question": "Which join returns only rows with matching values in both tables?",
+                        "options": [
+                            "INNER JOIN",
+                            "LEFT JOIN",
+                            "RIGHT JOIN",
+                            "FULL OUTER JOIN"
+                        ]
+                    },
+                    {
+                        "question": "Which join returns all rows from the left table and the matching rows from the right table?",
+                        "options": [
+                            "LEFT JOIN",
+                            "RIGHT JOIN",
+                            "INNER JOIN",
+                            "CROSS JOIN"
+                        ]
+                    },
+                    {
+                        "question": "Which join returns the Cartesian product of two tables?",
+                        "options": [
+                            "CROSS JOIN",
+                            "INNER JOIN",
+                            "LEFT JOIN",
+                            "RIGHT JOIN"
+                        ]
+                    },
+                    {
+                        "question": "What does a join condition usually compare?",
+                        "options": [
+                            "Primary key of one table to foreign key of another",
+                            "Column names only",
+                            "Row numbers",
+                            "Table names"
+                        ]
+                    },
+                    {
+                        "question": "Which keyword can be used instead of INNER JOIN in some simple join queries?",
+                        "options": [
+                            "FROM table1, table2 with WHERE condition",
+                            "MATCH table1, table2",
+                            "JOIN ONLY",
+                            "LINK table1 TO table2"
+                        ]
+                    },
+                    {
+                        "question": "When columns from different tables have the same name, how are they typically referenced?",
+                        "options": [
+                            "By prefixing with table or alias name",
+                            "By quoting them",
+                            "They cannot be referenced",
+                            "By renaming tables"
+                        ]
+                    },
+                    {
+                        "question": "Which clause can be used to rename tables for easier join syntax?",
+                        "options": [
+                            "Table aliases (e.g., FROM customers c)",
+                            "RENAME TABLE",
+                            "ALTER TABLE ALIAS",
+                            "JOIN AS"
+                        ]
+                    },
+                    {
+                        "question": "Which join type is most commonly used in typical multi-table queries?",
+                        "options": [
+                            "INNER JOIN",
+                            "FULL OUTER JOIN",
+                            "RIGHT JOIN",
+                            "CROSS JOIN"
+                        ]
+                    }
+                ],
+                "Medium": [
+                    {
+                        "question": "Which join returns all rows from both tables, with NULLs where there are no matches?",
+                        "options": [
+                            "FULL OUTER JOIN",
+                            "INNER JOIN",
+                            "LEFT JOIN",
+                            "RIGHT JOIN"
+                        ]
+                    },
+                    {
+                        "question": "In a LEFT JOIN, rows from the right table that do not match the join condition will:",
+                        "options": [
+                            "Appear with NULLs for right table columns",
+                            "Be completely excluded from the result",
+                            "Cause an error",
+                            "Be duplicated"
+                        ]
+                    },
+                    {
+                        "question": "Which join type is often used to find rows that have no matching counterpart in another table?",
+                        "options": [
+                            "LEFT JOIN with a WHERE right_table.key IS NULL",
+                            "INNER JOIN with inequality condition",
+                            "CROSS JOIN with WHERE 1=0",
+                            "RIGHT JOIN without condition"
+                        ]
+                    },
+                    {
+                        "question": "Which join syntax is generally considered clearer and more maintainable?",
+                        "options": [
+                            "Explicit JOIN ... ON syntax",
+                            "Implicit joins in the WHERE clause only",
+                            "Cartesian products only",
+                            "Natural joins everywhere"
+                        ]
+                    },
+                    {
+                        "question": "What is a self-join?",
+                        "options": [
+                            "A join of a table with itself",
+                            "A join between a table and a view",
+                            "A join that uses no conditions",
+                            "A join without aliases"
+                        ]
+                    },
+                    {
+                        "question": "Which clause can be used to join tables on columns with the same name without specifying ON explicitly in some DBMSs?",
+                        "options": [
+                            "USING (column_name)",
+                            "LIKE (column_name)",
+                            "MATCH (column_name)",
+                            "EQUALS (column_name)"
+                        ]
+                    },
+                    {
+                        "question": "Which join is typically used to produce all combinations of rows from two tables?",
+                        "options": [
+                            "CROSS JOIN",
+                            "INNER JOIN",
+                            "LEFT JOIN",
+                            "FULL OUTER JOIN"
+                        ]
+                    },
+                    {
+                        "question": "How do you avoid ambiguous column names when selecting from joined tables?",
+                        "options": [
+                            "Use table aliases and qualify columns",
+                            "Drop one of the columns",
+                            "Rename the table",
+                            "Use SELECT * without aliases"
+                        ]
+                    },
+                    {
+                        "question": "What is the result of an INNER JOIN when there are no matching rows between the tables?",
+                        "options": [
+                            "An empty result set",
+                            "Rows with NULLs in all columns",
+                            "All rows from both tables",
+                            "Rows only from the left table"
+                        ]
+                    },
+                    {
+                        "question": "Which join pattern is commonly used to model many-to-many relationships?",
+                        "options": [
+                            "Joining two tables through a junction (bridge) table",
+                            "Self-join on each table",
+                            "CROSS JOIN directly between the two tables",
+                            "Nested subqueries without joins"
+                        ]
+                    }
+                ],
+                "Hard": [
+                    {
+                        "question": "Which join type can be emulated in databases that do not support FULL OUTER JOIN natively?",
+                        "options": [
+                            "Using UNION of LEFT JOIN and RIGHT JOIN with filters",
+                            "Using only INNER JOIN",
+                            "Using CROSS JOIN only",
+                            "Using NATURAL JOIN only"
+                        ]
+                    },
+                    {
+                        "question": "Why can joining large tables on non-indexed columns be problematic?",
+                        "options": [
+                            "It can cause full table scans and poor performance",
+                            "It is not allowed by SQL standards",
+                            "It always returns incorrect results",
+                            "It forces the use of CROSS JOIN instead"
+                        ]
+                    },
+                    {
+                        "question": "Which join algorithm is commonly used when both inputs are large and hashed on the join key?",
+                        "options": [
+                            "Hash join",
+                            "Nested loop join",
+                            "Merge join",
+                            "Cartesian join"
+                        ]
+                    },
+                    {
+                        "question": "Which join algorithm can be very efficient when both inputs are sorted on the join key?",
+                        "options": [
+                            "Merge join",
+                            "Hash join",
+                            "Nested loop join",
+                            "Cross join"
+                        ]
+                    },
+                    {
+                        "question": "What is a potential side effect of writing joins without proper conditions?",
+                        "options": [
+                            "Accidental Cartesian products",
+                            "Automatic index corruption",
+                            "Silent truncation of columns",
+                            "Forced use of FULL JOIN"
+                        ]
+                    },
+                    {
+                        "question": "Which approach can help reduce data volume before a heavy join?",
+                        "options": [
+                            "Filtering rows in subqueries or CTEs before joining",
+                            "Always joining all tables first, then filtering",
+                            "Using CROSS JOIN and then grouping",
+                            "Disabling indexes before joining"
+                        ]
+                    },
+                    {
+                        "question": "In star schemas, which join pattern is most common for querying facts and dimensions?",
+                        "options": [
+                            "Fact table INNER JOIN dimension tables on surrogate keys",
+                            "Dimensions LEFT JOIN fact table",
+                            "CROSS JOIN all dimensions and facts",
+                            "FULL JOIN among all dimensions"
+                        ]
+                    },
+                    {
+                        "question": "Which clause can be used along with JOINs to aggregate results from multiple tables?",
+                        "options": [
+                            "GROUP BY",
+                            "ORDER BY",
+                            "LIMIT",
+                            "DISTINCT ONLY"
+                        ]
+                    },
+                    {
+                        "question": "When joining three or more tables, the join order chosen by the optimizer is based primarily on:",
+                        "options": [
+                            "Statistics and estimated cardinalities",
+                            "Alphabetical order of table names",
+                            "The order they appear in the FROM clause",
+                            "The size of index names"
+                        ]
+                    },
+                    {
+                        "question": "Which technique can help debug complex join logic?",
+                        "options": [
+                            "Building and testing joins step by step (two tables at a time)",
+                            "Using only SELECT * always",
+                            "Avoiding aliases entirely",
+                            "Removing all WHERE conditions"
+                        ]
+                    }
+                ]
+            }
+        }
+    }
+}

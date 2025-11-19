@@ -1,0 +1,1121 @@
+{
+    "data": {
+        "Rust": {
+            "no_std": {
+                "Easy": [
+                    {
+                        "question": "What does `no_std` mean in Rust?",
+                        "options": [
+                            "Compiling without the Rust standard library",
+                            "Compiling without any crates",
+                            "Compiling only on Windows",
+                            "Compiling only in debug mode"
+                        ]
+                    },
+                    {
+                        "question": "Which attribute is used to enable `no_std` in a Rust crate?",
+                        "options": [
+                            "#![no_std]",
+                            "#![nostd]",
+                            "#![no_stdlib]",
+                            "#![std_off]"
+                        ]
+                    },
+                    {
+                        "question": "Why is `no_std` commonly used?",
+                        "options": [
+                            "To run Rust on embedded or bare-metal targets",
+                            "To speed up cargo builds on desktops",
+                            "To enable dynamic linking by default",
+                            "To allow using unsafe code only"
+                        ]
+                    },
+                    {
+                        "question": "Which crate usually replaces parts of `std` in `no_std` environments?",
+                        "options": [
+                            "core",
+                            "alloc",
+                            "std_support",
+                            "embedded"
+                        ]
+                    },
+                    {
+                        "question": "Which of the following is NOT available in a pure `no_std` environment?",
+                        "options": [
+                            "Heap-allocated `String` and `Vec` by default",
+                            "Basic traits like `Copy` and `Clone`",
+                            "Primitive types like `u32` and `f32`",
+                            "Basic ops traits like `Add` and `Sub`"
+                        ]
+                    },
+                    {
+                        "question": "What is a common target type for `no_std` Rust code?",
+                        "options": [
+                            "Microcontrollers and bare-metal systems",
+                            "Web browsers only",
+                            "High-performance Linux servers only",
+                            "Desktop GUIs only"
+                        ]
+                    },
+                    {
+                        "question": "In `no_std` Rust, which crate is always available?",
+                        "options": [
+                            "core",
+                            "std",
+                            "tokio",
+                            "rayon"
+                        ]
+                    },
+                    {
+                        "question": "Which language feature is especially important in `no_std` for avoiding panics?",
+                        "options": [
+                            "Error handling with `Result`",
+                            "Macros",
+                            "Enums",
+                            "Trait objects"
+                        ]
+                    },
+                    {
+                        "question": "Which Rust feature is often disabled or carefully controlled in `no_std` environments?",
+                        "options": [
+                            "Heap allocation",
+                            "Generics",
+                            "Pattern matching",
+                            "Lifetimes"
+                        ]
+                    },
+                    {
+                        "question": "Which kind of devices typically use `no_std` Rust?",
+                        "options": [
+                            "Embedded controllers and constrained devices",
+                            "Cloud VMs with large RAM",
+                            "Desktop gaming PCs",
+                            "High-level scripting runtimes"
+                        ]
+                    }
+                ],
+                "Medium": [
+                    {
+                        "question": "Which two crates are commonly combined to add heap allocation to a `no_std` project?",
+                        "options": [
+                            "core + alloc",
+                            "std + core",
+                            "alloc + std",
+                            "alloc + sync"
+                        ]
+                    },
+                    {
+                        "question": "What is needed to use `Vec` in a `no_std` environment?",
+                        "options": [
+                            "A global allocator and the `alloc` crate",
+                            "The full `std` crate",
+                            "A custom prelude",
+                            "Disabling all panics"
+                        ]
+                    },
+                    {
+                        "question": "In `no_std` environments, how is panic behavior usually customized?",
+                        "options": [
+                            "By defining a custom `#[panic_handler]` function",
+                            "By enabling `panic=abort` in Cargo.toml only",
+                            "By using `unwrap()` everywhere",
+                            "By disabling all error handling"
+                        ]
+                    },
+                    {
+                        "question": "Why is `no_std` often paired with `#![no_main]` on bare-metal targets?",
+                        "options": [
+                            "Because there is no OS-provided entry point",
+                            "Because Rust cannot compile `main` on ARM",
+                            "Because macros do not work with `main`",
+                            "Because the compiler requires it for tests"
+                        ]
+                    },
+                    {
+                        "question": "Which of the following is a limitation of `no_std` compared to `std`?",
+                        "options": [
+                            "No file system or networking APIs by default",
+                            "No support for generic types",
+                            "No support for traits",
+                            "No support for pattern matching"
+                        ]
+                    },
+                    {
+                        "question": "Which feature of `std` depends heavily on OS services and is therefore absent in `no_std`?",
+                        "options": [
+                            "Threads and blocking I/O",
+                            "Enums and pattern matching",
+                            "Generics and traits",
+                            "Closures and iterators"
+                        ]
+                    },
+                    {
+                        "question": "How are hardware registers commonly accessed in `no_std` embedded Rust?",
+                        "options": [
+                            "Via memory-mapped I/O and `volatile` access",
+                            "Through the standard file APIs",
+                            "Through HTTP requests",
+                            "Using dynamic loading of shared libraries"
+                        ]
+                    },
+                    {
+                        "question": "What is one reason to avoid panicking in `no_std` firmware?",
+                        "options": [
+                            "Panics can cause lockups or undefined device behavior",
+                            "Panics automatically erase flash memory",
+                            "Panics disable interrupts permanently",
+                            "Panics always reboot the host OS"
+                        ]
+                    },
+                    {
+                        "question": "Which crate provides many algorithms and traits but does not require `std`?",
+                        "options": [
+                            "core",
+                            "std",
+                            "os",
+                            "runtime"
+                        ]
+                    },
+                    {
+                        "question": "In `no_std` development, what typically replaces OS-level logging?",
+                        "options": [
+                            "Custom logging over UART, RTT, or semihosting",
+                            "Writing log files to disk",
+                            "Printing to a system console",
+                            "Using a browser devtools console"
+                        ]
+                    }
+                ],
+                "Hard": [
+                    {
+                        "question": "Why is `panic = \"abort\"` often used in `no_std` embedded projects?",
+                        "options": [
+                            "To reduce binary size and avoid stack unwinding",
+                            "To enable multi-threaded unwinding",
+                            "To support async/await automatically",
+                            "To improve filesystem performance"
+                        ]
+                    },
+                    {
+                        "question": "What is a typical consequence of using dynamic memory allocation (`alloc`) on very constrained microcontrollers?",
+                        "options": [
+                            "Risk of fragmentation and out-of-memory at runtime",
+                            "Compile-time failure of all generics",
+                            "Inability to use `unsafe` code",
+                            "Disabling interrupt handling"
+                        ]
+                    },
+                    {
+                        "question": "Which of the following can help share code between `std` and `no_std` targets?",
+                        "options": [
+                            "Using `#[cfg(feature = \"std\")]` and feature flags",
+                            "Always importing `std::io`",
+                            "Disabling `core` in all builds",
+                            "Avoiding traits entirely"
+                        ]
+                    },
+                    {
+                        "question": "Why must `no_std` firmware carefully manage stack usage?",
+                        "options": [
+                            "Embedded stacks are small and cannot grow dynamically",
+                            "Stacks are shared across devices over the network",
+                            "Stacks are stored in flash memory only",
+                            "Stacks are allocated by the OS at runtime"
+                        ]
+                    },
+                    {
+                        "question": "What is a common strategy to handle fallible operations without panics in `no_std`?",
+                        "options": [
+                            "Returning `Result` and handling errors explicitly",
+                            "Using `unwrap()` on all results",
+                            "Ignoring errors to save code size",
+                            "Converting errors to strings and logging only"
+                        ]
+                    },
+                    {
+                        "question": "Which of the following is often used to implement cooperative multitasking in `no_std` embedded apps?",
+                        "options": [
+                            "Interrupt handlers and main loop scheduling",
+                            "OS threads and preemptive scheduling",
+                            "Async/await with a full OS runtime",
+                            "Forking new processes"
+                        ]
+                    },
+                    {
+                        "question": "Why might you split a crate into a `no_std` core and a `std`-enabled adapter layer?",
+                        "options": [
+                            "To share logic between embedded and desktop environments",
+                            "To force the compiler to always optimize for size",
+                            "To avoid using traits in either layer",
+                            "To disable generics in embedded code"
+                        ]
+                    },
+                    {
+                        "question": "Which of these is a good pattern for dealing with time in `no_std` firmware?",
+                        "options": [
+                            "Using hardware timers and tick counters",
+                            "Using `std::time::Instant`",
+                            "Reading time from the local filesystem",
+                            "Using NTP over TCP directly in `core`"
+                        ]
+                    },
+                    {
+                        "question": "What is often needed to safely share mutable data between interrupt context and main loop in `no_std`?",
+                        "options": [
+                            "Careful use of `volatile` and atomic operations",
+                            "Using `Rc<RefCell<T>>` from `std`",
+                            "Using `std::sync::Mutex`",
+                            "Relying on OS-level locks"
+                        ]
+                    },
+                    {
+                        "question": "Why are custom linkers scripts often relevant in `no_std` embedded Rust projects?",
+                        "options": [
+                            "To place code and data at correct memory addresses",
+                            "To enable dynamic linking",
+                            "To embed a filesystem image automatically",
+                            "To configure network interfaces"
+                        ]
+                    }
+                ]
+            },
+            
+            "RTIC": {
+                "Easy": [
+                    {
+                        "question": "What does RTIC stand for in the Rust embedded ecosystem?",
+                        "options": [
+                            "Real-Time Interrupt-driven Concurrency",
+                            "Rust Threaded Interrupt Controller",
+                            "Runtime Task Integration Core",
+                            "Real-Time IPC Channel"
+                        ]
+                    },
+                    {
+                        "question": "RTIC is primarily used for:",
+                        "options": [
+                            "Building real-time embedded applications on microcontrollers",
+                            "Creating desktop GUIs",
+                            "Managing cloud servers",
+                            "Writing web frontends"
+                        ]
+                    },
+                    {
+                        "question": "RTIC applications are typically:",
+                        "options": [
+                            "`no_std` and bare-metal",
+                            "Standard desktop Rust apps",
+                            "WebAssembly modules only",
+                            "Kernel modules for Linux"
+                        ]
+                    },
+                    {
+                        "question": "RTIC’s concurrency model is based on:",
+                        "options": [
+                            "Tasks scheduled by hardware interrupts and priorities",
+                            "OS-level preemptive threads",
+                            "Futures and async executors",
+                            "Processes and syscalls"
+                        ]
+                    },
+                    {
+                        "question": "In RTIC, tasks are often defined using:",
+                        "options": [
+                            "Attributes/macros like `#[task]`",
+                            "Trait implementations only",
+                            "Dynamic dispatch and vtables",
+                            "Config files with YAML"
+                        ]
+                    },
+                    {
+                        "question": "RTIC helps provide which property by construction?",
+                        "options": [
+                            "Race-free shared resource access",
+                            "Automatic garbage collection",
+                            "Runtime reflection",
+                            "Dynamic loading of tasks"
+                        ]
+                    },
+                    {
+                        "question": "Which Rust domain commonly uses RTIC?",
+                        "options": [
+                            "Embedded systems and microcontrollers",
+                            "Browser-based apps",
+                            "CLI utilities on desktops",
+                            "GPU kernel compilation"
+                        ]
+                    },
+                    {
+                        "question": "Which concept does RTIC use to model hardware interrupt handlers?",
+                        "options": [
+                            "Tasks bound to interrupts",
+                            "Threads created per interrupt",
+                            "Processes with PIDs",
+                            "Global event loops only"
+                        ]
+                    },
+                    {
+                        "question": "What feature does RTIC provide for handling shared peripherals like SPI or I2C safely?",
+                        "options": [
+                            "Resource management with priority-based locking",
+                            "Automatic reference counting",
+                            "Global mutable statics without restrictions",
+                            "OS-level mutexes"
+                        ]
+                    },
+                    {
+                        "question": "RTIC is most often used with which Rust target type?",
+                        "options": [
+                            "Cortex-M microcontrollers",
+                            "x86_64 desktop CPUs",
+                            "WebAssembly targets",
+                            "NVMe controllers"
+                        ]
+                    }
+                ],
+                "Medium": [
+                    {
+                        "question": "In RTIC, what is the role of the `#[app]` macro?",
+                        "options": [
+                            "Defines the overall application, resources, and tasks",
+                            "Starts the RTOS kernel",
+                            "Configures the Rust standard library",
+                            "Generates Cargo.toml entries"
+                        ]
+                    },
+                    {
+                        "question": "How does RTIC ensure safe access to shared resources?",
+                        "options": [
+                            "By statically analyzing task priorities and resource access",
+                            "By using a global mutex for all resources",
+                            "By relying on runtime OS checks",
+                            "By disabling interrupts globally"
+                        ]
+                    },
+                    {
+                        "question": "In RTIC, what is a `resource`?",
+                        "options": [
+                            "A shared piece of state or peripheral protected by RTIC’s rules",
+                            "A heap-allocated object only",
+                            "A network connection only",
+                            "A compiled binary image"
+                        ]
+                    },
+                    {
+                        "question": "Which of the following is true about RTIC tasks?",
+                        "options": [
+                            "They run to completion without preemption by lower-priority tasks",
+                            "They can be preempted by tasks of lower priority",
+                            "They always run in separate OS threads",
+                            "They require dynamic allocation"
+                        ]
+                    },
+                    {
+                        "question": "What does RTIC’s priority-based scheduling help guarantee?",
+                        "options": [
+                            "Bounded response time for higher-priority tasks",
+                            "Fair time sharing across all tasks",
+                            "Automatic energy minimization",
+                            "Deterministic network throughput"
+                        ]
+                    },
+                    {
+                        "question": "In RTIC, what is typically used to schedule tasks at a later time?",
+                        "options": [
+                            "Timers and software tasks",
+                            "Spawning OS threads",
+                            "Writing to a message queue",
+                            "Using async/await"
+                        ]
+                    },
+                    {
+                        "question": "RTIC’s `init` function (or `#[init]` task) is used for:",
+                        "options": [
+                            "One-time initialization of peripherals and resources",
+                            "Handling panics",
+                            "Defining the main OS thread",
+                            "Dynamic loading of crates"
+                        ]
+                    },
+                    {
+                        "question": "Why is `no_std` important for RTIC-based applications?",
+                        "options": [
+                            "They target MCUs without an operating system",
+                            "They cannot use generics otherwise",
+                            "They need dynamic linking",
+                            "They must always run on Linux"
+                        ]
+                    },
+                    {
+                        "question": "What does RTIC use instead of traditional RTOS tasks and mutexes?",
+                        "options": [
+                            "Statically scheduled tasks and priority-based resource access",
+                            "OS threads mapped to interrupts",
+                            "Kernel-level signals and semaphores",
+                            "A global interpreter lock"
+                        ]
+                    },
+                    {
+                        "question": "Why is deterministic interrupt latency important in RTIC applications?",
+                        "options": [
+                            "To meet real-time deadlines and guarantees",
+                            "To reduce binary size",
+                            "To improve compile times",
+                            "To simplify heap management"
+                        ]
+                    }
+                ],
+                "Hard": [
+                    {
+                        "question": "How does RTIC prevent classic priority-inversion problems with shared resources?",
+                        "options": [
+                            "By enforcing ceiling-based priority rules at compile time",
+                            "By dynamically boosting priorities at runtime only",
+                            "By allowing only one global priority",
+                            "By disabling interrupts entirely"
+                        ]
+                    },
+                    {
+                        "question": "In RTIC, what is a `spawn` operation typically used for?",
+                        "options": [
+                            "Scheduling a software task to run later",
+                            "Creating a new OS thread",
+                            "Allocating a new heap object",
+                            "Rebooting the microcontroller"
+                        ]
+                    },
+                    {
+                        "question": "Which of the following best describes RTIC’s memory model?",
+                        "options": [
+                            "Static allocation of tasks and resources with no hidden dynamic allocation",
+                            "Heap-allocation of all tasks and resources",
+                            "Paging-based virtual memory",
+                            "Full MMU support for per-task address spaces"
+                        ]
+                    },
+                    {
+                        "question": "Why is it beneficial that RTIC has a fully analyzable schedule at compile time?",
+                        "options": [
+                            "It enables worst-case execution time and latency analysis",
+                            "It improves syntax highlighting",
+                            "It allows hot code reloading",
+                            "It guarantees zero flash usage"
+                        ]
+                    },
+                    {
+                        "question": "Which type of bug is RTIC specifically designed to eliminate by construction?",
+                        "options": [
+                            "Data races on shared resources",
+                            "Stack overflows",
+                            "Logic errors in algorithms",
+                            "Incorrect pin mappings"
+                        ]
+                    },
+                    {
+                        "question": "When using RTIC, how are interrupt priorities chosen?",
+                        "options": [
+                            "By assigning task priorities that map to hardware interrupt priorities",
+                            "Randomly by the compiler",
+                            "Automatically by the hardware without configuration",
+                            "Only at runtime via a configuration file"
+                        ]
+                    },
+                    {
+                        "question": "How does RTIC handle nesting of interrupts and tasks?",
+                        "options": [
+                            "Higher-priority tasks can preempt lower-priority ones",
+                            "Lower-priority tasks can preempt higher-priority ones",
+                            "No preemption is allowed at all",
+                            "All tasks run in strict round-robin order"
+                        ]
+                    },
+                    {
+                        "question": "Why might RTIC be preferred over a traditional RTOS in some Rust embedded projects?",
+                        "options": [
+                            "It integrates tightly with Rust’s type system and ownership model",
+                            "It requires less Rust knowledge",
+                            "It always consumes more RAM but compiles faster",
+                            "It allows dynamic scripting"
+                        ]
+                    },
+                    {
+                        "question": "What is a potential drawback of RTIC’s static, compile-time scheduling?",
+                        "options": [
+                            "Less flexibility for dynamically creating tasks at runtime",
+                            "Larger runtime binary size",
+                            "Inability to use interrupts at all",
+                            "Lack of support for priority-based behavior"
+                        ]
+                    },
+                    {
+                        "question": "Which kind of analysis becomes easier thanks to RTIC’s design?",
+                        "options": [
+                            "Worst-case execution time and resource contention analysis",
+                            "JIT optimization analysis",
+                            "Garbage collection tuning",
+                            "SQL query optimization"
+                        ]
+                    }
+                ]
+            },
+            
+            "Ring": {
+                "Easy": [
+                    {
+                        "question": "In the Rust ecosystem, `ring` is primarily:",
+                        "options": [
+                            "A cryptography library",
+                            "A web framework",
+                            "A game engine",
+                            "A GUI toolkit"
+                        ]
+                    },
+                    {
+                        "question": "`ring` is mainly focused on:",
+                        "options": [
+                            "Modern, safe, and fast crypto primitives",
+                            "Database ORM functionality",
+                            "Text rendering and fonts",
+                            "GPU shaders"
+                        ]
+                    },
+                    {
+                        "question": "Which language is `ring` implemented in under the hood besides Rust?",
+                        "options": [
+                            "A mix of Rust and C/assembly",
+                            "Only JavaScript",
+                            "Only Python",
+                            "Only Go"
+                        ]
+                    },
+                    {
+                        "question": "Which kind of operations are commonly provided by `ring`?",
+                        "options": [
+                            "Hashing, encryption, and signatures",
+                            "File system operations",
+                            "Web routing",
+                            "Audio playback"
+                        ]
+                    },
+                    {
+                        "question": "Which hash function family is typically available in `ring`?",
+                        "options": [
+                            "SHA-2 family",
+                            "MD1",
+                            "CRC8 only",
+                            "MurmurHash"
+                        ]
+                    },
+                    {
+                        "question": "Why is `ring` recommended over home-grown cryptographic code?",
+                        "options": [
+                            "It is tested, vetted, and optimized by experts",
+                            "It generates random code automatically",
+                            "It replaces the Rust compiler",
+                            "It can only be used on nightly Rust"
+                        ]
+                    },
+                    {
+                        "question": "Which cryptographic concept does `ring` support?",
+                        "options": [
+                            "Public-key and symmetric-key operations",
+                            "GUI window management",
+                            "Network routing",
+                            "HTML parsing"
+                        ]
+                    },
+                    {
+                        "question": "What is a common use case for `ring` in web backends?",
+                        "options": [
+                            "Verifying JWT signatures or TLS primitives",
+                            "Rendering HTML templates",
+                            "Serving static files",
+                            "Managing SQL migrations"
+                        ]
+                    },
+                    {
+                        "question": "Why is constant-time implementation important in `ring`?",
+                        "options": [
+                            "To mitigate timing side-channel attacks",
+                            "To improve compile time",
+                            "To reduce binary size",
+                            "To enable dynamic linking"
+                        ]
+                    },
+                    {
+                        "question": "Which random-related functionality does `ring` provide?",
+                        "options": [
+                            "Cryptographically secure random number generation",
+                            "Pseudo-random fonts",
+                            "Random UI theme selection",
+                            "Non-cryptographic RNG only"
+                        ]
+                    }
+                ],
+                "Medium": [
+                    {
+                        "question": "Which `ring` module is used for hashing data?",
+                        "options": [
+                            "digest",
+                            "rand",
+                            "agreement",
+                            "aead"
+                        ]
+                    },
+                    {
+                        "question": "Which `ring` module is used for authenticated encryption and decryption?",
+                        "options": [
+                            "aead",
+                            "digest",
+                            "hmac",
+                            "signature"
+                        ]
+                    },
+                    {
+                        "question": "Which `ring` module is typically used for key agreement (e.g., ECDH)?",
+                        "options": [
+                            "agreement",
+                            "signature",
+                            "digest",
+                            "derive"
+                        ]
+                    },
+                    {
+                        "question": "The `ring::signature` module is commonly used for:",
+                        "options": [
+                            "Digital signatures and verification",
+                            "File I/O",
+                            "Network sockets",
+                            "GUI event handling"
+                        ]
+                    },
+                    {
+                        "question": "What is a typical pattern when using AEAD in `ring`?",
+                        "options": [
+                            "Use a nonce, key, and additional authenticated data (AAD)",
+                            "Open a TCP socket first",
+                            "Write to a file directly",
+                            "Call `unwrap()` on all results"
+                        ]
+                    },
+                    {
+                        "question": "Why does `ring` avoid supporting many legacy or weak algorithms?",
+                        "options": [
+                            "To reduce footguns and encourage secure defaults",
+                            "To keep compatibility with very old systems",
+                            "To maximize code size",
+                            "To simplify GUI design"
+                        ]
+                    },
+                    {
+                        "question": "Which trait is commonly used to represent CSPRNGs in `ring`?",
+                        "options": [
+                            "SecureRandom",
+                            "CryptoRng",
+                            "RandomGen",
+                            "EntropySource"
+                        ]
+                    },
+                    {
+                        "question": "Why is `ring` often not easily portable to every platform?",
+                        "options": [
+                            "It relies on carefully tuned assembly for specific architectures",
+                            "It uses nightly-only language features",
+                            "It requires a full desktop OS",
+                            "It depends on a GUI runtime"
+                        ]
+                    },
+                    {
+                        "question": "What is an important practice when using `ring` for password handling?",
+                        "options": [
+                            "Use proper password hashing like PBKDF2 or similar",
+                            "Store passwords in plaintext for debugging",
+                            "Use SHA-1 without salt",
+                            "Roll your own hash algorithm"
+                        ]
+                    },
+                    {
+                        "question": "Which abstraction does `ring` often expose for verifying signatures?",
+                        "options": [
+                            "Verification key types specialized per algorithm",
+                            "A single generic `Verifier` for all algorithms",
+                            "Dynamic reflection-based keys",
+                            "Global mutable static key objects"
+                        ]
+                    }
+                ],
+                "Hard": [
+                    {
+                        "question": "Why is using `ring`’s AEAD APIs safer than manually composing cipher + MAC?",
+                        "options": [
+                            "It avoids common pitfalls like incorrect order and nonce misuse",
+                            "It compiles faster",
+                            "It uses less disk space",
+                            "It automatically rotates keys"
+                        ]
+                    },
+                    {
+                        "question": "What is a key property of `ring`’s cryptographic primitives implementation style?",
+                        "options": [
+                            "Constant-time operations to resist timing attacks",
+                            "Excessive branching for performance",
+                            "Dynamic configuration of algorithms at runtime",
+                            "Use of reflection for algorithm selection"
+                        ]
+                    },
+                    {
+                        "question": "Why should developers avoid reusing nonces with the same AEAD key in `ring`?",
+                        "options": [
+                            "Nonce reuse can completely break confidentiality and integrity",
+                            "Nonce reuse slows down performance",
+                            "Nonce reuse causes compile errors",
+                            "Nonce reuse inflates binary size"
+                        ]
+                    },
+                    {
+                        "question": "Why is it important to handle all `Result` values returned by `ring` carefully?",
+                        "options": [
+                            "Crypto operations can fail and silently ignoring errors is dangerous",
+                            "It speeds up hashing",
+                            "It automatically retries failed encryption",
+                            "It enables OS-level logging"
+                        ]
+                    },
+                    {
+                        "question": "What is a recommended approach for key storage when using `ring` in a server?",
+                        "options": [
+                            "Use secure key management or HSM where possible",
+                            "Store keys in plaintext config files",
+                            "Hardcode keys directly in the binary",
+                            "Send keys to clients on connection"
+                        ]
+                    },
+                    {
+                        "question": "Which kind of mistake can lead to 'oracle' vulnerabilities when using `ring`?",
+                        "options": [
+                            "Leaking whether decryption or MAC verification failed",
+                            "Using too large buffer sizes",
+                            "Compiling in release mode",
+                            "Using Rust 2021 edition"
+                        ]
+                    },
+                    {
+                        "question": "Why is it discouraged to directly compare untrusted MAC tags with `==` instead of using library functions?",
+                        "options": [
+                            "Non-constant-time comparisons can leak timing information",
+                            "It is syntactically invalid in Rust",
+                            "It always returns false",
+                            "It allocates on the heap"
+                        ]
+                    },
+                    {
+                        "question": "Which of these is a correct security principle when using `ring`?",
+                        "options": [
+                            "Prefer well-reviewed, high-level APIs over custom crypto constructions",
+                            "Always build your own ciphers from primitives",
+                            "Use deprecated algorithms for compatibility",
+                            "Disable all error checking for speed"
+                        ]
+                    },
+                    {
+                        "question": "Why might compiling `ring` for some exotic targets be challenging?",
+                        "options": [
+                            "Because it contains handwritten assembly optimized for mainstream CPUs",
+                            "Because it requires nightly Rust features",
+                            "Because it depends on `std` only",
+                            "Because it uses a GUI-based build system"
+                        ]
+                    },
+                    {
+                        "question": "When integrating `ring` into a larger system, what should be done regarding updates?",
+                        "options": [
+                            "Regularly update to pick up security and performance fixes",
+                            "Pin forever to the oldest version",
+                            "Avoid updating to prevent API changes",
+                            "Only update when changing OS"
+                        ]
+                    }
+                ]
+            },
+            
+            "AWS Lambda Runtime for Rust": {
+                "Easy": [
+                    {
+                        "question": "What is AWS Lambda primarily used for?",
+                        "options": [
+                            "Running serverless functions in the cloud",
+                            "Building local GUIs",
+                            "Managing databases directly",
+                            "Compiling Rust binaries on desktops"
+                        ]
+                    },
+                    {
+                        "question": "What does the AWS Lambda Runtime for Rust provide?",
+                        "options": [
+                            "A way to write Lambda handlers in Rust",
+                            "A GUI library",
+                            "A kernel abstraction layer",
+                            "A SQL ORM"
+                        ]
+                    },
+                    {
+                        "question": "Which language is being used when writing AWS Lambda functions with this runtime?",
+                        "options": [
+                            "Rust",
+                            "Python only",
+                            "JavaScript only",
+                            "Go only"
+                        ]
+                    },
+                    {
+                        "question": "Serverless Rust functions on Lambda are typically compiled as:",
+                        "options": [
+                            "Statically linked binaries",
+                            "Dynamic libraries loaded at runtime",
+                            "Interpreted scripts",
+                            "JVM bytecode"
+                        ]
+                    },
+                    {
+                        "question": "AWS Lambda functions are invoked in response to:",
+                        "options": [
+                            "Events, such as HTTP requests or queue messages",
+                            "Only manual console clicks",
+                            "Kernel interrupts",
+                            "BIOS calls"
+                        ]
+                    },
+                    {
+                        "question": "Why is Rust attractive for AWS Lambda?",
+                        "options": [
+                            "Fast startup, low memory, and safety",
+                            "Integrated GUI rendering",
+                            "Native SQL support",
+                            "Default JIT compilation"
+                        ]
+                    },
+                    {
+                        "question": "Which AWS service is commonly used as an HTTP front for Lambda functions?",
+                        "options": [
+                            "API Gateway",
+                            "S3",
+                            "CloudFront only",
+                            "RDS"
+                        ]
+                    },
+                    {
+                        "question": "In the Rust Lambda runtime model, your code typically implements:",
+                        "options": [
+                            "An async handler function",
+                            "A full HTTP server by hand",
+                            "A desktop event loop",
+                            "An infinite busy loop"
+                        ]
+                    },
+                    {
+                        "question": "What type of workloads fit well into AWS Lambda with Rust?",
+                        "options": [
+                            "Short-lived, event-driven tasks",
+                            "Long-running daemons with open sockets",
+                            "OS kernel drivers",
+                            "GPU firmware"
+                        ]
+                    },
+                    {
+                        "question": "Which package manager is used to manage Rust Lambda runtime dependencies?",
+                        "options": [
+                            "Cargo",
+                            "npm",
+                            "pip",
+                            "maven"
+                        ]
+                    }
+                ],
+                "Medium": [
+                    {
+                        "question": "Why is cold-start time important for AWS Lambda functions?",
+                        "options": [
+                            "It directly impacts latency for first requests",
+                            "It controls billing granularity",
+                            "It defines max memory usage",
+                            "It sets concurrency limits"
+                        ]
+                    },
+                    {
+                        "question": "How can you reduce the size of Rust Lambda binaries?",
+                        "options": [
+                            "Enable release builds and strip symbols",
+                            "Compile in debug mode",
+                            "Bundle full `std` source",
+                            "Use dynamic linking with every crate"
+                        ]
+                    },
+                    {
+                        "question": "Which AWS concept describes how many Lambda instances can run in parallel?",
+                        "options": [
+                            "Concurrency",
+                            "Sharding",
+                            "Zoning",
+                            "Threading"
+                        ]
+                    },
+                    {
+                        "question": "Why is it beneficial that Rust binaries are compiled ahead-of-time for Lambda?",
+                        "options": [
+                            "No runtime JIT is needed, reducing startup overhead",
+                            "It allows hot code patching",
+                            "It enables OS-specific syscalls",
+                            "It automatically manages memory"
+                        ]
+                    },
+                    {
+                        "question": "How is configuration typically passed to Rust Lambda functions?",
+                        "options": [
+                            "Environment variables and event payloads",
+                            "Editing the compiled binary",
+                            "Through global mutable statics only",
+                            "By reading from `/etc/config`"
+                        ]
+                    },
+                    {
+                        "question": "When writing a Rust Lambda handler, what is a common signature style?",
+                        "options": [
+                            "An async function taking an event and context, returning a result",
+                            "A synchronous function with no arguments",
+                            "A function returning `!` only",
+                            "A function that always panics"
+                        ]
+                    },
+                    {
+                        "question": "Why should Rust Lambda handlers avoid heavy global initialization on every invocation?",
+                        "options": [
+                            "To reduce per-invocation latency and cost",
+                            "To increase compilation time",
+                            "To keep logs small",
+                            "To reduce code size"
+                        ]
+                    },
+                    {
+                        "question": "What is a common pattern for reusing expensive resources across Lambda invocations in Rust?",
+                        "options": [
+                            "Store them in static variables initialized once per container",
+                            "Recreate them on every request",
+                            "Store them in environment variables",
+                            "Serialize them into the response"
+                        ]
+                    },
+                    {
+                        "question": "Which AWS feature triggers Lambda based on messages in a queue?",
+                        "options": [
+                            "SQS event source mapping",
+                            "API Gateway",
+                            "CloudWatch dashboards",
+                            "EBS volumes"
+                        ]
+                    },
+                    {
+                        "question": "Which serialization format is frequently used to parse JSON events in Rust Lambdas?",
+                        "options": [
+                            "serde + serde_json",
+                            "manual string parsing",
+                            "XML-based parsing only",
+                            "Protocol Buffers only"
+                        ]
+                    }
+                ],
+                "Hard": [
+                    {
+                        "question": "Why is it important to reduce the number of dependencies in a Rust Lambda project?",
+                        "options": [
+                            "Smaller binaries and faster cold starts",
+                            "To avoid using Cargo",
+                            "To prevent linking errors on Windows",
+                            "To enable nightly features"
+                        ]
+                    },
+                    {
+                        "question": "What is one concern when using blocking I/O inside an async Rust Lambda handler?",
+                        "options": [
+                            "It can block the executor’s thread and hurt concurrency",
+                            "It reduces compile-time safety",
+                            "It forces panics on timeouts",
+                            "It disables logging"
+                        ]
+                    },
+                    {
+                        "question": "How can you optimize connection reuse in Rust Lambdas calling external services (e.g., databases)?",
+                        "options": [
+                            "Use connection pools stored in static or lazy-initialized globals",
+                            "Create a new connection on each invocation",
+                            "Open multiple connections per request for redundancy",
+                            "Use only UDP to avoid connections"
+                        ]
+                    },
+                    {
+                        "question": "Why might you choose a `no_std`-like setup or minimal runtime when targeting custom Lambda runtimes with Rust?",
+                        "options": [
+                            "To minimize binary size and dependencies",
+                            "To enable GUI rendering",
+                            "To support kernel modules",
+                            "To use unstable language features"
+                        ]
+                    },
+                    {
+                        "question": "What is a potential drawback of heavy compile-time optimizations like `lto = true` for Rust Lambdas?",
+                        "options": [
+                            "Longer compile times",
+                            "Increased cold-start time",
+                            "Disabled error checking",
+                            "Inability to use async/await"
+                        ]
+                    },
+                    {
+                        "question": "How does AWS Lambda’s execution model affect the design of Rust async handlers?",
+                        "options": [
+                            "Handlers must be short-lived and respect timeouts",
+                            "Handlers can block forever without penalty",
+                            "Handlers must spawn OS threads per request",
+                            "Handlers must ignore cancellation"
+                        ]
+                    },
+                    {
+                        "question": "Which cost-related property of Lambda should influence how much work each Rust invocation performs?",
+                        "options": [
+                            "Billing is based on memory size and execution time",
+                            "Billing is based on number of crates",
+                            "Billing is based on binary size only",
+                            "Billing is based on number of lines of code"
+                        ]
+                    },
+                    {
+                        "question": "What is a recommended pattern for observability in Rust Lambdas?",
+                        "options": [
+                            "Structured logging and metrics exported via CloudWatch",
+                            "Printing raw binary data only",
+                            "Disabling all logs in production",
+                            "Using only local log files"
+                        ]
+                    },
+                    {
+                        "question": "Why should you consider using `tokio` or another async runtime carefully in Lambda functions?",
+                        "options": [
+                            "To avoid spawning unnecessary background tasks and blocking the runtime",
+                            "Because async is unsupported in Lambda",
+                            "Because async forces single-threaded execution",
+                            "Because async disables panics"
+                        ]
+                    },
+                    {
+                        "question": "When integrating with other AWS services from Rust Lambdas, which security best practice should you follow?",
+                        "options": [
+                            "Use IAM roles and short-lived credentials rather than hardcoded keys",
+                            "Embed AWS access keys in source code",
+                            "Store credentials in Lambda environment variables as plaintext secrets",
+                            "Send credentials to clients for reuse"
+                        ]
+                    }
+                ]
+            }
+        }
+    }
+}

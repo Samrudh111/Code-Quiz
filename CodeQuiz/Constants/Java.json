@@ -1,0 +1,1867 @@
+{
+    "data": {
+        "Java": {
+            "Spring Boot": {
+                "Easy": [
+                    {
+                        "question": "What is Spring Boot primarily used for?",
+                        "options": [
+                            "Creating standalone Java applications easily",
+                            "Building low-level C programs",
+                            "Creating iOS applications",
+                            "Managing cloud servers directly"
+                        ]
+                    },
+                    {
+                        "question": "Which file typically contains Spring Boot configuration?",
+                        "options": [
+                            "application.properties",
+                            "config.xml",
+                            "boot.json",
+                            "settings.ini"
+                        ]
+                    },
+                    {
+                        "question": "Which annotation marks a class as a Spring Boot application?",
+                        "options": [
+                            "@SpringBootApplication",
+                            "@BootApp",
+                            "@EnableSpring",
+                            "@Application"
+                        ]
+                    },
+                    {
+                        "question": "Which server does Spring Boot use by default?",
+                        "options": [
+                            "Tomcat",
+                            "WebLogic",
+                            "GlassFish",
+                            "WildFly"
+                        ]
+                    },
+                    {
+                        "question": "Which dependency helps build REST APIs in Spring Boot?",
+                        "options": [
+                            "spring-boot-starter-web",
+                            "spring-boot-starter-test",
+                            "spring-boot-starter-mail",
+                            "spring-boot-starter-data"
+                        ]
+                    },
+                    {
+                        "question": "Which annotation is used to expose REST endpoints?",
+                        "options": [
+                            "@RestController",
+                            "@Bean",
+                            "@ModelAttribute",
+                            "@Component"
+                        ]
+                    },
+                    {
+                        "question": "Which annotation maps HTTP GET requests?",
+                        "options": [
+                            "@GetMapping",
+                            "@PostMapping",
+                            "@PutMapping",
+                            "@RequestBody"
+                        ]
+                    },
+                    {
+                        "question": "Which build tool is commonly used with Spring Boot?",
+                        "options": [
+                            "Maven",
+                            "NPM",
+                            "Gradle only",
+                            "CMake"
+                        ]
+                    },
+                    {
+                        "question": "What port does Spring Boot use by default?",
+                        "options": [
+                            "8080",
+                            "3000",
+                            "5000",
+                            "9090"
+                        ]
+                    },
+                    {
+                        "question": "Spring Boot applications are typically packaged as:",
+                        "options": [
+                            "JAR files",
+                            "IPA files",
+                            "EXE files",
+                            "APK files"
+                        ]
+                    }
+                ],
+                "Medium": [
+                    {
+                        "question": "Which annotation is used for dependency injection?",
+                        "options": [
+                            "@Autowired",
+                            "@InjectBean",
+                            "@AutoWiring",
+                            "@LoadBean"
+                        ]
+                    },
+                    {
+                        "question": "Which annotation maps a method to any HTTP request?",
+                        "options": [
+                            "@RequestMapping",
+                            "@RouteAll",
+                            "@AnyHttp",
+                            "@Handle"
+                        ]
+                    },
+                    {
+                        "question": "Which dependency is used for database operations with Spring Boot?",
+                        "options": [
+                            "spring-boot-starter-data-jpa",
+                            "spring-boot-starter-thymeleaf",
+                            "spring-boot-starter-security",
+                            "spring-boot-starter-mail"
+                        ]
+                    },
+                    {
+                        "question": "Which Spring Boot annotation creates a singleton bean?",
+                        "options": [
+                            "@Bean",
+                            "@Configuration",
+                            "@Scope(“prototype”)",
+                            "@ServiceBean"
+                        ]
+                    },
+                    {
+                        "question": "What is the purpose of application.yml?",
+                        "options": [
+                            "Configuring application properties",
+                            "Creating REST endpoints",
+                            "Adding security rules",
+                            "Managing dependencies"
+                        ]
+                    },
+                    {
+                        "question": "Which ORM is commonly used with Spring Boot JPA?",
+                        "options": [
+                            "Hibernate",
+                            "MyBatis",
+                            "Apache OJB",
+                            "JDBC Only"
+                        ]
+                    },
+                    {
+                        "question": "Which annotation is used to map a class to a database table?",
+                        "options": [
+                            "@Entity",
+                            "@TableClass",
+                            "@Model",
+                            "@Repository"
+                        ]
+                    },
+                    {
+                        "question": "Spring Boot DevTools provides:",
+                        "options": [
+                            "Automatic restart and live reload",
+                            "Production security tools",
+                            "Database migration tools",
+                            "Container orchestration"
+                        ]
+                    },
+                    {
+                        "question": "Which Spring Boot feature helps embed Tomcat inside the application?",
+                        "options": [
+                            "Starter dependencies",
+                            "JDBC Template",
+                            "Actuator",
+                            "Session Manager"
+                        ]
+                    },
+                    {
+                        "question": "Which annotation is used for scheduled tasks?",
+                        "options": [
+                            "@Scheduled",
+                            "@Timer",
+                            "@RunEvery",
+                            "@Task"
+                        ]
+                    }
+                ],
+                "Hard": [
+                    {
+                        "question": "Spring Boot Actuator is primarily used for:",
+                        "options": [
+                            "Monitoring and managing the application",
+                            "Running batch jobs",
+                            "Encrypting traffic",
+                            "Generating documentation"
+                        ]
+                    },
+                    {
+                        "question": "Which database migration tool is often used with Spring Boot?",
+                        "options": [
+                            "Flyway",
+                            "Docker",
+                            "Gulp",
+                            "Puppet"
+                        ]
+                    },
+                    {
+                        "question": "Which keyword creates non-blocking REST controllers in Spring WebFlux?",
+                        "options": [
+                            "Mono/Flux",
+                            "Future/Promise",
+                            "AsyncTask",
+                            "ThreadPool"
+                        ]
+                    },
+                    {
+                        "question": "Which annotation enables caching in Spring Boot?",
+                        "options": [
+                            "@EnableCaching",
+                            "@Cacheable",
+                            "@CacheManager",
+                            "@InitCache"
+                        ]
+                    },
+                    {
+                        "question": "Which HTTP client is reactive in Spring Boot?",
+                        "options": [
+                            "WebClient",
+                            "RestTemplate",
+                            "HttpURLConnection",
+                            "FeignClient"
+                        ]
+                    },
+                    {
+                        "question": "What is the default embedded reactive server in Spring WebFlux?",
+                        "options": [
+                            "Netty",
+                            "Tomcat",
+                            "Jetty",
+                            "GlassFish"
+                        ]
+                    },
+                    {
+                        "question": "Which annotation is used for global exception handling?",
+                        "options": [
+                            "@ControllerAdvice",
+                            "@GlobalCatch",
+                            "@ExceptionGuard",
+                            "@HandleErrors"
+                        ]
+                    },
+                    {
+                        "question": "What is the main advantage of Spring Boot auto-configuration?",
+                        "options": [
+                            "Reduces boilerplate configuration",
+                            "Improves server startup time",
+                            "Compiles Java faster",
+                            "Reduces application size"
+                        ]
+                    },
+                    {
+                        "question": "Which Spring Boot annotation defines an asynchronous method?",
+                        "options": [
+                            "@Async",
+                            "@Future",
+                            "@Parallel",
+                            "@AsyncMethod"
+                        ]
+                    },
+                    {
+                        "question": "Spring Cloud is typically used for:",
+                        "options": [
+                            "Building distributed microservices",
+                            "Creating desktop GUI apps",
+                            "Building CLI tools",
+                            "Processing machine learning models"
+                        ]
+                    }
+                ]
+            },
+            
+            "Android SDK": {
+                "Easy": [
+                    {
+                        "question": "Android apps are primarily written in:",
+                        "options": ["Java/Kotlin", "Swift", "C#", "Ruby"]
+                    },
+                    {
+                        "question": "Which tool is used to build Android apps?",
+                        "options": ["Android Studio", "Xcode", "VS Code", "Sublime"]
+                    },
+                    {
+                        "question": "Which file defines app permissions?",
+                        "options": ["AndroidManifest.xml", "build.gradle", "settings.gradle", "MainActivity.java"]
+                    },
+                    {
+                        "question": "What is the base class for an Android screen?",
+                        "options": ["Activity", "Controller", "Fragment", "Adapter"]
+                    },
+                    {
+                        "question": "Which folder stores layout XML files?",
+                        "options": ["res/layout", "src/main", "drawable/", "assets/"]
+                    },
+                    {
+                        "question": "Which method is called when an Activity is first created?",
+                        "options": ["onCreate()", "onStart()", "onInit()", "onBegin()"]
+                    },
+                    {
+                        "question": "Which component displays scrollable lists?",
+                        "options": ["RecyclerView", "ImageView", "ScrollBar", "LinearView"]
+                    },
+                    {
+                        "question": "Which file contains app dependencies?",
+                        "options": ["build.gradle", "local.properties", "manifest.xml", "project.json"]
+                    },
+                    {
+                        "question": "Which Android class is used for logging?",
+                        "options": ["Log", "Logger", "AndroidLog", "SystemLog"]
+                    },
+                    {
+                        "question": "Which widget is used for clickable buttons?",
+                        "options": ["Button", "Clicker", "TapView", "PressWidget"]
+                    }
+                ],
+                "Medium": [
+                    {
+                        "question": "What is the purpose of a Fragment?",
+                        "options": [
+                            "Represents a portion of UI inside an Activity",
+                            "Acts as an application launcher",
+                            "Stores app-level configuration",
+                            "Manages build scripts"
+                        ]
+                    },
+                    {
+                        "question": "Which layout arranges items in a single column or row?",
+                        "options": ["LinearLayout", "FrameLayout", "ConstraintLayout", "GridLayout"]
+                    },
+                    {
+                        "question": "Which Android class handles background tasks?",
+                        "options": ["AsyncTask (deprecated)", "Thread", "IntentService", "Worker"]
+                    },
+                    {
+                        "question": "Which XML folder contains app icons?",
+                        "options": ["mipmap/", "layout/", "drawable/", "menu/"]
+                    },
+                    {
+                        "question": "What is an Intent used for?",
+                        "options": [
+                            "Starting Activities or Services",
+                            "Rendering UI",
+                            "Compiling resources",
+                            "Managing app permissions"
+                        ]
+                    },
+                    {
+                        "question": "Which database is built into Android?",
+                        "options": ["SQLite", "PostgreSQL", "MongoDB", "Realm"]
+                    },
+                    {
+                        "question": "Which component listens to system-wide broadcasts?",
+                        "options": ["BroadcastReceiver", "Service", "Activity", "Provider"]
+                    },
+                    {
+                        "question": "Which tool displays logs for debugging?",
+                        "options": ["Logcat", "Terminal", "Console", "Shell"]
+                    },
+                    {
+                        "question": "Which Android architecture component stores UI-related data?",
+                        "options": ["ViewModel", "LiveData", "Activity", "DataAdapter"]
+                    },
+                    {
+                        "question": "Which file specifies minSdkVersion and targetSdkVersion?",
+                        "options": ["build.gradle", "manifest.xml", "config.xml", "project.properties"]
+                    }
+                ],
+                "Hard": [
+                    {
+                        "question": "What is the advantage of using ConstraintLayout?",
+                        "options": [
+                            "Flexible positioning and reduced layout nesting",
+                            "Faster network calls",
+                            "Automatic animations",
+                            "Less XML needed for RecyclerView"
+                        ]
+                    },
+                    {
+                        "question": "Which API enables reactive data updates in Android?",
+                        "options": ["LiveData", "FlowLayout", "ServiceData", "AsyncChannel"]
+                    },
+                    {
+                        "question": "What is the purpose of WorkManager?",
+                        "options": [
+                            "Running deferrable background tasks",
+                            "Refreshing UI layouts",
+                            "Caching large bitmaps",
+                            "Managing notification icons"
+                        ]
+                    },
+                    {
+                        "question": "What type of navigation does the Navigation Component support?",
+                        "options": ["Graph-based navigation", "Only deep links", "Stack-only navigation", "Tab-only navigation"]
+                    },
+                    {
+                        "question": "Which tool reduces APK size by removing unused code?",
+                        "options": ["R8/ProGuard", "ShrinkTool", "OptiBuild", "MinifyXML"]
+                    },
+                    {
+                        "question": "What is ViewBinding?",
+                        "options": [
+                            "A feature that generates binding classes for XML layouts",
+                            "A tool for creating themes",
+                            "A library for animations",
+                            "A database utility"
+                        ]
+                    },
+                    {
+                        "question": "What is ANR in Android?",
+                        "options": [
+                            "Application Not Responding",
+                            "App Network Reset",
+                            "Android Native Runtime",
+                            "Application Needed Restart"
+                        ]
+                    },
+                    {
+                        "question": "Which component manages lifecycle-aware tasks?",
+                        "options": ["LifecycleOwner", "LifeManager", "ActivityOwner", "ContextObserver"]
+                    },
+                    {
+                        "question": "Which memory leak detection tool is popular for Android?",
+                        "options": ["LeakCanary", "MemorySnoop", "RAMTester", "HeapWatch"]
+                    },
+                    {
+                        "question": "Which API improves performance by loading images efficiently?",
+                        "options": ["Glide/Picasso", "ImageLoaderNative", "PhotoManager", "BitmapCache"]
+                    }
+                ]
+            },
+            
+            "Jetpack": {
+                "Easy": [
+                    {
+                        "question": "Jetpack is a suite of libraries designed to:",
+                        "options": [
+                            "Help Android developers build apps faster",
+                            "Build Java desktop applications",
+                            "Develop iOS apps",
+                            "Compile C++ code"
+                        ]
+                    },
+                    {
+                        "question": "Which Jetpack component is lifecycle aware?",
+                        "options": ["ViewModel", "Activity", "Adapter", "Logger"]
+                    },
+                    {
+                        "question": "Which component stores UI-related data?",
+                        "options": ["ViewModel", "Service", "Fragment", "LiveStore"]
+                    },
+                    {
+                        "question": "Which Jetpack component notifies UI on data change?",
+                        "options": ["LiveData", "Flow", "Intent", "Receiver"]
+                    },
+                    {
+                        "question": "Which component helps navigation between screens?",
+                        "options": ["Navigation Component", "WorkManager", "RecyclerManager", "DataBinder"]
+                    },
+                    {
+                        "question": "Which component is used for background work?",
+                        "options": ["WorkManager", "LiveData", "Navigation", "Paging"]
+                    },
+                    {
+                        "question": "Which Jetpack library simplifies list pagination?",
+                        "options": ["Paging", "RecyclerLib", "ListAdapter", "InfiniteScroll"]
+                    },
+                    {
+                        "question": "Jetpack Compose is used for:",
+                        "options": ["Modern UI development", "Database handling", "Threading", "Network calls"]
+                    },
+                    {
+                        "question": "Which component helps save small key-value data?",
+                        "options": ["DataStore", "Room", "ViewModel", "FileStore"]
+                    },
+                    {
+                        "question": "Which Jetpack library provides modern camera APIs?",
+                        "options": ["CameraX", "CameraLib", "MediaX", "PhotoKit"]
+                    }
+                ],
+                "Medium": [
+                    {
+                        "question": "Room is a Jetpack library used for:",
+                        "options": [
+                            "Local database persistence",
+                            "UI animations",
+                            "Navigation",
+                            "Networking"
+                        ]
+                    },
+                    {
+                        "question": "Which annotation defines a Room Entity?",
+                        "options": ["@Entity", "@Table", "@RoomTable", "@Model"]
+                    },
+                    {
+                        "question": "Which annotation marks a DAO method for SQL queries?",
+                        "options": ["@Query", "@SQL", "@Select", "@RoomQuery"]
+                    },
+                    {
+                        "question": "Which Jetpack library is recommended for reactive UI updates?",
+                        "options": ["LiveData or StateFlow", "WorkerFlow", "IntentStream", "LifecycleFlow"]
+                    },
+                    {
+                        "question": "What is SavedStateHandle used for?",
+                        "options": [
+                            "Saving UI state during process death",
+                            "Saving database configuration",
+                            "Managing network retries",
+                            "Debug logging"
+                        ]
+                    },
+                    {
+                        "question": "Which component replaces AsyncTask?",
+                        "options": ["WorkManager + Coroutines", "ThreadPools", "JobManager", "TaskExecutor"]
+                    },
+                    {
+                        "question": "Which part of Jetpack is used for modern reactive UI design?",
+                        "options": ["Compose", "LegacyXML", "UIBinder", "RenderManager"]
+                    },
+                    {
+                        "question": "Which API is commonly used for permission handling?",
+                        "options": [
+                            "Activity Results API",
+                            "PermissionsX",
+                            "AndroidSecurity",
+                            "PermissionManager"
+                        ]
+                    },
+                    {
+                        "question": "Which component helps build modular navigation graphs?",
+                        "options": ["NavHostFragment", "NavigationListener", "NavBinder", "RouterFragment"]
+                    },
+                    {
+                        "question": "Which Jetpack library is used for image loading?",
+                        "options": ["Coil", "PicassoX", "MediaFlow", "ImageKit"]
+                    }
+                ],
+                "Hard": [
+                    {
+                        "question": "Paging 3 uses which programming paradigm?",
+                        "options": ["Coroutines + Flow", "AsyncTask", "Broadcasts", "ThreadCallbacks"]
+                    },
+                    {
+                        "question": "Room supports which conflict strategy for insert operations?",
+                        "options": ["REPLACE", "IGNORE", "ABORT", "All of the above"]
+                    },
+                    {
+                        "question": "Compose UI is:",
+                        "options": [
+                            "Declarative",
+                            "Imperative",
+                            "XML-based only",
+                            "Synchronous-only"
+                        ]
+                    },
+                    {
+                        "question": "Which Jetpack library handles complex camera operations?",
+                        "options": ["CameraX", "CameraViewLegacy", "MediaProjectionX", "SafeCamera"]
+                    },
+                    {
+                        "question": "Which Jetpack library enables offline-first data sync?",
+                        "options": ["Room + WorkManager", "Paging Only", "ViewModelManager", "ComposeStorage"]
+                    },
+                    {
+                        "question": "Recomposition in Compose occurs when:",
+                        "options": [
+                            "State changes",
+                            "Activity restarts only",
+                            "Device rotates only",
+                            "Database updates"
+                        ]
+                    },
+                    {
+                        "question": "Which annotation makes a Compose function reusable UI?",
+                        "options": ["@Composable", "@Compose", "@UIFunc", "@Render"]
+                    },
+                    {
+                        "question": "LiveData becomes active when:",
+                        "options": [
+                            "There is at least one active observer",
+                            "App starts",
+                            "Database loads",
+                            "Network becomes available"
+                        ]
+                    },
+                    {
+                        "question": "Which Jetpack tool is used for concurrency?",
+                        "options": ["Coroutines", "AsyncTask", "Broadcast Receivers", "ThreadPool only"]
+                    },
+                    {
+                        "question": "Which Compose API manages internal state?",
+                        "options": ["remember{}", "keep()", "stateOf()", "hold()"]
+                    }
+                ]
+            },
+            
+            "Kotlin": {
+                "Easy": [
+                    {
+                        "question": "Kotlin is primarily used for:",
+                        "options": ["Android development", "iOS development only", "C++ apps", "Web servers only"]
+                    },
+                    {
+                        "question": "Kotlin is:",
+                        "options": ["Statically typed", "Dynamically typed", "Untyped", "Weakly typed"]
+                    },
+                    {
+                        "question": "Which keyword declares a variable that cannot be reassigned?",
+                        "options": ["val", "var", "let", "const"]
+                    },
+                    {
+                        "question": "Which keyword declares a mutable variable?",
+                        "options": ["var", "val", "mut", "let"]
+                    },
+                    {
+                        "question": "Kotlin code runs on which platform?",
+                        "options": ["JVM", "Browser only", "iOS only", "Linux kernel"]
+                    },
+                    {
+                        "question": "Which Kotlin feature avoids NullPointerExceptions?",
+                        "options": ["Null safety", "Strict mode", "Type casting", "Static linking"]
+                    },
+                    {
+                        "question": "Which symbol marks nullable types?",
+                        "options": ["?", "!", "#", "&"]
+                    },
+                    {
+                        "question": "Which function prints a line to the console?",
+                        "options": ["println()", "printline()", "console()", "writeLine()"]
+                    },
+                    {
+                        "question": "Which operator checks equality in Kotlin?",
+                        "options": ["==", "=", "equals()", "==="]
+                    },
+                    {
+                        "question": "Kotlin supports which programming paradigm?",
+                        "options": ["Object-oriented & Functional", "Functional only", "Procedural only", "Scripting only"]
+                    }
+                ],
+                "Medium": [
+                    {
+                        "question": "Which class is used for asynchronous operations in Kotlin?",
+                        "options": ["Coroutine", "AsyncTask", "Thread", "Looper"]
+                    },
+                    {
+                        "question": "Which keyword defines an extension function?",
+                        "options": ["fun ClassName.method()", "extend.method()", "class.method()", "modify.method()"]
+                    },
+                    {
+                        "question": "Which Kotlin type represents a sequence of characters?",
+                        "options": ["String", "CharArray", "Text", "Sequence"]
+                    },
+                    {
+                        "question": "What is Elvis operator in Kotlin?",
+                        "options": ["?:", "??", "::", "++"]
+                    },
+                    {
+                        "question": "A Kotlin data class automatically provides:",
+                        "options": ["equals/hashCode/toString", "Serialization", "Database mapping", "Network handlers"]
+                    },
+                    {
+                        "question": "Which keyword defines an interface?",
+                        "options": ["interface", "abstract", "proto", "define"]
+                    },
+                    {
+                        "question": "Which keyword declares a class that cannot be subclassed?",
+                        "options": ["final", "sealed", "static", "fixed"]
+                    },
+                    {
+                        "question": "Which function creates a new coroutine?",
+                        "options": ["launch", "run", "start", "invoke"]
+                    },
+                    {
+                        "question": "Which type represents a list that cannot be modified?",
+                        "options": ["List", "MutableList", "ArrayList", "Vector"]
+                    },
+                    {
+                        "question": "Which scope function is used to configure an object?",
+                        "options": ["apply", "let", "also", "run"]
+                    }
+                ],
+                "Hard": [
+                    {
+                        "question": "A sealed class is used for:",
+                        "options": [
+                            "Representing restricted class hierarchies",
+                            "Creating immutable objects",
+                            "Marking async boundaries",
+                            "Handling database transactions"
+                        ]
+                    },
+                    {
+                        "question": "Which keyword is used for defining inline functions?",
+                        "options": ["inline", "fast", "compact", "micro"]
+                    },
+                    {
+                        "question": "Suspend functions in Kotlin:",
+                        "options": [
+                            "Can run asynchronously using coroutines",
+                            "Pause the program completely",
+                            "Freeze threads",
+                            "Only work on main thread"
+                        ]
+                    },
+                    {
+                        "question": "Flows in Kotlin represent:",
+                        "options": [
+                            "Cold asynchronous data streams",
+                            "Hot live updates",
+                            "File input streams",
+                            "Thread pools"
+                        ]
+                    },
+                    {
+                        "question": "Which class ensures coroutine cancellation propagation?",
+                        "options": ["Job", "ThreadGroup", "TaskHandler", "ScopeManager"]
+                    },
+                    {
+                        "question": "Which operator is used for safe-calls?",
+                        "options": ["?.", "!.", "*.", "&."]
+                    },
+                    {
+                        "question": "Which keyword defines a compile-time constant?",
+                        "options": ["const val", "final val", "static let", "define"]
+                    },
+                    {
+                        "question": "Tail recursion is optimized using which keyword?",
+                        "options": ["tailrec", "optimize", "recur", "loop"]
+                    },
+                    {
+                        "question": "Kotlin inline classes avoid:",
+                        "options": ["Object allocation overhead", "Null checks", "Coroutines", "JVM dispatch"]
+                    },
+                    {
+                        "question": "Which type is used to represent success/failure in Kotlin?",
+                        "options": ["Result", "Outcome", "TryCatch", "ReturnType"]
+                    }
+                ]
+            },
+            
+            "Kubernetes": {
+                "Easy": [
+                    {
+                        "question": "What is Kubernetes primarily used for?",
+                        "options": [
+                            "Orchestrating containerized applications",
+                            "Compiling Java code",
+                            "Building Android apps",
+                            "Designing relational databases"
+                        ]
+                    },
+                    {
+                        "question": "Which company originally created Kubernetes before donating it to CNCF?",
+                        "options": [
+                            "Google",
+                            "Microsoft",
+                            "Amazon",
+                            "IBM"
+                        ]
+                    },
+                    {
+                        "question": "Which file format is most commonly used for Kubernetes manifests?",
+                        "options": [
+                            "YAML",
+                            "JSON",
+                            "XML",
+                            "INI"
+                        ]
+                    },
+                    {
+                        "question": "Which command-line tool is used to interact with a Kubernetes cluster?",
+                        "options": [
+                            "kubectl",
+                            "kubecli",
+                            "dockerctl",
+                            "kadmin"
+                        ]
+                    },
+                    {
+                        "question": "In Kubernetes, which object represents a running instance of a containerized application?",
+                        "options": [
+                            "Pod",
+                            "Image",
+                            "Node",
+                            "ConfigMap"
+                        ]
+                    },
+                    {
+                        "question": "Which Kubernetes object is used to expose an application to the network?",
+                        "options": [
+                            "Service",
+                            "ConfigMap",
+                            "Secret",
+                            "Volume"
+                        ]
+                    },
+                    {
+                        "question": "Which Kubernetes component runs on each worker node and manages Pods?",
+                        "options": [
+                            "kubelet",
+                            "kube-apiserver",
+                            "etcd",
+                            "kube-scheduler"
+                        ]
+                    },
+                    {
+                        "question": "Which Kubernetes object is typically used to manage a replicated, self-healing set of Pods?",
+                        "options": [
+                            "Deployment",
+                            "ConfigMap",
+                            "Secret",
+                            "Job"
+                        ]
+                    },
+                    {
+                        "question": "Which type of Service provides a stable internal virtual IP in a cluster?",
+                        "options": [
+                            "ClusterIP",
+                            "NodePort",
+                            "LoadBalancer",
+                            "ExternalName"
+                        ]
+                    },
+                    {
+                        "question": "In Kubernetes, a cluster is composed of:",
+                        "options": [
+                            "One or more master/control plane nodes and worker nodes",
+                            "Only a single database server",
+                            "Multiple Dockerfiles",
+                            "Only a single physical machine"
+                        ]
+                    }
+                ],
+                "Medium": [
+                    {
+                        "question": "Which object is responsible for maintaining the desired number of Pods in a Deployment?",
+                        "options": [
+                            "ReplicaSet",
+                            "StatefulSet",
+                            "DaemonSet",
+                            "Job"
+                        ]
+                    },
+                    {
+                        "question": "Which Kubernetes object is recommended to store configuration values as key-value pairs?",
+                        "options": [
+                            "ConfigMap",
+                            "Secret",
+                            "Service",
+                            "Ingress"
+                        ]
+                    },
+                    {
+                        "question": "Which object is used to store sensitive information such as passwords or tokens?",
+                        "options": [
+                            "Secret",
+                            "ConfigMap",
+                            "StorageClass",
+                            "Endpoint"
+                        ]
+                    },
+                    {
+                        "question": "Which type of Kubernetes Service exposes the service on each node’s IP at a static port?",
+                        "options": [
+                            "NodePort",
+                            "ClusterIP",
+                            "LoadBalancer",
+                            "ExternalName"
+                        ]
+                    },
+                    {
+                        "question": "Which Kubernetes object provides HTTP/HTTPS routing from outside the cluster to Services inside the cluster?",
+                        "options": [
+                            "Ingress",
+                            "ConfigMap",
+                            "StatefulSet",
+                            "EndpointSlice"
+                        ]
+                    },
+                    {
+                        "question": "What is the recommended practice for updating container images in a Deployment?",
+                        "options": [
+                            "Rolling updates",
+                            "Recreating the cluster",
+                            "Deleting and re-creating the namespace",
+                            "Manually editing each Pod"
+                        ]
+                    },
+                    {
+                        "question": "Which strategy allows Kubernetes to roll out a new version of an application while still serving traffic from the old version?",
+                        "options": [
+                            "RollingUpdate",
+                            "Recreate",
+                            "DrainUpdate",
+                            "ImmediateReplace"
+                        ]
+                    },
+                    {
+                        "question": "Which controller is best suited for workloads that require stable, unique network identities and persistent storage per Pod?",
+                        "options": [
+                            "StatefulSet",
+                            "Deployment",
+                            "Job",
+                            "DaemonSet"
+                        ]
+                    },
+                    {
+                        "question": "Which Kubernetes resource describes how to dynamically provision persistent storage?",
+                        "options": [
+                            "StorageClass",
+                            "ConfigMap",
+                            "PodTemplate",
+                            "VolumeMount"
+                        ]
+                    },
+                    {
+                        "question": "Which label-like mechanism is typically used to attach non-identifying metadata to Kubernetes objects?",
+                        "options": [
+                            "Annotations",
+                            "Selectors",
+                            "Tags",
+                            "Comments"
+                        ]
+                    }
+                ],
+                "Hard": [
+                    {
+                        "question": "Which Kubernetes component is responsible for scheduling Pods onto nodes?",
+                        "options": [
+                            "kube-scheduler",
+                            "kube-controller-manager",
+                            "kube-proxy",
+                            "kubelet"
+                        ]
+                    },
+                    {
+                        "question": "Which API resource would you use for defining fine-grained permissions for users and service accounts?",
+                        "options": [
+                            "Role and RoleBinding",
+                            "PodDisruptionBudget",
+                            "LimitRange",
+                            "HorizontalPodAutoscaler"
+                        ]
+                    },
+                    {
+                        "question": "In Kubernetes, which object is used to specify constraints on resource usage like CPU and memory per namespace?",
+                        "options": [
+                            "ResourceQuota",
+                            "LimitRange",
+                            "PodSpec",
+                            "NodeSelector"
+                        ]
+                    },
+                    {
+                        "question": "Which Kubernetes feature allows automatically scaling the number of Pods based on CPU or custom metrics?",
+                        "options": [
+                            "HorizontalPodAutoscaler",
+                            "VerticalPodAutoscaler",
+                            "ResourceQuota",
+                            "PodDisruptionBudget"
+                        ]
+                    },
+                    {
+                        "question": "Which admission controller or resource can enforce security policies like restricting privileged containers?",
+                        "options": [
+                            "PodSecurityPolicy / Pod Security standards",
+                            "LimitRange",
+                            "ConfigMap",
+                            "IngressClass"
+                        ]
+                    },
+                    {
+                        "question": "Which volume type allows a Pod to mount the same persistent volume across restarts and rescheduling?",
+                        "options": [
+                            "PersistentVolumeClaim",
+                            "emptyDir",
+                            "configMap volume",
+                            "secret volume"
+                        ]
+                    },
+                    {
+                        "question": "Which Kubernetes feature allows performing short-lived, one-off tasks such as batch jobs?",
+                        "options": [
+                            "Job",
+                            "DaemonSet",
+                            "StatefulSet",
+                            "ReplicaSet"
+                        ]
+                    },
+                    {
+                        "question": "Which object guarantees that a copy of a Pod runs on all (or some) Nodes?",
+                        "options": [
+                            "DaemonSet",
+                            "Deployment",
+                            "StatefulSet",
+                            "Job"
+                        ]
+                    },
+                    {
+                        "question": "Which mechanism is commonly used to discover services within a Kubernetes cluster?",
+                        "options": [
+                            "DNS-based service discovery",
+                            "Static IP lists",
+                            "Manual host file entries",
+                            "Custom routing tables on each node"
+                        ]
+                    },
+                    {
+                        "question": "Which Kubernetes configuration is commonly used to perform rolling deployments with minimal or zero downtime for Java microservices?",
+                        "options": [
+                            "Deployment with RollingUpdate strategy",
+                            "Job with RestartPolicy=Never",
+                            "DaemonSet with Recreate strategy",
+                            "StatefulSet with OnDelete update strategy"
+                        ]
+                    }
+                ]
+            },
+            
+            "Hibernate": {
+                "Easy": [
+                    {
+                        "question": "Hibernate is primarily used for:",
+                        "options": [
+                            "Object-Relational Mapping (ORM)",
+                            "Building Android UIs",
+                            "Compiling Java bytecode",
+                            "Managing Kubernetes clusters"
+                        ]
+                    },
+                    {
+                        "question": "Which Java specification is Hibernate commonly associated with?",
+                        "options": [
+                            "JPA (Java Persistence API)",
+                            "JMS",
+                            "JAX-RS",
+                            "JTA"
+                        ]
+                    },
+                    {
+                        "question": "Which annotation marks a class as a persistent entity in Hibernate/JPA?",
+                        "options": [
+                            "@Entity",
+                            "@Table",
+                            "@Persistent",
+                            "@Model"
+                        ]
+                    },
+                    {
+                        "question": "Which annotation is used to mark a field as the primary key?",
+                        "options": [
+                            "@Id",
+                            "@PrimaryKey",
+                            "@PK",
+                            "@Key"
+                        ]
+                    },
+                    {
+                        "question": "Which file traditionally contains Hibernate configuration in XML-based setups?",
+                        "options": [
+                            "hibernate.cfg.xml",
+                            "config.xml",
+                            "hibernate.properties",
+                            "persistence.xml"
+                        ]
+                    },
+                    {
+                        "question": "Which annotation specifies the database table name for an entity?",
+                        "options": [
+                            "@Table",
+                            "@EntityName",
+                            "@DbTable",
+                            "@TableName"
+                        ]
+                    },
+                    {
+                        "question": "Which annotation maps a field to a specific column name?",
+                        "options": [
+                            "@Column",
+                            "@Field",
+                            "@DbColumn",
+                            "@Attribute"
+                        ]
+                    },
+                    {
+                        "question": "Which Hibernate feature automatically generates SQL based on entity mappings?",
+                        "options": [
+                            "HQL/criteria and ORM engine",
+                            "JDBC only",
+                            "Native SQL only",
+                            "JSP tags"
+                        ]
+                    },
+                    {
+                        "question": "Which annotation is used to map a many-to-one relationship?",
+                        "options": [
+                            "@ManyToOne",
+                            "@OneToMany",
+                            "@ManyToMany",
+                            "@OneToOne"
+                        ]
+                    },
+                    {
+                        "question": "Which strategy can Hibernate use to automatically generate primary key values?",
+                        "options": [
+                            "GenerationType.IDENTITY",
+                            "GenerationType.NONE",
+                            "GenerationType.MANUAL",
+                            "GenerationType.CUSTOM_ONLY"
+                        ]
+                    }
+                ],
+                "Medium": [
+                    {
+                        "question": "Which annotation is used to map a one-to-many relationship?",
+                        "options": [
+                            "@OneToMany",
+                            "@ManyToOne",
+                            "@ManyToMany",
+                            "@OneToOne"
+                        ]
+                    },
+                    {
+                        "question": "Which annotation maps a join column in a relationship?",
+                        "options": [
+                            "@JoinColumn",
+                            "@RelationColumn",
+                            "@ForeignKey",
+                            "@ColumnJoin"
+                        ]
+                    },
+                    {
+                        "question": "Which annotation is used to map a many-to-many relationship?",
+                        "options": [
+                            "@ManyToMany",
+                            "@OneToMany",
+                            "@ManyToOne",
+                            "@OneToOne"
+                        ]
+                    },
+                    {
+                        "question": "Which interface represents a single unit of work in Hibernate?",
+                        "options": [
+                            "Session",
+                            "EntityManagerFactory",
+                            "Configuration",
+                            "TransactionManager"
+                        ]
+                    },
+                    {
+                        "question": "Which Hibernate query language is object-oriented and similar to SQL?",
+                        "options": [
+                            "HQL",
+                            "JQL",
+                            "HSQL",
+                            "JPQL only"
+                        ]
+                    },
+                    {
+                        "question": "Which caching level is associated with the Session object?",
+                        "options": [
+                            "First-level cache",
+                            "Second-level cache",
+                            "Query cache",
+                            "No cache"
+                        ]
+                    },
+                    {
+                        "question": "Which annotation is used to specify cascading operations?",
+                        "options": [
+                            "@OneToMany(cascade = ...)",
+                            "@CascadeOnly",
+                            "@CascadeType",
+                            "@WithCascade"
+                        ]
+                    },
+                    {
+                        "question": "Which annotation can specify lazy loading behavior for associations?",
+                        "options": [
+                            "fetch = FetchType.LAZY",
+                            "@LazyLoad",
+                            "mode = LAZY",
+                            "@Fetch(LAZY_ONLY)"
+                        ]
+                    },
+                    {
+                        "question": "Which annotation is used to map an embedded value type?",
+                        "options": [
+                            "@Embeddable and @Embedded",
+                            "@EmbeddedType",
+                            "@ValueObject",
+                            "@Composite"
+                        ]
+                    },
+                    {
+                        "question": "Which configuration is typically used in Spring Boot to set Hibernate properties?",
+                        "options": [
+                            "application.properties / application.yml",
+                            "hibernate.cfg.xml only",
+                            "persistence.xml only",
+                            "server.xml"
+                        ]
+                    }
+                ],
+                "Hard": [
+                    {
+                        "question": "Which Hibernate cache stores data across Sessions and can be shared by the entire application?",
+                        "options": [
+                            "Second-level cache",
+                            "First-level cache",
+                            "Session cache only",
+                            "L1 only"
+                        ]
+                    },
+                    {
+                        "question": "Which caching strategy is typically used for data that changes rarely and is read frequently?",
+                        "options": [
+                            "READ_ONLY",
+                            "NONSTRICT_READ_WRITE",
+                            "READ_WRITE",
+                            "TRANSACTIONAL"
+                        ]
+                    },
+                    {
+                        "question": "Which inheritance strategy maps each class in an inheritance hierarchy to its own table?",
+                        "options": [
+                            "TABLE_PER_CLASS",
+                            "SINGLE_TABLE",
+                            "JOINED",
+                            "MIXED_TABLE"
+                        ]
+                    },
+                    {
+                        "question": "Which annotation is used on the root entity to define the inheritance mapping strategy?",
+                        "options": [
+                            "@Inheritance",
+                            "@Discriminator",
+                            "@SubclassOf",
+                            "@Hierarchy"
+                        ]
+                    },
+                    {
+                        "question": "Which locking mechanism prevents two transactions from modifying the same data concurrently but can reduce concurrency?",
+                        "options": [
+                            "Pessimistic locking",
+                            "Optimistic locking",
+                            "Snapshot isolation",
+                            "No locking"
+                        ]
+                    },
+                    {
+                        "question": "Which annotation is typically used to implement optimistic locking?",
+                        "options": [
+                            "@Version",
+                            "@LockMode",
+                            "@Optimistic",
+                            "@LockField"
+                        ]
+                    },
+                    {
+                        "question": "Which feature allows fetching only a subset of fields rather than entire entities using HQL/JPQL?",
+                        "options": [
+                            "Projection queries (select new ...)",
+                            "Native SQL only",
+                            "PartialEntity",
+                            "ColumnFetch"
+                        ]
+                    },
+                    {
+                        "question": "Which approach is recommended to avoid the N+1 select problem in Hibernate?",
+                        "options": [
+                            "Using JOIN FETCH or entity graphs",
+                            "Using only lazy loading without joins",
+                            "Disabling caching",
+                            "Always using native SQL"
+                        ]
+                    },
+                    {
+                        "question": "Which annotation can be used to define named queries in JPA/Hibernate?",
+                        "options": [
+                            "@NamedQuery / @NamedQueries",
+                            "@QueryName",
+                            "@JPQLQuery",
+                            "@HibernateQuery"
+                        ]
+                    },
+                    {
+                        "question": "Which API is the JPA-standard abstraction that Hibernate implements for interacting with persistence context?",
+                        "options": [
+                            "EntityManager",
+                            "Session",
+                            "SessionFactory",
+                            "PersistenceUnit"
+                        ]
+                    }
+                ]
+            },
+            
+            "JUnit": {
+                "Easy": [
+                    {
+                        "question": "JUnit is primarily used for:",
+                        "options": [
+                            "Unit testing Java code",
+                            "Building web UIs",
+                            "Managing databases",
+                            "Container orchestration"
+                        ]
+                    },
+                    {
+                        "question": "Which JUnit annotation marks a method as a test method in JUnit 4?",
+                        "options": [
+                            "@Test",
+                            "@Run",
+                            "@Check",
+                            "@Verify"
+                        ]
+                    },
+                    {
+                        "question": "Which assertion checks equality of two values in JUnit?",
+                        "options": [
+                            "assertEquals",
+                            "assertSame",
+                            "assertTrue",
+                            "assertNull"
+                        ]
+                    },
+                    {
+                        "question": "Which annotation is used to run code before each test method in JUnit 4?",
+                        "options": [
+                            "@Before",
+                            "@BeforeAll",
+                            "@Setup",
+                            "@Init"
+                        ]
+                    },
+                    {
+                        "question": "Which annotation is used to run code after each test method in JUnit 4?",
+                        "options": [
+                            "@After",
+                            "@AfterAll",
+                            "@Cleanup",
+                            "@TearDown"
+                        ]
+                    },
+                    {
+                        "question": "In JUnit 5, which annotation replaces @Before for per-test setup?",
+                        "options": [
+                            "@BeforeEach",
+                            "@BeforeTest",
+                            "@SetupEach",
+                            "@InitTest"
+                        ]
+                    },
+                    {
+                        "question": "In JUnit 5, which annotation replaces @After for per-test cleanup?",
+                        "options": [
+                            "@AfterEach",
+                            "@AfterTest",
+                            "@CleanupEach",
+                            "@TearDownTest"
+                        ]
+                    },
+                    {
+                        "question": "Which JUnit assertion checks that a value is true?",
+                        "options": [
+                            "assertTrue",
+                            "assertEquals",
+                            "assertSame",
+                            "assertNotNull"
+                        ]
+                    },
+                    {
+                        "question": "Which JUnit assertion verifies that an object reference is null?",
+                        "options": [
+                            "assertNull",
+                            "assertEmpty",
+                            "assertFalse",
+                            "assertZero"
+                        ]
+                    },
+                    {
+                        "question": "Which tool is commonly used to run JUnit tests in a Maven project?",
+                        "options": [
+                            "mvn test",
+                            "mvn run",
+                            "mvn junit",
+                            "mvn verify-only"
+                        ]
+                    }
+                ],
+                "Medium": [
+                    {
+                        "question": "In JUnit 5, which annotation is used to group multiple test methods into a test class?",
+                        "options": [
+                            "@Test on methods within a regular class",
+                            "@TestClass",
+                            "@JUnitTest",
+                            "@Suite"
+                        ]
+                    },
+                    {
+                        "question": "In JUnit 5, which annotation is used for setup logic that runs once before all tests in a class?",
+                        "options": [
+                            "@BeforeAll",
+                            "@BeforeClass",
+                            "@InitAll",
+                            "@SetupClass"
+                        ]
+                    },
+                    {
+                        "question": "Which JUnit 5 assertion checks that an executable throws a specific exception?",
+                        "options": [
+                            "assertThrows",
+                            "assertException",
+                            "assertError",
+                            "assertFails"
+                        ]
+                    },
+                    {
+                        "question": "Which JUnit annotation can be used to disable a test method?",
+                        "options": [
+                            "@Disabled",
+                            "@IgnoreTest",
+                            "@Skip",
+                            "@Off"
+                        ]
+                    },
+                    {
+                        "question": "Which feature allows writing tests that run multiple times with different arguments?",
+                        "options": [
+                            "Parameterized tests",
+                            "Mock tests",
+                            "Concurrent tests",
+                            "Suite tests"
+                        ]
+                    },
+                    {
+                        "question": "In JUnit, which assertion checks that two references point to the same object?",
+                        "options": [
+                            "assertSame",
+                            "assertEquals",
+                            "assertTrue",
+                            "assertNotNull"
+                        ]
+                    },
+                    {
+                        "question": "Which assertion library is often used alongside JUnit for fluent assertions?",
+                        "options": [
+                            "AssertJ",
+                            "Mockito",
+                            "Hamcrest-only",
+                            "Log4J"
+                        ]
+                    },
+                    {
+                        "question": "In JUnit 5, which annotation is used to provide a human-readable description for a test?",
+                        "options": [
+                            "@DisplayName",
+                            "@Description",
+                            "@TestName",
+                            "@Label"
+                        ]
+                    },
+                    {
+                        "question": "In JUnit 5, which annotation allows repeating the same test a certain number of times?",
+                        "options": [
+                            "@RepeatedTest",
+                            "@LoopTest",
+                            "@RetryTest",
+                            "@RunMany"
+                        ]
+                    },
+                    {
+                        "question": "What is the purpose of test suites in JUnit?",
+                        "options": [
+                            "To group and run multiple test classes together",
+                            "To generate code coverage reports",
+                            "To mock dependencies",
+                            "To measure performance automatically"
+                        ]
+                    }
+                ],
+                "Hard": [
+                    {
+                        "question": "Which JUnit 5 feature provides dependency injection for tests (e.g., TestInfo, TestReporter)?",
+                        "options": [
+                            "Parameter resolvers",
+                            "Context loaders",
+                            "SpringExtension",
+                            "Runner injection"
+                        ]
+                    },
+                    {
+                        "question": "Which concept in JUnit 5 allows composing multiple annotations into a single custom annotation?",
+                        "options": [
+                            "Meta-annotations",
+                            "Super-annotations",
+                            "Composite markers",
+                            "Annotation bundling"
+                        ]
+                    },
+                    {
+                        "question": "Which JUnit 5 extension model callback is used to execute code before each test method?",
+                        "options": [
+                            "BeforeEachCallback",
+                            "BeforeAllCallback",
+                            "TestInstancePostProcessor",
+                            "ParameterResolver"
+                        ]
+                    },
+                    {
+                        "question": "What is the main advantage of using @TestInstance(Lifecycle.PER_CLASS) in JUnit 5?",
+                        "options": [
+                            "Reuse the same test instance for all methods",
+                            "Increase parallel execution by default",
+                            "Simplify assertions",
+                            "Automatically mock dependencies"
+                        ]
+                    },
+                    {
+                        "question": "Which JUnit 5 annotation can be used to conditionally execute tests only on specific operating systems?",
+                        "options": [
+                            "@EnabledOnOs",
+                            "@RunIfOs",
+                            "@OsFilter",
+                            "@IfOs"
+                        ]
+                    },
+                    {
+                        "question": "Which JUnit 5 feature enables third-party frameworks (like Spring) to integrate testing support?",
+                        "options": [
+                            "Extension model (@ExtendWith)",
+                            "Runner model (@RunWith)",
+                            "Suite model",
+                            "Injector model"
+                        ]
+                    },
+                    {
+                        "question": "Which JUnit 5 annotation can be used to declare custom display name generation strategy?",
+                        "options": [
+                            "@DisplayNameGeneration",
+                            "@NameStrategy",
+                            "@TestLabelStrategy",
+                            "@DisplayStrategy"
+                        ]
+                    },
+                    {
+                        "question": "Which test approach is best for verifying behavior of boundaries and edge cases?",
+                        "options": [
+                            "Boundary value analysis",
+                            "Happy path only testing",
+                            "Smoke testing",
+                            "Manual regression only"
+                        ]
+                    },
+                    {
+                        "question": "Which assertion style is encouraged for better readability in complex tests?",
+                        "options": [
+                            "Fluent assertions (e.g., AssertJ)",
+                            "Single-line assertions only",
+                            "Only using assertTrue",
+                            "Using println instead of assertions"
+                        ]
+                    },
+                    {
+                        "question": "Which JUnit feature is useful for writing integration tests that depend on external resources and may need tagging?",
+                        "options": [
+                            "@Tag",
+                            "@Integration",
+                            "@External",
+                            "@SlowTest"
+                        ]
+                    }
+                ]
+            },
+            
+            "Mockito": {
+                "Easy": [
+                    {
+                        "question": "Mockito is primarily used for:",
+                        "options": [
+                            "Mocking dependencies in unit tests",
+                            "Measuring code coverage",
+                            "Running integration tests only",
+                            "Compiling Java applications"
+                        ]
+                    },
+                    {
+                        "question": "Which method is commonly used to create a mock object in Mockito?",
+                        "options": [
+                            "Mockito.mock()",
+                            "Mockito.create()",
+                            "Mockito.instance()",
+                            "Mockito.stub()"
+                        ]
+                    },
+                    {
+                        "question": "Which annotation is used to create mocks automatically in JUnit with Mockito?",
+                        "options": [
+                            "@Mock",
+                            "@Stub",
+                            "@Fake",
+                            "@Double"
+                        ]
+                    },
+                    {
+                        "question": "Which Mockito method verifies that a mock method was called?",
+                        "options": [
+                            "verify()",
+                            "check()",
+                            "assertCalled()",
+                            "inspect()"
+                        ]
+                    },
+                    {
+                        "question": "Which method is used to specify what a mock should return when a method is called?",
+                        "options": [
+                            "when(...).thenReturn(...)",
+                            "given(...).returns(...)",
+                            "onCall(...).return(...)",
+                            "mockReturn(...)"
+                        ]
+                    },
+                    {
+                        "question": "What is the main purpose of using mocks in unit tests?",
+                        "options": [
+                            "Isolate the class under test from external dependencies",
+                            "Speed up Java compilation",
+                            "Replace assertions",
+                            "Avoid using JUnit"
+                        ]
+                    },
+                    {
+                        "question": "Which annotation is often used on the class to enable Mockito annotations in JUnit 5?",
+                        "options": [
+                            "@ExtendWith(MockitoExtension.class)",
+                            "@RunWith(Mockito.class)",
+                            "@UseMockito",
+                            "@MockitoEnabled"
+                        ]
+                    },
+                    {
+                        "question": "Which Mockito method can be used to create a mock that also calls real methods by default?",
+                        "options": [
+                            "spy()",
+                            "mockReal()",
+                            "partialMock()",
+                            "realMock()"
+                        ]
+                    },
+                    {
+                        "question": "Which Mockito method is typically used for void methods that should perform no action?",
+                        "options": [
+                            "doNothing()",
+                            "doVoid()",
+                            "doSkip()",
+                            "ignore()"
+                        ]
+                    },
+                    {
+                        "question": "Mockito is most commonly used together with:",
+                        "options": [
+                            "JUnit",
+                            "Gradle only",
+                            "Docker",
+                            "Kubernetes"
+                        ]
+                    }
+                ],
+                "Medium": [
+                    {
+                        "question": "Which Mockito method is used to stub a void method to throw an exception?",
+                        "options": [
+                            "doThrow().when(...)",
+                            "whenVoid().thenThrow(...)",
+                            "onVoid().throw(...)",
+                            "throwWhenVoid(...)"
+                        ]
+                    },
+                    {
+                        "question": "Which annotation is used to inject mock dependencies into the class under test?",
+                        "options": [
+                            "@InjectMocks",
+                            "@AutowireMocks",
+                            "@MockInto",
+                            "@UseMocks"
+                        ]
+                    },
+                    {
+                        "question": "Which method can be used to define custom behavior based on method arguments?",
+                        "options": [
+                            "thenAnswer(...)",
+                            "thenCall(...)",
+                            "thenCustom(...)",
+                            "thenDo(...)"
+                        ]
+                    },
+                    {
+                        "question": "Which argument matcher in Mockito matches any value of a given type?",
+                        "options": [
+                            "any() / any(Type.class)",
+                            "matchAll()",
+                            "anything()",
+                            "allOf()"
+                        ]
+                    },
+                    {
+                        "question": "Which Mockito method can verify that no interactions happened with a particular mock?",
+                        "options": [
+                            "verifyNoInteractions(mock)",
+                            "verifyNone(mock)",
+                            "assertNoCalls(mock)",
+                            "checkNoInvocations(mock)"
+                        ]
+                    },
+                    {
+                        "question": "Which method can verify that there are no unexpected interactions beyond those already verified?",
+                        "options": [
+                            "verifyNoMoreInteractions(mock)",
+                            "verifyOnly(mock)",
+                            "assertAllVerified(mock)",
+                            "checkRemaining(mock)"
+                        ]
+                    },
+                    {
+                        "question": "In Mockito, spies are mainly used to:",
+                        "options": [
+                            "Wrap real objects while allowing selective stubbing",
+                            "Simulate network traffic",
+                            "Generate test data",
+                            "Measure performance"
+                        ]
+                    },
+                    {
+                        "question": "Which style of stubbing is recommended in newer Mockito versions for readability?",
+                        "options": [
+                            "BDDMockito.given(...).willReturn(...)",
+                            "Mockito.when(...).thenReturn(...) only",
+                            "Using System.out.println",
+                            "Using XML-based stubs"
+                        ]
+                    },
+                    {
+                        "question": "Which Mockito method allows verifying how many times a method was called?",
+                        "options": [
+                            "verify(mock, times(n))",
+                            "verifyCount(mock, n)",
+                            "assertCalls(mock, n)",
+                            "checkTimes(mock, n)"
+                        ]
+                    },
+                    {
+                        "question": "Which Mockito method is used when you want the real method to be called on a spy?",
+                        "options": [
+                            "doCallRealMethod()",
+                            "thenCallReal()",
+                            "callReal()",
+                            "useReal()"
+                        ]
+                    }
+                ],
+                "Hard": [
+                    {
+                        "question": "Which Mockito feature helps to mock static methods (in newer versions with plugins)?",
+                        "options": [
+                            "mockStatic(...)",
+                            "Mockito.mockStaticMethods(...)",
+                            "staticMock(...)",
+                            "spyStatic(...)"
+                        ]
+                    },
+                    {
+                        "question": "Which limitation traditionally existed in Mockito before support for inline mocking?",
+                        "options": [
+                            "Could not mock final classes or methods by default",
+                            "Could not mock interfaces",
+                            "Could not mock abstract classes",
+                            "Could not mock public methods"
+                        ]
+                    },
+                    {
+                        "question": "Why is excessive use of mocks sometimes considered a code smell?",
+                        "options": [
+                            "It can indicate tight coupling or poor design",
+                            "It always slows down tests",
+                            "It breaks the JVM",
+                            "It prevents use of JUnit"
+                        ]
+                    },
+                    {
+                        "question": "Which Mockito verification mode checks that a method is called at least once but not more than a given number of times?",
+                        "options": [
+                            "atLeastOnce() with atMost(int)",
+                            "timesBetween(int,int)",
+                            "minMaxCalls(int,int)",
+                            "boundedVerify(int,int)"
+                        ]
+                    },
+                    {
+                        "question": "Which concept encourages verifying interactions with mocks rather than state only?",
+                        "options": [
+                            "Behavior verification",
+                            "State verification",
+                            "White-box testing",
+                            "Mutation testing"
+                        ]
+                    },
+                    {
+                        "question": "Which Mockito feature allows capturing arguments passed to a mock method?",
+                        "options": [
+                            "ArgumentCaptor",
+                            "ArgumentWatcher",
+                            "ParamSpy",
+                            "CaptorTool"
+                        ]
+                    },
+                    {
+                        "question": "When using spies, why should you avoid calling real methods that depend on external resources?",
+                        "options": [
+                            "It breaks unit test isolation and may make tests flaky",
+                            "It always throws exceptions",
+                            "Spies cannot call real methods",
+                            "It disables mocking entirely"
+                        ]
+                    },
+                    {
+                        "question": "Which Mockito principle aligns well with clean architecture for Java apps?",
+                        "options": [
+                            "Mock outward dependencies and test domain logic in isolation",
+                            "Mock the JVM itself",
+                            "Mock every method including private ones",
+                            "Avoid interfaces to reduce mocking"
+                        ]
+                    },
+                    {
+                        "question": "Which Mockito feature can help test code that uses constructors to create new instances internally?",
+                        "options": [
+                            "Using a factory or dependency injection instead of mocking constructors",
+                            "Mocking constructors directly by default",
+                            "Replacing all constructors with static methods",
+                            "Disabling JUnit and using Mockito only"
+                        ]
+                    },
+                    {
+                        "question": "What is a best practice when combining Mockito with Spring Boot tests?",
+                        "options": [
+                            "Use @MockBean to replace beans in the ApplicationContext",
+                            "Mock the entire ApplicationContext",
+                            "Avoid using mocks at all",
+                            "Use only real database connections"
+                        ]
+                    }
+                ]
+            }
+        }
+    }
+}

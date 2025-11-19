@@ -66,10 +66,10 @@ enum Language: String, CaseIterable{
         switch self{
         case .Swift: return ["Swift UI", "UIKit", "AppKit", "Storyboard", "Async/Await", "URLSession"]
         case .Python: return ["Pandas", "NumPy", "SciPy", "TensorFlow", "PyTorch", "scikit-learn", "Flask"]
-        case .SQL: return ["MySQL", "PostgreSQL", "Oracle", "SQLite", "Snowflake", "Power BI", "Tableau", "Indexes", "Joins", "Views"]
-        case .Java: return ["Spring Boot", "Jakarta EE", "Android SDK", "Jetpack", "Kotlin", "Kubernetes", "Hibernate", "JUnit", "Mockito"]
+        case .SQL: return ["MySQL", "PostgreSQL", "Oracle", "SQLite", "Snowflake", "Indexes", "Joins"]
+        case .Java: return ["Spring Boot", "Android SDK", "Jetpack", "Kotlin", "Kubernetes", "Hibernate", "JUnit", "Mockito"]
         case .Cpp: return ["Windows API", "POSIX", "TensorRT", "OpenCV", "Arduino SDK"]
-        case .Rust: return ["no_std", "RTIC", "Ring", "RustCrypto", "AWS Lambda Runtime for Rust"]
+        case .Rust: return ["no_std", "RTIC", "Ring", "AWS Lambda Runtime for Rust"]
         }
     }
 }
