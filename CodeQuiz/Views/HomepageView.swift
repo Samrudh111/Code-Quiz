@@ -126,54 +126,27 @@ struct HomepageView: View {
     }
     
     private func beginTest(){
-        guard let _ = levelWeight, let _ = languageSelected else{ // if no category selected, choose random set
+        guard let _ = levelWeight, let _ = languageSelected, let _ = category else{ // if no category selected, choose random set
             showErrorMessage = true // !! not showing in landscape mode
             DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
                 showErrorMessage = false
             }
             return
         }
-        prepareQuestionSet()
-    }
-    
-    private func prepareQuestionSet(){
         guard let allQuestions = UserDefaults.standard.data(forKey: "AllQuestionSet") else {
             // Still downloading the questions indicator
             return
         }
         let questionsData = try? JSONDecoder().decode(Root.self, from: allQuestions)
-        let swiftTopics = questionsData!.data.swift
-        
-        // 1. Pick the correct DifficultySet for the chosen category
-        let topicSet: DifficultySet
-        switch category {
-        case "Swift UI":
-            topicSet = swiftTopics.swiftUI
-        case "UIKit":
-            topicSet = swiftTopics.uiKit
-        case "AppKit":
-            topicSet = swiftTopics.appKit
-        case "Storyboard":
-            topicSet = swiftTopics.storyboard
-        case "Async/Await":
-            topicSet = swiftTopics.asyncAwait
-        case "URLSession":
-            topicSet = swiftTopics.urlSession
-        default:
-            return
-        }
-        
-        // 2. Pick the correct difficulty array (Easy / Medium / Hard)
-        let questionSet: [QA]
-        switch levelWeight {
-        case 1:
-            questionSet = topicSet.easy
-        case 2:
-            questionSet = topicSet.medium
-        case 3:
-            questionSet = topicSet.hard
-        default:
-            return
+        var questionSet: [QA] = []
+        switch languageSelected?.rawValue{
+        case "Swift": questionSet = swiftQuestionSet(from: questionsData)
+        case "Python": questionSet = pythonQuestionSet(from: questionsData)
+        case "SQL": questionSet = sqlQuestionSet(from: questionsData)
+        case "Java": questionSet = javaQuestionSet(from: questionsData)
+        case "C++": questionSet = cppQuestionSet(from: questionsData)
+        case "Rust": questionSet = rustQuestionSet(from: questionsData)
+        default: return
         }
         let encodedQSet = try? JSONEncoder().encode(questionSet)
         UserDefaults.standard.set(encodedQSet, forKey: "QuestionSet")
@@ -182,8 +155,168 @@ struct HomepageView: View {
         UserDefaults.standard.set(true, forKey: "QuizActive")
     }
     
+    private func swiftQuestionSet(from questionsData: Root?) -> [QA]{
+        let swiftTopics = questionsData!.data.swift
+        let topicSet: DifficultySet
+        
+        switch category {
+        case "Swift UI": topicSet = swiftTopics!.swiftUI
+        case "UIKit": topicSet = swiftTopics!.uiKit
+        case "AppKit": topicSet = swiftTopics!.appKit
+        case "Storyboard": topicSet = swiftTopics!.storyboard
+        case "Async/Await": topicSet = swiftTopics!.asyncAwait
+        case "URLSession": topicSet = swiftTopics!.urlSession
+        default:
+            return []
+        }
+        
+        let questionSet: [QA]
+        switch levelWeight {
+        case 1: questionSet = topicSet.easy
+        case 2: questionSet = topicSet.medium
+        case 3: questionSet = topicSet.hard
+        default:
+            return []
+        }
+        
+        return questionSet
+    }
+    
+    private func javaQuestionSet(from questionsData: Root?) -> [QA]{
+        let javaTopics = questionsData!.data.java
+        let topicSet: DifficultySet
+        
+        switch category {
+        case "Spring Boot": topicSet = javaTopics!.springBoot
+        case "Android SDK": topicSet = javaTopics!.androidSDK
+        case "Jetpack": topicSet = javaTopics!.jetpack
+        case "Kotlin": topicSet = javaTopics!.kotlin
+        case "Kubernetes": topicSet = javaTopics!.kubernetes
+        case "Hibernate": topicSet = javaTopics!.hiberate
+        case "JUnit": topicSet = javaTopics!.jUnit
+        case "Mockito": topicSet = javaTopics!.mockito
+        default:
+            return []
+        }
+        
+        let questionSet: [QA]
+        switch levelWeight {
+        case 1: questionSet = topicSet.easy
+        case 2: questionSet = topicSet.medium
+        case 3: questionSet = topicSet.hard
+        default:
+            return []
+        }
+        
+        return questionSet
+    }
+    private func pythonQuestionSet(from questionsData: Root?) -> [QA]{
+        let pythonTopics = questionsData!.data.python
+        let topicSet: DifficultySet
+        
+        switch category {
+        case "Pandas": topicSet = pythonTopics!.pandas
+        case "NumPy": topicSet = pythonTopics!.numPy
+        case "TensorFlow": topicSet = pythonTopics!.tensorflow
+        case "PyTorch": topicSet = pythonTopics!.pytorch
+        case "Scikit-Learn": topicSet = pythonTopics!.scikitLearn
+        case "SciPy": topicSet = pythonTopics!.sciPy
+        case "Flask": topicSet = pythonTopics!.flask
+        default:
+            return []
+        }
+        
+        let questionSet: [QA]
+        switch levelWeight {
+        case 1: questionSet = topicSet.easy
+        case 2: questionSet = topicSet.medium
+        case 3: questionSet = topicSet.hard
+        default:
+            return []
+        }
+        
+        return questionSet
+    }
+    
+    private func cppQuestionSet(from questionsData: Root?) -> [QA]{
+        let cppTopics = questionsData!.data.cpp
+        let topicSet: DifficultySet
+        
+        switch category {
+        case "Windows API": topicSet = cppTopics!.windowsApi
+        case "POSIX": topicSet = cppTopics!.posix
+        case "TensorRT": topicSet = cppTopics!.tensorRT
+        case "OpenCV": topicSet = cppTopics!.openCV
+        case "Arduino SDK": topicSet = cppTopics!.arduinoSdk
+        default:
+            return []
+        }
+        
+        let questionSet: [QA]
+        switch levelWeight {
+        case 1: questionSet = topicSet.easy
+        case 2: questionSet = topicSet.medium
+        case 3: questionSet = topicSet.hard
+        default:
+            return []
+        }
+        
+        return questionSet
+    }
+    private func rustQuestionSet(from questionsData: Root?) -> [QA]{
+        let rustTopics = questionsData!.data.rust
+        let topicSet: DifficultySet
+        
+        switch category {
+        case "No-Std": topicSet = rustTopics!.noStd
+        case "RTIC": topicSet = rustTopics!.rTic
+        case "Ring": topicSet = rustTopics!.ring
+        case "AWS Lambda Runtime for Rust": topicSet = rustTopics!.awsLambda
+        default:
+            return []
+        }
+        
+        let questionSet: [QA]
+        switch levelWeight {
+        case 1: questionSet = topicSet.easy
+        case 2: questionSet = topicSet.medium
+        case 3: questionSet = topicSet.hard
+        default:
+            return []
+        }
+        
+        return questionSet
+    }
+    private func sqlQuestionSet(from questionsData: Root?) -> [QA]{
+        let sqlTopics = questionsData!.data.sql
+        let topicSet: DifficultySet
+        
+        switch category {
+        case "MySQL": topicSet = sqlTopics!.mySql
+        case "PostgreSQL": topicSet = sqlTopics!.postgreSql
+        case "Oracle": topicSet = sqlTopics!.oracle
+        case "SQLite": topicSet = sqlTopics!.sqlLite
+        case "Snowflake": topicSet = sqlTopics!.snowflake
+        case "Indexes": topicSet = sqlTopics!.indexes
+        case "Joins": topicSet = sqlTopics!.joins
+        default:
+            return []
+        }
+        
+        let questionSet: [QA]
+        switch levelWeight {
+        case 1: questionSet = topicSet.easy
+        case 2: questionSet = topicSet.medium
+        case 3: questionSet = topicSet.hard
+        default:
+            return []
+        }
+        
+        return questionSet
+    }
+    
     private func fetchQuestionSets(){
-        guard let dataUrl = Bundle.main.url(forResource: "Swift", withExtension: "json"),
+        guard let dataUrl = Bundle.main.url(forResource: "QuestionsDataset", withExtension: "json"),
               let rawData = try? Data(contentsOf: dataUrl) else{ return }
         UserDefaults.standard.set(rawData, forKey: "AllQuestionSet")
     }

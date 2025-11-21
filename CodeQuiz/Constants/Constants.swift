@@ -51,6 +51,7 @@ enum Language: String, CaseIterable{
         case .Rust: return "rustLogo"
         }
     }
+    
     var backgroundColor: Color{
         switch self{
         case .Swift: return Color(red: 222/255, green: 93/255, blue: 67/255)
@@ -65,11 +66,11 @@ enum Language: String, CaseIterable{
     var categories: [String]{
         switch self{
         case .Swift: return ["Swift UI", "UIKit", "AppKit", "Storyboard", "Async/Await", "URLSession"]
-        case .Python: return ["Pandas", "NumPy", "SciPy", "TensorFlow", "PyTorch", "scikit-learn", "Flask"]
+        case .Python: return ["Pandas", "NumPy", "SciPy", "TensorFlow", "PyTorch", "Scikit-Learn", "Flask"]
         case .SQL: return ["MySQL", "PostgreSQL", "Oracle", "SQLite", "Snowflake", "Indexes", "Joins"]
         case .Java: return ["Spring Boot", "Android SDK", "Jetpack", "Kotlin", "Kubernetes", "Hibernate", "JUnit", "Mockito"]
         case .Cpp: return ["Windows API", "POSIX", "TensorRT", "OpenCV", "Arduino SDK"]
-        case .Rust: return ["no_std", "RTIC", "Ring", "AWS Lambda Runtime for Rust"]
+        case .Rust: return ["No-Std", "RTIC", "Ring", "AWS Lambda Runtime for Rust"]
         }
     }
 }
