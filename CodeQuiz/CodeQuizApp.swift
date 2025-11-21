@@ -10,12 +10,10 @@ import SwiftData
 
 @main
 struct CodeQuizApp: App {
-    @State var testProperties = TestProperties()
     
     var body: some Scene {
         WindowGroup {
             TabBarView()
-                .environment(testProperties)
             // Add classic touch sounds for almost everything
             // Handle Frame size (width/height)
             // Handle Dynamic Type

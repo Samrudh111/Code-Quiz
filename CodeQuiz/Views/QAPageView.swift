@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct QAPageView: View {
-    @State private var index = 0
+    @State private var index: Int = 0
     @State var cardDegree = 0.0
     @State var contentDegree = 0.0
     @State var questionSet: [QA] = []
@@ -28,7 +28,7 @@ struct QAPageView: View {
             .toolbar(.hidden, for: .tabBar)
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
-                    MenuView(index: $index, questionCount: questionSet.count)
+                    MenuView(cardDegree: $cardDegree, contentDegree: $contentDegree, index: $index, questionCount: questionSet.count)
                 }
                 ToolbarItem(placement: .topBarLeading) {
                     ExitButton {
@@ -93,11 +93,12 @@ struct QuestionCard: View {
     
     var body: some View {
         Text(question ?? "Error fetching Questions")
-            .font(.custom("GoogleSansCode-Medium", size: 13))
-            .padding(15)
+            .font(.custom("GoogleSansCode-Medium", size: 15))
+            .padding(25)
             .frame(maxHeight: .infinity, alignment: .top)
             .frame(maxWidth: .infinity, alignment: .leading)
             .foregroundStyle(.white)
+            .multilineTextAlignment(.leading)
             .background(.black)
     }
 }
@@ -119,15 +120,32 @@ struct OptionsCard: View {
 
 //MARK: -Menu View
 struct MenuView: View {
-    @Environment(TestProperties.self) private var testProperties
+    @Binding var cardDegree: Double
+    @Binding var contentDegree: Double
     @Binding var index: Int
     let questionCount: Int
-    
+    let animTime = 0.7
+
     var body: some View {
         Menu {
             ForEach(0..<questionCount, id: \.self) { qNumber in
                 Button {
-                    index = qNumber
+                    withAnimation(.linear(duration: 0.001).delay(animTime/2)) {
+                        if qNumber > index{
+                            contentDegree -= 180
+                        } else if qNumber < index{
+                            contentDegree += 180
+                        }
+                        // rotates fast!
+                    }
+                    withAnimation(.easeOut(duration: animTime)) {
+                        if qNumber > index{
+                            cardDegree -= 180
+                        } else if qNumber < index{
+                            cardDegree += 180
+                        }
+                        index = qNumber
+                    }
                 } label: {
                     HStack{
                         Text((String(qNumber+1)))
@@ -171,7 +189,6 @@ struct ExitButton: View {
 struct NavigateQuestionButtons: View {
     @Binding var cardDegree: Double
     @Binding var contentDegree: Double
-    @Environment(TestProperties.self) private var testProperties
     @Binding var index: Int
     let questionCount: Int
     
@@ -197,7 +214,7 @@ struct NavigateQuestionButtons: View {
             }
             withAnimation(.easeOut(duration: animTime)) {
                 isNextButton ? (cardDegree -= 180) : (cardDegree += 180)
-                isNextButton ? (index += 1) : (index -= 1) // remove this
+                isNextButton ? (index += 1) : (index -= 1)
             }
         } label: {
             Image(systemName: isNextButton ? "chevron.right" : "chevron.left")
@@ -208,7 +225,5 @@ struct NavigateQuestionButtons: View {
 }
 
 #Preview {
-    let testprop = TestProperties()
     HomePageGroup()
-        .environment(testprop)
 }

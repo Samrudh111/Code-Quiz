@@ -18,7 +18,6 @@ struct HomepageView: View {
                    GridItem(.flexible()),
                    GridItem(.flexible())]
     @State var doNotScroll = true
-    @Environment(TestProperties.self) var testProperties
     @State var showErrorMessage = false
     
     var body: some View {
@@ -398,7 +397,5 @@ struct CategoryButtonView: View {
 }
 
 #Preview{
-    let testprop = TestProperties()
     HomePageGroup()
-        .environment(testprop)
 }
