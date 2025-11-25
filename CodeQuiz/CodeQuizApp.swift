@@ -16,6 +16,7 @@ struct CodeQuizApp: App {
             TabBarView()
             // Add classic touch sounds for almost everything
             // Handle Frame size (width/height)
+            // Suggestions or Preferences using AI as per users likes
             // Handle Dynamic Type
             // Create color constants
             // Future implementation: Generate unique set of questions daily

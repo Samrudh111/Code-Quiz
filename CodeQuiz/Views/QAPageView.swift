@@ -13,14 +13,12 @@ struct QAPageView: View {
     @State var contentDegree = 0.0
     @State var questionSet: [QA] = []
     @State var testObject = TestObject(levelWeight: 1, languageSelected: "Unknown", category: "Unknown")
+    @State var attemptStatus: [Int : Bool]?
     
     var body: some View {
         NavigationStack{
-            
-            // Show quiz setting like level and language
-            
             ZStack{
-                QACard(for: index)
+                QACard(index: $index, attemptStatus: $attemptStatus, testObject: testObject, questionSet: questionSet)
                     .id(index)
                     .rotation3DEffect(.degrees(contentDegree), axis: (x: 0, y: 1, z: 0))
             }
@@ -34,6 +32,7 @@ struct QAPageView: View {
                     ExitButton {
                         UserDefaults.standard.set(false, forKey: "QuizActive")
                         //UserDefaults.standard.set([], forKey: "QuestionSet")
+                        //UserDefaults.standard.removeObject(forKey: "")
                     }
                 }
             }
@@ -44,6 +43,7 @@ struct QAPageView: View {
         .onAppear{
             questionSet = fetchFromUserDefaults()
             testObject = getCategoryLabel()
+            attemptStatus = Dictionary(uniqueKeysWithValues: (0..<questionSet.count).map{($0, false)})
         }
     }
     
@@ -63,31 +63,103 @@ struct QAPageView: View {
         }
         return TestObject()
     }
+}
+
+//MARK: - QACard
+struct QACard: View{
+    @Binding var index: Int
+    @Binding var attemptStatus: [Int : Bool]?
+    @State var showExplanation = false
+    let testObject: TestObject
+    let questionSet: [QA]
+    @State var isliked = false
     
-    @ViewBuilder
-    private func QACard(for index: Int) -> some View {
+    var body: some View{
         ZStack{
             if !questionSet.isEmpty{
                 QuestionCard(question: questionSet[index].question)
                 ScrollView{
-                    VStack{
-                        Text("\(testObject.category!) - \(testObject.languageSelected!) - Level \(testObject.levelWeight!)")
-                        OptionsCard(answerSet: questionSet[index].options)
+                    ZStack{
+                        if showExplanation{
+                            VStack{
+                                Text("Here goes the explanation!")
+                                    .font(.custom("Exo2-Medium", size: 14))
+                                    .padding(.vertical, 5)
+                                    .padding(.horizontal, 15)
+                                    .background(.black)
+                                    .foregroundStyle(.white)
+                                    .padding(8)
+                                Button {
+                                    showExplanation = false
+                                } label: {
+                                    Text("Close")
+                                }
+                            }
+                            .frame(maxWidth: .infinity)
+                            .frame(height: 1000, alignment: .top) // need to check this height
+                            .background(.green,in: .rect(cornerRadius: 35))
+                            .offset(y: 380)
+                        } else{
+                            VStack{
+                                Text("\(testObject.category!)  -  \(testObject.languageSelected!)  -  Level \(testObject.levelWeight!)")
+                                    .font(.custom("Exo2-Medium", size: 12))
+                                    .padding(.vertical, 5)
+                                    .padding(.horizontal, 18)
+                                    .foregroundStyle(.white)
+                                    .background(RoundedRectangle(cornerRadius: 20).fill(.black))
+                                    .padding(8)
+                                HStack{
+                                    Spacer()
+                                    Button {
+                                        withAnimation(.easeOut(duration: 2)) {
+                                            showExplanation = true
+                                        }
+                                    }label: {
+                                        Text("Explanation > >")
+                                            .font(.custom("Exo2-Medium", size: 12))
+                                            .frame(width: 110, height: 20)
+                                            .background(Rectangle()
+                                                .fill(.yellow)
+                                                .shadow(radius: 2, x: 3, y: 3))
+                                    }
+                                    .opacity(attemptStatus![index]! ? 1 : 0)
+                                    .padding(.trailing, 75)
+                                    .padding(.bottom, 8)
+                                }
+                                OptionsCard(answerSet: questionSet[index].options, index: $index, attemptStatus: $attemptStatus)
+                            }
+                            .frame(maxWidth: .infinity)
+                            .frame(height: 1000, alignment: .top) // need to check this height
+                            .background(RoundedRectangle(cornerRadius: 35)
+                                .fill(.white)
+                                .shadow(color: .white.opacity(0.6), radius: 25))
+                            .offset(y: 380)
+                            .overlay {
+                                Button {
+                                    isliked.toggle()
+                                } label: {
+                                    Image(systemName: isliked ? "heart.fill" : "heart")
+                                        .resizable()
+                                        .scaledToFit()
+                                        .frame(width: isliked ? 20 : 22)
+                                        .foregroundStyle(isliked ? .pink : .black)
+                                        .symbolEffect(.bounce.up.byLayer, options: .nonRepeating)
+                                }
+                                .offset(x: 160, y: -90)
+                            }
+                        }
                     }
-                    .frame(maxWidth: .infinity)
-                    .frame(height: 1000, alignment: .top) // need to check this height
-                    .background(.white)
-                    .offset(y: 400)
                 }
+                //.scrollDisabled(showExplanation)
             }else{
                 // Error fetching screen
             }
-            //.scrollDisabled(false)
+            //.scrollShowDisabled(false)
         }
     }
 }
 
-//MARK: -Question Card
+//MARK: - Question Card
 struct QuestionCard: View {
     var question: String?
     
@@ -103,29 +175,60 @@ struct QuestionCard: View {
     }
 }
 
-//MARK: -Options Card
+//MARK: - Options Card
 struct OptionsCard: View {
     let answerSet: [String]?
+    @State var optionSelected: String = ""
+    @State var isRightOption = false
+    @Binding var index: Int
+    @Binding var attemptStatus: [Int : Bool]?
     
     var body: some View {
-        VStack{
+        VStack(spacing: 13){
             if let optionSet = answerSet{
-                ForEach(optionSet, id: \.self){ options in
-                    Text(options)
+                ForEach(optionSet, id: \.self){ option in
+                    Button {
+                        optionSelected = option
+                        isRightOption = checkRightAnswer(for: option)
+                        attemptStatus![index] = true
+                    } label: {
+                        Text(option)
+                            .font(.custom("Exo2-Medium", size: 15))
+                            .padding(.horizontal, 10)
+                            .frame(width: 260, height: 50)
+                            .foregroundStyle(.black)
+                            .background(RoundedRectangle(cornerRadius: 10)
+                                .fill(optionSelected.isEmpty ? .white : (isRightOption ? Color.green : Color.red))
+                                .shadow(color: .black, radius: 3, x: 3, y: 3))
+                            .overlay {
+                                RoundedRectangle(cornerRadius: 10)
+                                    .stroke(Color.black, lineWidth: 1)
+                            }
+                    }
                 }
             }
         }
     }
+    //
+    //    @ViewBuilder
+    //    private func optionView() -> some View{
+    //
+    //    }
+    
+    private func checkRightAnswer(for option: String) -> Bool{
+        
+        return false
+    }
 }
 
-//MARK: -Menu View
+//MARK: - Menu View
 struct MenuView: View {
     @Binding var cardDegree: Double
     @Binding var contentDegree: Double
     @Binding var index: Int
     let questionCount: Int
     let animTime = 0.7
-
+    
     var body: some View {
         Menu {
             ForEach(0..<questionCount, id: \.self) { qNumber in
@@ -165,7 +268,7 @@ struct MenuView: View {
     }
 }
 
-//MARK: -Exit Button
+//MARK: - Exit Button
 struct ExitButton: View {
     var onTapAction: () -> Void
     
@@ -185,7 +288,7 @@ struct ExitButton: View {
     }
 }
 
-//MARK: -Navigate Buttons
+//MARK: - Navigate Buttons
 struct NavigateQuestionButtons: View {
     @Binding var cardDegree: Double
     @Binding var contentDegree: Double
