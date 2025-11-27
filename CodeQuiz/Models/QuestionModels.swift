@@ -7,10 +7,10 @@
 
 import Foundation
 
-struct QA: Codable {
-    //let id = UUID()
-    let question: String
-    let options: [String]
+struct QA: Codable, Identifiable {
+    let id = UUID()
+    var question: String
+    var options: [String]
 }
 
 struct Root: Decodable {

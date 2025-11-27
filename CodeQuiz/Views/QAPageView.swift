@@ -14,11 +14,13 @@ struct QAPageView: View {
     @State var questionSet: [QA] = []
     @State var testObject = TestObject(levelWeight: 1, languageSelected: "Unknown", category: "Unknown")
     @State var attemptStatus: [Int : Bool]?
+    @State var correctOptionsArray : [Int] = []
+    @State var userChoices = [Int : Int]()
     
     var body: some View {
         NavigationStack{
             ZStack{
-                QACard(index: $index, attemptStatus: $attemptStatus, testObject: testObject, questionSet: questionSet)
+                QACard(index: $index, testObject: testObject, questionSet: questionSet, correctOptionsArray: correctOptionsArray, userChoices: $userChoices)
                     .id(index)
                     .rotation3DEffect(.degrees(contentDegree), axis: (x: 0, y: 1, z: 0))
             }
@@ -43,15 +45,24 @@ struct QAPageView: View {
         .onAppear{
             questionSet = fetchFromUserDefaults()
             testObject = getCategoryLabel()
-            attemptStatus = Dictionary(uniqueKeysWithValues: (0..<questionSet.count).map{($0, false)})
+            userChoices = Dictionary(uniqueKeysWithValues: (0..<questionSet.count).map { ($0, -1) })
         }
     }
     
     private func fetchFromUserDefaults() -> [QA]{
         let data = UserDefaults.standard.data(forKey: "QuestionSet")
         var questionSet: [QA] = []
+        
         if let data = data{
             questionSet = try! JSONDecoder().decode([QA].self, from: data)
+            for i in questionSet.indices{
+                let correctOption = questionSet[i].options[0]
+                questionSet[i].options.shuffle()
+                correctOptionsArray.append(questionSet[i].options.firstIndex(of: correctOption) ?? 0)
+                
+                // can store this correct option index in the QA object itself..
+                
+            }
         }
         return questionSet
     }
@@ -68,11 +79,12 @@ struct QAPageView: View {
 //MARK: - QACard
 struct QACard: View{
     @Binding var index: Int
-    @Binding var attemptStatus: [Int : Bool]?
     @State var showExplanation = false
     let testObject: TestObject
     let questionSet: [QA]
     @State var isliked = false
+    let correctOptionsArray : [Int]
+    @Binding var userChoices: [Int : Int]
     
     var body: some View{
         ZStack{
@@ -98,7 +110,7 @@ struct QACard: View{
                             .frame(maxWidth: .infinity)
                             .frame(height: 1000, alignment: .top) // need to check this height
                             .background(.green,in: .rect(cornerRadius: 35))
-                            .offset(y: 380)
+                            .offset(y: 350)
                         } else{
                             VStack{
                                 Text("\(testObject.category!)  -  \(testObject.languageSelected!)  -  Level \(testObject.levelWeight!)")
@@ -122,18 +134,18 @@ struct QACard: View{
                                                 .fill(.yellow)
                                                 .shadow(radius: 2, x: 3, y: 3))
                                     }
-                                    .opacity(attemptStatus![index]! ? 1 : 0)
+                                    .opacity((userChoices[index] == -1) ? 0 : 1)
                                     .padding(.trailing, 75)
                                     .padding(.bottom, 8)
                                 }
-                                OptionsCard(answerSet: questionSet[index].options, index: $index, attemptStatus: $attemptStatus)
+                                OptionsCard(answerSet: questionSet[index].options, correctOptionsArray: correctOptionsArray, index: $index, userChoices: $userChoices)
                             }
                             .frame(maxWidth: .infinity)
                             .frame(height: 1000, alignment: .top) // need to check this height
                             .background(RoundedRectangle(cornerRadius: 35)
                                 .fill(.white)
                                 .shadow(color: .white.opacity(0.6), radius: 25))
-                            .offset(y: 380)
+                            .offset(y: 350)
                             .overlay {
                                 Button {
                                     isliked.toggle()
@@ -145,12 +157,12 @@ struct QACard: View{
                                         .foregroundStyle(isliked ? .pink : .black)
                                         .symbolEffect(.bounce.up.byLayer, options: .nonRepeating)
                                 }
-                                .offset(x: 160, y: -90)
+                                .offset(x: 160, y: -120)
                             }
                         }
                     }
-                }
-                //.scrollDisabled(showExplanation)
+                } // disable interaction during transition
+                //.scrollDisabled for showExplanation
             }else{
                 // Error fetching screen
             }
@@ -178,46 +190,68 @@ struct QuestionCard: View {
 //MARK: - Options Card
 struct OptionsCard: View {
     let answerSet: [String]?
-    @State var optionSelected: String = ""
-    @State var isRightOption = false
+    let correctOptionsArray : [Int]
     @Binding var index: Int
-    @Binding var attemptStatus: [Int : Bool]?
+    @Binding var userChoices: [Int : Int]
+    @State var wrongOption = -1
     
     var body: some View {
-        VStack(spacing: 13){
+        VStack(spacing: 15){
             if let optionSet = answerSet{
                 ForEach(optionSet, id: \.self){ option in
-                    Button {
-                        optionSelected = option
-                        isRightOption = checkRightAnswer(for: option)
-                        attemptStatus![index] = true
-                    } label: {
-                        Text(option)
-                            .font(.custom("Exo2-Medium", size: 15))
-                            .padding(.horizontal, 10)
-                            .frame(width: 260, height: 50)
-                            .foregroundStyle(.black)
-                            .background(RoundedRectangle(cornerRadius: 10)
-                                .fill(optionSelected.isEmpty ? .white : (isRightOption ? Color.green : Color.red))
-                                .shadow(color: .black, radius: 3, x: 3, y: 3))
-                            .overlay {
-                                RoundedRectangle(cornerRadius: 10)
-                                    .stroke(Color.black, lineWidth: 1)
-                            }
-                    }
+                    optionView(optionSet: optionSet, option: option)
                 }
             }
         }
+        .onAppear{
+            checkCorrectOption(for: userChoices[index] ?? -1)
+        }
     }
-    //
-    //    @ViewBuilder
-    //    private func optionView() -> some View{
-    //
-    //    }
     
-    private func checkRightAnswer(for option: String) -> Bool{
+    private func checkCorrectOption(for userSelectedOption: Int){
+        if userSelectedOption != -1 {
+            if userSelectedOption != correctOptionsArray[index]{
+                wrongOption = userSelectedOption
+            }
+        }
+    }
+    
+    @ViewBuilder
+    private func optionView(optionSet: [String], option: String) -> some View{
+        let optionIndex = optionSet.firstIndex(of: option)
+        var showStroke = false
+        let optionColor: Color = {
+            if (userChoices[index] != -1){
+                if(optionIndex == correctOptionsArray[index]){
+                    return Color.green
+                } else if userChoices[index] == optionIndex{
+                    if wrongOption != -1{
+                        showStroke = true
+                        return Color.white
+                    }
+                }
+            }
+            return Color.white
+        }()
         
-        return false
+        Button {
+            userChoices[index] = optionIndex
+            checkCorrectOption(for: optionIndex ?? -1)
+        } label: {
+            Text(option)
+                .font(.custom("Exo2-Medium", size: 15))
+                .padding(.horizontal, 10)
+                .frame(width: 260, height: 50)
+                .foregroundStyle(.black)
+                .background(RoundedRectangle(cornerRadius: 10)
+                    .fill(optionColor)
+                    .shadow(color: showStroke ? .red : .black, radius: 3, x: 3, y: 3))
+                .overlay {
+                    RoundedRectangle(cornerRadius: 10)
+                        .stroke(showStroke ? Color.red : Color.black, lineWidth: showStroke ? 2.5 : 1)
+                }
+        }
+        .disabled((userChoices[index]) != -1)
     }
 }
 
