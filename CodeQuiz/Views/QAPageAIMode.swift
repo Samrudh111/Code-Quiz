@@ -1,55 +1,79 @@
 //
-//  QAPageView.swift
+//  QAPageAIMode.swift
 //  CodeQuiz
 //
-//  Created by Samrudh S on 11/9/25.
+//  Created by Samrudh S on 11/30/25.
 //
 
 import SwiftUI
 
-struct QAPageView: View {
+struct QAPageViewAIMode: View {
     @State private var index: Int = 0
     @State var cardDegree = 0.0
     @State var contentDegree = 0.0
     @State var questionSet: [QA] = []
     @State var questionSetAI: [QAai] = []
+    
     @State var testObject = TestObject(levelWeight: 1, languageSelected: "Unknown", category: "Unknown")
-    @State var attemptStatus: [Int : Bool]?
-    @State var correctOptionsArray : [Int] = []
     @State var userChoices = [Int : Int]()
     
     @EnvironmentObject var quizVM: QuizViewModel
     
     var body: some View {
         NavigationStack{
-            ZStack{
-                QACard(index: $index, testObject: testObject, questionSet: questionSet, correctOptionsArray: correctOptionsArray, userChoices: $userChoices)
-                    .id(index)
-                    .rotation3DEffect(.degrees(contentDegree), axis: (x: 0, y: 1, z: 0))
-            }
-            .rotation3DEffect(.degrees(cardDegree), axis: (x: 0, y: 1, z: 0))
-            .toolbar(.hidden, for: .tabBar)
-            .toolbar {
-                ToolbarItem(placement: .topBarTrailing) {
-                    MenuView(cardDegree: $cardDegree, contentDegree: $contentDegree, index: $index, questionCount: questionSet.count)
-                }
-                ToolbarItem(placement: .topBarLeading) {
-                    ExitButton {
-                        UserDefaults.standard.set(false, forKey: "QuizActive")
-                        //UserDefaults.standard.set([], forKey: "QuestionSet")
-                        //UserDefaults.standard.removeObject(forKey: "")
+            Group {
+                if quizVM.isLoading {
+                    VStack {
+                        ProgressView()
+                        Text("Generating quiz…")
+                            .padding(.top, 8)
                     }
-                }
+                } else if let error = quizVM.errorMessage {
+                    VStack(spacing: 16) {
+                        Text(error)
+                            .foregroundColor(.red)
+                            .multilineTextAlignment(.center)
+                        Button("Retry") {
+                            UserDefaults.standard.set(false, forKey: "QuizActive")
+                        }
+                    }
+                } else if quizVM.questions.isEmpty {
+                    Text("No questions loaded.")
+                    Button("Exit") {
+                        UserDefaults.standard.set(false, forKey: "QuizActive")
+                    }
+                } else {
+                        ZStack{
+                            QACardAi(index: $index, testObject: testObject, questionSet: questionSetAI, userChoices: $userChoices)
+                                .id(index)
+                                .rotation3DEffect(.degrees(contentDegree), axis: (x: 0, y: 1, z: 0))
+                        }
+                        .rotation3DEffect(.degrees(cardDegree), axis: (x: 0, y: 1, z: 0))
+                        .toolbar(.hidden, for: .tabBar)
+                        .toolbar {
+                            ToolbarItem(placement: .topBarTrailing) {
+                                MenuView(cardDegree: $cardDegree, contentDegree: $contentDegree, index: $index, questionCount: questionSetAI.count)
+                            }
+                            ToolbarItem(placement: .topBarLeading) {
+                                ExitButton {
+                                    UserDefaults.standard.set(false, forKey: "QuizActive")
+                                    //UserDefaults.standard.set([], forKey: "QuestionSet")
+                                    //UserDefaults.standard.removeObject(forKey: "")
+                                    // Are u sure u want to finish the test ? popup
+                                }
+                            }
+                        }
+                        .overlay {
+                            NavigateQuestionButtons(cardDegree: $cardDegree, contentDegree: $contentDegree, index: $index, questionCount: questionSetAI.count)
+                        }
+                        .onAppear{
+                            //questionSet = fetchFromUserDefaults()
+                            questionSetAI = fetchFromAIMode()
+                            //testObject = getCategoryLabel()
+                            userChoices = Dictionary(uniqueKeysWithValues: (0..<questionSetAI.count).map { ($0, -1) })
+                        }
+                    }
             }
-            .overlay {
-                NavigateQuestionButtons(cardDegree: $cardDegree, contentDegree: $contentDegree, index: $index, questionCount: questionSet.count)
-            }
-        }
-        .onAppear{
-            //questionSet = fetchFromUserDefaults()
-            questionSetAI = fetchFromAIMode()
-            testObject = getCategoryLabel()
-            userChoices = Dictionary(uniqueKeysWithValues: (0..<questionSet.count).map { ($0, -1) })
         }
     }
     
@@ -59,14 +83,14 @@ struct QAPageView: View {
         
         if let data = data{
             questionSet = try! JSONDecoder().decode([QA].self, from: data)
-            for i in questionSet.indices{
-                let correctOption = questionSet[i].options[0]
-                questionSet[i].options.shuffle()
-                correctOptionsArray.append(questionSet[i].options.firstIndex(of: correctOption) ?? 0)
-                
-                // can store this correct option index in the QA object itself..
-                
-            }
+            //            for i in questionSet.indices{
+            //                let correctOption = questionSet[i].options[0]
+            //                questionSet[i].options.shuffle()
+            //                correctOptionsArray.append(questionSet[i].options.firstIndex(of: correctOption) ?? 0)
+            //
+            //                // can store this correct option index in the QA object itself..
+            //
+            //            }
         }
         return questionSet
     }
@@ -85,13 +109,12 @@ struct QAPageView: View {
 }
 
 //MARK: - QACard
-struct QACard: View{
+struct QACardAi: View{
     @Binding var index: Int
     @State var showExplanation = false
     let testObject: TestObject
-    let questionSet: [QA]
+    let questionSet: [QAai]
     @State var isliked = false
-    let correctOptionsArray : [Int]
     @Binding var userChoices: [Int : Int]
     
     var body: some View{
@@ -102,13 +125,10 @@ struct QACard: View{
                     ZStack{
                         if showExplanation{
                             VStack{
-                                Text("Here goes the explanation!")
-                                    .font(.custom("Exo2-Medium", size: 14))
-                                    .padding(.vertical, 5)
-                                    .padding(.horizontal, 15)
-                                    .background(.black)
-                                    .foregroundStyle(.white)
-                                    .padding(8)
+                                Text(questionSet[index].explanation ?? "Sorry. Explanation unavailable..")
+                                    .font(.custom("Exo2-Medium", size: 25))
+                                    .foregroundStyle(.black)
+                                    .padding()
                                 Button {
                                     showExplanation = false
                                 } label: {
@@ -131,7 +151,7 @@ struct QACard: View{
                                 HStack{
                                     Spacer()
                                     Button {
-                                        withAnimation(.easeOut(duration: 2)) {
+                                        withAnimation(.easeOut(duration: 0.5)) {
                                             showExplanation = true
                                         }
                                     }label: {
@@ -146,7 +166,7 @@ struct QACard: View{
                                     .padding(.trailing, 75)
                                     .padding(.bottom, 8)
                                 }
-                                OptionsCard(answerSet: questionSet[index].options, correctOptionsArray: correctOptionsArray, index: $index, userChoices: $userChoices)
+                                OptionsCardAi(answerSet: questionSet[index].options, correctOption: questionSet[index].correctOptionIndex, index: $index, userChoices: $userChoices)
                             }
                             .frame(maxWidth: .infinity)
                             .frame(height: 1000, alignment: .top) // need to check this height
@@ -182,7 +202,7 @@ struct QACard: View{
 }
 
 //MARK: - Question Card
-struct QuestionCard: View {
+struct QuestionCardAi: View {
     var question: String?
     
     var body: some View {
@@ -198,9 +218,9 @@ struct QuestionCard: View {
 }
 
 //MARK: - Options Card
-struct OptionsCard: View {
+struct OptionsCardAi: View {
     let answerSet: [String]?
-    let correctOptionsArray : [Int]
+    @State var correctOption: Int
     @Binding var index: Int
     @Binding var userChoices: [Int : Int]
     @State var wrongOption = -1
@@ -220,7 +240,7 @@ struct OptionsCard: View {
     
     private func checkCorrectOption(for userSelectedOption: Int){
         if userSelectedOption != -1 {
-            if userSelectedOption != correctOptionsArray[index]{
+            if userSelectedOption != correctOption{
                 wrongOption = userSelectedOption
             }
         }
@@ -232,7 +252,7 @@ struct OptionsCard: View {
         var showStroke = false
         let optionColor: Color = {
             if (userChoices[index] != -1){
-                if(optionIndex == correctOptionsArray[index]){
+                if(optionIndex == correctOption){
                     return Color.green
                 } else if userChoices[index] == optionIndex{
                     if wrongOption != -1{
@@ -266,7 +286,7 @@ struct OptionsCard: View {
 }
 
 //MARK: - Menu View
-struct MenuView: View {
+struct MenuViewAi: View {
     @Binding var cardDegree: Double
     @Binding var contentDegree: Double
     @Binding var index: Int
@@ -313,7 +333,7 @@ struct MenuView: View {
 }
 
 //MARK: - Exit Button
-struct ExitButton: View {
+struct ExitButtonAi: View {
     var onTapAction: () -> Void
     
     var body: some View {
@@ -333,7 +353,7 @@ struct ExitButton: View {
 }
 
 //MARK: - Navigate Buttons
-struct NavigateQuestionButtons: View {
+struct NavigateQuestionButtonsAi: View {
     @Binding var cardDegree: Double
     @Binding var contentDegree: Double
     @Binding var index: Int

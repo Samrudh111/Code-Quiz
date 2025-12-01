@@ -13,6 +13,25 @@ struct QA: Codable, Identifiable {
     var options: [String]
 }
 
+struct QAai: Identifiable, Codable, Hashable {
+    let id: Int
+    let question: String
+    var options: [String]
+    let correctOptionIndex: Int
+    let explanation: String?
+}
+struct QuestionResponse: Decodable {
+    let language: String
+    let topic: String
+    let difficulty: String
+    let questions: [QAai]
+}
+enum Difficulty: String, Codable, CaseIterable {
+    case easy = "Easy"
+    case medium = "Medium"
+    case hard = "Hard"
+}
+
 struct Root: Decodable {
     let data: LanguageData
 }

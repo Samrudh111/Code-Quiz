@@ -12,6 +12,8 @@ struct HomepageView: View {
     @State var levelWeight: Int?
     @State var languageSelected: Language?
     @State var category: String?
+    @EnvironmentObject var quizVM: QuizViewModel
+    @State var difficultyLevel: Difficulty?
     // can save the above values to an object?
     private let languagesList = Language.allCases.sorted(by: { $0.rawValue < $1.rawValue })
     let columns = [GridItem(.flexible()),
@@ -20,12 +22,18 @@ struct HomepageView: View {
     @State var doNotScroll = true
     @State var showErrorMessage = false
     
+    @State var languageTyped: String = ""
+    let languageList = ["C", "Swift", "Python"]
+    @State var topicTyped: String = ""
+    let topicList = ["C", "Swift", "Python"]
+    
     var body: some View {
         NavigationStack{
             ZStack{
                 ScrollView{
                     
                     // "Continue where u left? or start a new test"
+                    // For Ai mode, add 'other' language selector option which holds all other languages and also a search bar at top
                     
                     VStack(spacing: 10){
                         VStackLayout(alignment: .leading){
@@ -42,7 +50,7 @@ struct HomepageView: View {
                         .frame(maxWidth: .infinity)
                         .background(.blue)
                         
-                        VStack(alignment: .leading){
+                        VStack(alignment: .center){
                             Text("Programming Languae")
                                 .font(.custom("Exo2-Regular", size: 24))
                                 .padding(.vertical, 10)
@@ -70,15 +78,59 @@ struct HomepageView: View {
                                     .padding()
                                 }
                             }
+                            VStack(alignment: .center){
+                                Text("Or")
+                                    .font(.custom("Exo2-BlackItalic", size: 35))
+                                    .foregroundStyle(.yellow)
+                                    .shadow(color: .black, radius: 1.5, x: 4, y: 4)
+                                Text("Search here:")
+                                    .font(.custom("Exo2-Medium", size: 20))
+                                    .padding(.horizontal, 8)
+                                    .background(.black, in: RoundedRectangle(cornerRadius: 10))
+                                    .foregroundStyle(.white)
+                                    .padding(.top, 20)
+                                
+                                // Search bar !!
+                                
+                                HStack{
+                                    Text("Language :")
+                                        .font(.custom("Exo2-Black", size: 20))
+                                        .frame(width: 120)
+                                    Picker("Language", selection: $languageTyped, content: {
+                                        ForEach(languageList, id: \.self) { language in
+                                            Text(language)
+                                        }
+                                    })
+                                    .pickerStyle(.menu)
+                                    .frame(width: 150, height: 30)
+                                    .background(.white, in: RoundedRectangle(cornerRadius: 10))
+                                    .foregroundStyle(.black)
+                                }
+                                HStack{
+                                    Text("Topic :")
+                                        .font(.custom("Exo2-Black", size: 20))
+                                        .frame(width: 120)
+                                    Picker("Topic", selection: $topicTyped, content: {
+                                        ForEach(topicList, id: \.self) { topic in
+                                            Text(topic)
+                                        }
+                                    })
+                                    .pickerStyle(.menu)
+                                    .frame(width: 150, height: 30)
+                                    .background(.white, in: RoundedRectangle(cornerRadius: 10))
+                                    .foregroundStyle(.black)
+                                }
+                            }
+                            .padding(.top,30)
                         }
                         .frame(maxWidth: .infinity)
                     }
-                }.scrollDisabled(languageSelected == nil)
+                }
                 
                 if showErrorMessage {
                     HStack(spacing: 8) {
                         Image(systemName: "exclamationmark.triangle.fill")
-                        Text("Please select all required fields.")
+                        Text("Please select all required options.")
                     }
                     .font(.subheadline)
                     .padding(.horizontal, 16)
@@ -94,7 +146,8 @@ struct HomepageView: View {
                 VStack{
                     Spacer()
                     Button {
-                        beginTest()
+                        //beginTest()
+                        beginTestAIMode()
                     } label: {
                         Text("BEGIN !")
                             .font(.custom("Exo2-Black", size: 30))
@@ -124,9 +177,21 @@ struct HomepageView: View {
         }
     }
     
+    private func beginTestAIMode(){
+        guard let _ = languageSelected, let _ = category else{
+            showErrorMessage = true
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                showErrorMessage = false
+            }
+            return
+        }
+        quizVM.loadAIQuestions(language: languageSelected!.rawValue, topic: category!, difficulty: Difficulty.easy, count: 10) // change the input param
+        UserDefaults.standard.set(true, forKey: "QuizActive")
+    }
+    
     private func beginTest(){
-        guard let _ = levelWeight, let _ = languageSelected, let _ = category else{ // if no category selected, choose random set
-            showErrorMessage = true // !! not showing in landscape mode
+        guard let _ = levelWeight, let _ = languageSelected, let _ = category else{
+            showErrorMessage = true
             DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
                 showErrorMessage = false
             }
@@ -331,12 +396,10 @@ struct LevelButtonView: View {
         Button {
             doHighlight ? (levelSelected = nil) : (levelSelected = level.weightage)
         } label: {
-            HStack{
-                Text(level.rawValue)
-                    .font(.custom("Exo2-Black", size: 25))
-                    .foregroundStyle(doHighlight ? Color.white : Color.black)
-            }
-            .padding(4)
+            Text(level.rawValue)
+                .font(.custom("Exo2-Black", size: 25))
+                .foregroundStyle(doHighlight ? Color.white : Color.black)
+                .padding(4)
         }
         .buttonStyle(.glassProminent)
     }
@@ -357,13 +420,13 @@ struct LanguagePickerView: View {
                 Image(language.logo)
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-                    .frame(height: 35)
+                    .frame(height: 25)
                 Text(language.rawValue)
                     .font(.custom("Exo2-Regular", size: 18))
                     .foregroundStyle(Color.black)
             }
             .frame(maxWidth: .infinity)
-            .frame(height: 80)
+            .frame(height: 70)
             .background(doHighlight ? language.backgroundColor : (isFirstRow ? Color(red: 214/255, green: 214/255, blue: 214/255) : Color(red: 235/255, green: 235/255, blue: 235/255)))
             .shadow(radius: 2, y: -3)
         }
@@ -397,5 +460,5 @@ struct CategoryButtonView: View {
 }
 
 #Preview{
-    HomePageGroup()
+    TabBarView()
 }

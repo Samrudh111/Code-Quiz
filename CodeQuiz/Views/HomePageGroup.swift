@@ -10,12 +10,17 @@ import Foundation
 
 struct HomePageGroup: View {
     @AppStorage("QuizActive") private var isQuizActive: Bool?
-
+    @StateObject var quizVM = QuizViewModel()
+    
     var body: some View {
         if isQuizActive ?? false{
-            QAPageView()
+            QAPageViewAIMode()
+                .environmentObject(quizVM)
+//            QAPageView()
+//                .environmentObject(quizVM)
         } else {
             HomepageView()
+                .environmentObject(quizVM)
         }
     }
 }
