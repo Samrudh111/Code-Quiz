@@ -12,6 +12,7 @@ struct HomepageView: View {
     @State var levelWeight: Int?
     @State var languageSelected: Language?
     @State var category: String?
+    @EnvironmentObject var networkMonitor: NetworkMonitor
     @EnvironmentObject var quizVM: QuizViewModel
     @State var difficultyLevel: Difficulty?
     // can save the above values to an object?
@@ -122,6 +123,15 @@ struct HomepageView: View {
                                 }
                             }
                             .padding(.top,30)
+                            .overlay {
+                                if !networkMonitor.isConnected{
+                                    Text("Offline")
+                                        .bold()
+                                        .foregroundStyle(.white)
+                                        .frame(width: 350, height: 210)
+                                        .background(.black.opacity(0.5))
+                                }
+                            }
                         }
                         .frame(maxWidth: .infinity)
                     }
@@ -399,7 +409,6 @@ struct LevelButtonView: View {
             Text(level.rawValue)
                 .font(.custom("Exo2-Black", size: 25))
                 .foregroundStyle(doHighlight ? Color.white : Color.black)
-                .padding(4)
         }
         .buttonStyle(.glassProminent)
     }
