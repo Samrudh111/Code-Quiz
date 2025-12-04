@@ -122,16 +122,30 @@ struct HomepageView: View {
                                     .foregroundStyle(.black)
                                 }
                             }
-                            .padding(.top,30)
+                            .disabled(!networkMonitor.isConnected) // change this
+                            .frame(width: 300, height: 220)
                             .overlay {
+                                RoundedRectangle(cornerRadius: 10)
+                                    .strokeBorder(lineWidth: 1)
+                                    .shadow(color: .black, radius: 2, x: 2, y: 2)
                                 if !networkMonitor.isConnected{
-                                    Text("Offline")
-                                        .bold()
-                                        .foregroundStyle(.white)
-                                        .frame(width: 350, height: 210)
-                                        .background(.black.opacity(0.5))
+                                    HStack{
+                                        Text("Offline")
+                                            .bold()
+                                            .foregroundStyle(.red)
+                                        Image(systemName: "wifi.exclamationmark")
+                                            .symbolRenderingMode(.palette)
+                                            .symbolColorRenderingMode(.gradient)
+                                            .foregroundStyle(.red)
+                                            .symbolEffect(.breathe.pulse.wholeSymbol, options: .repeat(.periodic(delay: 1.5)))
+                                    }
+                                    .offset(x: 90, y: -80)
+                                    .foregroundStyle(.white)
+                                    .frame(width: 300, height: 220)
+                                    .background(.black.opacity(0.5), in: RoundedRectangle(cornerRadius: 10))
                                 }
                             }
+                            .padding(.top,30)
                         }
                         .frame(maxWidth: .infinity)
                     }
@@ -469,5 +483,8 @@ struct CategoryButtonView: View {
 }
 
 #Preview{
+    @StateObject var networkMonitor = NetworkMonitor.shared
     TabBarView()
+        .font(.custom("Exo2-Medium", size: 20))
+        .environmentObject(networkMonitor)
 }
