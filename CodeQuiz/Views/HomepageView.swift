@@ -23,10 +23,10 @@ struct HomepageView: View {
     @State var doNotScroll = true
     @State var showErrorMessage = false
     
-    @State var languageTyped: String = ""
+    @State var languagePicker: String = ""
     let languageList = ["C", "Swift", "Python"]
-    @State var topicTyped: String = ""
-    let topicList = ["C", "Swift", "Python"]
+    @State var topicPicker: String = ""
+    let topicList = ["UIKit", "SwiftUI", "Async/Await"]
     
     var body: some View {
         NavigationStack{
@@ -34,7 +34,6 @@ struct HomepageView: View {
                 ScrollView{
                     
                     // "Continue where u left? or start a new test"
-                    // For Ai mode, add 'other' language selector option which holds all other languages and also a search bar at top
                     
                     VStack(spacing: 10){
                         VStackLayout(alignment: .leading){
@@ -50,7 +49,7 @@ struct HomepageView: View {
                         .frame(height: 160)
                         .frame(maxWidth: .infinity)
                         .background(.blue)
-                        
+                        //Language Picker View
                         VStack(alignment: .center){
                             Text("Programming Languae")
                                 .font(.custom("Exo2-Regular", size: 24))
@@ -59,26 +58,28 @@ struct HomepageView: View {
                             VStack(spacing: -12){
                                 HStack(spacing: 1){
                                     ForEach(languagesList.prefix(upTo: 3), id: \.self){ pl in
-                                        LanguagePickerView(language: pl, isFirstRow: true, languageSelected: $languageSelected)
+                                        LanguagePickerView(language: pl, isFirstRow: true, languageSelected: $languageSelected, categorySelected: $category)
                                     }
                                 }
                                 HStack(spacing: 1){
                                     ForEach(languagesList.dropFirst(3), id: \.self){ pl in
-                                        LanguagePickerView(language: pl, isFirstRow: false, languageSelected:  $languageSelected)
+                                        LanguagePickerView(language: pl, isFirstRow: false, languageSelected:  $languageSelected, categorySelected: $category)
                                     }
                                 }
                             }
+                            //Category Button View
                             VStack{
                                 if let languageSelected = languageSelected{
                                     LazyVGrid(columns: columns) {
-                                        CategoryButtonView(category: "Random 15", bgColor: languageSelected.backgroundColor, categorySelected: $category) // Change border color for this button
+                                        CategoryButtonView(category: "Random 15", bgColor: languageSelected.backgroundColor, categorySelected: $category, languagePicker: $languagePicker, topicPicker: $topicPicker)
                                         ForEach(languageSelected.categories, id: \.self){ category in
-                                            CategoryButtonView(category: category, bgColor: languageSelected.backgroundColor, categorySelected: $category)
+                                            CategoryButtonView(category: category, bgColor: languageSelected.backgroundColor, categorySelected: $category, languagePicker: $languagePicker, topicPicker: $topicPicker)
                                         }
                                     }
                                     .padding()
                                 }
                             }
+                            // Online Mode
                             VStack(alignment: .center){
                                 Text("Or")
                                     .font(.custom("Exo2-BlackItalic", size: 35))
@@ -93,11 +94,12 @@ struct HomepageView: View {
                                 
                                 // Search bar !!
                                 
+                                //Language Picker
                                 HStack{
                                     Text("Language :")
                                         .font(.custom("Exo2-Black", size: 20))
                                         .frame(width: 120)
-                                    Picker("Language", selection: $languageTyped, content: {
+                                    Picker("Language", selection: $languagePicker, content: {
                                         ForEach(languageList, id: \.self) { language in
                                             Text(language)
                                         }
@@ -107,13 +109,20 @@ struct HomepageView: View {
                                     .background(.white, in: RoundedRectangle(cornerRadius: 10))
                                     .foregroundStyle(.black)
                                 }
+                                //Topic Picker
                                 HStack{
                                     Text("Topic :")
                                         .font(.custom("Exo2-Black", size: 20))
                                         .frame(width: 120)
-                                    Picker("Topic", selection: $topicTyped, content: {
+                                    Picker("Topic", selection: $topicPicker, content: {
                                         ForEach(topicList, id: \.self) { topic in
                                             Text(topic)
+                                        }
+                                    })
+                                    .onChange(of: topicPicker, { oldValue, newValue in
+                                        if newValue != "" {
+                                            languageSelected = nil
+                                            category = nil
                                         }
                                     })
                                     .pickerStyle(.menu)
@@ -122,9 +131,10 @@ struct HomepageView: View {
                                     .foregroundStyle(.black)
                                 }
                             }
-                            .disabled(!networkMonitor.isConnected) // change this
+                            .disabled(!networkMonitor.isConnected)
                             .frame(width: 300, height: 220)
                             .overlay {
+                                // Offline warning overlay
                                 RoundedRectangle(cornerRadius: 10)
                                     .strokeBorder(lineWidth: 1)
                                     .shadow(color: .black, radius: 2, x: 2, y: 2)
@@ -150,12 +160,16 @@ struct HomepageView: View {
                         .frame(maxWidth: .infinity)
                     }
                 }
-                
+                // Offline Error message popup
                 if showErrorMessage {
-                    HStack(spacing: 8) {
-                        Image(systemName: "exclamationmark.triangle.fill")
-                        Text("Please select all required options.")
+                    VStack{
+                        HStack(spacing: 8) {
+                            Image(systemName: "exclamationmark.triangle.fill")
+                            Text("oops! there's no internet")
+                        }
+                        Text("Please check your internet connection or select the available options above..")
                     }
+                    .multilineTextAlignment(.center)
                     .font(.subheadline)
                     .padding(.horizontal, 16)
                     .padding(.vertical, 12)
@@ -167,16 +181,16 @@ struct HomepageView: View {
                     .offset(y: 250)
                     .transition(.move(edge: .bottom).combined(with: .opacity))
                 }
+                // BEGIN Test
                 VStack{
                     Spacer()
                     Button {
-                        //beginTest()
-                        beginTestAIMode()
+                        beginTest()
                     } label: {
                         Text("BEGIN !")
                             .font(.custom("Exo2-Black", size: 30))
-                        // SHow loading circle while retrieving quiz and disable the button touch
                     }
+                    .disabled((levelWeight == nil) || ((category == nil) && ((languagePicker.isEmpty) || (topicPicker.isEmpty))))
                     .buttonStyle(.glassProminent)
                 }
             }
@@ -200,27 +214,43 @@ struct HomepageView: View {
             }
         }
     }
-    
-    private func beginTestAIMode(){
-        guard let _ = languageSelected, let _ = category else{
+
+//MARK: - Begin Test
+    private func beginTest(){
+        var languageName = ""
+        var topicName = ""
+        
+        if !networkMonitor.isConnected && ((!languagePicker.isEmpty) || (!topicPicker.isEmpty)){
             showErrorMessage = true
             DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
                 showErrorMessage = false
             }
             return
+        } else if category != nil {
+            if networkMonitor.isConnected{
+                languageName = languageSelected!.rawValue
+                topicName = category!
+            } else {
+                //beginTestOffline()
+                //print("begin test - Non-AI mode")
+            }
+        } else if !topicPicker.isEmpty{
+            languageName = languagePicker
+            topicName = topicPicker
         }
-        quizVM.loadAIQuestions(language: languageSelected!.rawValue, topic: category!, difficulty: Difficulty.easy, count: 10) // change the input param
+        
+        quizVM.loadAIQuestions(language: languageName, topic: topicName, difficulty: Difficulty.easy, count: 10) // change the input param
         UserDefaults.standard.set(true, forKey: "QuizActive")
     }
     
-    private func beginTest(){
-        guard let _ = levelWeight, let _ = languageSelected, let _ = category else{
-            showErrorMessage = true
-            DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-                showErrorMessage = false
-            }
-            return
-        }
+    private func beginTestOffline(){
+//        guard let _ = levelWeight, let _ = languageSelected, let _ = category else{
+//            //            showErrorMessage = true
+//            //            DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+//            //                showErrorMessage = false
+//            //            }
+//            return
+//        }
         guard let allQuestions = UserDefaults.standard.data(forKey: "AllQuestionSet") else {
             // Still downloading the questions indicator
             return
@@ -418,7 +448,7 @@ struct LevelButtonView: View {
     
     var body: some View {
         Button {
-            doHighlight ? (levelSelected = nil) : (levelSelected = level.weightage)
+            levelSelected = doHighlight ? nil : level.weightage
         } label: {
             Text(level.rawValue)
                 .font(.custom("Exo2-Black", size: 25))
@@ -433,11 +463,15 @@ struct LanguagePickerView: View {
     let language: Language
     var isFirstRow = false
     @Binding var languageSelected: Language?
+    @Binding var categorySelected: String?
     private var doHighlight: Bool{ return (language == languageSelected) }
     
     var body: some View {
         Button {
-            doHighlight ? (languageSelected = nil) : (languageSelected = language)
+            languageSelected = doHighlight ? nil : language
+            if let _ = categorySelected{
+                categorySelected = nil
+            }
         } label: {
             HStack{
                 Image(language.logo)
@@ -461,11 +495,19 @@ struct CategoryButtonView: View {
     let category: String
     let bgColor: Color
     @Binding var categorySelected: String?
+    @Binding var languagePicker: String
+    @Binding var topicPicker: String
     private var doHighlight: Bool{ return (category == categorySelected) }
     
     var body: some View {
         Button {
-            doHighlight ? (categorySelected = nil) : (categorySelected = category)
+            if doHighlight{
+                categorySelected = nil
+            } else{
+                categorySelected = category
+                languagePicker = ""
+                topicPicker = ""
+            }
         } label: {
             HStack{
                 Text(category)
