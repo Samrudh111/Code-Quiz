@@ -18,7 +18,6 @@ struct CodeQuizApp: App {
                 .font(.custom("Exo2-Medium", size: 20))
                 .environmentObject(networkMonitor)
             // Caching the generated questions through ai
-            // Handle the offline and online mode
             // Add classic touch sounds for almost everything
             // Handle Frame size (width/height)
             // Suggestions or Preferences using AI as per users likes

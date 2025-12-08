@@ -16,17 +16,16 @@ struct HomepageView: View {
     @EnvironmentObject var quizVM: QuizViewModel
     @State var difficultyLevel: Difficulty?
     // can save the above values to an object?
-    private let languagesList = Language.allCases.sorted(by: { $0.rawValue < $1.rawValue })
     let columns = [GridItem(.flexible()),
                    GridItem(.flexible()),
                    GridItem(.flexible())]
     @State var doNotScroll = true
     @State var showErrorMessage = false
-    
-    @State var languagePicker: String = ""
-    let languageList = ["C", "Swift", "Python"]
+    private let languageOfflineList: [Language] = [.Java, .Cpp, .Swift, .Rust, .Python, .SQL].sorted(by: { $0.rawValue < $1.rawValue })
+    private let languagesList = Language.allCases.sorted(by: { $0.rawValue < $1.rawValue })
+    @State var topicList: [String] = []
+    @State var languagePicker: Language?
     @State var topicPicker: String = ""
-    let topicList = ["UIKit", "SwiftUI", "Async/Await"]
     
     var body: some View {
         NavigationStack{
@@ -52,17 +51,20 @@ struct HomepageView: View {
                         //Language Picker View
                         VStack(alignment: .center){
                             Text("Programming Languae")
+                                //.multilineTextAlignment(.leading)
                                 .font(.custom("Exo2-Regular", size: 24))
                                 .padding(.vertical, 10)
-                                .padding(.leading, 40)
                             VStack(spacing: -12){
+                                
+                                //Keep only 9 items per language in offline mode
+                                
                                 HStack(spacing: 1){
-                                    ForEach(languagesList.prefix(upTo: 3), id: \.self){ pl in
+                                    ForEach(languageOfflineList.prefix(upTo: 3), id: \.self){ pl in
                                         LanguagePickerView(language: pl, isFirstRow: true, languageSelected: $languageSelected, categorySelected: $category)
                                     }
                                 }
                                 HStack(spacing: 1){
-                                    ForEach(languagesList.dropFirst(3), id: \.self){ pl in
+                                    ForEach(languageOfflineList.dropFirst(3), id: \.self){ pl in
                                         LanguagePickerView(language: pl, isFirstRow: false, languageSelected:  $languageSelected, categorySelected: $category)
                                     }
                                 }
@@ -76,7 +78,6 @@ struct HomepageView: View {
                                             CategoryButtonView(category: category, bgColor: languageSelected.backgroundColor, categorySelected: $category, languagePicker: $languagePicker, topicPicker: $topicPicker)
                                         }
                                     }
-                                    .padding()
                                 }
                             }
                             // Online Mode
@@ -100,8 +101,18 @@ struct HomepageView: View {
                                         .font(.custom("Exo2-Black", size: 20))
                                         .frame(width: 120)
                                     Picker("Language", selection: $languagePicker, content: {
-                                        ForEach(languageList, id: \.self) { language in
-                                            Text(language)
+                                        ForEach(languagesList, id: \.self) { language in
+                                            Text(language.rawValue)
+                                                .tag(language)
+                                        }
+                                    })
+                                    .onChange(of: languagePicker, { oldValue, newValue in
+                                        if let selectedLanguage = newValue {
+                                            topicList = selectedLanguage.categories
+                                            topicPicker = selectedLanguage.categories.first ?? ""
+                                        } else {
+                                            topicList = []
+                                            topicPicker = ""
                                         }
                                     })
                                     .pickerStyle(.menu)
@@ -109,6 +120,7 @@ struct HomepageView: View {
                                     .background(.white, in: RoundedRectangle(cornerRadius: 10))
                                     .foregroundStyle(.black)
                                 }
+                                
                                 //Topic Picker
                                 HStack{
                                     Text("Topic :")
@@ -117,6 +129,7 @@ struct HomepageView: View {
                                     Picker("Topic", selection: $topicPicker, content: {
                                         ForEach(topicList, id: \.self) { topic in
                                             Text(topic)
+                                                .tag(topic)
                                         }
                                     })
                                     .onChange(of: topicPicker, { oldValue, newValue in
@@ -190,7 +203,7 @@ struct HomepageView: View {
                         Text("BEGIN !")
                             .font(.custom("Exo2-Black", size: 30))
                     }
-                    .disabled((levelWeight == nil) || ((category == nil) && ((languagePicker.isEmpty) || (topicPicker.isEmpty))))
+                    .disabled((levelWeight == nil) || ((category == nil) && ((languagePicker == nil) || (topicPicker.isEmpty))))
                     .buttonStyle(.glassProminent)
                 }
             }
@@ -214,43 +227,41 @@ struct HomepageView: View {
             }
         }
     }
-
-//MARK: - Begin Test
+    
+    //MARK: - Begin Test
     private func beginTest(){
-        var languageName = ""
+        var languageName: Language?
         var topicName = ""
         
-        if !networkMonitor.isConnected && ((!languagePicker.isEmpty) || (!topicPicker.isEmpty)){
+        //Offline but picker already selected - Show Error
+        if !networkMonitor.isConnected && ((languagePicker != nil) || (!topicPicker.isEmpty)){
             showErrorMessage = true
             DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
                 showErrorMessage = false
             }
             return
-        } else if category != nil {
+        } else if category != nil { //The top category list selected offline/online
             if networkMonitor.isConnected{
-                languageName = languageSelected!.rawValue
+                languageName = languageSelected!
                 topicName = category!
             } else {
+                beginTestOffline()
+                return
                 //beginTestOffline()
                 //print("begin test - Non-AI mode")
             }
-        } else if !topicPicker.isEmpty{
-            languageName = languagePicker
+        } else if !topicPicker.isEmpty{ //Fully Online mode
+            languageName = languagePicker!
             topicName = topicPicker
         }
+        //if offline mode and already other language has been selected from the top languages list !!
         
-        quizVM.loadAIQuestions(language: languageName, topic: topicName, difficulty: Difficulty.easy, count: 10) // change the input param
+        quizVM.loadAIQuestions(language: languageName!.rawValue, topic: topicName, difficulty: Difficulty.easy, count: 10) // change the input param
+        //Save to userDefaults and fetch from it in the QAPage
         UserDefaults.standard.set(true, forKey: "QuizActive")
     }
     
     private func beginTestOffline(){
-//        guard let _ = levelWeight, let _ = languageSelected, let _ = category else{
-//            //            showErrorMessage = true
-//            //            DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-//            //                showErrorMessage = false
-//            //            }
-//            return
-//        }
         guard let allQuestions = UserDefaults.standard.data(forKey: "AllQuestionSet") else {
             // Still downloading the questions indicator
             return
@@ -296,7 +307,6 @@ struct HomepageView: View {
         default:
             return []
         }
-        
         return questionSet
     }
     
@@ -495,7 +505,7 @@ struct CategoryButtonView: View {
     let category: String
     let bgColor: Color
     @Binding var categorySelected: String?
-    @Binding var languagePicker: String
+    @Binding var languagePicker: Language?
     @Binding var topicPicker: String
     private var doHighlight: Bool{ return (category == categorySelected) }
     
@@ -505,21 +515,22 @@ struct CategoryButtonView: View {
                 categorySelected = nil
             } else{
                 categorySelected = category
-                languagePicker = ""
+                languagePicker = nil
                 topicPicker = ""
             }
         } label: {
-            HStack{
-                Text(category)
-                    .font(.custom("Exo2-Regular", size: 15))
-                    .foregroundStyle(doHighlight ? bgColor : Color.white) // update the fgcolor
-            }
-            .padding(10)
-            .background(doHighlight ? .white.opacity(0.8) : bgColor, in: .capsule)
-            .overlay {
-                Capsule().stroke(lineWidth: 2)
-                    .foregroundStyle(bgColor)
-            }
+            Text(category)
+                .font(.custom("Exo2-Regular", size: 15))
+                .foregroundStyle(doHighlight ? bgColor : Color.white) // update the fgcolor
+                .padding(.vertical, 15)
+                .padding(.horizontal, 8)
+                .frame(maxWidth: .infinity)
+                .background(doHighlight ? .white.opacity(0.8) : bgColor, in: .capsule)
+                .overlay {
+                    Capsule().stroke(lineWidth: 2)
+                        .foregroundStyle(bgColor)
+                }
+                .padding(8)
         }
     }
 }
