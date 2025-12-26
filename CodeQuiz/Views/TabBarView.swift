@@ -13,6 +13,9 @@ struct TabBarView: View {
             Tab("Quiz", systemImage: "rectangle.and.pencil.and.ellipsis") {
                 HomePageGroup()
             }
+            Tab("Favorites", systemImage: "heart") {
+                FavoritesPageView()
+            }
             Tab("Settings", systemImage: "gear") {
                 SettingsView()
             }
@@ -20,7 +23,9 @@ struct TabBarView: View {
     }
 }
 
-
 #Preview {
+    var networkMonitor = NetworkMonitor.shared
     TabBarView()
+        .font(.custom("Exo2-Medium", size: 20))
+        .environmentObject(networkMonitor)
 }
