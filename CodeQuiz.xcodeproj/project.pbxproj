@@ -13,6 +13,7 @@
 		BC4976F22EFDC6B0007387E0 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = BC4976F12EFDC6B0007387E0 /* FirebaseDatabase */; };
 		BC4976F42EFDC6B0007387E0 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = BC4976F32EFDC6B0007387E0 /* FirebaseFirestore */; };
 		BC4976F62EFDC6B0007387E0 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = BC4976F52EFDC6B0007387E0 /* FirebaseStorage */; };
+		BC54B6D42EFE422200897F39 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = BC54B6D32EFE422200897F39 /* FirebaseAnalytics */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC54B6D42EFE422200897F39 /* FirebaseAnalytics in Frameworks */,
 				BC4976EC2EFDC6B0007387E0 /* FirebaseAuth in Frameworks */,
 				BC4976F02EFDC6B0007387E0 /* FirebaseCore in Frameworks */,
 				BC4976F22EFDC6B0007387E0 /* FirebaseDatabase in Frameworks */,
@@ -99,6 +101,7 @@
 				BC4976F12EFDC6B0007387E0 /* FirebaseDatabase */,
 				BC4976F32EFDC6B0007387E0 /* FirebaseFirestore */,
 				BC4976F52EFDC6B0007387E0 /* FirebaseStorage */,
+				BC54B6D32EFE422200897F39 /* FirebaseAnalytics */,
 			);
 			productName = CodeQuiz;
 			productReference = BCF9E9502EBD64D6008B3E3C /* CodeQuiz.app */;
@@ -411,6 +414,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = BC4976EA2EFDC6B0007387E0 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseStorage;
+		};
+		BC54B6D32EFE422200897F39 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BC4976EA2EFDC6B0007387E0 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

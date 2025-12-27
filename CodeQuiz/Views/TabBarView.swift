@@ -8,16 +8,24 @@
 import SwiftUI
 
 struct TabBarView: View {
+    @EnvironmentObject var authManager: AuthManager
+    
     var body: some View {
-        TabView {
-            Tab("Quiz", systemImage: "rectangle.and.pencil.and.ellipsis") {
-                HomePageGroup()
-            }
-            Tab("Favorites", systemImage: "heart") {
-                FavoritesPageView()
-            }
-            Tab("Settings", systemImage: "gear") {
-                SettingsView()
+        Group{
+            if authManager.user == nil{
+                LoginView()
+            } else{
+                TabView {
+                    Tab("Quiz", systemImage: "rectangle.and.pencil.and.ellipsis") {
+                        HomePageGroup()
+                    }
+                    Tab("Favorites", systemImage: "heart") {
+                        FavoritesPageView()
+                    }
+                    Tab("Settings", systemImage: "gear") {
+                        SettingsView()
+                    }
+                }
             }
         }
     }
@@ -25,7 +33,10 @@ struct TabBarView: View {
 
 #Preview {
     var networkMonitor = NetworkMonitor.shared
+    @StateObject var authManager = AuthManager()
+
     TabBarView()
         .font(.custom("Exo2-Medium", size: 20))
         .environmentObject(networkMonitor)
+        .environmentObject(authManager)
 }
